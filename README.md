@@ -22,6 +22,20 @@ Every NBA game day, about 1 hour before each tip-off, this job calculates each t
 3. **Final:** 70 % Vegas + 30 % stats model, blended in log-odds. Vegas is the strongest single predictor; the stats model nudges it.
 4. **Kalshi edge:** final probability − Kalshi YES ask − Kalshi fee (≈ 0.07·P·(1−P)). A side is flagged as **value** at 3 ¢ or more per $1 contract.
 
+## Player props (Kalshi)
+
+Kalshi lists NBA player props as ladders (e.g. "Brunson 25+ points", "Zubac 10+ rebounds") in the series `KXNBAPTS`, `KXNBAREB`, `KXNBAAST`, `KXNBA3PT` and `KXNBAPRA`, readable without a key. For each game the job:
+
+1. **Projects minutes** for every rotation player: his recent minutes. A player tagged Out frees his minutes for teammates. The rotation is then fitted to 240, trimming the bench first.
+2. **Projects production**: recent per-minute points / rebounds / assists / threes, with last season's rates counted as 8 extra games (ESPN player stats), times projected minutes.
+3. **Adjusts for the matchup**: the team's points are scaled to the Vegas implied team score; rebounds, assists and threes are scaled by what the opponent allows vs league average (from box scores) and by the game's pace (Vegas total).
+4. **Prices every Kalshi line**: normal distribution for points and PRA, negative binomial for rebounds / assists / threes. The result is blended 60/40 with Kalshi's own price, since 12 games of data can't beat a market that knows careers. Edge = probability − ask − Kalshi fee, for both YES (over) and NO (under).
+5. **Picks 1-2 per team**, only for players with no injury tag and a tight market (bid/ask ≤ 6¢, price 0.20-0.85): **value** = 5¢+ edge, **lean** = 2-5¢.
+
+Props are priced as if the player plays: Kalshi settles a prop at a fair price when the player doesn't take the court. Each card also shows the starters' season average, the projection and the chance to reach the average. Picks are graded from the final box score and tracked on the dashboard (hit rate vs expected, and P&L at $1 per contract).
+
+Sportsbook props (DraftKings, FanDuel…) are available through The Odds API, but each game costs ~4 credits per market group, about 1,000 credits a month. That's beyond the free tier, so it's not wired in yet.
+
 Every tunable number lives at the top of `nba_odds/model.py`, `nba_odds/players.py` and `nba_odds/report.py`.
 
 The dashboard keeps a **track record** (accuracy and Brier score for the model, Vegas, Kalshi and stats-only, plus the P&L of the value picks at $1 per contract). Let it build a few weeks of history before trusting any edge: beating the closing line is hard, and the stats model is deliberately simple.

@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import espn, report, slack
+from . import espn, props, report, slack
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"           # published with the dashboard
@@ -45,6 +45,9 @@ def _history_row(r: dict) -> dict:
         "p_home_kalshi": k.get("p_home"),
         "pick": r["pick"]["team"],
         "best_value": r.get("best_value"),
+        "prop_picks": [{**{k: pk[k] for k in ("athlete_id", "name", "stat", "line", "side", "label", "p", "ask", "edge", "strength")},
+                        "team": r[side]["abbr"], "won": None}
+                       for side in ("away", "home") for pk in ((r.get("props") or {}).get("picks") or {}).get(side, [])],
         "result": None,
     }
 
@@ -68,6 +71,18 @@ def _value_bets(rows: list[dict]) -> dict:
     return {"n": len(bets), "pnl_per_contract": round(pnl, 2)}
 
 
+def _prop_record(picks: list[dict]) -> dict:
+    out = {}
+    for strength in ("value", "lean"):
+        done = [p for p in picks if p.get("strength") == strength and p.get("won") is not None]
+        wins = sum(1 for p in done if p["won"])
+        pnl = sum((1 - p["ask"]) if p["won"] else -p["ask"] for p in done)
+        out[strength] = {"n": len(done), "hit_rate": round(wins / len(done), 4) if done else None,
+                         "expected_hit_rate": round(sum(p["p"] for p in done) / len(done), 4) if done else None,
+                         "pnl_per_contract": round(pnl, 2)}
+    return out
+
+
 def settle(history: list[dict], now: datetime) -> int:
     pending = [h for h in history if h["result"] is None and datetime.fromisoformat(h["tip"]) < now - timedelta(hours=3)]
     dates = sorted({datetime.fromisoformat(h["tip"]).astimezone(ET).strftime("%Y%m%d") for h in pending})
@@ -83,6 +98,14 @@ def settle(history: list[dict], now: datetime) -> int:
             h["result"] = {"home_score": g["home"]["score"], "away_score": g["away"]["score"],
                            "home_won": g["home"]["score"] > g["away"]["score"]}
             n += 1
+            if h.get("prop_picks"):
+                try:
+                    box = espn.box_lines(h["event_id"], CACHE)
+                    for pk in h["prop_picks"]:
+                        pk["won"] = props.grade(pk, box)
+                        pk["graded"] = True
+                except Exception as e:
+                    print(f"  warn: grading props for {h['event_id']} failed: {e}", file=sys.stderr)
     return n
 
 
@@ -110,6 +133,7 @@ def write_index(games: list[dict], history: list[dict], now: datetime, meta: dic
             "stats_only": _brier(settled, "p_home_stats"),
             "kalshi": _brier(settled, "p_home_kalshi"),
             "value_bets": _value_bets([h for h in settled if h.get("best_value")]),
+            "props": _prop_record([pk for h in settled for pk in h.get("prop_picks", [])]),
         },
         "notes": meta.get("notes", []),
     }

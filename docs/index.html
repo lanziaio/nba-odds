@@ -59,6 +59,30 @@ ul.flags { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--mu
 .stat .v { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .stat .d { font-size: 12px; color: var(--muted); }
 details { margin-top: 8px; font-size: 12px; color: var(--muted); }
+.pick { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; row-gap: 1px; align-items: baseline; font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.pick .num { grid-column: 2; text-align: left !important; }
+.best .pick { grid-template-columns: auto 1fr auto; }
+.best .pick .num { grid-column: auto; text-align: right !important; }
+@media (max-width: 520px) { .best .pick { grid-template-columns: auto 1fr; } .best .pick .num { grid-column: 2; text-align: left !important; } }
+.pick:last-child { border-bottom: 0; }
+.tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 1px 6px; border-radius: 6px; }
+.tag.value { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
+.tag.lean { background: var(--chip); color: var(--muted); }
+.pick .num { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; }
+.pick .num b { color: var(--good); }
+table.avg { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 6px; font-variant-numeric: tabular-nums; }
+table.avg th { text-align: right; color: var(--muted); font-weight: 500; padding: 2px 3px; }
+table.avg th:first-child, table.avg td:first-child { text-align: left; }
+table.avg td { text-align: right; padding: 3px 2px; border-top: 1px solid var(--line); white-space: nowrap; line-height: 1.2; }
+table.avg td:first-child { max-width: 88px; overflow: hidden; text-overflow: ellipsis; }
+table.avg td b { font-size: 12.5px; }
+table.avg td small { color: var(--muted); font-size: 10.5px; }
+.avg-wrap { overflow-x: auto; }
+.up { color: var(--good); } .down { color: var(--bad); }
+.best { margin-top: 16px; }
+.best .card { padding: 10px 14px; }
+.best h2, .slate-title { font-size: 15px; margin: 18px 0 6px; }
+@media (max-width: 520px) { .pick { grid-template-columns: auto 1fr; } .pick .num { grid-column: 1 / -1; text-align: left; } }
 footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 @media (max-width: 420px) { .roster { grid-template-columns: 1fr; } }
 </style>
@@ -70,11 +94,17 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
     <p id="meta">Loading…</p>
   </header>
   <div class="record" id="record"></div>
+  <div class="best" id="best"></div>
+  <h2 class="slate-title">Games</h2>
   <div class="grid" id="games"></div>
   <footer>
     Model = 70% de-vigged Vegas line + 30% stats model (season point differential, home court, last-7-days form,
     back-to-backs, injuries to regular starters and rotation). "Value" = expected profit buying the Kalshi YES at the
-    current ask, after Kalshi's fee, of at least 3¢ per $1 contract. Informational only: track the record before risking money.
+    current ask, after Kalshi's fee, of at least 3¢ per $1 contract.
+    Player props: projection from recent per-minute production (last season as a prior), projected minutes (injured
+    teammates' minutes redistributed), the Vegas implied team score, and what the opponent allows in rebounds, assists and
+    threes; blended 60/40 with Kalshi's own price. "Value" = 5¢+ edge after fees, "lean" = 2-5¢.
+    Informational only: track the record before risking money.
   </footer>
 </main>
 <script>
@@ -135,6 +165,7 @@ function card(g, r) {
     <div class="roster">${roster(r.away)}${roster(r.home)}</div>
     <div class="section-title">Form</div>
     ${form(r.away)}${form(r.home)}
+    ${propsBlock(g, r)}
     ${r.flags.length ? `<ul class="flags">${r.flags.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
     <details><summary>How the model got there</summary>
       Expected margin ${esc(g.home.abbr)} ${r.model.expected_home_margin > 0 ? "+" : ""}${r.model.expected_home_margin} ·
@@ -145,13 +176,45 @@ function card(g, r) {
   </div>`;
 }
 
+function pickRow(pk, abbr) {
+  return `<div class="pick"><span class="tag ${pk.strength}">${pk.strength}</span>
+    <span>${abbr ? `<b>${esc(abbr)}</b> ` : ""}${esc(pk.label)}</span>
+    <span class="num">model ${pct(pk.p)} · Kalshi ${pk.ask.toFixed(2)} · <b>+${(pk.edge * 100).toFixed(1)}¢</b></span></div>`;
+}
+
+function avgTable(rows) {
+  const cell = (p, s) => {
+    const a = p.avg[s], pr = p.proj[s], h = p.hit_avg[s];
+    const cls = pr > a * 1.05 ? "up" : pr < a * 0.95 ? "down" : "";
+    return `<td title="season avg ${a} → projected ${pr}; chance of ${h.line}+ = ${pct(h.p)}"><b class="${cls}">${pr}</b><br><small>${a} · ${pct(h.p)}</small></td>`;
+  };
+  return `<table class="avg"><tr><th>Starter · min</th><th>PTS</th><th>REB</th><th>AST</th><th>3PM</th></tr>
+    ${rows.filter(p => p.role === "starter").map(p => `<tr><td>${esc(p.name)} <small>${p.minutes}</small></td>${["pts", "reb", "ast", "tpm"].map(s => cell(p, s)).join("")}</tr>`).join("")}</table>`;
+}
+
+function propsBlock(g, r) {
+  const pr = r.props;
+  if (!pr) return "";
+  const picks = ["away", "home"].flatMap(s => (pr.picks[s] || []).map(pk => pickRow(pk, r[s].abbr))).join("");
+  return `<div class="section-title">Player props · Kalshi</div>
+    ${picks || '<div class="form">No Kalshi prop line has a positive edge for this game.</div>'}
+    <details><summary>Starters: season average → projection (chance to reach the average)</summary>
+      <div class="form" style="margin-top:4px">Each cell: projection, then season average · chance to reach it.</div>
+      <div class="avg-wrap" style="margin-top:6px"><b>${esc(r.away.abbr)}</b>${avgTable(pr.players.away || [])}</div>
+      <div class="avg-wrap" style="margin-top:8px"><b>${esc(r.home.abbr)}</b>${avgTable(pr.players.home || [])}</div>
+    </details>`;
+}
+
 function record(tr) {
   if (!tr || !tr.games) return `<div class="stat"><div class="k">Track record</div><div class="v">–</div><div class="d">Fills in as games finish</div></div>`;
   const s = (label, x) => `<div class="stat"><div class="k">${label}</div><div class="v">${x.accuracy == null ? "–" : Math.round(x.accuracy * 100) + "%"}</div>
     <div class="d">Brier ${x.brier ?? "–"} · n=${x.n}</div></div>`;
   const vb = tr.value_bets;
   return s("Model", tr.model) + s("Vegas", tr.vegas) + s("Kalshi", tr.kalshi) + s("Stats only", tr.stats_only) +
-    `<div class="stat"><div class="k">Value picks</div><div class="v">${vb.pnl_per_contract >= 0 ? "+" : ""}$${vb.pnl_per_contract}</div><div class="d">${vb.n} picks, $1 contracts</div></div>`;
+    `<div class="stat"><div class="k">Value picks</div><div class="v">${vb.pnl_per_contract >= 0 ? "+" : ""}$${vb.pnl_per_contract}</div><div class="d">${vb.n} picks, $1 contracts</div></div>` +
+    (tr.props ? ["value", "lean"].map(k => { const x = tr.props[k]; return `<div class="stat"><div class="k">Props · ${k}</div>
+      <div class="v">${x.hit_rate == null ? "–" : Math.round(x.hit_rate * 100) + "%"}</div>
+      <div class="d">expected ${x.expected_hit_rate == null ? "–" : Math.round(x.expected_hit_rate * 100) + "%"} · ${x.pnl_per_contract >= 0 ? "+" : ""}$${x.pnl_per_contract} · n=${x.n}</div></div>`; }).join("") : "");
 }
 
 async function load() {
@@ -160,14 +223,16 @@ async function load() {
     document.getElementById("meta").textContent =
       `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${new Date(idx.generated_at).toLocaleString()} · lower Brier = better calibrated`;
     document.getElementById("record").innerHTML = record(idx.track_record);
-    const cards = await Promise.all(idx.slate.map(async g => {
-      let r = null;
-      if (g.has_report) {
-        try { r = await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) {}
-      }
-      return card(g, r);
+    const reports = await Promise.all(idx.slate.map(async g => {
+      if (!g.has_report) return null;
+      try { return await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
     }));
-    document.getElementById("games").innerHTML = cards.join("") || '<div class="pending">No NBA games today.</div>';
+    document.getElementById("games").innerHTML = idx.slate.map((g, i) => card(g, reports[i])).join("") || '<div class="pending">No NBA games today.</div>';
+    const best = reports.filter(r => r && r.props).flatMap(r => ["away", "home"].flatMap(s =>
+      (r.props.picks[s] || []).filter(pk => pk.strength === "value").map(pk => ({pk, abbr: r[s].abbr}))))
+      .sort((a, b) => b.pk.edge - a.pk.edge).slice(0, 10);
+    document.getElementById("best").innerHTML = best.length ? `<h2>Best player props today</h2><div class="card">${best.map(b => pickRow(b.pk, b.abbr)).join("")}
+      <div class="form" style="margin-top:8px">Stacking picks into one ticket multiplies the risk: each leg has to hit, and legs from the same game move together.</div></div>` : "";
   } catch (e) {
     document.getElementById("meta").textContent = "Could not load data yet. The first scheduled run creates it.";
   }

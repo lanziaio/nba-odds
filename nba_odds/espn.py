@@ -233,3 +233,52 @@ def box_lines(event_id: str, cache_dir: Path) -> dict[str, list[dict]]:
         cache_dir.mkdir(parents=True, exist_ok=True)
         cache.write_text(json.dumps(out, separators=(",", ":")))
     return out
+
+
+ATHLETE_STATS = "https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/athletes/{}/stats"
+
+
+def season_label(today: datetime | None = None) -> str:
+    d = today or datetime.now(timezone.utc)
+    y = d.year if d.month >= 8 else d.year - 1
+    return f"{y}-{(y + 1) % 100:02d}"
+
+
+def athlete_seasons(athlete_id: str, cache_dir: Path, max_age_h: float = 20.0) -> dict:
+    """Per-game averages for the current and the previous season. Cached ~1 day."""
+    import time as _t
+
+    cache = cache_dir / f"{athlete_id}.json"
+    if cache.exists():
+        # age from the stored timestamp: git checkouts reset file mtimes
+        cached = json.loads(cache.read_text())
+        if _t.time() - cached.get("fetched_at", 0) < max_age_h * 3600:
+            return cached
+    data = get_json(ATHLETE_STATS.format(athlete_id))
+    by_season: dict[str, list[dict]] = {}
+    for cat in data.get("categories", []):
+        if cat.get("name") != "averages":
+            continue
+        labels = cat.get("labels") or []
+        for st in cat.get("statistics", []):
+            vals = dict(zip(labels, st.get("stats") or []))
+            row = {"gp": _num(vals.get("GP", 0)), "min": _num(vals.get("MIN", 0)), "pts": _num(vals.get("PTS", 0)),
+                   "reb": _num(vals.get("REB", 0)), "ast": _num(vals.get("AST", 0)),
+                   "tpm": _num(str(vals.get("3PT", "0-0")).split("-")[0])}
+            by_season.setdefault(st.get("season", {}).get("displayName", ""), []).append(row)
+
+    def merge(rows: list[dict] | None) -> dict | None:
+        if not rows:
+            return None
+        gp = sum(r["gp"] for r in rows)
+        if not gp:
+            return None
+        return {"gp": gp, **{k: round(sum(r[k] * r["gp"] for r in rows) / gp, 2) for k in ("min", "pts", "reb", "ast", "tpm")}}
+
+    cur = season_label()
+    y = int(cur[:4]) - 1
+    prev = f"{y}-{(y + 1) % 100:02d}"
+    out = {"current": merge(by_season.get(cur)), "prior": merge(by_season.get(prev)), "fetched_at": int(_t.time())}
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(out))
+    return out

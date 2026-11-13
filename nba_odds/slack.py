@@ -57,6 +57,14 @@ def format_message(r: dict, dashboard_url: str | None = None) -> dict:
         {"type": "section", "text": {"type": "mrkdwn", "text": _avail_line(a) + "\n" + _avail_line(h)}},
         {"type": "section", "text": {"type": "mrkdwn", "text": _form_line(a) + "\n" + _form_line(h)}},
     ]
+    pr = r.get("props") or {}
+    lines = []
+    for side in ("away", "home"):
+        for pk in (pr.get("picks") or {}).get(side, []):
+            lines.append(f'• *{r[side]["abbr"]}* {pk["label"]} · model {pk["p"]:.0%} vs Kalshi {pk["ask"]:.2f} '
+                         f'→ {pk["edge"]*100:+.1f}¢ ({pk["strength"]})')
+    if lines:
+        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*Player props (Kalshi)*\n" + "\n".join(lines)}})
     if r["flags"]:
         blocks.append({"type": "context", "elements": [{"type": "mrkdwn", "text": " · ".join(r["flags"])[:2900]}]})
     if dashboard_url:

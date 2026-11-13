@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import espn, kalshi, model, odds_api, players
+from . import espn, kalshi, model, odds_api, players, props
 
 ET = ZoneInfo("America/New_York")
 BOX_GAMES = 12        # recent games used to find regular starters / rotation
@@ -29,6 +29,13 @@ class RunContext:
         except Exception as e:  # optional source: never block the report
             self.errors.append(f"The Odds API: {e}")
         self._schedules: dict[str, list[dict]] = {}
+        self._league: dict | None = None
+
+    @property
+    def league(self) -> dict:
+        if self._league is None:
+            self._league = props.league_baseline(self.cache_dir)
+        return self._league
 
     def schedule(self, team_id: str) -> list[dict]:
         if team_id not in self._schedules:
@@ -64,11 +71,9 @@ def _form(team_id: str, schedule: list[dict], tip: datetime) -> dict:
     }
 
 
-def _core(team_id: str, event_ids: list[str], cache_dir: Path) -> dict:
+def _boxes(event_ids: list[str], cache_dir: Path) -> list[dict]:
     with ThreadPoolExecutor(max_workers=6) as pool:
-        boxes = list(pool.map(lambda eid: espn.box_lines(eid, cache_dir), event_ids))
-    games = [b.get(team_id, []) for b in boxes if b.get(team_id)]
-    return players.core_players(games)
+        return list(pool.map(lambda eid: espn.box_lines(eid, cache_dir), event_ids))
 
 
 def _streak_len(streak: str | None) -> tuple[str | None, int]:
@@ -84,9 +89,12 @@ def build(game: dict, ctx: RunContext, preview: bool = False) -> dict:
         t = game[side]
         st = ctx.standings.get(t["id"], {"wins": 0, "losses": 0, "gp": 0, "diff_pg": 0.0})
         form = _form(t["id"], ctx.schedule(t["id"]), tip)
-        core = _core(t["id"], form.pop("recent_event_ids"), ctx.cache_dir)
+        boxes = _boxes(form.pop("recent_event_ids"), ctx.cache_dir)
+        games = [b[t["id"]] for b in boxes if b.get(t["id"])]
+        core = players.core_players(games)
         avail = players.availability(core, ctx.injuries.get(t["id"], []))
-        sides[side] = {**t, "standing": st, "form": form, "availability": avail, "core_games_sampled": core["games_sampled"]}
+        sides[side] = {**t, "standing": st, "form": form, "availability": avail, "core_games_sampled": core["games_sampled"],
+                       "_boxes": boxes, "_games": games, "_core": core}
 
     # --- market (Vegas) ---
     odds = game.get("odds") or {}
@@ -155,8 +163,18 @@ def build(game: dict, ctx: RunContext, preview: bool = False) -> dict:
     if not k:
         flags.append("No Kalshi market found for this game")
 
+    prop_section = None
+    try:
+        prop_section = _props(game, sides, odds, tip, ctx)
+    except Exception as e:
+        ctx.errors.append(f"Props {game['away']['abbr']}@{game['home']['abbr']}: {e}")
+    for side in ("home", "away"):
+        for tmp_key in ("_boxes", "_games", "_core"):
+            sides[side].pop(tmp_key, None)
+
     return {
         "event_id": game["event_id"],
+        "props": prop_section,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "preview": preview,
         "tip": game["tip"],
@@ -184,3 +202,54 @@ def build(game: dict, ctx: RunContext, preview: bool = False) -> dict:
         "best_value": best,
         "flags": flags,
     }
+
+
+def _props(game: dict, sides: dict, odds: dict, tip: datetime, ctx: RunContext) -> dict:
+    spread, total = odds.get("home_spread"), odds.get("total")
+    implied = {"home": None, "away": None}
+    if spread is not None and total:
+        implied = {"home": (total - spread) / 2, "away": (total + spread) / 2}
+    markets: list[dict] = []
+    try:
+        markets = props.kalshi_props(game["away"]["abbr"], game["home"]["abbr"], tip)
+    except Exception as e:
+        ctx.errors.append(f"Kalshi props {game['away']['abbr']}@{game['home']['abbr']}: {e}")
+
+    out = {"source": "Kalshi player props" if markets else None, "markets_found": len(markets),
+           "picks": {}, "players": {}, "defense": {}, "team_target": {}}
+    for side, other in (("home", "away"), ("away", "home")):
+        s, o = sides[side], sides[other]
+        inj = {r["athlete_id"]: players.status_weight(r)
+               for r in ctx.injuries.get(s["id"], []) if r.get("athlete_id")}
+        allowed = props.allowed_factors(o["id"], o["_boxes"], ctx.league)
+        recent_ids = {row["athlete_id"] for g in s["_games"][:3] for row in g if not row.get("dnp")}
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            ids = sorted(recent_ids)
+            seasons = dict(zip(ids, pool.map(lambda a: _season_safe(a, ctx), ids)))
+        proj = props.project_team(s["id"], s["_games"], inj, allowed, ctx.league, implied[side], total, seasons)
+        priced = props.price_markets(markets, proj["players"], kalshi.code(s["abbr"]))
+        out["picks"][side] = props.pick(priced)
+        out["defense"][other] = allowed  # what `other` allows, used for `side`'s players
+        out["team_target"][side] = proj["target"]
+        core_ids = s["_core"]["starters"] + s["_core"]["rotation"]
+        rows = []
+        for pid in core_ids:
+            p = proj["players"].get(pid)
+            if not p:
+                continue
+            lines = sorted([m for m in priced if m["athlete_id"] == pid], key=lambda m: (m["stat"], m["line"]))
+            rows.append({
+                "athlete_id": pid, "name": p["name"], "role": "starter" if pid in s["_core"]["starters"] else "rotation",
+                "minutes": p["minutes"], "avg": p["avg"], "proj": p["proj"], "miss_prob": p["miss_prob"],
+                "hit_avg": props.hit_average(p),
+                "lines": [{k: m[k] for k in ("stat", "line", "p_yes", "yes_ask", "no_ask", "edge_yes", "edge_no")} for m in lines],
+            })
+        out["players"][side] = rows
+    return out
+
+
+def _season_safe(athlete_id: str, ctx: RunContext) -> dict:
+    try:
+        return espn.athlete_seasons(athlete_id, ctx.cache_dir.parent / "athletes")
+    except Exception:
+        return {}
