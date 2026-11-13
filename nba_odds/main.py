@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import espn, props, report, slack
+from . import espn, model, props, report, slack
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"           # published with the dashboard
@@ -61,25 +61,49 @@ def _brier(rows: list[dict], key: str) -> dict:
     return {"n": len(pts), "brier": round(brier, 4), "accuracy": round(acc, 4)}
 
 
+def _contract_pnl(won: bool | None, ask: float) -> float:
+    """P&L of one $1 Kalshi contract bought at `ask`, after the taker fee. Void (player didn't play) = 0."""
+    if won is None:
+        return 0.0
+    fee = model.kalshi_fee(ask)
+    return round((1 - ask - fee) if won else (-ask - fee), 4)
+
+
+def grade_row(h: dict, box: dict | None) -> None:
+    """Stamp every pick in a settled history row with its outcome and P&L (idempotent)."""
+    res = h["result"]
+    winner = h["home"] if res["home_won"] else h["away"]
+    h["model_pick_correct"] = h.get("pick") == winner
+    bv = h.get("best_value")
+    if bv:
+        won = res["home_won"] if bv["side"] == "home" else not res["home_won"]
+        bv["status"] = "won" if won else "lost"
+        bv["pnl"] = _contract_pnl(won, bv["ask"])
+    for pk in h.get("prop_picks", []):
+        if box is None:
+            pk["status"] = "pending"
+            continue
+        won = props.grade(pk, box)
+        pk["won"] = won
+        pk["status"] = "void" if won is None else ("won" if won else "lost")
+        pk["pnl"] = _contract_pnl(won, pk["ask"])
+    h["graded"] = box is not None or not h.get("prop_picks")
+
+
 def _value_bets(rows: list[dict]) -> dict:
-    bets = [r for r in rows if r.get("best_value")]
-    pnl = 0.0
-    for r in bets:
-        bv = r["best_value"]
-        won = r["result"]["home_won"] if bv["side"] == "home" else not r["result"]["home_won"]
-        pnl += (1 - bv["ask"]) if won else -bv["ask"]
-    return {"n": len(bets), "pnl_per_contract": round(pnl, 2)}
+    bets = [r["best_value"] for r in rows if r.get("best_value") and r["best_value"].get("status")]
+    return {"n": len(bets), "wins": sum(1 for b in bets if b["status"] == "won"),
+            "pnl_per_contract": round(sum(b["pnl"] for b in bets), 2)}
 
 
 def _prop_record(picks: list[dict]) -> dict:
     out = {}
     for strength in ("value", "lean"):
-        done = [p for p in picks if p.get("strength") == strength and p.get("won") is not None]
-        wins = sum(1 for p in done if p["won"])
-        pnl = sum((1 - p["ask"]) if p["won"] else -p["ask"] for p in done)
+        done = [p for p in picks if p.get("strength") == strength and p.get("status") in ("won", "lost")]
+        wins = sum(1 for p in done if p["status"] == "won")
         out[strength] = {"n": len(done), "hit_rate": round(wins / len(done), 4) if done else None,
                          "expected_hit_rate": round(sum(p["p"] for p in done) / len(done), 4) if done else None,
-                         "pnl_per_contract": round(pnl, 2)}
+                         "pnl_per_contract": round(sum(p["pnl"] for p in done), 2)}
     return out
 
 
@@ -98,14 +122,17 @@ def settle(history: list[dict], now: datetime) -> int:
             h["result"] = {"home_score": g["home"]["score"], "away_score": g["away"]["score"],
                            "home_won": g["home"]["score"] > g["away"]["score"]}
             n += 1
-            if h.get("prop_picks"):
-                try:
-                    box = espn.box_lines(h["event_id"], CACHE)
-                    for pk in h["prop_picks"]:
-                        pk["won"] = props.grade(pk, box)
-                        pk["graded"] = True
-                except Exception as e:
-                    print(f"  warn: grading props for {h['event_id']} failed: {e}", file=sys.stderr)
+    # Grade every settled row that isn't fully graded yet (also retries props whose box score failed).
+    for h in history:
+        if h["result"] is None or h.get("graded"):
+            continue
+        box = None
+        if h.get("prop_picks"):
+            try:
+                box = espn.box_lines(h["event_id"], CACHE)
+            except Exception as e:
+                print(f"  warn: box score for {h['event_id']} not available yet: {e}", file=sys.stderr)
+        grade_row(h, box)
     return n
 
 

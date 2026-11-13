@@ -36,6 +36,22 @@ Props are priced as if the player plays: Kalshi settles a prop at a fair price w
 
 Sportsbook props (DraftKings, FanDuel…) are available through The Odds API, but each game costs ~4 credits per market group, about 1,000 credits a month. That's beyond the free tier, so it's not wired in yet.
 
+## Track record
+
+Every pick that goes out at T-60 is kept in `docs/data/history.json` and graded once the game is final (any run at least 3 hours after tip-off, plus the 11:00 UTC morning sweep):
+
+- **Winner picks:** the model's favourite in every game, scored against Vegas's and Kalshi's favourites (accuracy and Brier score).
+- **Game bets:** the Kalshi YES flagged as value on a game winner.
+- **Prop picks:** value and lean, graded from the final box score. A player who didn't play counts as **void**, because Kalshi settles those at a fair price.
+
+P&L assumes one $1 Kalshi contract per pick, bought at the ask shown when the pick was made, minus Kalshi's taker fee. The dashboard's **Track record** tab (`#track`) shows:
+- hit rate vs what the model expected
+- cumulative P&L, P&L and ROI
+- breakdowns by stat, over/under, edge size and probability bucket (calibration)
+- the full pick log, filterable by 7 / 30 days / season and by type
+
+Preview reports (`--all-today`) never count.
+
 Every tunable number lives at the top of `nba_odds/model.py`, `nba_odds/players.py` and `nba_odds/report.py`.
 
 The dashboard keeps a **track record** (accuracy and Brier score for the model, Vegas, Kalshi and stats-only, plus the P&L of the value picks at $1 per contract). Let it build a few weeks of history before trusting any edge: beating the closing line is hard, and the stats model is deliberately simple.

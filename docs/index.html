@@ -9,11 +9,13 @@
   --bg: #f6f7f9; --card: #ffffff; --ink: #14161a; --muted: #5f6672; --line: #e3e6eb;
   --home: #2f6fdb; --away: #d9534f; --good: #1f8a4c; --warn: #b7791f; --bad: #c0392b;
   --chip: #eef1f5; --bar: #e9ecf1;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; /* chart series (validated: CVD + contrast) */
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #0f1115; --card: #171a21; --ink: #e8eaee; --muted: #9aa3b2; --line: #272c36;
           --home: #5b8ff0; --away: #ef6f6a; --good: #3fbf74; --warn: #e0a43a; --bad: #ef5b4c;
-          --chip: #222733; --bar: #232834; }
+          --chip: #222733; --bar: #232834;
+          --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -98,6 +100,51 @@ table.lines td .t { display: flex; align-items: center; gap: 6px; font-weight: 6
 table.lines td .t img { width: 18px; height: 18px; }
 table.lines td .sub { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
 table.lines .fav { font-weight: 700; }
+/* tabs + segmented filters */
+.seg { display: inline-flex; background: var(--chip); border-radius: 10px; padding: 3px; gap: 2px; }
+.seg button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 8px; cursor: pointer; }
+.seg button.on { background: var(--card); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.seg button:focus-visible { outline: 2px solid var(--s1); outline-offset: 1px; }
+.tabs { margin-top: 12px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; }
+.pos { color: var(--good); } .neg { color: var(--bad); }
+.muted { color: var(--muted); font-weight: 400; } .small { font-size: 12px; margin-top: 6px; }
+.empty { color: var(--muted); font-size: 13px; padding: 24px 8px; text-align: center; }
+/* chart */
+.chart-card { margin-top: 14px; }
+.chart-head { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; font-size: 14px; }
+.legend2 { display: flex; gap: 12px; font-size: 12px; color: var(--muted); margin-left: auto; }
+.sw { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+.sw.s1 { background: var(--s1); } .sw.s2 { background: var(--s2); } .sw.s3 { background: var(--s3); }
+.chart-wrap { position: relative; margin-top: 8px; overflow-x: auto; }
+svg.pnl { width: 100%; min-width: 560px; height: auto; display: block; }
+svg.pnl .grid { stroke: var(--line); stroke-width: 1; }
+svg.pnl .grid.zero { stroke: var(--muted); stroke-dasharray: 3 3; }
+svg.pnl .tick { fill: var(--muted); font-size: 11px; }
+svg.pnl .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+svg.pnl .line.s1 { stroke: var(--s1); } svg.pnl .line.s2 { stroke: var(--s2); } svg.pnl .line.s3 { stroke: var(--s3); }
+svg.pnl .fill.s1 { fill: var(--s1); } svg.pnl .fill.s2 { fill: var(--s2); } svg.pnl .fill.s3 { fill: var(--s3); }
+svg.pnl .end { fill: var(--ink); font-size: 11.5px; }
+svg.pnl .cross { stroke: var(--muted); stroke-width: 1; }
+svg.pnl .hit { fill: transparent; cursor: crosshair; }
+.chart-wrap .tip { position: absolute; top: 6px; min-width: 170px; background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 10px; font-size: 12px; box-shadow: 0 6px 18px rgba(0,0,0,.18); pointer-events: none; }
+.chart-wrap .tip div { margin-top: 3px; }
+/* breakdowns + log */
+.bd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-top: 14px; }
+.card h3 { font-size: 14px; margin: 0 0 8px; }
+table.bdt, table.log { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+table.bdt th, table.log th { font-size: 11px; font-weight: 500; color: var(--muted); text-align: right; padding: 4px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.bdt td, table.log td { text-align: right; padding: 5px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.bdt th:first-child, table.bdt td:first-child, table.log td:nth-child(-n+4), table.log th:nth-child(-n+4) { text-align: left; }
+table.log td.lbl { white-space: normal; min-width: 180px; }
+.log-wrap { overflow-x: auto; }
+section#tab-track > .card:last-child { margin-top: 14px; }
+.res { font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 1px 7px; border-radius: 6px; background: var(--chip); color: var(--muted); }
+.res.won { color: var(--good); background: color-mix(in srgb, var(--good) 15%, transparent); }
+.res.lost { color: var(--bad); background: color-mix(in srgb, var(--bad) 13%, transparent); }
+button.more { margin-top: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 8px; cursor: pointer; }
+.stat .v.pos { color: var(--good); } .stat .v.neg { color: var(--bad); }
 footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 @media (max-width: 420px) { .roster { grid-template-columns: 1fr; } }
 </style>
@@ -107,12 +154,18 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
   <header>
     <h1>NBA Win Odds</h1>
     <p id="meta">Loading…</p>
+    <nav class="tabs seg" role="tablist">
+      <button role="tab" data-tab="today" class="on">Today</button>
+      <button role="tab" data-tab="track">Track record</button>
+    </nav>
   </header>
-  <div id="lines"></div>
-  <div class="record" id="record"></div>
-  <div class="best" id="best"></div>
-  <h2 class="slate-title">Games</h2>
-  <div class="grid" id="games"></div>
+  <section id="tab-today">
+    <div id="lines"></div>
+    <div class="best" id="best"></div>
+    <h2 class="slate-title">Games</h2>
+    <div class="grid" id="games"></div>
+  </section>
+  <section id="tab-track" hidden></section>
   <footer>
     Model = 70% de-vigged Vegas line + 30% stats model (season point differential, home court, last-7-days form,
     back-to-backs, injuries to regular starters and rotation). "Value" = expected profit buying the Kalshi YES at the
@@ -123,6 +176,7 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
     Informational only: track the record before risking money.
   </footer>
 </main>
+<script src="track.js"></script>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const pct = p => p == null ? "–" : Math.round(p * 100) + "%";
@@ -237,18 +291,6 @@ function propsBlock(g, r) {
     </details>`;
 }
 
-function record(tr) {
-  if (!tr || !tr.games) return `<div class="stat"><div class="k">Track record</div><div class="v">–</div><div class="d">Fills in as games finish</div></div>`;
-  const s = (label, x) => `<div class="stat"><div class="k">${label}</div><div class="v">${x.accuracy == null ? "–" : Math.round(x.accuracy * 100) + "%"}</div>
-    <div class="d">Brier ${x.brier ?? "–"} · n=${x.n}</div></div>`;
-  const vb = tr.value_bets;
-  return s("Model", tr.model) + s("Vegas", tr.vegas) + s("Kalshi", tr.kalshi) + s("Stats only", tr.stats_only) +
-    `<div class="stat"><div class="k">Value picks</div><div class="v">${vb.pnl_per_contract >= 0 ? "+" : ""}$${vb.pnl_per_contract}</div><div class="d">${vb.n} picks, $1 contracts</div></div>` +
-    (tr.props ? ["value", "lean"].map(k => { const x = tr.props[k]; return `<div class="stat"><div class="k">Props · ${k}</div>
-      <div class="v">${x.hit_rate == null ? "–" : Math.round(x.hit_rate * 100) + "%"}</div>
-      <div class="d">expected ${x.expected_hit_rate == null ? "–" : Math.round(x.expected_hit_rate * 100) + "%"} · ${x.pnl_per_contract >= 0 ? "+" : ""}$${x.pnl_per_contract} · n=${x.n}</div></div>`; }).join("") : "");
-}
-
 function noVig(o) {
   const p = v => v == null ? null : v < 0 ? -v / (-v + 100) : 100 / (v + 100);
   const h = p(o.home_ml), a = p(o.away_ml);
@@ -286,8 +328,7 @@ async function load() {
   try {
     const idx = await (await fetch("data/index.json" + bust())).json();
     document.getElementById("meta").textContent =
-      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${new Date(idx.generated_at).toLocaleString()} · lower Brier = better calibrated`;
-    document.getElementById("record").innerHTML = record(idx.track_record);
+      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${new Date(idx.generated_at).toLocaleString()}`;
     const reports = await Promise.all(idx.slate.map(async g => {
       if (!g.has_report) return null;
       try { return await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
@@ -303,8 +344,19 @@ async function load() {
     document.getElementById("meta").textContent = "Could not load data yet. The first scheduled run creates it.";
   }
 }
+function showTab(name) {
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === name));
+  document.getElementById("tab-today").hidden = name !== "today";
+  document.getElementById("tab-track").hidden = name !== "track";
+  if (name === "track") TrackTab.load();
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  history.replaceState(null, "", b.dataset.tab === "track" ? "#track" : location.pathname);
+  showTab(b.dataset.tab);
+}));
 load();
-setInterval(load, 5 * 60 * 1000);
+showTab(location.hash === "#track" ? "track" : "today");
+setInterval(() => { load(); if (location.hash === "#track") TrackTab.load(); }, 5 * 60 * 1000);
 </script>
 </body>
 </html>
