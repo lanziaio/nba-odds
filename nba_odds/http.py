@@ -19,7 +19,7 @@ def get_json(
     url: str,
     params: dict[str, Any] | None = None,
     *,
-    retries: int = 3,
+    retries: int = 4,
     timeout: float = 20.0,
     with_headers: bool = False,
 ) -> Any:
@@ -37,6 +37,13 @@ def get_json(
             last_err = e
             if e.code not in (429, 500, 502, 503, 504):
                 break
+            if e.code == 429:  # rate limited: honour Retry-After, else back off exponentially
+                try:
+                    wait = float(e.headers.get("Retry-After") or 0)
+                except ValueError:
+                    wait = 0
+                time.sleep(max(wait, 2.0 * 2 ** attempt))
+                continue
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             last_err = e
         time.sleep(1.5 * (attempt + 1))

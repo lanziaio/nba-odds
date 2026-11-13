@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import math
 import re
+import time
 import unicodedata
 from pathlib import Path
 
@@ -322,6 +323,7 @@ def kalshi_props(away_abbr: str, home_abbr: str, tip) -> list[dict]:
     suffix = f"{d:%y}{d:%b}{d:%d}".upper() + f"{code(away_abbr)}{code(home_abbr)}"
     out = []
     for series, stat in KALSHI_SERIES.items():
+        time.sleep(0.3)  # stay well under Kalshi's public rate limit
         data = get_json(f"{BASE}/markets", {"event_ticker": f"{series}-{suffix}", "limit": 1000})
         for m in data.get("markets") or []:
             if m.get("status") not in ("active", "open"):
