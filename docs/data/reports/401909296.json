@@ -1,0 +1,432 @@
+{
+ "event_id": "401909296",
+ "generated_at": "2026-11-13T21:28:14+00:00",
+ "preview": true,
+ "tip": "2026-11-14T00:00:00+00:00",
+ "tip_et": "Fri Nov 13, 7:00 PM ET",
+ "home": {
+  "id": "11",
+  "abbr": "IND",
+  "name": "Indiana Pacers",
+  "nickname": "Pacers",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "IND",
+   "wins": 4,
+   "losses": 8,
+   "gp": 12,
+   "diff_pg": -2.42,
+   "streak": "W1",
+   "last10": "3-7",
+   "home_record": "1-4",
+   "road_record": "3-3",
+   "seed": 11,
+   "conference": "East"
+  },
+  "form": {
+   "games": 3,
+   "wins": 1,
+   "losses": 2,
+   "avg_margin": -0.7,
+   "results": [
+    {
+     "date": "2026-11-12T00:00:00+00:00",
+     "opp": "WSH",
+     "home": true,
+     "score": "114-101",
+     "won": true
+    },
+    {
+     "date": "2026-11-10T01:00:00+00:00",
+     "opp": "DAL",
+     "home": false,
+     "score": "122-125",
+     "won": false
+    },
+    {
+     "date": "2026-11-07T22:00:00+00:00",
+     "opp": "DEN",
+     "home": true,
+     "score": "102-114",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "3149673",
+     "name": "Pascal Siakam",
+     "role": "starter",
+     "mpg": 29.6,
+     "ppg": 22.7,
+     "impact": 4.43,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4395712",
+     "name": "Andrew Nembhard",
+     "role": "starter",
+     "mpg": 27.8,
+     "ppg": 17.1,
+     "impact": 2.97,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4396909",
+     "name": "Aaron Nesmith",
+     "role": "starter",
+     "mpg": 20.9,
+     "ppg": 11.7,
+     "impact": 0.46,
+     "status": "Day-To-Day",
+     "detail": "Knee Soreness",
+     "comment": "Nesmith (knee) is questionable for Friday's game against the Knicks.",
+     "miss_prob": 0.35,
+     "played_share": 0.83,
+     "expected_loss": 0.13
+    },
+    {
+     "athlete_id": "4017837",
+     "name": "Ivica Zubac",
+     "role": "starter",
+     "mpg": 13.5,
+     "ppg": 10.6,
+     "impact": 1.93,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.58,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3133603",
+     "name": "Kelly Oubre Jr.",
+     "role": "starter",
+     "mpg": 19.7,
+     "ppg": 9.6,
+     "impact": 0.81,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4592829",
+     "name": "Quenton Jackson",
+     "role": "rotation",
+     "mpg": 21.7,
+     "ppg": 9.5,
+     "impact": 1.58,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5106060",
+     "name": "Jarace Walker",
+     "role": "rotation",
+     "mpg": 21.1,
+     "ppg": 6.8,
+     "impact": 0.27,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4278355",
+     "name": "Obi Toppin",
+     "role": "rotation",
+     "mpg": 15.9,
+     "ppg": 12.8,
+     "impact": 2.32,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.75,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 4,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [],
+   "uncertain": [
+    "Aaron Nesmith (Day-To-Day)"
+   ],
+   "injury_margin_loss": 0.13
+  },
+  "core_games_sampled": 12
+ },
+ "away": {
+  "id": "18",
+  "abbr": "NY",
+  "name": "New York Knicks",
+  "nickname": "Knicks",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "NY",
+   "wins": 6,
+   "losses": 5,
+   "gp": 11,
+   "diff_pg": 6.82,
+   "streak": "L1",
+   "last10": "6-4",
+   "home_record": "4-3",
+   "road_record": "2-2",
+   "seed": 5,
+   "conference": "East"
+  },
+  "form": {
+   "games": 3,
+   "wins": 2,
+   "losses": 1,
+   "avg_margin": 12.0,
+   "results": [
+    {
+     "date": "2026-11-12T00:00:00+00:00",
+     "opp": "CLE",
+     "home": true,
+     "score": "107-115",
+     "won": false
+    },
+    {
+     "date": "2026-11-11T00:30:00+00:00",
+     "opp": "MIL",
+     "home": true,
+     "score": "117-85",
+     "won": true
+    },
+    {
+     "date": "2026-11-08T01:00:00+00:00",
+     "opp": "CLE",
+     "home": false,
+     "score": "109-97",
+     "won": true
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "3934672",
+     "name": "Jalen Brunson",
+     "role": "starter",
+     "mpg": 33.5,
+     "ppg": 26.0,
+     "impact": 4.51,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3934719",
+     "name": "OG Anunoby",
+     "role": "starter",
+     "mpg": 32.8,
+     "ppg": 16.5,
+     "impact": 2.09,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3136195",
+     "name": "Karl-Anthony Towns",
+     "role": "starter",
+     "mpg": 31.4,
+     "ppg": 20.9,
+     "impact": 4.85,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3147657",
+     "name": "Mikal Bridges",
+     "role": "starter",
+     "mpg": 24.4,
+     "ppg": 5.9,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3062679",
+     "name": "Josh Hart",
+     "role": "starter",
+     "mpg": 22.5,
+     "ppg": 8.2,
+     "impact": 0.68,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.73,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3914044",
+     "name": "Landry Shamet",
+     "role": "rotation",
+     "mpg": 25.9,
+     "ppg": 9.6,
+     "impact": 0.61,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4431823",
+     "name": "Miles McBride",
+     "role": "rotation",
+     "mpg": 18.9,
+     "ppg": 7.9,
+     "impact": 0.95,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "6585",
+     "name": "Andre Drummond",
+     "role": "rotation",
+     "mpg": 13.5,
+     "ppg": 4.3,
+     "impact": 1.22,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": true,
+   "missing": [],
+   "uncertain": [],
+   "injury_margin_loss": 0.0
+  },
+  "core_games_sampled": 11
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.2589982634670207,
+  "p_home_open": 0.4572564612326044,
+  "home_ml": 271,
+  "away_ml": -337,
+  "home_ml_open": 110,
+  "away_ml_open": -130,
+  "home_spread": 8.5,
+  "total": 219.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13NYKIND",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13NYKIND-IND",
+   "bid": 0.24,
+   "ask": 0.25,
+   "last": 0.25,
+   "mid": 0.245,
+   "spread": 0.01,
+   "volume": 109096.58,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13NYKIND-NYK",
+   "bid": 0.75,
+   "ask": 0.76,
+   "last": 0.76,
+   "mid": 0.755,
+   "spread": 0.01,
+   "volume": 517225.03,
+   "status": "active"
+  },
+  "p_home": 0.245,
+  "illiquid": false,
+  "volume": 626321.61
+ },
+ "model": {
+  "p_home_stats": 0.384,
+  "expected_home_margin": -3.5,
+  "components": {
+   "season_rating_edge": -4.89,
+   "home_court": 2.0,
+   "form_edge": -0.52,
+   "rest_edge": 0.0,
+   "injury_edge": -0.13
+  },
+  "p_home_final": 0.2937,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "away",
+  "team": "NY",
+  "prob": 0.7063
+ },
+ "edges": {
+  "home": 0.0237,
+  "away": -0.0737
+ },
+ "best_value": null,
+ "flags": [
+  "NY full strength (all 5 regular starters + rotation available)",
+  "IND questionable: Aaron Nesmith (Day-To-Day)",
+  "Line moved toward NY: P(home) 46% at open -> 26% now",
+  "Stats model (38%) and Vegas (26%) disagree on P(home)"
+ ]
+}

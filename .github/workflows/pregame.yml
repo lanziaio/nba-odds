@@ -1,0 +1,62 @@
+name: pregame
+
+on:
+  schedule:
+    # Every 15 min across NBA tip-off hours (UTC). Covers noon to 10:30 PM ET tip-offs in EST and EDT.
+    - cron: "*/15 14-23 * * *"
+    - cron: "*/15 0-3 * * *"
+    # Morning sweep: record overnight final scores for the track record.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run = normal T-60 check · preview-all = analyse every remaining game today (no Slack) · settle = fill final scores"
+        type: choice
+        options: [run, preview-all, settle]
+        default: run
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pregame
+  cancel-in-progress: false
+
+jobs:
+  pregame:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Analyse games tipping off within 75 min
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+          MODE: ${{ github.event.inputs.mode || 'run' }}
+        run: |
+          python3 --version
+          case "$MODE" in
+            preview-all) python3 -m nba_odds run --all-today ;;
+            settle)      python3 -m nba_odds settle ;;
+            *)           python3 -m nba_odds run ;;
+          esac
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data data/cache
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
+
+  tests:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s tests -v

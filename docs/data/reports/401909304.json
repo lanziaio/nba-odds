@@ -1,0 +1,424 @@
+{
+ "event_id": "401909304",
+ "generated_at": "2026-11-13T21:28:19+00:00",
+ "preview": true,
+ "tip": "2026-11-14T03:30:00+00:00",
+ "tip_et": "Fri Nov 13, 10:30 PM ET",
+ "home": {
+  "id": "12",
+  "abbr": "LAC",
+  "name": "LA Clippers",
+  "nickname": "Clippers",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "LAC",
+   "wins": 2,
+   "losses": 8,
+   "gp": 10,
+   "diff_pg": -5.9,
+   "streak": "L1",
+   "last10": "2-8",
+   "home_record": "2-3",
+   "road_record": "0-5",
+   "seed": 13,
+   "conference": "West"
+  },
+  "form": {
+   "games": 2,
+   "wins": 1,
+   "losses": 1,
+   "avg_margin": -3.5,
+   "results": [
+    {
+     "date": "2026-11-11T02:00:00+00:00",
+     "opp": "PHX",
+     "home": false,
+     "score": "110-133",
+     "won": false
+    },
+    {
+     "date": "2026-11-09T02:00:00+00:00",
+     "opp": "NO",
+     "home": true,
+     "score": "139-123",
+     "won": true
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 2
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4396907",
+     "name": "Darius Garland",
+     "role": "starter",
+     "mpg": 32.7,
+     "ppg": 20.4,
+     "impact": 2.38,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2991139",
+     "name": "Kris Dunn",
+     "role": "starter",
+     "mpg": 28.7,
+     "ppg": 8.5,
+     "impact": 1.67,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3936099",
+     "name": "Derrick Jones Jr.",
+     "role": "starter",
+     "mpg": 26.3,
+     "ppg": 11.1,
+     "impact": 1.65,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.9,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4066648",
+     "name": "Rui Hachimura",
+     "role": "starter",
+     "mpg": 23.6,
+     "ppg": 14.4,
+     "impact": 1.15,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.8,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4432170",
+     "name": "Isaiah Jackson",
+     "role": "starter",
+     "mpg": 18.5,
+     "ppg": 8.1,
+     "impact": 1.48,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.9,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4702352",
+     "name": "Kobe Sanders",
+     "role": "rotation",
+     "mpg": 24.3,
+     "ppg": 9.8,
+     "impact": 0.96,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3448",
+     "name": "Brook Lopez",
+     "role": "rotation",
+     "mpg": 23.4,
+     "ppg": 13.6,
+     "impact": 2.3,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5254165",
+     "name": "Keaton Wagler",
+     "role": "rotation",
+     "mpg": 23.2,
+     "ppg": 12.2,
+     "impact": 1.7,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": true,
+   "missing": [],
+   "uncertain": [],
+   "injury_margin_loss": 0.0
+  },
+  "core_games_sampled": 10
+ },
+ "away": {
+  "id": "25",
+  "abbr": "OKC",
+  "name": "Oklahoma City Thunder",
+  "nickname": "Thunder",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "OKC",
+   "wins": 8,
+   "losses": 4,
+   "gp": 12,
+   "diff_pg": 4.17,
+   "streak": "L2",
+   "last10": "6-4",
+   "home_record": "5-0",
+   "road_record": "3-4",
+   "seed": 7,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 1,
+   "losses": 2,
+   "avg_margin": 3.0,
+   "results": [
+    {
+     "date": "2026-11-12T03:00:00+00:00",
+     "opp": "POR",
+     "home": false,
+     "score": "108-118",
+     "won": false
+    },
+    {
+     "date": "2026-11-11T04:00:00+00:00",
+     "opp": "POR",
+     "home": false,
+     "score": "103-123",
+     "won": false
+    },
+    {
+     "date": "2026-11-08T01:00:00+00:00",
+     "opp": "WSH",
+     "home": true,
+     "score": "114-75",
+     "won": true
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4278073",
+     "name": "Shai Gilgeous-Alexander",
+     "role": "starter",
+     "mpg": 32.8,
+     "ppg": 29.7,
+     "impact": 5.72,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4222252",
+     "name": "Isaiah Hartenstein",
+     "role": "starter",
+     "mpg": 25.0,
+     "ppg": 8.0,
+     "impact": 1.89,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4900671",
+     "name": "Ajay Mitchell",
+     "role": "starter",
+     "mpg": 25.0,
+     "ppg": 18.5,
+     "impact": 3.4,
+     "status": "Day-To-Day",
+     "detail": "Ankle Sprain",
+     "comment": "Mitchell (ankle) is questionable for Friday's game against the Clippers.",
+     "miss_prob": 0.35,
+     "played_share": 0.92,
+     "expected_loss": 1.09
+    },
+    {
+     "athlete_id": "3133626",
+     "name": "Kenrich Williams",
+     "role": "starter",
+     "mpg": 19.1,
+     "ppg": 6.8,
+     "impact": 0.59,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4683778",
+     "name": "Jared McCain",
+     "role": "starter",
+     "mpg": 26.2,
+     "ppg": 12.7,
+     "impact": 0.98,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5174983",
+     "name": "Aday Mara",
+     "role": "rotation",
+     "mpg": 21.3,
+     "ppg": 8.5,
+     "impact": 1.55,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5241364",
+     "name": "Bennett Stirtz",
+     "role": "rotation",
+     "mpg": 18.6,
+     "ppg": 7.9,
+     "impact": 0.91,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2991350",
+     "name": "Alex Caruso",
+     "role": "rotation",
+     "mpg": 14.8,
+     "ppg": 7.6,
+     "impact": 1.92,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.75,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 4,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [],
+   "uncertain": [
+    "Ajay Mitchell (Day-To-Day)"
+   ],
+   "injury_margin_loss": 1.09
+  },
+  "core_games_sampled": 12
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.29021087646715615,
+  "p_home_open": 0.2947262808051671,
+  "home_ml": 231,
+  "away_ml": -283,
+  "home_ml_open": 226,
+  "away_ml_open": -276,
+  "home_spread": 7.5,
+  "total": 222.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13OKCLAC",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13OKCLAC-LAC",
+   "bid": 0.28,
+   "ask": 0.29,
+   "last": 0.29,
+   "mid": 0.28500000000000003,
+   "spread": 0.01,
+   "volume": 18796.33,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13OKCLAC-OKC",
+   "bid": 0.71,
+   "ask": 0.72,
+   "last": 0.72,
+   "mid": 0.715,
+   "spread": 0.01,
+   "volume": 117905.4,
+   "status": "active"
+  },
+  "p_home": 0.285,
+  "illiquid": false,
+  "volume": 136701.72999999998
+ },
+ "model": {
+  "p_home_stats": 0.4446,
+  "expected_home_margin": -1.7,
+  "components": {
+   "season_rating_edge": -5.22,
+   "home_court": 2.0,
+   "form_edge": 0.46,
+   "rest_edge": 0.0,
+   "injury_edge": 1.09
+  },
+  "p_home_final": 0.3334,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "away",
+  "team": "OKC",
+  "prob": 0.6666
+ },
+ "edges": {
+  "home": 0.0234,
+  "away": -0.0734
+ },
+ "best_value": null,
+ "flags": [
+  "OKC questionable: Ajay Mitchell (Day-To-Day)",
+  "LAC full strength (all 5 regular starters + rotation available)",
+  "Stats model (44%) and Vegas (29%) disagree on P(home)"
+ ]
+}

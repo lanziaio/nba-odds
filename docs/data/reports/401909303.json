@@ -1,0 +1,438 @@
+{
+ "event_id": "401909303",
+ "generated_at": "2026-11-13T21:28:18+00:00",
+ "preview": true,
+ "tip": "2026-11-14T03:00:00+00:00",
+ "tip_et": "Fri Nov 13, 10:00 PM ET",
+ "home": {
+  "id": "23",
+  "abbr": "SAC",
+  "name": "Sacramento Kings",
+  "nickname": "Kings",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "SAC",
+   "wins": 1,
+   "losses": 10,
+   "gp": 11,
+   "diff_pg": -12.73,
+   "streak": "L4",
+   "last10": "1-9",
+   "home_record": "0-6",
+   "road_record": "1-4",
+   "seed": 14,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 0,
+   "losses": 3,
+   "avg_margin": -9.3,
+   "results": [
+    {
+     "date": "2026-11-11T03:00:00+00:00",
+     "opp": "ORL",
+     "home": true,
+     "score": "100-107",
+     "won": false
+    },
+    {
+     "date": "2026-11-09T02:00:00+00:00",
+     "opp": "MIA",
+     "home": true,
+     "score": "108-114",
+     "won": false
+    },
+    {
+     "date": "2026-11-07T03:00:00+00:00",
+     "opp": "SA",
+     "home": true,
+     "score": "109-124",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 2
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "5142620",
+     "name": "Darius Acuff Jr.",
+     "role": "starter",
+     "mpg": 37.3,
+     "ppg": 26.2,
+     "impact": 3.56,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3064440",
+     "name": "Zach LaVine",
+     "role": "starter",
+     "mpg": 32.7,
+     "ppg": 22.3,
+     "impact": 3.38,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3155942",
+     "name": "Domantas Sabonis",
+     "role": "starter",
+     "mpg": 31.3,
+     "ppg": 13.8,
+     "impact": 3.59,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4065732",
+     "name": "De'Andre Hunter",
+     "role": "starter",
+     "mpg": 28.6,
+     "ppg": 13.3,
+     "impact": 0.58,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4431679",
+     "name": "Precious Achiuwa",
+     "role": "starter",
+     "mpg": 26.4,
+     "ppg": 10.4,
+     "impact": 1.64,
+     "status": "Day-To-Day",
+     "detail": "Ankle Soreness",
+     "comment": "Achiuwa (ankle) is questionable to play Friday's game against the Trail Blazers.",
+     "miss_prob": 0.35,
+     "played_share": 1.0,
+     "expected_loss": 0.57
+    },
+    {
+     "athlete_id": "5106058",
+     "name": "Emanuel Sharp",
+     "role": "rotation",
+     "mpg": 18.1,
+     "ppg": 4.6,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4066262",
+     "name": "Malik Monk",
+     "role": "rotation",
+     "mpg": 14.1,
+     "ppg": 7.8,
+     "impact": 0.67,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4395650",
+     "name": "Leaky Black",
+     "role": "rotation",
+     "mpg": 12.1,
+     "ppg": 5.8,
+     "impact": 0.93,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.55,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 4,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [],
+   "uncertain": [
+    "Precious Achiuwa (Day-To-Day)"
+   ],
+   "injury_margin_loss": 0.57
+  },
+  "core_games_sampled": 11
+ },
+ "away": {
+  "id": "22",
+  "abbr": "POR",
+  "name": "Portland Trail Blazers",
+  "nickname": "Trail Blazers",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "POR",
+   "wins": 8,
+   "losses": 3,
+   "gp": 11,
+   "diff_pg": 7.27,
+   "streak": "W2",
+   "last10": "7-3",
+   "home_record": "3-2",
+   "road_record": "5-1",
+   "seed": 5,
+   "conference": "West"
+  },
+  "form": {
+   "games": 4,
+   "wins": 2,
+   "losses": 2,
+   "avg_margin": 0.5,
+   "results": [
+    {
+     "date": "2026-11-12T03:00:00+00:00",
+     "opp": "OKC",
+     "home": true,
+     "score": "118-108",
+     "won": true
+    },
+    {
+     "date": "2026-11-11T04:00:00+00:00",
+     "opp": "OKC",
+     "home": true,
+     "score": "123-103",
+     "won": true
+    },
+    {
+     "date": "2026-11-08T03:00:00+00:00",
+     "opp": "SA",
+     "home": true,
+     "score": "103-125",
+     "won": false
+    },
+    {
+     "date": "2026-11-07T03:00:00+00:00",
+     "opp": "LAL",
+     "home": false,
+     "score": "118-124",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4683021",
+     "name": "Deni Avdija",
+     "role": "starter",
+     "mpg": 32.5,
+     "ppg": 23.0,
+     "impact": 4.52,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "6606",
+     "name": "Damian Lillard",
+     "role": "starter",
+     "mpg": 29.2,
+     "ppg": 19.8,
+     "impact": 3.5,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4431736",
+     "name": "Toumani Camara",
+     "role": "starter",
+     "mpg": 28.5,
+     "ppg": 13.1,
+     "impact": 1.5,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5105565",
+     "name": "Donovan Clingan",
+     "role": "starter",
+     "mpg": 25.4,
+     "ppg": 10.8,
+     "impact": 2.77,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4683678",
+     "name": "Scoot Henderson",
+     "role": "starter",
+     "mpg": 22.2,
+     "ppg": 8.4,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3995",
+     "name": "Jrue Holiday",
+     "role": "rotation",
+     "mpg": 26.2,
+     "ppg": 13.4,
+     "impact": 2.59,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5081727",
+     "name": "Sidy Cissoko",
+     "role": "rotation",
+     "mpg": 22.9,
+     "ppg": 8.3,
+     "impact": 0.99,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4066211",
+     "name": "Robert Williams III",
+     "role": "rotation",
+     "mpg": 13.4,
+     "ppg": 7.6,
+     "impact": 2.37,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.82,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": true,
+   "missing": [],
+   "uncertain": [],
+   "injury_margin_loss": 0.0
+  },
+  "core_games_sampled": 11
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.20840365733742314,
+  "p_home_open": 0.1826900495365844,
+  "home_ml": 361,
+  "away_ml": -468,
+  "home_ml_open": 426,
+  "away_ml_open": -569,
+  "home_spread": 10.5,
+  "total": 229.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13PORSAC",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13PORSAC-SAC",
+   "bid": 0.19,
+   "ask": 0.2,
+   "last": 0.2,
+   "mid": 0.195,
+   "spread": 0.01,
+   "volume": 22184.98,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13PORSAC-POR",
+   "bid": 0.8,
+   "ask": 0.81,
+   "last": 0.81,
+   "mid": 0.805,
+   "spread": 0.01,
+   "volume": 71169.18,
+   "status": "active"
+  },
+  "p_home": 0.195,
+  "illiquid": false,
+  "volume": 93354.15999999999
+ },
+ "model": {
+  "p_home_stats": 0.2695,
+  "expected_home_margin": -7.4,
+  "components": {
+   "season_rating_edge": -10.48,
+   "home_court": 2.0,
+   "form_edge": 1.68,
+   "rest_edge": 0.0,
+   "injury_edge": -0.57
+  },
+  "p_home_final": 0.2256,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "away",
+  "team": "POR",
+  "prob": 0.7744
+ },
+ "edges": {
+  "home": 0.0056,
+  "away": -0.0556
+ },
+ "best_value": null,
+ "flags": [
+  "POR full strength (all 5 regular starters + rotation available)",
+  "SAC questionable: Precious Achiuwa (Day-To-Day)",
+  "SAC on a 4-game losing streak"
+ ]
+}

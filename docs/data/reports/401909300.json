@@ -1,0 +1,442 @@
+{
+ "event_id": "401909300",
+ "generated_at": "2026-11-13T21:28:17+00:00",
+ "preview": true,
+ "tip": "2026-11-14T01:00:00+00:00",
+ "tip_et": "Fri Nov 13, 8:00 PM ET",
+ "home": {
+  "id": "3",
+  "abbr": "NO",
+  "name": "New Orleans Pelicans",
+  "nickname": "Pelicans",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "NO",
+   "wins": 4,
+   "losses": 8,
+   "gp": 12,
+   "diff_pg": -7.33,
+   "streak": "L4",
+   "last10": "4-6",
+   "home_record": "3-4",
+   "road_record": "1-4",
+   "seed": 12,
+   "conference": "West"
+  },
+  "form": {
+   "games": 4,
+   "wins": 0,
+   "losses": 4,
+   "avg_margin": -26.8,
+   "results": [
+    {
+     "date": "2026-11-12T01:00:00+00:00",
+     "opp": "BKN",
+     "home": true,
+     "score": "111-145",
+     "won": false
+    },
+    {
+     "date": "2026-11-10T03:00:00+00:00",
+     "opp": "GS",
+     "home": false,
+     "score": "87-138",
+     "won": false
+    },
+    {
+     "date": "2026-11-09T02:00:00+00:00",
+     "opp": "LAC",
+     "home": false,
+     "score": "123-139",
+     "won": false
+    },
+    {
+     "date": "2026-11-07T01:00:00+00:00",
+     "opp": "MIN",
+     "home": true,
+     "score": "109-115",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "5144091",
+     "name": "Jeremiah Fears",
+     "role": "starter",
+     "mpg": 28.8,
+     "ppg": 15.2,
+     "impact": 1.9,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4395628",
+     "name": "Zion Williamson",
+     "role": "starter",
+     "mpg": 30.1,
+     "ppg": 21.7,
+     "impact": 4.88,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397688",
+     "name": "Trey Murphy III",
+     "role": "starter",
+     "mpg": 24.6,
+     "ppg": 15.6,
+     "impact": 2.34,
+     "status": "Out",
+     "detail": "Knee Tendinitis",
+     "comment": "Murphy (knee) is out for Friday's game against Memphis.",
+     "miss_prob": 1.0,
+     "played_share": 0.75,
+     "expected_loss": 1.75
+    },
+    {
+     "athlete_id": "3907497",
+     "name": "Dejounte Murray",
+     "role": "starter",
+     "mpg": 23.6,
+     "ppg": 13.4,
+     "impact": 1.82,
+     "status": "Out",
+     "detail": "Ankle",
+     "comment": "Murray (ankle) is out for Friday's game against Memphis.",
+     "miss_prob": 1.0,
+     "played_share": 0.75,
+     "expected_loss": 1.36
+    },
+    {
+     "athlete_id": "4997538",
+     "name": "Karlo Matkovic",
+     "role": "starter",
+     "mpg": 17.2,
+     "ppg": 8.5,
+     "impact": 1.25,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397136",
+     "name": "Saddiq Bey",
+     "role": "rotation",
+     "mpg": 26.8,
+     "ppg": 15.4,
+     "impact": 2.63,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4277813",
+     "name": "Herbert Jones",
+     "role": "rotation",
+     "mpg": 22.9,
+     "ppg": 5.7,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4869780",
+     "name": "Derik Queen",
+     "role": "rotation",
+     "mpg": 21.6,
+     "ppg": 12.2,
+     "impact": 2.29,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 3,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [
+    "Trey Murphy III",
+    "Dejounte Murray"
+   ],
+   "uncertain": [],
+   "injury_margin_loss": 3.11
+  },
+  "core_games_sampled": 12
+ },
+ "away": {
+  "id": "29",
+  "abbr": "MEM",
+  "name": "Memphis Grizzlies",
+  "nickname": "Grizzlies",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "MEM",
+   "wins": 7,
+   "losses": 4,
+   "gp": 11,
+   "diff_pg": 6.0,
+   "streak": "L1",
+   "last10": "6-4",
+   "home_record": "2-4",
+   "road_record": "5-0",
+   "seed": 8,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 1,
+   "losses": 2,
+   "avg_margin": -6.7,
+   "results": [
+    {
+     "date": "2026-11-12T01:00:00+00:00",
+     "opp": "DEN",
+     "home": true,
+     "score": "118-123",
+     "won": false
+    },
+    {
+     "date": "2026-11-10T00:30:00+00:00",
+     "opp": "TOR",
+     "home": false,
+     "score": "118-102",
+     "won": true
+    },
+    {
+     "date": "2026-11-07T01:00:00+00:00",
+     "opp": "OKC",
+     "home": true,
+     "score": "97-128",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "5041935",
+     "name": "Cameron Boozer",
+     "role": "starter",
+     "mpg": 32.2,
+     "ppg": 15.9,
+     "impact": 2.34,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5112087",
+     "name": "Jaylen Wells",
+     "role": "starter",
+     "mpg": 27.3,
+     "ppg": 12.0,
+     "impact": 1.39,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4065733",
+     "name": "Ty Jerome",
+     "role": "starter",
+     "mpg": 28.0,
+     "ppg": 26.2,
+     "impact": 5.25,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4903027",
+     "name": "Cedric Coward",
+     "role": "starter",
+     "mpg": 25.7,
+     "ppg": 12.8,
+     "impact": 2.2,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4600663",
+     "name": "Zach Edey",
+     "role": "starter",
+     "mpg": 18.9,
+     "ppg": 7.6,
+     "impact": 1.23,
+     "status": "Out",
+     "detail": "Ankle",
+     "comment": "Edey won't play in Friday's game against the Pelicans due to left ankle injury management.",
+     "miss_prob": 1.0,
+     "played_share": 0.91,
+     "expected_loss": 1.12
+    },
+    {
+     "athlete_id": "2991070",
+     "name": "Jerami Grant",
+     "role": "rotation",
+     "mpg": 23.5,
+     "ppg": 10.7,
+     "impact": 1.2,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4433083",
+     "name": "Cam Spencer",
+     "role": "rotation",
+     "mpg": 19.5,
+     "ppg": 9.3,
+     "impact": 2.41,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5105550",
+     "name": "GG Jackson",
+     "role": "rotation",
+     "mpg": 14.1,
+     "ppg": 6.3,
+     "impact": 0.05,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.91,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 4,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [
+    "Zach Edey"
+   ],
+   "uncertain": [],
+   "injury_margin_loss": 1.12
+  },
+  "core_games_sampled": 11
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.4066302458405761,
+  "p_home_open": 0.4383491878717329,
+  "home_ml": 136,
+  "away_ml": -162,
+  "home_ml_open": 119,
+  "away_ml_open": -141,
+  "home_spread": 3.5,
+  "total": 235.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13MEMNOP",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13MEMNOP-NOP",
+   "bid": 0.39,
+   "ask": 0.41,
+   "last": 0.41,
+   "mid": 0.4,
+   "spread": 0.02,
+   "volume": 105979.25,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13MEMNOP-MEM",
+   "bid": 0.59,
+   "ask": 0.6,
+   "last": 0.6,
+   "mid": 0.595,
+   "spread": 0.01,
+   "volume": 169411.73,
+   "status": "active"
+  },
+  "p_home": 0.4025,
+  "illiquid": false,
+  "volume": 275390.98
+ },
+ "model": {
+  "p_home_stats": 0.2377,
+  "expected_home_margin": -8.6,
+  "components": {
+   "season_rating_edge": -7.14,
+   "home_court": 2.0,
+   "form_edge": -1.43,
+   "rest_edge": 0.0,
+   "injury_edge": -1.99
+  },
+  "p_home_final": 0.3511,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "away",
+  "team": "MEM",
+  "prob": 0.6489
+ },
+ "edges": {
+  "home": -0.0789,
+  "away": 0.0289
+ },
+ "best_value": null,
+ "flags": [
+  "MEM without: Zach Edey",
+  "NO without: Trey Murphy III, Dejounte Murray",
+  "NO on a 4-game losing streak",
+  "Stats model (24%) and Vegas (41%) disagree on P(home)"
+ ]
+}

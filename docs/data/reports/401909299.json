@@ -1,0 +1,422 @@
+{
+ "event_id": "401909299",
+ "generated_at": "2026-11-13T21:28:16+00:00",
+ "preview": true,
+ "tip": "2026-11-14T01:00:00+00:00",
+ "tip_et": "Fri Nov 13, 8:00 PM ET",
+ "home": {
+  "id": "4",
+  "abbr": "CHI",
+  "name": "Chicago Bulls",
+  "nickname": "Bulls",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "CHI",
+   "wins": 1,
+   "losses": 9,
+   "gp": 10,
+   "diff_pg": -15.5,
+   "streak": "L8",
+   "last10": "1-9",
+   "home_record": "0-4",
+   "road_record": "1-5",
+   "seed": 14,
+   "conference": "East"
+  },
+  "form": {
+   "games": 2,
+   "wins": 0,
+   "losses": 2,
+   "avg_margin": -5.5,
+   "results": [
+    {
+     "date": "2026-11-12T01:00:00+00:00",
+     "opp": "SA",
+     "home": true,
+     "score": "119-124",
+     "won": false
+    },
+    {
+     "date": "2026-11-08T20:30:00+00:00",
+     "opp": "PHI",
+     "home": true,
+     "score": "121-127",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "5095151",
+     "name": "Caleb Wilson",
+     "role": "starter",
+     "mpg": 30.7,
+     "ppg": 18.9,
+     "impact": 2.54,
+     "status": "Out",
+     "detail": "Hand",
+     "comment": "Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.",
+     "miss_prob": 1.0,
+     "played_share": 1.0,
+     "expected_loss": 2.54
+    },
+    {
+     "athlete_id": "4871145",
+     "name": "Josh Giddey",
+     "role": "starter",
+     "mpg": 27.7,
+     "ppg": 10.2,
+     "impact": 1.52,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4711294",
+     "name": "Matas Buzelis",
+     "role": "starter",
+     "mpg": 26.3,
+     "ppg": 13.5,
+     "impact": 1.14,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397189",
+     "name": "Jalen Smith",
+     "role": "starter",
+     "mpg": 23.9,
+     "ppg": 12.8,
+     "impact": 2.83,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2595516",
+     "name": "Norman Powell",
+     "role": "starter",
+     "mpg": 23.1,
+     "ppg": 19.2,
+     "impact": 2.75,
+     "status": "Day-To-Day",
+     "detail": "Shoulder Inflammation",
+     "comment": "Powell (shoulder) is questionable for Friday's game against the Hawks.",
+     "miss_prob": 0.35,
+     "played_share": 0.8,
+     "expected_loss": 0.77
+    },
+    {
+     "athlete_id": "4432822",
+     "name": "Isaac Okoro",
+     "role": "rotation",
+     "mpg": 19.1,
+     "ppg": 5.2,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4395626",
+     "name": "Tre Jones",
+     "role": "rotation",
+     "mpg": 18.7,
+     "ppg": 10.6,
+     "impact": 2.31,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5044385",
+     "name": "Leonard Miller",
+     "role": "rotation",
+     "mpg": 14.3,
+     "ppg": 6.3,
+     "impact": 0.45,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.9,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 3,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [
+    "Caleb Wilson"
+   ],
+   "uncertain": [
+    "Norman Powell (Day-To-Day)"
+   ],
+   "injury_margin_loss": 3.31
+  },
+  "core_games_sampled": 10
+ },
+ "away": {
+  "id": "1",
+  "abbr": "ATL",
+  "name": "Atlanta Hawks",
+  "nickname": "Hawks",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "ATL",
+   "wins": 7,
+   "losses": 5,
+   "gp": 12,
+   "diff_pg": 2.08,
+   "streak": "L1",
+   "last10": "5-5",
+   "home_record": "3-3",
+   "road_record": "4-2",
+   "seed": 4,
+   "conference": "East"
+  },
+  "form": {
+   "games": 2,
+   "wins": 1,
+   "losses": 1,
+   "avg_margin": -3.5,
+   "results": [
+    {
+     "date": "2026-11-10T00:00:00+00:00",
+     "opp": "LAL",
+     "home": true,
+     "score": "114-124",
+     "won": false
+    },
+    {
+     "date": "2026-11-08T00:30:00+00:00",
+     "opp": "BKN",
+     "home": true,
+     "score": "124-121",
+     "won": true
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 3
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4278039",
+     "name": "Nickeil Alexander-Walker",
+     "role": "starter",
+     "mpg": 30.9,
+     "ppg": 21.9,
+     "impact": 3.37,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4869342",
+     "name": "Dyson Daniels",
+     "role": "starter",
+     "mpg": 30.3,
+     "ppg": 9.8,
+     "impact": 3.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4431680",
+     "name": "Onyeka Okongwu",
+     "role": "starter",
+     "mpg": 29.6,
+     "ppg": 13.7,
+     "impact": 2.77,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4701230",
+     "name": "Jalen Johnson",
+     "role": "starter",
+     "mpg": 25.2,
+     "ppg": 19.2,
+     "impact": 3.68,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.75,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2490149",
+     "name": "CJ McCollum",
+     "role": "starter",
+     "mpg": 25.6,
+     "ppg": 13.6,
+     "impact": 1.63,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397183",
+     "name": "Aaron Wiggins",
+     "role": "rotation",
+     "mpg": 26.0,
+     "ppg": 14.9,
+     "impact": 2.18,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397020",
+     "name": "Luguentz Dort",
+     "role": "rotation",
+     "mpg": 24.8,
+     "ppg": 9.3,
+     "impact": 0.52,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5149077",
+     "name": "Kingston Flemings",
+     "role": "rotation",
+     "mpg": 20.1,
+     "ppg": 8.5,
+     "impact": 1.05,
+     "status": "Day-To-Day",
+     "detail": "Back",
+     "comment": "Flemings (back) is questionable for Friday's game against the Bulls.",
+     "miss_prob": 0.35,
+     "played_share": 0.92,
+     "expected_loss": 0.34
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": false,
+   "missing": [],
+   "uncertain": [
+    "Kingston Flemings (Day-To-Day)"
+   ],
+   "injury_margin_loss": 0.34
+  },
+  "core_games_sampled": 12
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.2938906602015918,
+  "p_home_open": 0.3039997320112555,
+  "home_ml": 227,
+  "away_ml": -277,
+  "home_ml_open": 216,
+  "away_ml_open": -263,
+  "home_spread": 7.5,
+  "total": 245.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13ATLCHI",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13ATLCHI-CHI",
+   "bid": 0.29,
+   "ask": 0.3,
+   "last": 0.3,
+   "mid": 0.295,
+   "spread": 0.01,
+   "volume": 123857.0,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13ATLCHI-ATL",
+   "bid": 0.7,
+   "ask": 0.71,
+   "last": 0.71,
+   "mid": 0.705,
+   "spread": 0.01,
+   "volume": 129641.07,
+   "status": "active"
+  },
+  "p_home": 0.295,
+  "illiquid": false,
+  "volume": 253498.07
+ },
+ "model": {
+  "p_home_stats": 0.2529,
+  "expected_home_margin": -8.0,
+  "components": {
+   "season_rating_edge": -8.88,
+   "home_court": 2.0,
+   "form_edge": 1.87,
+   "rest_edge": 0.0,
+   "injury_edge": -2.97
+  },
+  "p_home_final": 0.2812,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "away",
+  "team": "ATL",
+  "prob": 0.7188
+ },
+ "edges": {
+  "home": -0.0388,
+  "away": -0.0112
+ },
+ "best_value": null,
+ "flags": [
+  "ATL questionable: Kingston Flemings (Day-To-Day)",
+  "CHI without: Caleb Wilson",
+  "CHI questionable: Norman Powell (Day-To-Day)",
+  "CHI on a 8-game losing streak"
+ ]
+}

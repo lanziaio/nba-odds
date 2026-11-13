@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NBA Win Odds</title>
+<style>
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --ink: #14161a; --muted: #5f6672; --line: #e3e6eb;
+  --home: #2f6fdb; --away: #d9534f; --good: #1f8a4c; --warn: #b7791f; --bad: #c0392b;
+  --chip: #eef1f5; --bar: #e9ecf1;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1115; --card: #171a21; --ink: #e8eaee; --muted: #9aa3b2; --line: #272c36;
+          --home: #5b8ff0; --away: #ef6f6a; --good: #3fbf74; --warn: #e0a43a; --bad: #ef5b4c;
+          --chip: #222733; --bar: #232834; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+header h1 { margin: 0; font-size: 22px; }
+header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; margin-top: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+.teams { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.team { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.team img { width: 28px; height: 28px; }
+.tip { color: var(--muted); font-size: 12px; text-align: center; }
+.bar { position: relative; height: 12px; border-radius: 6px; background: var(--bar); margin: 14px 0 4px; overflow: visible; }
+.bar .fill-away { position: absolute; left: 0; top: 0; bottom: 0; background: var(--away); border-radius: 6px 0 0 6px; }
+.bar .fill-home { position: absolute; right: 0; top: 0; bottom: 0; background: var(--home); border-radius: 0 6px 6px 0; }
+.bar .mark { position: absolute; top: -4px; width: 2px; height: 20px; background: var(--ink); }
+.bar .mark.k { background: var(--warn); }
+.probs { display: flex; justify-content: space-between; font-weight: 700; font-size: 20px; }
+.legend { font-size: 11px; color: var(--muted); display: flex; gap: 10px; justify-content: center; }
+.legend i { display: inline-block; width: 8px; height: 8px; margin-right: 4px; vertical-align: middle; }
+table.src { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+table.src td { padding: 3px 0; border-bottom: 1px solid var(--line); }
+table.src td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.value { border-radius: 10px; padding: 8px 10px; margin: 8px 0; font-size: 13px; background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); font-weight: 600; }
+.section-title { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 12px 0 6px; }
+.roster { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.roster > div { min-width: 0; }
+.roster h4 { margin: 0 0 4px; font-size: 13px; }
+.p { display: flex; justify-content: space-between; gap: 6px; font-size: 12px; padding: 2px 0; }
+.p .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.p .s { font-size: 11px; padding: 0 6px; border-radius: 8px; background: var(--chip); white-space: nowrap; }
+.s.ok { color: var(--good); } .s.q { color: var(--warn); } .s.out { color: var(--bad); font-weight: 700; }
+.p.bench .n { color: var(--muted); }
+.form { font-size: 12px; color: var(--muted); }
+.form b { color: var(--ink); }
+.w { color: var(--good); font-weight: 700; } .l { color: var(--bad); font-weight: 700; }
+ul.flags { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); }
+.pending { color: var(--muted); font-size: 13px; padding: 18px 0 6px; text-align: center; }
+.badge { font-size: 11px; padding: 1px 7px; border-radius: 8px; background: var(--chip); color: var(--muted); }
+.record { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 14px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.stat .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.stat .v { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat .d { font-size: 12px; color: var(--muted); }
+details { margin-top: 8px; font-size: 12px; color: var(--muted); }
+footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
+@media (max-width: 420px) { .roster { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>NBA Win Odds</h1>
+    <p id="meta">Loading…</p>
+  </header>
+  <div class="record" id="record"></div>
+  <div class="grid" id="games"></div>
+  <footer>
+    Model = 70% de-vigged Vegas line + 30% stats model (season point differential, home court, last-7-days form,
+    back-to-backs, injuries to regular starters and rotation). "Value" = expected profit buying the Kalshi YES at the
+    current ask, after Kalshi's fee, of at least 3¢ per $1 contract. Informational only: track the record before risking money.
+  </footer>
+</main>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = p => p == null ? "–" : Math.round(p * 100) + "%";
+const ml = v => v == null ? "–" : (v > 0 ? "+" + v : v);
+const et = iso => new Date(iso).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: "America/New_York"}) + " ET";
+const bust = () => "?t=" + Date.now();
+
+function statusClass(r) { return r.miss_prob >= 0.85 ? "out" : r.miss_prob > 0 ? "q" : "ok"; }
+
+function roster(t) {
+  const a = t.availability;
+  const rows = a.players.map(r => `
+    <div class="p ${r.role === "rotation" ? "bench" : ""}" title="${esc(r.comment || "")}">
+      <span class="n">${r.role === "starter" ? "" : "· "}${esc(r.name)} <span style="color:var(--muted)">${r.mpg}m</span></span>
+      <span class="s ${statusClass(r)}">${esc(r.status)}</span>
+    </div>`).join("");
+  return `<div><h4>${esc(t.abbr)} · starters ${a.starters_available}/${a.starters_total}</h4>${rows}</div>`;
+}
+
+function form(t) {
+  const f = t.form, s = t.standing || {};
+  const seq = f.results.slice().reverse().map(r => `<span class="${r.won ? "w" : "l"}">${r.won ? "W" : "L"}</span>`).join(" ");
+  return `<div class="form"><b>${esc(t.abbr)}</b> ${s.wins ?? 0}-${s.losses ?? 0} · streak <b>${esc(s.streak || "–")}</b>
+    · last 7d ${seq || "no games"}${f.avg_margin != null ? ` (${f.avg_margin > 0 ? "+" : ""}${f.avg_margin})` : ""}
+    ${f.back_to_back ? ' · <b style="color:var(--warn)">back-to-back</b>' : ""}</div>`;
+}
+
+function card(g, r) {
+  const head = `
+    <div class="teams">
+      <div class="team"><img src="${esc(g.away.logo)}" alt="">${esc(g.away.abbr)}${g.away.score != null ? " " + g.away.score : ""}</div>
+      <div class="tip">${et(g.tip)}<br>${g.state === "post" ? "Final" : g.state === "in" ? "Live" : ""}</div>
+      <div class="team">${g.home.score != null ? g.home.score + " " : ""}${esc(g.home.abbr)}<img src="${esc(g.home.logo)}" alt=""></div>
+    </div>`;
+  if (!r) {
+    return `<div class="card">${head}<div class="pending">Analysis runs about 1 hour before tip-off (${et(g.report_at)}).</div></div>`;
+  }
+  const p = r.model.p_home_final, k = r.kalshi, m = r.market;
+  const marks = [m.p_home != null ? `<div class="mark" style="left:${(1 - m.p_home) * 100}%" title="Vegas"></div>` : "",
+                 k && k.p_home != null ? `<div class="mark k" style="left:${(1 - k.p_home) * 100}%" title="Kalshi"></div>` : ""].join("");
+  const bv = r.best_value;
+  return `<div class="card">${head}
+    <div class="bar"><div class="fill-away" style="width:${(1 - p) * 100}%"></div><div class="fill-home" style="width:${p * 100}%"></div>${marks}</div>
+    <div class="probs"><span style="color:var(--away)">${pct(1 - p)}</span><span style="color:var(--home)">${pct(p)}</span></div>
+    <div class="legend"><span><i style="background:var(--ink)"></i>Vegas</span><span><i style="background:var(--warn)"></i>Kalshi</span>
+      ${r.preview ? '<span class="badge">preview</span>' : ""}</div>
+    <table class="src">
+      <tr><td></td><td>${esc(g.away.abbr)}</td><td>${esc(g.home.abbr)}</td></tr>
+      <tr><td>Model (final)</td><td>${pct(1 - p)}</td><td>${pct(p)}</td></tr>
+      <tr><td>Vegas (no-vig)</td><td>${pct(m.p_home == null ? null : 1 - m.p_home)} <small>${ml(m.away_ml)}</small></td><td>${pct(m.p_home)} <small>${ml(m.home_ml)}</small></td></tr>
+      <tr><td>Kalshi</td><td>${k ? pct(1 - k.p_home) + ` <small>ask ${k.away.ask ?? "–"}</small>` : "–"}</td><td>${k ? pct(k.p_home) + ` <small>ask ${k.home.ask ?? "–"}</small>` : "–"}</td></tr>
+      <tr><td>Stats only</td><td>${pct(1 - r.model.p_home_stats)}</td><td>${pct(r.model.p_home_stats)}</td></tr>
+    </table>
+    ${bv ? `<div class="value">Value: ${esc(bv.team)} YES at ${bv.ask.toFixed(2)} → ${(bv.edge * 100).toFixed(1)}¢ edge per $1 after fees</div>` : ""}
+    <div class="section-title">Starters & rotation</div>
+    <div class="roster">${roster(r.away)}${roster(r.home)}</div>
+    <div class="section-title">Form</div>
+    ${form(r.away)}${form(r.home)}
+    ${r.flags.length ? `<ul class="flags">${r.flags.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+    <details><summary>How the model got there</summary>
+      Expected margin ${esc(g.home.abbr)} ${r.model.expected_home_margin > 0 ? "+" : ""}${r.model.expected_home_margin} ·
+      ${Object.entries(r.model.components).map(([k, v]) => `${esc(k.replace(/_/g, " "))} ${v > 0 ? "+" : ""}${v}`).join(" · ")}<br>
+      Market: ${esc(m.source || "none")}${m.p_home_open != null ? ` · opened ${pct(m.p_home_open)} ${esc(g.home.abbr)}` : ""}<br>
+      Report generated ${new Date(r.generated_at).toLocaleString()}
+    </details>
+  </div>`;
+}
+
+function record(tr) {
+  if (!tr || !tr.games) return `<div class="stat"><div class="k">Track record</div><div class="v">–</div><div class="d">Fills in as games finish</div></div>`;
+  const s = (label, x) => `<div class="stat"><div class="k">${label}</div><div class="v">${x.accuracy == null ? "–" : Math.round(x.accuracy * 100) + "%"}</div>
+    <div class="d">Brier ${x.brier ?? "–"} · n=${x.n}</div></div>`;
+  const vb = tr.value_bets;
+  return s("Model", tr.model) + s("Vegas", tr.vegas) + s("Kalshi", tr.kalshi) + s("Stats only", tr.stats_only) +
+    `<div class="stat"><div class="k">Value picks</div><div class="v">${vb.pnl_per_contract >= 0 ? "+" : ""}$${vb.pnl_per_contract}</div><div class="d">${vb.n} picks, $1 contracts</div></div>`;
+}
+
+async function load() {
+  try {
+    const idx = await (await fetch("data/index.json" + bust())).json();
+    document.getElementById("meta").textContent =
+      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${new Date(idx.generated_at).toLocaleString()} · lower Brier = better calibrated`;
+    document.getElementById("record").innerHTML = record(idx.track_record);
+    const cards = await Promise.all(idx.slate.map(async g => {
+      let r = null;
+      if (g.has_report) {
+        try { r = await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) {}
+      }
+      return card(g, r);
+    }));
+    document.getElementById("games").innerHTML = cards.join("") || '<div class="pending">No NBA games today.</div>';
+  } catch (e) {
+    document.getElementById("meta").textContent = "Could not load data yet. The first scheduled run creates it.";
+  }
+}
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>

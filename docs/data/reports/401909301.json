@@ -1,0 +1,433 @@
+{
+ "event_id": "401909301",
+ "generated_at": "2026-11-13T21:28:17+00:00",
+ "preview": true,
+ "tip": "2026-11-14T01:30:00+00:00",
+ "tip_et": "Fri Nov 13, 8:30 PM ET",
+ "home": {
+  "id": "10",
+  "abbr": "HOU",
+  "name": "Houston Rockets",
+  "nickname": "Rockets",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "HOU",
+   "wins": 9,
+   "losses": 3,
+   "gp": 12,
+   "diff_pg": 8.92,
+   "streak": "W2",
+   "last10": "7-3",
+   "home_record": "6-1",
+   "road_record": "3-2",
+   "seed": 4,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 2,
+   "losses": 1,
+   "avg_margin": 4.7,
+   "results": [
+    {
+     "date": "2026-11-12T02:30:00+00:00",
+     "opp": "GS",
+     "home": true,
+     "score": "115-108",
+     "won": true
+    },
+    {
+     "date": "2026-11-10T01:30:00+00:00",
+     "opp": "DEN",
+     "home": true,
+     "score": "110-100",
+     "won": true
+    },
+    {
+     "date": "2026-11-08T02:00:00+00:00",
+     "opp": "PHX",
+     "home": false,
+     "score": "99-102",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4432639",
+     "name": "Jabari Smith Jr.",
+     "role": "starter",
+     "mpg": 35.2,
+     "ppg": 16.8,
+     "impact": 2.95,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3202",
+     "name": "Kevin Durant",
+     "role": "starter",
+     "mpg": 34.3,
+     "ppg": 20.9,
+     "impact": 3.52,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4684740",
+     "name": "Amen Thompson",
+     "role": "starter",
+     "mpg": 33.0,
+     "ppg": 15.2,
+     "impact": 2.83,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4871144",
+     "name": "Alperen Sengun",
+     "role": "starter",
+     "mpg": 29.2,
+     "ppg": 21.1,
+     "impact": 5.18,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2991230",
+     "name": "Fred VanVleet",
+     "role": "starter",
+     "mpg": 25.1,
+     "ppg": 13.7,
+     "impact": 2.44,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4433192",
+     "name": "Tari Eason",
+     "role": "rotation",
+     "mpg": 23.8,
+     "ppg": 9.3,
+     "impact": 1.19,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2990992",
+     "name": "Marcus Smart",
+     "role": "rotation",
+     "mpg": 16.0,
+     "ppg": 8.3,
+     "impact": 0.6,
+     "status": "Suspension",
+     "detail": "Suspension",
+     "comment": "Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports.",
+     "miss_prob": 1.0,
+     "played_share": 0.75,
+     "expected_loss": 0.45
+    },
+    {
+     "athlete_id": "4711272",
+     "name": "Reed Sheppard",
+     "role": "rotation",
+     "mpg": 14.6,
+     "ppg": 10.1,
+     "impact": 1.31,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.75,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": false,
+   "missing": [
+    "Marcus Smart"
+   ],
+   "uncertain": [],
+   "injury_margin_loss": 0.45
+  },
+  "core_games_sampled": 12
+ },
+ "away": {
+  "id": "26",
+  "abbr": "UTAH",
+  "name": "Utah Jazz",
+  "nickname": "Jazz",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "UTAH",
+   "wins": 1,
+   "losses": 11,
+   "gp": 12,
+   "diff_pg": -11.5,
+   "streak": "L10",
+   "last10": "0-10",
+   "home_record": "1-6",
+   "road_record": "0-5",
+   "seed": 15,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 0,
+   "losses": 3,
+   "avg_margin": -12.0,
+   "results": [
+    {
+     "date": "2026-11-12T02:00:00+00:00",
+     "opp": "ORL",
+     "home": true,
+     "score": "108-123",
+     "won": false
+    },
+    {
+     "date": "2026-11-11T02:00:00+00:00",
+     "opp": "MIA",
+     "home": true,
+     "score": "109-115",
+     "won": false
+    },
+    {
+     "date": "2026-11-09T00:00:00+00:00",
+     "opp": "MIN",
+     "home": false,
+     "score": "100-115",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "5041955",
+     "name": "Darryn Peterson",
+     "role": "starter",
+     "mpg": 30.9,
+     "ppg": 16.2,
+     "impact": 2.15,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4873138",
+     "name": "Ace Bailey",
+     "role": "starter",
+     "mpg": 31.0,
+     "ppg": 13.3,
+     "impact": 1.47,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4433627",
+     "name": "Keyonte George",
+     "role": "starter",
+     "mpg": 29.5,
+     "ppg": 20.4,
+     "impact": 3.05,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397077",
+     "name": "Jaxson Hayes",
+     "role": "starter",
+     "mpg": 22.9,
+     "ppg": 8.5,
+     "impact": 1.57,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4066336",
+     "name": "Lauri Markkanen",
+     "role": "starter",
+     "mpg": 20.6,
+     "ppg": 18.0,
+     "impact": 2.63,
+     "status": "Out",
+     "detail": "Hand Fracture",
+     "comment": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.",
+     "miss_prob": 1.0,
+     "played_share": 0.67,
+     "expected_loss": 1.76
+    },
+    {
+     "athlete_id": "4065663",
+     "name": "Josh Okogie",
+     "role": "rotation",
+     "mpg": 16.9,
+     "ppg": 4.0,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4432811",
+     "name": "Josh Green",
+     "role": "rotation",
+     "mpg": 16.7,
+     "ppg": 3.6,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3133602",
+     "name": "Svi Mykhailiuk",
+     "role": "rotation",
+     "mpg": 16.0,
+     "ppg": 3.6,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 4,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [
+    "Lauri Markkanen"
+   ],
+   "uncertain": [],
+   "injury_margin_loss": 1.76
+  },
+  "core_games_sampled": 12
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.8856325947105075,
+  "p_home_open": 0.9038901601830663,
+  "home_ml": -1180,
+  "away_ml": 740,
+  "home_ml_open": -1580,
+  "away_ml_open": 900,
+  "home_spread": -15.5,
+  "total": 220.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV13UTAHOU",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV13UTAHOU-HOU",
+   "bid": 0.9,
+   "ask": 0.91,
+   "last": 0.91,
+   "mid": 0.905,
+   "spread": 0.01,
+   "volume": 125659.04,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV13UTAHOU-UTA",
+   "bid": 0.09,
+   "ask": 0.1,
+   "last": 0.1,
+   "mid": 0.095,
+   "spread": 0.01,
+   "volume": 128728.77,
+   "status": "active"
+  },
+  "p_home": 0.905,
+  "illiquid": false,
+  "volume": 254387.81
+ },
+ "model": {
+  "p_home_stats": 0.8765,
+  "expected_home_margin": 13.9,
+  "components": {
+   "season_rating_edge": 11.14,
+   "home_court": 2.0,
+   "form_edge": -0.56,
+   "rest_edge": 0.0,
+   "injury_edge": 1.31
+  },
+  "p_home_final": 0.8829,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "home",
+  "team": "HOU",
+  "prob": 0.8829
+ },
+ "edges": {
+  "home": -0.0371,
+  "away": 0.0071
+ },
+ "best_value": null,
+ "flags": [
+  "UTAH without: Lauri Markkanen",
+  "UTAH on a 10-game losing streak",
+  "HOU without: Marcus Smart"
+ ]
+}
