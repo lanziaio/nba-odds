@@ -111,10 +111,14 @@ def settle(history: list[dict], now: datetime) -> int:
 
 def write_index(games: list[dict], history: list[dict], now: datetime, meta: dict) -> None:
     by_id = {h["event_id"]: h for h in history}
+    prev_odds = {s["event_id"]: s.get("odds") for s in _load(DATA / "index.json", {}).get("slate", [])}
     slate = []
     for g in sorted(games, key=lambda g: g["tip"]):
         h = by_id.get(g["event_id"])
+        # Keep the last PRE-game line once a game starts (ESPN switches to live odds or drops them).
+        odds = g.get("odds") if g["state"] == "pre" else (prev_odds.get(g["event_id"]) or g.get("odds"))
         slate.append({
+            "odds": odds,
             "event_id": g["event_id"], "tip": g["tip"], "state": g["state"], "status": g["status"],
             "home": {**{k: g["home"][k] for k in ("abbr", "name", "logo")}, "score": g["home"]["score"] if g["state"] == "post" else None},
             "away": {**{k: g["away"][k] for k in ("abbr", "name", "logo")}, "score": g["away"]["score"] if g["state"] == "post" else None},
@@ -180,6 +184,10 @@ def cmd_run(args) -> int:
             except Exception:
                 failures += 1
                 print(f"  ! {label}: report failed\n{traceback.format_exc()}", file=sys.stderr)
+                continue
+            existing = _load(DATA / "reports" / f'{g["event_id"]}.json', None)
+            if preview and existing and not existing.get("preview"):
+                print(f"  {label}: final report already out, preview not saved")
                 continue
             _save(DATA / "reports" / f'{g["event_id"]}.json', r)
             hist = {h["event_id"]: h for h in history}

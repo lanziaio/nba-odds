@@ -34,6 +34,9 @@ MARKET_WEIGHT = 0.60    # log-odds weight of Kalshi's own price: 12 games can't 
 DEFENSE_SHRINK = 10     # games of pseudo-sample pulling a team's "allowed" factor toward 1.0
 VAR_SHRINK = 8          # games of pseudo-sample pulling a player's variance toward the prior
 TEAM_MINUTES = 240.0
+BENCH_TRIM = 0.0        # share of bench minutes trimmed FIRST when the rotation overflows 240.
+                        # Backtest on ~1,000 player-games (2026-11-13): 0.0 -> starters +0.6 / bench -0.1 min bias;
+                        # 0.3 -> starters +3.0 / bench -2.8 and a worse MAE. Keep 0 unless a new backtest says otherwise.
 MAX_MINUTES = 40.0
 PACE_EXP = {"reb": 0.5, "ast": 0.7, "tpm": 0.6}
 
@@ -225,7 +228,7 @@ def project_team(team_id: str, games: list[list[dict]], injuries_by_pid: dict[st
     if excess > 0:  # too many minutes: trim the bench first (up to 30%), starters' minutes are stable
         top5 = set(sorted(mins, key=lambda k: -mins[k])[:5])
         pool = sum(v for k, v in mins.items() if k not in top5)
-        cut = min(excess, 0.3 * pool)
+        cut = min(excess, BENCH_TRIM * pool)
         for k in mins:
             if k not in top5 and pool:
                 mins[k] -= cut * mins[k] / pool

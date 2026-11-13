@@ -83,6 +83,17 @@ table.avg td small { color: var(--muted); font-size: 10.5px; }
 .best .card { padding: 10px 14px; }
 .best h2, .slate-title { font-size: 15px; margin: 18px 0 6px; }
 @media (max-width: 520px) { .pick { grid-template-columns: auto 1fr; } .pick .num { grid-column: 1 / -1; text-align: left; } }
+#lines h2 { font-size: 15px; margin: 16px 0 6px; }
+.lines-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+table.lines { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 640px; }
+table.lines th { text-align: right; font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.lines td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.lines tr:last-child td { border-bottom: 0; }
+table.lines th:first-child, table.lines td:first-child { text-align: left; }
+table.lines td .t { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+table.lines td .t img { width: 18px; height: 18px; }
+table.lines td .sub { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
+table.lines .fav { font-weight: 700; }
 footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 @media (max-width: 420px) { .roster { grid-template-columns: 1fr; } }
 </style>
@@ -93,6 +104,7 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
     <h1>NBA Win Odds</h1>
     <p id="meta">Loading…</p>
   </header>
+  <div id="lines"></div>
   <div class="record" id="record"></div>
   <div class="best" id="best"></div>
   <h2 class="slate-title">Games</h2>
@@ -217,6 +229,39 @@ function record(tr) {
       <div class="d">expected ${x.expected_hit_rate == null ? "–" : Math.round(x.expected_hit_rate * 100) + "%"} · ${x.pnl_per_contract >= 0 ? "+" : ""}$${x.pnl_per_contract} · n=${x.n}</div></div>`; }).join("") : "");
 }
 
+function noVig(o) {
+  const p = v => v == null ? null : v < 0 ? -v / (-v + 100) : 100 / (v + 100);
+  const h = p(o.home_ml), a = p(o.away_ml);
+  return h == null || a == null ? null : h / (h + a);
+}
+
+function linesTable(slate, reports) {
+  const rows = slate.map((g, i) => {
+    const o = g.odds || {}, r = reports[i];
+    const ph = noVig(o), phOpen = noVig({home_ml: o.home_ml_open, away_ml: o.away_ml_open});
+    const sp = o.home_spread;
+    const spread = sp == null ? "–" : sp === 0 ? "PK" : sp < 0 ? `${esc(g.home.abbr)} ${sp}` : `${esc(g.away.abbr)} -${sp}`;
+    const move = ph != null && phOpen != null && Math.abs(ph - phOpen) >= 0.02
+      ? `<span class="sub">open ${pct(1 - phOpen)} / ${pct(phOpen)}</span>` : "";
+    const favH = ph != null && ph >= 0.5;
+    const status = g.state === "post" ? `Final ${g.away.score}-${g.home.score}` : g.state === "in" ? "Live" : et(g.tip);
+    return `<tr>
+      <td><span class="t"><img src="${esc(g.away.logo)}" alt="">${esc(g.away.abbr)} @ <img src="${esc(g.home.logo)}" alt="">${esc(g.home.abbr)}</span><span class="sub">${status}</span></td>
+      <td><span class="${favH ? "" : "fav"}">${ml(o.away_ml)}</span> / <span class="${favH ? "fav" : ""}">${ml(o.home_ml)}</span></td>
+      <td>${ph == null ? "–" : `${pct(1 - ph)} / ${pct(ph)}`}${move}</td>
+      <td>${spread}</td>
+      <td>${o.total ?? "–"}</td>
+      <td>${r && r.kalshi && r.kalshi.p_home != null ? `${pct(1 - r.kalshi.p_home)} / ${pct(r.kalshi.p_home)}` : "–"}</td>
+      <td>${r ? `<b>${pct(1 - r.model.p_home_final)} / ${pct(r.model.p_home_final)}</b>` : `<span class="sub">at ${et(g.report_at)}</span>`}</td>
+    </tr>`;
+  }).join("");
+  const src = (slate.find(g => g.odds && g.odds.provider) || {}).odds?.provider || "Sportsbook";
+  return rows ? `<h2>Vegas lines tonight <span class="badge">${esc(src)}</span></h2>
+    <div class="lines-wrap"><table class="lines">
+      <tr><th>Game</th><th>Moneyline away / home</th><th>Win % (no vig)</th><th>Spread</th><th>Total</th><th>Kalshi</th><th>Model</th></tr>
+      ${rows}</table></div>` : "";
+}
+
 async function load() {
   try {
     const idx = await (await fetch("data/index.json" + bust())).json();
@@ -227,6 +272,7 @@ async function load() {
       if (!g.has_report) return null;
       try { return await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
     }));
+    document.getElementById("lines").innerHTML = linesTable(idx.slate, reports);
     document.getElementById("games").innerHTML = idx.slate.map((g, i) => card(g, reports[i])).join("") || '<div class="pending">No NBA games today.</div>';
     const best = reports.filter(r => r && r.props).flatMap(r => ["away", "home"].flatMap(s =>
       (r.props.picks[s] || []).filter(pk => pk.strength === "value").map(pk => ({pk, abbr: r[s].abbr}))))
