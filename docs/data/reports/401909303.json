@@ -1,6 +1,6 @@
 {
  "event_id": "401909303",
- "generated_at": "2026-11-13T21:28:18+00:00",
+ "generated_at": "2026-11-13T21:59:19+00:00",
  "preview": true,
  "tip": "2026-11-14T03:00:00+00:00",
  "tip_et": "Fri Nov 13, 10:00 PM ET",
@@ -121,12 +121,12 @@
      "mpg": 26.4,
      "ppg": 10.4,
      "impact": 1.64,
-     "status": "Day-To-Day",
+     "status": "Out",
      "detail": "Ankle Soreness",
-     "comment": "Achiuwa (ankle) is questionable to play Friday's game against the Trail Blazers.",
-     "miss_prob": 0.35,
+     "comment": "Achiuwa (ankle) is out for Friday's game against the Trail Blazers.",
+     "miss_prob": 1.0,
      "played_share": 1.0,
-     "expected_loss": 0.57
+     "expected_loss": 1.64
     },
     {
      "athlete_id": "5106058",
@@ -175,11 +175,11 @@
    "starters_total": 5,
    "all_starters_available": false,
    "all_core_available": false,
-   "missing": [],
-   "uncertain": [
-    "Precious Achiuwa (Day-To-Day)"
+   "missing": [
+    "Precious Achiuwa"
    ],
-   "injury_margin_loss": 0.57
+   "uncertain": [],
+   "injury_margin_loss": 1.64
   },
   "core_games_sampled": 11
  },
@@ -368,7 +368,7 @@
   "core_games_sampled": 11
  },
  "market": {
-  "source": "Draft Kings moneyline via ESPN",
+  "source": "DraftKings moneyline via ESPN",
   "p_home": 0.20840365733742314,
   "p_home_open": 0.1826900495365844,
   "home_ml": 361,
@@ -390,7 +390,7 @@
    "last": 0.2,
    "mid": 0.195,
    "spread": 0.01,
-   "volume": 22184.98,
+   "volume": 22692.0,
    "status": "active"
   },
   "away": {
@@ -400,39 +400,39 @@
    "last": 0.81,
    "mid": 0.805,
    "spread": 0.01,
-   "volume": 71169.18,
+   "volume": 74844.91,
    "status": "active"
   },
   "p_home": 0.195,
   "illiquid": false,
-  "volume": 93354.15999999999
+  "volume": 97536.91
  },
  "model": {
-  "p_home_stats": 0.2695,
-  "expected_home_margin": -7.4,
+  "p_home_stats": 0.2409,
+  "expected_home_margin": -8.4,
   "components": {
    "season_rating_edge": -10.48,
    "home_court": 2.0,
    "form_edge": 1.68,
    "rest_edge": 0.0,
-   "injury_edge": -0.57
+   "injury_edge": -1.64
   },
-  "p_home_final": 0.2256,
+  "p_home_final": 0.2178,
   "market_weight": 0.7
  },
  "pick": {
   "side": "away",
   "team": "POR",
-  "prob": 0.7744
+  "prob": 0.7822
  },
  "edges": {
-  "home": 0.0056,
-  "away": -0.0556
+  "home": -0.0022,
+  "away": -0.0478
  },
  "best_value": null,
  "flags": [
   "POR full strength (all 5 regular starters + rotation available)",
-  "SAC questionable: Precious Achiuwa (Day-To-Day)",
+  "SAC without: Precious Achiuwa",
   "SAC on a 4-game losing streak"
  ]
 }
