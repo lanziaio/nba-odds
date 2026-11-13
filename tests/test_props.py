@@ -45,7 +45,9 @@ class ProjectionTests(unittest.TestCase):
     def test_minutes_fit_240_and_star_projection(self):
         proj = props.project_team("T", team_games(), {}, {}, LEAGUE, None, None)
         total = sum(p["minutes"] for p in proj["players"].values())
-        self.assertAlmostEqual(total, 240, delta=2)
+        # never above 240; a short rotation is not stretched (the deep bench takes the rest)
+        self.assertLessEqual(total, 240.5)
+        self.assertAlmostEqual(total, 5 * 34 + 3 * 22, delta=1)
         self.assertAlmostEqual(proj["players"]["1"]["proj"]["pts"], 28, delta=3)
 
     def test_injured_star_frees_minutes_and_shots(self):
@@ -78,6 +80,17 @@ class PickTests(unittest.TestCase):
         self.assertEqual(len(picks), 1)
         self.assertEqual(picks[0]["side"], "yes")
         self.assertEqual(picks[0]["strength"], "value")
+
+    def test_recent_hits_counted_for_the_pick_side(self):
+        r = self.priced(0.62, 0.52, 0.54)
+        r["recent"] = [30, 20, 26, 25, 18, 27]
+        pk = props.pick([r])[0]
+        self.assertEqual((pk["hits"], pk["games"]), (4, 6))  # 25+ in 4 of 6
+        self.assertEqual(pk["last5_avg"], 23.8)
+        r2 = self.priced(0.30, 0.52, 0.54)  # model likes the under
+        r2["recent"] = [30, 20, 26, 25, 18, 27]
+        pk2 = props.pick([r2])[0]
+        self.assertEqual((pk2["side"], pk2["hits"]), ("no", 2))
 
     def test_injured_player_and_wide_market_skipped(self):
         self.assertEqual(props.pick([self.priced(0.62, 0.52, 0.54, miss=0.35)]), [])

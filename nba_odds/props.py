@@ -38,6 +38,13 @@ BENCH_TRIM = 0.0        # share of bench minutes trimmed FIRST when the rotation
                         # Backtest on ~1,000 player-games (2026-11-13): 0.0 -> starters +0.6 / bench -0.1 min bias;
                         # 0.3 -> starters +3.0 / bench -2.8 and a worse MAE. Keep 0 unless a new backtest says otherwise.
 MAX_MINUTES = 40.0
+FREED_EVEN = 1.0         # 0 = freed minutes shared in proportion to minutes, 1 = split evenly across the rotation.
+                         # Backtest 2026-11-13, games with 40+ freed minutes: proportional = starters +1.07 / bench -1.84 min,
+                         # even = +0.51 / -0.86 (MAE 4.87 -> 4.66); all games: even = -0.04 / +0.34, MAE also lower.
+                         # EXTRA_MINUTES_CAP 4 beat no cap (starters bias +0.64 -> +0.41, MAE 4.49 -> 4.41).
+FREED_TO_ROTATION = 1.0  # share of an injured player's minutes that go to the current rotation
+MAX_SCALE_UP = 1.0       # never stretch the rotation above its own minutes to fill 240 (backtest: equal or better)
+EXTRA_MINUTES_CAP = 4.0  # max minutes above his normal load when teammates are out
 PACE_EXP = {"reb": 0.5, "ast": 0.7, "tpm": 0.6}
 
 PICK_MIN_EDGE = 0.05    # "value": 5 cents per $1 after fees (props are noisier than game lines)
@@ -219,11 +226,18 @@ def project_team(team_id: str, games: list[list[dict]], injuries_by_pid: dict[st
         miss = injuries_by_pid.get(pid, 0.0)
         freed += mpg * miss
         mins[pid] = mpg * (1 - miss)
-        cap[pid] = min(MAX_MINUTES, max(p["by_idx"].values()) + 2)
+        # nobody plays far above his normal load just because teammates are out
+        cap[pid] = min(MAX_MINUTES, mpg + EXTRA_MINUTES_CAP, max(p["by_idx"].values()) + 2)
     avail_total = sum(mins.values()) or 1.0
+    n_avail = sum(1 for v in mins.values() if v > 0) or 1
     for pid in mins:
-        mins[pid] += freed * mins[pid] / avail_total
-    room = max(TEAM_MINUTES - bench, 180.0)
+        if mins[pid] <= 0:
+            continue
+        # blend of "even split" and "in proportion to his minutes" (stars are near their ceiling)
+        share = FREED_EVEN * (1 / n_avail) + (1 - FREED_EVEN) * mins[pid] / avail_total
+        mins[pid] += FREED_TO_ROTATION * freed * share
+    # Part of the freed minutes goes to deep-bench players who haven't been in the rotation.
+    room = max(TEAM_MINUTES - bench - freed * (1 - FREED_TO_ROTATION), 180.0)
     excess = sum(mins.values()) - room
     if excess > 0:  # too many minutes: trim the bench first (up to 30%), starters' minutes are stable
         top5 = set(sorted(mins, key=lambda k: -mins[k])[:5])
@@ -234,8 +248,10 @@ def project_team(team_id: str, games: list[list[dict]], injuries_by_pid: dict[st
                 mins[k] -= cut * mins[k] / pool
     for _ in range(3):  # then scale to fit 240, respecting each player's cap
         tot = sum(mins.values()) or 1.0
+        # scaling DOWN is unlimited; scaling UP is limited (short rotations hand minutes to the deep bench)
+        f = min(room / tot, MAX_SCALE_UP)
         for pid in mins:
-            mins[pid] = min(cap[pid], mins[pid] * room / tot)
+            mins[pid] = min(cap[pid], mins[pid] * f)
 
     # Per-minute rates: recent games + last season as PRIOR_GAMES pseudo-games.
     seasons = seasons or {}
@@ -303,6 +319,8 @@ def project_team(team_id: str, games: list[list[dict]], injuries_by_pid: dict[st
             "has_prior": bool((seasons.get(pid) or {}).get("prior")),
             "proj": {s: round(proj[s], 1) for s in STATS},
             "_var": var,
+            # his last 10 games for each stat, most recent first (for hit rates on a line)
+            "_recent": {s: [stat_of(r, s) for r in p["logs"][:10]] for s in STATS},
             "miss_prob": injuries_by_pid.get(pid, 0.0),
         }
     return {"players": out, "scale": {k: round(v, 3) for k, v in scale.items()}, "team_avg": {s: round(team_avg[s], 1) for s in STATS},
@@ -369,6 +387,7 @@ def price_markets(markets: list[dict], side_players: dict[str, dict], team_code:
         p_mkt = (m["yes_bid"] + m["yes_ask"]) / 2 if m["yes_bid"] and m["yes_ask"] else None
         prob = expit(MARKET_WEIGHT * logit(p_mkt) + (1 - MARKET_WEIGHT) * logit(p_model)) if p_mkt else p_model
         row = {**m, "athlete_id": p["athlete_id"], "name": p["name"], "proj": p["proj"][m["stat"]],
+               "recent": p["_recent"][m["stat"]],
                "avg": p["avg"][m["stat"]], "p_model": round(p_model, 4), "p_market": round(p_mkt, 4) if p_mkt else None,
                "p_yes": round(prob, 4), "miss_prob": p["miss_prob"]}
         for side, pr, ask, bid in (("yes", prob, m["yes_ask"], m["yes_bid"]), ("no", 1 - prob, m["no_ask"], m["no_bid"])):
@@ -392,6 +411,7 @@ def pick(priced: list[dict], n: int = PICKS_PER_TEAM) -> list[dict]:
             if edge < LEAN_MIN_EDGE:
                 continue
             p_side = r["p_yes"] if side == "yes" else 1 - r["p_yes"]
+            recent = r.get("recent") or []
             cands.append({
                 "athlete_id": r["athlete_id"], "name": r["name"], "stat": r["stat"], "line": r["line"],
                 "side": side,
@@ -401,6 +421,11 @@ def pick(priced: list[dict], n: int = PICKS_PER_TEAM) -> list[dict]:
                 "p_model": r["p_model"] if side == "yes" else round(1 - r["p_model"], 4),
                 "p_market": (r["p_market"] if side == "yes" else round(1 - r["p_market"], 4)) if r["p_market"] else None,
                 "strength": "value" if edge >= PICK_MIN_EDGE else "lean",
+                "last5_avg": round(sum(recent[:5]) / len(recent[:5]), 1) if recent else None,
+                "last10": recent,
+                # games out of his last 10 where this side would have won
+                "hits": sum(1 for v in recent if (v >= r["line"]) == (side == "yes")),
+                "games": len(recent),
                 "ticker": r["ticker"],
             })
     cands.sort(key=lambda c: -c["edge"])

@@ -61,7 +61,9 @@ def format_message(r: dict, dashboard_url: str | None = None) -> dict:
     lines = []
     for side in ("away", "home"):
         for pk in (pr.get("picks") or {}).get(side, []):
-            lines.append(f'• *{r[side]["abbr"]}* {pk["label"]} · model {pk["p"]:.0%} vs Kalshi {pk["ask"]:.2f} '
+            stats = f'avg {pk["avg"]}' + (f' · last 5 {pk["last5_avg"]}' if pk.get("last5_avg") is not None else "") \
+                + (f' · hit {pk["hits"]}/{pk["games"]} last games' if pk.get("games") else "")
+            lines.append(f'• *{r[side]["abbr"]}* {pk["label"]} ({stats}) · model {pk["p"]:.0%} vs Kalshi {pk["ask"]:.2f} '
                          f'→ {pk["edge"]*100:+.1f}¢ ({pk["strength"]})')
     if lines:
         blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": "*Player props (Kalshi)*\n" + "\n".join(lines)}})

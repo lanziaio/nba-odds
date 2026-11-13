@@ -83,6 +83,10 @@ table.avg td small { color: var(--muted); font-size: 10.5px; }
 .best .card { padding: 10px 14px; }
 .best h2, .slate-title { font-size: 15px; margin: 18px 0 6px; }
 @media (max-width: 520px) { .pick { grid-template-columns: auto 1fr; } .pick .num { grid-column: 1 / -1; text-align: left; } }
+.pstats { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.pstats b { color: var(--ink); font-weight: 600; }
+.pstats .spark { display: block; font-size: 11px; margin-top: 1px; }
+.pstats .spark .w, .pstats .spark .l { font-weight: 600; }
 #lines h2 { font-size: 15px; margin: 16px 0 6px; }
 .lines-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
 table.lines { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 640px; }
@@ -188,9 +192,25 @@ function card(g, r) {
   </div>`;
 }
 
+function pickStats(pk) {
+  if (pk.avg == null) return "";
+  const parts = [`Season avg <b>${pk.avg}</b>`];
+  if (pk.last5_avg != null) parts.push(`last 5 <b>${pk.last5_avg}</b>`);
+  if (pk.games) {
+    const won = pk.side === "yes" ? "cleared" : "stayed under";
+    parts.push(`${won} ${pk.line} in <b>${pk.hits}/${pk.games}</b> recent games`);
+  }
+  parts.push(`projected <b>${pk.proj}</b>`);
+  const spark = (pk.last10 || []).slice().reverse().map(v => {
+    const hit = pk.side === "yes" ? v >= pk.line : v < pk.line;
+    return `<span class="${hit ? "w" : "l"}" title="${v}">${v}</span>`;
+  }).join(" ");
+  return `<span class="pstats">${parts.join(" · ")}${spark ? `<span class="spark">last ${pk.last10.length}, oldest → newest: ${spark}</span>` : ""}</span>`;
+}
+
 function pickRow(pk, abbr) {
   return `<div class="pick"><span class="tag ${pk.strength}">${pk.strength}</span>
-    <span>${abbr ? `<b>${esc(abbr)}</b> ` : ""}${esc(pk.label)}</span>
+    <span>${abbr ? `<b>${esc(abbr)}</b> ` : ""}${esc(pk.label)}${pickStats(pk)}</span>
     <span class="num">model ${pct(pk.p)} · Kalshi ${pk.ask.toFixed(2)} · <b>+${(pk.edge * 100).toFixed(1)}¢</b></span></div>`;
 }
 
