@@ -196,7 +196,9 @@
     "edge": 0.0833,
     "strength": "value",
     "team": "CLE",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.47
    },
    {
     "athlete_id": "3908809",
@@ -210,7 +212,9 @@
     "edge": 0.058,
     "strength": "value",
     "team": "CLE",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.45
    },
    {
     "athlete_id": "4066261",
@@ -224,7 +228,9 @@
     "edge": 0.0744,
     "strength": "value",
     "team": "MIA",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.63
    },
    {
     "athlete_id": "3032977",
@@ -238,10 +244,18 @@
     "edge": 0.0703,
     "strength": "value",
     "team": "MIA",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.43
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 133,
+   "away_score": 121,
+   "home_won": true
+  },
+  "model_pick_correct": true,
+  "graded": true
  },
  {
   "event_id": "401909299",
@@ -268,7 +282,9 @@
     "edge": 0.0345,
     "strength": "lean",
     "team": "ATL",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.37
    },
    {
     "athlete_id": "2595516",
@@ -282,7 +298,9 @@
     "edge": 0.0537,
     "strength": "value",
     "team": "CHI",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.54
    },
    {
     "athlete_id": "4711294",
@@ -296,10 +314,18 @@
     "edge": 0.0523,
     "strength": "value",
     "team": "CHI",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.47
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 125,
+   "away_score": 117,
+   "home_won": true
+  },
+  "model_pick_correct": false,
+  "graded": true
  },
  {
   "event_id": "401909300",
@@ -316,7 +342,9 @@
    "side": "away",
    "team": "MEM",
    "edge": 0.0389,
-   "ask": 0.59
+   "ask": 0.59,
+   "status": "won",
+   "pnl": 0.39
   },
   "prop_picks": [
    {
@@ -331,7 +359,9 @@
     "edge": 0.0547,
     "strength": "value",
     "team": "MEM",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.4
    },
    {
     "athlete_id": "5041935",
@@ -345,7 +375,9 @@
     "edge": 0.042,
     "strength": "lean",
     "team": "MEM",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.3
    },
    {
     "athlete_id": "4869780",
@@ -359,7 +391,9 @@
     "edge": 0.0472,
     "strength": "lean",
     "team": "NO",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.4
    },
    {
     "athlete_id": "5144091",
@@ -373,10 +407,18 @@
     "edge": 0.0426,
     "strength": "lean",
     "team": "NO",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.47
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 111,
+   "away_score": 142,
+   "home_won": false
+  },
+  "model_pick_correct": true,
+  "graded": true
  },
  {
   "event_id": "401909301",
@@ -403,7 +445,9 @@
     "edge": 0.0448,
     "strength": "lean",
     "team": "UTAH",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.81
    },
    {
     "athlete_id": "4873138",
@@ -417,7 +461,9 @@
     "edge": 0.0291,
     "strength": "lean",
     "team": "UTAH",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.16
    },
    {
     "athlete_id": "4711272",
@@ -431,7 +477,9 @@
     "edge": 0.0559,
     "strength": "value",
     "team": "HOU",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.33
    },
    {
     "athlete_id": "3202",
@@ -445,10 +493,18 @@
     "edge": 0.0378,
     "strength": "lean",
     "team": "HOU",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.31
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 125,
+   "away_score": 118,
+   "home_won": true
+  },
+  "model_pick_correct": true,
+  "graded": true
  },
  {
   "event_id": "401909302",
@@ -475,7 +531,9 @@
     "edge": 0.0334,
     "strength": "lean",
     "team": "GS",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.48
    },
    {
     "athlete_id": "4709138",
@@ -489,7 +547,9 @@
     "edge": 0.0255,
     "strength": "lean",
     "team": "GS",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.15
    },
    {
     "athlete_id": "5104157",
@@ -503,7 +563,9 @@
     "edge": 0.0329,
     "strength": "lean",
     "team": "SA",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.52
    },
    {
     "athlete_id": "4395723",
@@ -517,10 +579,18 @@
     "edge": 0.0275,
     "strength": "lean",
     "team": "SA",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.49
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 123,
+   "away_score": 85,
+   "home_won": true
+  },
+  "model_pick_correct": true,
+  "graded": true
  },
  {
   "event_id": "401909303",
@@ -547,7 +617,9 @@
     "edge": 0.0659,
     "strength": "value",
     "team": "POR",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.49
    },
    {
     "athlete_id": "5081727",
@@ -561,7 +633,9 @@
     "edge": 0.0293,
     "strength": "lean",
     "team": "POR",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.54
    },
    {
     "athlete_id": "3155942",
@@ -575,7 +649,9 @@
     "edge": 0.0963,
     "strength": "value",
     "team": "SAC",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.51
    },
    {
     "athlete_id": "4594327",
@@ -589,10 +665,18 @@
     "edge": 0.0745,
     "strength": "value",
     "team": "SAC",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.66
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 107,
+   "away_score": 120,
+   "home_won": false
+  },
+  "model_pick_correct": true,
+  "graded": true
  },
  {
   "event_id": "401909304",
@@ -619,7 +703,9 @@
     "edge": 0.0519,
     "strength": "value",
     "team": "OKC",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.5
    },
    {
     "athlete_id": "4222252",
@@ -633,7 +719,9 @@
     "edge": 0.034,
     "strength": "lean",
     "team": "OKC",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.43
    },
    {
     "athlete_id": "4066648",
@@ -647,7 +735,9 @@
     "edge": 0.0743,
     "strength": "value",
     "team": "LAC",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.5
    },
    {
     "athlete_id": "3448",
@@ -661,9 +751,17 @@
     "edge": 0.0364,
     "strength": "lean",
     "team": "LAC",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.58
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 113,
+   "away_score": 112,
+   "home_won": true
+  },
+  "model_pick_correct": false,
+  "graded": true
  }
 ]
