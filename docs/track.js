@@ -4,7 +4,7 @@
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
   const pct = p => p == null ? "–" : Math.round(p * 100) + "%";
   const money = v => v == null ? "–" : (v >= 0 ? "+$" : "−$") + Math.abs(v).toFixed(2);
-  const etDate = iso => new Date(iso).toLocaleDateString("en-CA", {timeZone: "America/New_York"}); // YYYY-MM-DD
+  const etDate = iso => new Date(iso).toLocaleDateString("en-CA", {timeZone: "America/Phoenix"}); // YYYY-MM-DD
   const shortDate = d => { const [y, m, dd] = d.split("-"); return `${+m}/${+dd}`; };
   const STAT = {pts: "Points", reb: "Rebounds", ast: "Assists", tpm: "Threes", pra: "Pts+Reb+Ast"};
   const SERIES = [
@@ -48,7 +48,7 @@
   function inPeriod(p) {
     if (state.period === "all") return true;
     const days = +state.period;
-    const cutoff = new Date(Date.now() - days * 864e5).toLocaleDateString("en-CA", {timeZone: "America/New_York"});
+    const cutoff = new Date(Date.now() - days * 864e5).toLocaleDateString("en-CA", {timeZone: "America/Phoenix"});
     return p.date >= cutoff;
   }
   const isBet = p => p.kind !== "winner";

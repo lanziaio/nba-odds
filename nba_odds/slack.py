@@ -35,7 +35,7 @@ def _form_line(s: dict) -> str:
 def format_message(r: dict, dashboard_url: str | None = None) -> dict:
     h, a, m, k = r["home"], r["away"], r["model"], r["kalshi"]
     ph = m["p_home_final"]
-    title = f'{a["abbr"]} @ {h["abbr"]} · {r["tip_et"]}'
+    title = f'{a["abbr"]} @ {h["abbr"]} · {r.get("tip_az") or r["tip_et"]}'
     probs = (
         f'*Model:* {h["abbr"]} {_pct(ph)} · {a["abbr"]} {_pct(1 - ph)}   '
         f'(expected margin {h["abbr"]} {m["expected_home_margin"]:+.1f})\n'

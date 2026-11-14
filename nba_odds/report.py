@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 from . import espn, kalshi, model, odds_api, players, props
 
 ET = ZoneInfo("America/New_York")
+AZ = ZoneInfo("America/Phoenix")  # display time: MST all year, no DST
 BOX_GAMES = 12        # recent games used to find regular starters / rotation
 FORM_DAYS = 7
 VALUE_EDGE = 0.03     # flag a Kalshi side when expected profit >= 3 cents per $1 contract
@@ -179,6 +180,7 @@ def build(game: dict, ctx: RunContext, preview: bool = False) -> dict:
         "preview": preview,
         "tip": game["tip"],
         "tip_et": tip.astimezone(ET).strftime("%a %b %-d, %-I:%M %p ET"),
+        "tip_az": tip.astimezone(AZ).strftime("%a %b %-d, %-I:%M %p AZ"),
         "home": sides["home"],
         "away": sides["away"],
         "market": {

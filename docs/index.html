@@ -181,7 +181,10 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const pct = p => p == null ? "–" : Math.round(p * 100) + "%";
 const ml = v => v == null ? "–" : (v > 0 ? "+" + v : v);
-const et = iso => new Date(iso).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: "America/New_York"}) + " ET";
+// All times shown in Arizona time (MST, UTC-7 all year, no daylight saving).
+const TZ = "America/Phoenix";
+const az = iso => new Date(iso).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: TZ}) + " AZ";
+const azStamp = iso => new Date(iso).toLocaleString("en-US", {month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: TZ}) + " AZ";
 const bust = () => "?t=" + Date.now();
 
 function statusClass(r) { return r.miss_prob >= 0.85 ? "out" : r.miss_prob > 0 ? "q" : "ok"; }
@@ -208,11 +211,11 @@ function card(g, r) {
   const head = `
     <div class="teams">
       <div class="team"><img src="${esc(g.away.logo)}" alt="">${esc(g.away.abbr)}${g.away.score != null ? " " + g.away.score : ""}</div>
-      <div class="tip">${et(g.tip)}<br>${g.state === "post" ? "Final" : g.state === "in" ? "Live" : ""}</div>
+      <div class="tip">${az(g.tip)}<br>${g.state === "post" ? "Final" : g.state === "in" ? "Live" : ""}</div>
       <div class="team">${g.home.score != null ? g.home.score + " " : ""}${esc(g.home.abbr)}<img src="${esc(g.home.logo)}" alt=""></div>
     </div>`;
   if (!r) {
-    return `<div class="card">${head}<div class="pending">Analysis runs about 1 hour before tip-off (${et(g.report_at)}).</div></div>`;
+    return `<div class="card">${head}<div class="pending">Analysis runs about 1 hour before tip-off (${az(g.report_at)}).</div></div>`;
   }
   const p = r.model.p_home_final, k = r.kalshi, m = r.market;
   const marks = [m.p_home != null ? `<div class="mark" style="left:${(1 - m.p_home) * 100}%" title="Vegas"></div>` : "",
@@ -241,7 +244,7 @@ function card(g, r) {
       Expected margin ${esc(g.home.abbr)} ${r.model.expected_home_margin > 0 ? "+" : ""}${r.model.expected_home_margin} ·
       ${Object.entries(r.model.components).map(([k, v]) => `${esc(k.replace(/_/g, " "))} ${v > 0 ? "+" : ""}${v}`).join(" · ")}<br>
       Market: ${esc(m.source || "none")}${m.p_home_open != null ? ` · opened ${pct(m.p_home_open)} ${esc(g.home.abbr)}` : ""}<br>
-      Report generated ${new Date(r.generated_at).toLocaleString()}
+      Report generated ${azStamp(r.generated_at)}
     </details>
   </div>`;
 }
@@ -306,7 +309,7 @@ function linesTable(slate, reports) {
     const move = ph != null && phOpen != null && Math.abs(ph - phOpen) >= 0.02
       ? `<span class="sub">open ${pct(1 - phOpen)} / ${pct(phOpen)}</span>` : "";
     const favH = ph != null && ph >= 0.5;
-    const status = g.state === "post" ? `Final ${g.away.score}-${g.home.score}` : g.state === "in" ? "Live" : et(g.tip);
+    const status = g.state === "post" ? `Final ${g.away.score}-${g.home.score}` : g.state === "in" ? "Live" : az(g.tip);
     return `<tr>
       <td><span class="t"><img src="${esc(g.away.logo)}" alt="">${esc(g.away.abbr)} @ <img src="${esc(g.home.logo)}" alt="">${esc(g.home.abbr)}</span><span class="sub">${status}</span></td>
       <td><span class="${favH ? "" : "fav"}">${ml(o.away_ml)}</span> / <span class="${favH ? "fav" : ""}">${ml(o.home_ml)}</span></td>
@@ -314,7 +317,7 @@ function linesTable(slate, reports) {
       <td>${spread}</td>
       <td>${o.total ?? "–"}</td>
       <td>${r && r.kalshi && r.kalshi.p_home != null ? `${pct(1 - r.kalshi.p_home)} / ${pct(r.kalshi.p_home)}` : "–"}</td>
-      <td>${r ? `<b>${pct(1 - r.model.p_home_final)} / ${pct(r.model.p_home_final)}</b>` : `<span class="sub">at ${et(g.report_at)}</span>`}</td>
+      <td>${r ? `<b>${pct(1 - r.model.p_home_final)} / ${pct(r.model.p_home_final)}</b>` : `<span class="sub">at ${az(g.report_at)}</span>`}</td>
     </tr>`;
   }).join("");
   const src = (slate.find(g => g.odds && g.odds.provider) || {}).odds?.provider || "Sportsbook";
@@ -328,7 +331,7 @@ async function load() {
   try {
     const idx = await (await fetch("data/index.json" + bust())).json();
     document.getElementById("meta").textContent =
-      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${new Date(idx.generated_at).toLocaleString()}`;
+      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${azStamp(idx.generated_at)} · all times Arizona (MST)`;
     const reports = await Promise.all(idx.slate.map(async g => {
       if (!g.has_report) return null;
       try { return await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
