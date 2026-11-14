@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T00:01:11+00:00",
+ "generated_at": "2026-11-14T00:16:07+00:00",
  "slate_date_et": "20261113",
  "slate": [
   {
@@ -15,8 +15,8 @@
    },
    "event_id": "401909296",
    "tip": "2026-11-14T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "IND",
     "name": "Indiana Pacers",
@@ -117,8 +117,8 @@
    },
    "event_id": "401909297",
    "tip": "2026-11-14T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "ORL",
     "name": "Orlando Magic",
@@ -535,7 +535,7 @@
    "summary": {
     "event_id": "401909301",
     "tip": "2026-11-14T01:30:00+00:00",
-    "preview": true,
+    "preview": false,
     "home": "HOU",
     "away": "UTAH",
     "p_home_final": 0.8829,
@@ -546,29 +546,29 @@
     "best_value": null,
     "prop_picks": [
      {
-      "athlete_id": "4873138",
-      "name": "Ace Bailey",
-      "stat": "tpm",
-      "line": 3,
-      "side": "no",
-      "label": "Ace Bailey under 3 threes",
-      "p": 0.7128,
-      "ask": 0.64,
-      "edge": 0.0528,
-      "strength": "value",
-      "team": "UTAH",
-      "won": null
-     },
-     {
       "athlete_id": "5041955",
       "name": "Darryn Peterson",
       "stat": "pra",
       "line": 35,
       "side": "no",
       "label": "Darryn Peterson under 35 pts+reb+ast",
-      "p": 0.8566,
+      "p": 0.8548,
       "ask": 0.79,
-      "edge": 0.0466,
+      "edge": 0.0448,
+      "strength": "lean",
+      "team": "UTAH",
+      "won": null
+     },
+     {
+      "athlete_id": "4873138",
+      "name": "Ace Bailey",
+      "stat": "tpm",
+      "line": 4,
+      "side": "no",
+      "label": "Ace Bailey under 4 threes",
+      "p": 0.8691,
+      "ask": 0.83,
+      "edge": 0.0291,
       "strength": "lean",
       "team": "UTAH",
       "won": null
@@ -588,15 +588,15 @@
       "won": null
      },
      {
-      "athlete_id": "4432639",
-      "name": "Jabari Smith Jr.",
+      "athlete_id": "3202",
+      "name": "Kevin Durant",
       "stat": "pts",
-      "line": 15,
+      "line": 25,
       "side": "yes",
-      "label": "Jabari Smith Jr. 15+ points",
-      "p": 0.5396,
-      "ask": 0.49,
-      "edge": 0.0296,
+      "label": "Kevin Durant 25+ points",
+      "p": 0.3478,
+      "ask": 0.29,
+      "edge": 0.0378,
       "strength": "lean",
       "team": "HOU",
       "won": null
