@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T18:53:21+00:00",
+ "generated_at": "2026-11-14T22:46:49+00:00",
  "slate_date_et": "20261114",
  "slate": [
   {
@@ -8,8 +8,8 @@
     "details": "DEN -12.5",
     "home_spread": 12.5,
     "total": 235.5,
-    "home_ml": 483,
-    "away_ml": -670,
+    "home_ml": 470,
+    "away_ml": -650,
     "home_ml_open": 417,
     "away_ml_open": -556
    },
@@ -29,18 +29,75 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-14T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909980",
+    "tip": "2026-11-15T00:00:00+00:00",
+    "preview": false,
+    "home": "NO",
+    "away": "DEN",
+    "p_home_final": 0.1677,
+    "p_home_stats": 0.1661,
+    "p_home_market": 0.16835016835016833,
+    "p_home_kalshi": 0.16,
+    "pick": "DEN",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4431767",
+      "name": "Christian Braun",
+      "stat": "tpm",
+      "line": 1,
+      "side": "no",
+      "label": "Christian Braun under 1 threes",
+      "p": 0.3359,
+      "ask": 0.27,
+      "edge": 0.0459,
+      "strength": "lean",
+      "team": "DEN",
+      "won": null
+     },
+     {
+      "athlete_id": "4277813",
+      "name": "Herbert Jones",
+      "stat": "tpm",
+      "line": 1,
+      "side": "no",
+      "label": "Herbert Jones under 1 threes",
+      "p": 0.3602,
+      "ask": 0.29,
+      "edge": 0.0502,
+      "strength": "value",
+      "team": "NO",
+      "won": null
+     },
+     {
+      "athlete_id": "5144091",
+      "name": "Jeremiah Fears",
+      "stat": "pra",
+      "line": 30,
+      "side": "no",
+      "label": "Jeremiah Fears under 30 pts+reb+ast",
+      "p": 0.5873,
+      "ask": 0.53,
+      "edge": 0.0373,
+      "strength": "lean",
+      "team": "NO",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "DAL -4.5",
-    "home_spread": 4.5,
+    "details": "DAL -5.5",
+    "home_spread": 5.5,
     "total": 228.5,
-    "home_ml": 164,
-    "away_ml": -196,
+    "home_ml": 190,
+    "away_ml": -229,
     "home_ml_open": -140,
     "away_ml_open": 118
    },
@@ -98,11 +155,11 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "MEM -2.5",
-    "home_spread": -2.5,
-    "total": 228.5,
-    "home_ml": -148,
-    "away_ml": 125,
+    "details": "MEM -1.5",
+    "home_spread": -1.5,
+    "total": 227.5,
+    "home_ml": -130,
+    "away_ml": 110,
     "home_ml_open": -195,
     "away_ml_open": 163
    },
@@ -131,9 +188,9 @@
     "provider": "Draft Kings",
     "details": "MIN -15.5",
     "home_spread": -15.5,
-    "total": 235.5,
-    "home_ml": -1020,
-    "away_ml": 660,
+    "total": 234.5,
+    "home_ml": -1080,
+    "away_ml": 690,
     "home_ml_open": -840,
     "away_ml_open": 580
    },
