@@ -789,7 +789,9 @@
     "edge": 0.0459,
     "strength": "lean",
     "team": "DEN",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.29
    },
    {
     "athlete_id": "4277813",
@@ -803,7 +805,9 @@
     "edge": 0.0502,
     "strength": "value",
     "team": "NO",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.31
    },
    {
     "athlete_id": "5144091",
@@ -817,9 +821,17 @@
     "edge": 0.0373,
     "strength": "lean",
     "team": "NO",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.45
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 108,
+   "away_score": 116,
+   "home_won": false
+  },
+  "model_pick_correct": true,
+  "graded": true
  }
 ]
