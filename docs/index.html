@@ -106,6 +106,8 @@ table.lines .fav { font-weight: 700; }
 .seg button.on { background: var(--card); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
 .seg button:focus-visible { outline: 2px solid var(--s1); outline-offset: 1px; }
 .tabs { margin-top: 12px; }
+.title-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.league button { font-weight: 600; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; }
 .pos { color: var(--good); } .neg { color: var(--bad); }
 .muted { color: var(--muted); font-weight: 400; } .small { font-size: 12px; margin-top: 6px; }
@@ -152,10 +154,16 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 <body>
 <main>
   <header>
-    <h1>NBA Win Odds</h1>
+    <div class="title-row">
+      <h1 id="h1">NBA Win Odds</h1>
+      <nav class="league seg" aria-label="League">
+        <button data-sport="nba" class="on">NBA</button>
+        <button data-sport="nfl">NFL</button>
+      </nav>
+    </div>
     <p id="meta">Loading…</p>
     <nav class="tabs seg" role="tablist">
-      <button role="tab" data-tab="today" class="on">Today</button>
+      <button role="tab" data-tab="today" class="on" id="tab-today-btn">Today</button>
       <button role="tab" data-tab="track">Track record</button>
     </nav>
   </header>
@@ -166,7 +174,7 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
     <div class="grid" id="games"></div>
   </section>
   <section id="tab-track" hidden></section>
-  <footer>
+  <footer id="footer-nba">
     Model = 70% de-vigged Vegas line + 30% stats model (season point differential, home court, last-7-days form,
     back-to-backs, injuries to regular starters and rotation). "Value" = expected profit buying the Kalshi YES at the
     current ask, after Kalshi's fee, of at least 3¢ per $1 contract.
@@ -174,6 +182,15 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
     teammates' minutes redistributed), the Vegas implied team score, and what the opponent allows in rebounds, assists and
     threes; blended 60/40 with Kalshi's own price. "Value" = 5¢+ edge after fees, "lean" = 2-5¢.
     Informational only: track the record before risking money.
+  </footer>
+  <footer id="footer-nfl" hidden>
+    Model = 75% de-vigged Vegas line + 25% stats model (season point differential, home field 1.5, last-3-games form,
+    coming off a bye, starters out by depth-chart position: a starting QB is worth 4.5 points). "Value" = expected profit
+    buying the Kalshi YES at the current ask, after Kalshi's fee, of at least 3¢ per $1 contract.
+    Player props: recent usage this season (injured teammates' share handed to the healthy players), game script from the
+    Vegas total and spread, and what the opponent allows; touchdowns from a TD rate per carry/target shrunk toward the league
+    rate; blended 70/30 with Kalshi's own price. Picks only for players with an established role. "Value" = 5¢+ edge after
+    fees, "lean" = 2-5¢. Informational only: track the record before risking money.
   </footer>
 </main>
 <script src="track.js"></script>
@@ -187,9 +204,28 @@ const az = iso => new Date(iso).toLocaleTimeString("en-US", {hour: "numeric", mi
 const azStamp = iso => new Date(iso).toLocaleString("en-US", {month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: TZ}) + " AZ";
 const bust = () => "?t=" + Date.now();
 
-function statusClass(r) { return r.miss_prob >= 0.85 ? "out" : r.miss_prob > 0 ? "q" : "ok"; }
+// League: NBA data lives in data/, NFL in data/nfl/ (same file layout).
+let SPORT = "nba";
+const base = () => SPORT === "nfl" ? "data/nfl/" : "data/";
+const NFL = () => SPORT === "nfl";
+
+function statusClass(r) { return r.miss_prob >= (NFL() ? 0.8 : 0.85) ? "out" : r.miss_prob > 0 ? "q" : "ok"; }
+
+// NFL: skill-position starters always, plus every other starter with an injury tag.
+function rosterNfl(t) {
+  const a = t.availability;
+  const order = ["qb", "rb", "wr1", "wr2", "wr3", "te"], skill = new Set(order);
+  const rank = r => skill.has(r.slot) ? order.indexOf(r.slot) : 10 - r.miss_prob;
+  const rows = a.players.filter(r => skill.has(r.slot) || r.miss_prob > 0).sort((x, y) => rank(x) - rank(y)).map(r => `
+    <div class="p ${skill.has(r.slot) ? "" : "bench"}" title="${esc(r.comment || "")}">
+      <span class="n"><span style="color:var(--muted)">${esc(r.pos)}</span> ${esc(r.name)}${r.slot === "qb" && r.miss_prob >= 0.8 && r.backup ? ` → ${esc(r.backup)}` : ""}</span>
+      <span class="s ${statusClass(r)}">${esc(r.status)}</span>
+    </div>`).join("");
+  return `<div><h4>${esc(t.abbr)} · starters ${a.starters_available}/${a.starters_total} available</h4>${rows}</div>`;
+}
 
 function roster(t) {
+  if (NFL()) return rosterNfl(t);
   const a = t.availability;
   const rows = a.players.map(r => `
     <div class="p ${r.role === "rotation" ? "bench" : ""}" title="${esc(r.comment || "")}">
@@ -201,10 +237,13 @@ function roster(t) {
 
 function form(t) {
   const f = t.form, s = t.standing || {};
-  const seq = f.results.slice().reverse().map(r => `<span class="${r.won ? "w" : "l"}">${r.won ? "W" : "L"}</span>`).join(" ");
-  return `<div class="form"><b>${esc(t.abbr)}</b> ${s.wins ?? 0}-${s.losses ?? 0} · streak <b>${esc(s.streak || "–")}</b>
-    · last 7d ${seq || "no games"}${f.avg_margin != null ? ` (${f.avg_margin > 0 ? "+" : ""}${f.avg_margin})` : ""}
-    ${f.back_to_back ? ' · <b style="color:var(--warn)">back-to-back</b>' : ""}</div>`;
+  const seq = f.results.slice().reverse().map(r => r.tie ? `<span>T</span>` : `<span class="${r.won ? "w" : "l"}">${r.won ? "W" : "L"}</span>`).join(" ");
+  const rec = `${s.wins ?? 0}-${s.losses ?? 0}${s.ties ? "-" + s.ties : ""}`;
+  return `<div class="form"><b>${esc(t.abbr)}</b> ${rec} · streak <b>${esc(s.streak || "–")}</b>
+    · ${NFL() ? "last 3 games" : "last 7d"} ${seq || "no games"}${f.avg_margin != null ? ` (${f.avg_margin > 0 ? "+" : ""}${f.avg_margin})` : ""}
+    ${f.back_to_back ? ' · <b style="color:var(--warn)">back-to-back</b>' : ""}
+    ${f.off_bye ? ' · <b style="color:var(--good)">off a bye</b>' : ""}
+    ${f.short_week ? ' · <b style="color:var(--warn)">short week</b>' : ""}</div>`;
 }
 
 function card(g, r) {
@@ -215,7 +254,7 @@ function card(g, r) {
       <div class="team">${g.home.score != null ? g.home.score + " " : ""}${esc(g.home.abbr)}<img src="${esc(g.home.logo)}" alt=""></div>
     </div>`;
   if (!r) {
-    return `<div class="card">${head}<div class="pending">Analysis runs about 1 hour before tip-off (${az(g.report_at)}).</div></div>`;
+    return `<div class="card">${head}<div class="pending">Analysis runs about 1 hour before ${NFL() ? "kickoff" : "tip-off"} (${az(g.report_at)}).</div></div>`;
   }
   const p = r.model.p_home_final, k = r.kalshi, m = r.market;
   const marks = [m.p_home != null ? `<div class="mark" style="left:${(1 - m.p_home) * 100}%" title="Vegas"></div>` : "",
@@ -234,7 +273,7 @@ function card(g, r) {
       <tr><td>Stats only</td><td>${pct(1 - r.model.p_home_stats)}</td><td>${pct(r.model.p_home_stats)}</td></tr>
     </table>
     ${bv ? `<div class="value">Value: ${esc(bv.team)} YES at ${bv.ask.toFixed(2)} → ${(bv.edge * 100).toFixed(1)}¢ edge per $1 after fees</div>` : ""}
-    <div class="section-title">Starters & rotation</div>
+    <div class="section-title">${NFL() ? "Starters (depth chart) & injuries" : "Starters & rotation"}</div>
     <div class="roster">${roster(r.away)}${roster(r.home)}</div>
     <div class="section-title">Form</div>
     ${form(r.away)}${form(r.home)}
@@ -281,16 +320,31 @@ function avgTable(rows) {
     ${rows.filter(p => p.role === "starter").map(p => `<tr><td>${esc(p.name)} <small>${p.minutes}</small></td>${["pts", "reb", "ast", "tpm"].map(s => cell(p, s)).join("")}</tr>`).join("")}</table>`;
 }
 
+// NFL: one row per key player; a stat he doesn't produce shows "–".
+const NFL_COLS = [["pass_yds", "Pass yds"], ["rush_yds", "Rush yds"], ["rec", "Rec"], ["rec_yds", "Rec yds"], ["td", "TD"]];
+function avgTableNfl(rows) {
+  const cell = (p, s) => {
+    const a = p.avg[s], pr = p.proj[s], h = (p.hit_avg || {})[s];
+    if (!pr || pr <= 0 || (a == null && s !== "pass_yds")) return "<td>–</td>";
+    if (a == null) return `<td title="no games this season: projected from the team's passing"><b>${pr}</b><br><small>new starter</small></td>`;
+    const cls = pr > a * 1.05 ? "up" : pr < a * 0.95 ? "down" : "";
+    return `<td title="season avg ${a} → projected ${pr}${h ? `; chance of ${h.line}+ = ${pct(h.p)}` : ""}"><b class="${cls}">${pr}</b><br><small>${a}${h ? " · " + pct(h.p) : ""}</small></td>`;
+  };
+  return `<table class="avg"><tr><th>Player</th>${NFL_COLS.map(([, l]) => `<th>${l}</th>`).join("")}</tr>
+    ${rows.map(p => `<tr><td>${p.pos ? `<small>${esc(p.pos)}</small> ` : ""}${esc(p.name)}</td>${NFL_COLS.map(([s]) => cell(p, s)).join("")}</tr>`).join("")}</table>`;
+}
+
 function propsBlock(g, r) {
   const pr = r.props;
   if (!pr) return "";
   const picks = ["away", "home"].flatMap(s => (pr.picks[s] || []).map(pk => pickRow(pk, r[s].abbr))).join("");
+  const table = NFL() ? avgTableNfl : avgTable;
   return `<div class="section-title">Player props · Kalshi</div>
     ${picks || '<div class="form">No Kalshi prop line has a positive edge for this game.</div>'}
-    <details><summary>Starters: season average → projection (chance to reach the average)</summary>
+    <details><summary>${NFL() ? "Key players" : "Starters"}: season average → projection (chance to reach the average)</summary>
       <div class="form" style="margin-top:4px">Each cell: projection, then season average · chance to reach it.</div>
-      <div class="avg-wrap" style="margin-top:6px"><b>${esc(r.away.abbr)}</b>${avgTable(pr.players.away || [])}</div>
-      <div class="avg-wrap" style="margin-top:8px"><b>${esc(r.home.abbr)}</b>${avgTable(pr.players.home || [])}</div>
+      <div class="avg-wrap" style="margin-top:6px"><b>${esc(r.away.abbr)}</b>${table(pr.players.away || [])}</div>
+      <div class="avg-wrap" style="margin-top:8px"><b>${esc(r.home.abbr)}</b>${table(pr.players.home || [])}</div>
     </details>`;
 }
 
@@ -321,7 +375,7 @@ function linesTable(slate, reports) {
     </tr>`;
   }).join("");
   const src = (slate.find(g => g.odds && g.odds.provider) || {}).odds?.provider || "Sportsbook";
-  return rows ? `<h2>Vegas lines tonight <span class="badge">${esc(src)}</span></h2>
+  return rows ? `<h2>Vegas lines ${NFL() ? "this week" : "tonight"} <span class="badge">${esc(src)}</span></h2>
     <div class="lines-wrap"><table class="lines">
       <tr><th>Game</th><th>Moneyline away / home</th><th>Win % (no vig)</th><th>Spread</th><th>Total</th><th>Kalshi</th><th>Model</th></tr>
       ${rows}</table></div>` : "";
@@ -329,37 +383,76 @@ function linesTable(slate, reports) {
 
 async function load() {
   try {
-    const idx = await (await fetch("data/index.json" + bust())).json();
-    document.getElementById("meta").textContent =
-      `Slate ${idx.slate_date_et.replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1")} · updated ${azStamp(idx.generated_at)} · all times Arizona (MST)`;
+    const sport = SPORT;
+    const idx = await (await fetch(base() + "index.json" + bust())).json();
+    const slateLabel = idx.slate_label || (idx.slate_date_et || "").replace(/(\d{4})(\d\d)(\d\d)/, "$2/$3/$1");
     const reports = await Promise.all(idx.slate.map(async g => {
       if (!g.has_report) return null;
-      try { return await (await fetch(`data/reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
+      try { return await (await fetch(`${base()}reports/${g.event_id}.json` + bust())).json(); } catch (e) { return null; }
     }));
+    if (sport !== SPORT) return;  // the league was switched while loading
+    document.getElementById("meta").textContent =
+      `${NFL() ? "" : "Slate "}${slateLabel} · updated ${azStamp(idx.generated_at)} · all times Arizona (MST)`;
     document.getElementById("lines").innerHTML = linesTable(idx.slate, reports);
-    document.getElementById("games").innerHTML = idx.slate.map((g, i) => card(g, reports[i])).join("") || '<div class="pending">No NBA games today.</div>';
-    const best = reports.filter(r => r && r.props).flatMap(r => ["away", "home"].flatMap(s =>
+    document.getElementById("games").innerHTML = idx.slate.map((g, i) => card(g, reports[i])).join("") ||
+      `<div class="pending">No ${NFL() ? "NFL games this week" : "NBA games today"}.</div>`;
+    // best props: only games that haven't started
+    const best = reports.filter((r, i) => r && r.props && idx.slate[i].state === "pre").flatMap(r => ["away", "home"].flatMap(s =>
       (r.props.picks[s] || []).filter(pk => pk.strength === "value").map(pk => ({pk, abbr: r[s].abbr}))))
       .sort((a, b) => b.pk.edge - a.pk.edge).slice(0, 10);
-    document.getElementById("best").innerHTML = best.length ? `<h2>Best player props today</h2><div class="card">${best.map(b => pickRow(b.pk, b.abbr)).join("")}
+    document.getElementById("best").innerHTML = best.length ? `<h2>Best player props${NFL() ? " (games not started yet)" : " today"}</h2><div class="card">${best.map(b => pickRow(b.pk, b.abbr)).join("")}
       <div class="form" style="margin-top:8px">Stacking picks into one ticket multiplies the risk: each leg has to hit, and legs from the same game move together.</div></div>` : "";
   } catch (e) {
     document.getElementById("meta").textContent = "Could not load data yet. The first scheduled run creates it.";
   }
 }
+// Routes: "" (NBA today) · #track (NBA record) · #nfl (NFL this week) · #nfl/track (NFL record)
+let TAB = "today";
+function route() {
+  const h = location.hash.replace(/^#/, "");
+  return {sport: h.startsWith("nfl") ? "nfl" : "nba", tab: h.endsWith("track") ? "track" : "today"};
+}
+function setRoute(sport, tab) {
+  const h = sport === "nfl" ? (tab === "track" ? "#nfl/track" : "#nfl") : (tab === "track" ? "#track" : "");
+  history.replaceState(null, "", h || location.pathname);
+}
 function showTab(name) {
+  TAB = name;
   document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === name));
   document.getElementById("tab-today").hidden = name !== "today";
   document.getElementById("tab-track").hidden = name !== "track";
-  if (name === "track") TrackTab.load();
+  if (name === "track") TrackTab.load(base(), SPORT);
+}
+function showSport(sport) {
+  SPORT = sport;
+  document.querySelectorAll(".league button").forEach(b => b.classList.toggle("on", b.dataset.sport === sport));
+  document.getElementById("h1").textContent = sport === "nfl" ? "NFL Win Odds" : "NBA Win Odds";
+  document.title = sport === "nfl" ? "NFL Win Odds" : "NBA Win Odds";
+  document.getElementById("tab-today-btn").textContent = sport === "nfl" ? "This week" : "Today";
+  document.getElementById("footer-nba").hidden = sport === "nfl";
+  document.getElementById("footer-nfl").hidden = sport !== "nfl";
+  ["lines", "best", "games"].forEach(id => { document.getElementById(id).innerHTML = ""; });
+  document.getElementById("meta").textContent = "Loading…";
+  load();
 }
 document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
-  history.replaceState(null, "", b.dataset.tab === "track" ? "#track" : location.pathname);
+  setRoute(SPORT, b.dataset.tab);
   showTab(b.dataset.tab);
 }));
-load();
-showTab(location.hash === "#track" ? "track" : "today");
-setInterval(() => { load(); if (location.hash === "#track") TrackTab.load(); }, 5 * 60 * 1000);
+document.querySelectorAll(".league button").forEach(b => b.addEventListener("click", () => {
+  setRoute(b.dataset.sport, TAB);
+  showSport(b.dataset.sport);
+  showTab(TAB);
+}));
+const start = route();
+showSport(start.sport);
+showTab(start.tab);
+window.addEventListener("hashchange", () => {
+  const r = route();
+  if (r.sport !== SPORT) showSport(r.sport);
+  showTab(r.tab);
+});
+setInterval(() => { load(); if (TAB === "track") TrackTab.load(base(), SPORT); }, 5 * 60 * 1000);
 </script>
 </body>
 </html>

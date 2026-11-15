@@ -1,12 +1,17 @@
 // Track record tab: every pick the app has made, graded, with P&L after Kalshi fees.
-// Data: data/history.json (one row per game, written by the scheduled job).
+// Data: data/history.json (NBA) or data/nfl/history.json (NFL), one row per game, written by the scheduled job.
 (function () {
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
   const pct = p => p == null ? "–" : Math.round(p * 100) + "%";
   const money = v => v == null ? "–" : (v >= 0 ? "+$" : "−$") + Math.abs(v).toFixed(2);
   const etDate = iso => new Date(iso).toLocaleDateString("en-CA", {timeZone: "America/Phoenix"}); // YYYY-MM-DD
   const shortDate = d => { const [y, m, dd] = d.split("-"); return `${+m}/${+dd}`; };
-  const STAT = {pts: "Points", reb: "Rebounds", ast: "Assists", tpm: "Threes", pra: "Pts+Reb+Ast"};
+  const STATS = {
+    nba: {pts: "Points", reb: "Rebounds", ast: "Assists", tpm: "Threes", pra: "Pts+Reb+Ast"},
+    nfl: {pass_yds: "Passing yds", pass_td: "Passing TDs", rush_yds: "Rushing yds", rec_yds: "Receiving yds",
+          rec: "Receptions", td: "Touchdowns"},
+  };
+  let STAT = STATS.nba;
   const SERIES = [
     {key: "props-value", label: "Props · value"},
     {key: "props-lean", label: "Props · lean"},
@@ -228,13 +233,19 @@
     if (m) m.addEventListener("click", () => { state.logLimit += 100; render(); });
   }
 
-  async function load() {
+  // base: "data/" (NBA) or "data/nfl/" (NFL); both hold the same history.json layout.
+  async function load(base = "data/", sport = "nba") {
+    const token = state.token = (state.token || 0) + 1;
+    let picks = [];
     try {
-      const history = await (await fetch("data/history.json?t=" + Date.now())).json();
-      state.picks = flatten(history);
+      const history = await (await fetch(base + "history.json?t=" + Date.now())).json();
+      picks = flatten(history);
     } catch (e) {
-      state.picks = [];
+      picks = [];
     }
+    if (token !== state.token) return;  // a newer load (other league) won
+    STAT = STATS[sport] || STATS.nba;
+    state.picks = picks;
     render();
   }
 
