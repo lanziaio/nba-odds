@@ -859,7 +859,9 @@
     "edge": 0.0578,
     "strength": "value",
     "team": "IND",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.54
    },
    {
     "athlete_id": "3133603",
@@ -873,7 +875,9 @@
     "edge": 0.0218,
     "strength": "lean",
     "team": "IND",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.56
    },
    {
     "athlete_id": "1966",
@@ -887,6 +891,86 @@
     "edge": 0.0277,
     "strength": "lean",
     "team": "PHI",
+    "won": false,
+    "status": "lost",
+    "pnl": -0.34
+   }
+  ],
+  "result": {
+   "home_score": 131,
+   "away_score": 124,
+   "home_won": true
+  },
+  "model_pick_correct": true,
+  "graded": true
+ },
+ {
+  "event_id": "401909991",
+  "tip": "2026-11-16T00:00:00+00:00",
+  "preview": false,
+  "home": "WSH",
+  "away": "HOU",
+  "p_home_final": 0.2925,
+  "p_home_stats": 0.3618,
+  "p_home_market": 0.26523547431076133,
+  "p_home_kalshi": 0.255,
+  "pick": "HOU",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "4871144",
+    "name": "Alperen Sengun",
+    "stat": "pra",
+    "line": 40,
+    "side": "yes",
+    "label": "Alperen Sengun 40+ pts+reb+ast",
+    "p": 0.4957,
+    "ask": 0.39,
+    "edge": 0.0857,
+    "strength": "value",
+    "team": "HOU",
+    "won": null
+   },
+   {
+    "athlete_id": "4711272",
+    "name": "Reed Sheppard",
+    "stat": "reb",
+    "line": 2,
+    "side": "no",
+    "label": "Reed Sheppard under 2 rebounds",
+    "p": 0.3404,
+    "ask": 0.25,
+    "edge": 0.0704,
+    "strength": "value",
+    "team": "HOU",
+    "won": null
+   },
+   {
+    "athlete_id": "5160992",
+    "name": "Alex Sarr",
+    "stat": "pts",
+    "line": 15,
+    "side": "yes",
+    "label": "Alex Sarr 15+ points",
+    "p": 0.3321,
+    "ask": 0.23,
+    "edge": 0.0821,
+    "strength": "value",
+    "team": "WSH",
+    "won": null
+   },
+   {
+    "athlete_id": "5142718",
+    "name": "AJ Dybantsa",
+    "stat": "tpm",
+    "line": 2,
+    "side": "no",
+    "label": "AJ Dybantsa under 2 threes",
+    "p": 0.7287,
+    "ask": 0.67,
+    "edge": 0.0387,
+    "strength": "lean",
+    "team": "WSH",
     "won": null
    }
   ],

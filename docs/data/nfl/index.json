@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T19:29:18+00:00",
+ "generated_at": "2026-11-15T23:28:39+00:00",
  "sport": "nfl",
  "slate_label": "Week 10, 2026",
  "slate": [
@@ -60,19 +60,19 @@
    },
    "event_id": "401873058",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_HALFTIME",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "ATL",
     "name": "Atlanta Falcons",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png",
-    "score": null
+    "score": 13
    },
    "away": {
     "abbr": "KC",
     "name": "Kansas City Chiefs",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
-    "score": null
+    "score": 35
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -101,7 +101,9 @@
       "edge": 0.0764,
       "strength": "value",
       "team": "KC",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.77
      },
      {
       "athlete_id": "4832955",
@@ -115,7 +117,9 @@
       "edge": 0.0466,
       "strength": "lean",
       "team": "KC",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.74
      },
      {
       "athlete_id": "3917914",
@@ -129,7 +133,9 @@
       "edge": 0.0816,
       "strength": "value",
       "team": "ATL",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.24
      },
      {
       "athlete_id": "4360248",
@@ -143,10 +149,18 @@
       "edge": 0.0419,
       "strength": "lean",
       "team": "ATL",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.69
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 13,
+     "away_score": 35,
+     "home_won": false
+    },
+    "model_pick_correct": true,
+    "graded": true
    }
   },
   {
@@ -162,19 +176,19 @@
    },
    "event_id": "401873056",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_HALFTIME",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "CLE",
     "name": "Cleveland Browns",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png",
-    "score": null
+    "score": 27
    },
    "away": {
     "abbr": "HOU",
     "name": "Houston Texans",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png",
-    "score": null
+    "score": 24
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -203,7 +217,9 @@
       "edge": 0.0464,
       "strength": "lean",
       "team": "HOU",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.36
      },
      {
       "athlete_id": "4429022",
@@ -217,7 +233,9 @@
       "edge": 0.04,
       "strength": "lean",
       "team": "HOU",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.71
      },
      {
       "athlete_id": "4685702",
@@ -231,7 +249,9 @@
       "edge": 0.0488,
       "strength": "lean",
       "team": "CLE",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.59
      },
      {
       "athlete_id": "3122840",
@@ -245,10 +265,18 @@
       "edge": 0.045,
       "strength": "lean",
       "team": "CLE",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.59
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 27,
+     "away_score": 24,
+     "home_won": true
+    },
+    "model_pick_correct": false,
+    "graded": true
    }
   },
   {
@@ -264,19 +292,19 @@
    },
    "event_id": "401873060",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "GB",
     "name": "Green Bay Packers",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/gb.png",
-    "score": null
+    "score": 10
    },
    "away": {
     "abbr": "MIN",
     "name": "Minnesota Vikings",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png",
-    "score": null
+    "score": 30
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -305,7 +333,9 @@
       "edge": 0.0892,
       "strength": "value",
       "team": "MIN",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.77
      },
      {
       "athlete_id": "3042519",
@@ -319,7 +349,9 @@
       "edge": 0.0597,
       "strength": "value",
       "team": "MIN",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.41
      },
      {
       "athlete_id": "4701936",
@@ -333,7 +365,9 @@
       "edge": 0.0507,
       "strength": "value",
       "team": "GB",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.48
      },
      {
       "athlete_id": "4429023",
@@ -347,10 +381,18 @@
       "edge": 0.0372,
       "strength": "lean",
       "team": "GB",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.38
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 10,
+     "away_score": 30,
+     "home_won": false
+    },
+    "model_pick_correct": false,
+    "graded": true
    }
   },
   {
@@ -366,19 +408,19 @@
    },
    "event_id": "401873057",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "TEN",
     "name": "Tennessee Titans",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png",
-    "score": null
+    "score": 23
    },
    "away": {
     "abbr": "JAX",
     "name": "Jacksonville Jaguars",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png",
-    "score": null
+    "score": 40
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -407,7 +449,9 @@
       "edge": 0.0389,
       "strength": "lean",
       "team": "JAX",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.46
      },
      {
       "athlete_id": "4432620",
@@ -421,7 +465,9 @@
       "edge": 0.0312,
       "strength": "lean",
       "team": "JAX",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.58
      },
      {
       "athlete_id": "4431268",
@@ -435,7 +481,9 @@
       "edge": 0.0493,
       "strength": "lean",
       "team": "TEN",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.48
      },
      {
       "athlete_id": "3916148",
@@ -449,10 +497,18 @@
       "edge": 0.0366,
       "strength": "lean",
       "team": "TEN",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.59
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 23,
+     "away_score": 40,
+     "home_won": false
+    },
+    "model_pick_correct": true,
+    "graded": true
    }
   },
   {
@@ -468,19 +524,19 @@
    },
    "event_id": "401873059",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_HALFTIME",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "IND",
     "name": "Indianapolis Colts",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ind.png",
-    "score": null
+    "score": 24
    },
    "away": {
     "abbr": "MIA",
     "name": "Miami Dolphins",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png",
-    "score": null
+    "score": 22
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -509,7 +565,9 @@
       "edge": 0.0499,
       "strength": "lean",
       "team": "MIA",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.77
      },
      {
       "athlete_id": "4685307",
@@ -523,7 +581,9 @@
       "edge": 0.0476,
       "strength": "lean",
       "team": "MIA",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.52
      },
      {
       "athlete_id": "4683151",
@@ -537,7 +597,9 @@
       "edge": 0.0749,
       "strength": "value",
       "team": "IND",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.29
      },
      {
       "athlete_id": "4061956",
@@ -551,10 +613,18 @@
       "edge": 0.062,
       "strength": "value",
       "team": "IND",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.39
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 24,
+     "away_score": 22,
+     "home_won": true
+    },
+    "model_pick_correct": true,
+    "graded": true
    }
   },
   {
@@ -570,19 +640,19 @@
    },
    "event_id": "401873055",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_HALFTIME",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "NO",
     "name": "New Orleans Saints",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png",
-    "score": null
+    "score": 17
    },
    "away": {
     "abbr": "CAR",
     "name": "Carolina Panthers",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png",
-    "score": null
+    "score": 20
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -611,7 +681,9 @@
       "edge": 0.057,
       "strength": "value",
       "team": "CAR",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.44
      },
      {
       "athlete_id": "4685350",
@@ -625,7 +697,9 @@
       "edge": 0.0554,
       "strength": "value",
       "team": "CAR",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.26
      },
      {
       "athlete_id": "3054850",
@@ -639,7 +713,9 @@
       "edge": 0.0505,
       "strength": "value",
       "team": "NO",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.6
      },
      {
       "athlete_id": "4569559",
@@ -653,10 +729,18 @@
       "edge": 0.0368,
       "strength": "lean",
       "team": "NO",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.44
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 17,
+     "away_score": 20,
+     "home_won": false
+    },
+    "model_pick_correct": false,
+    "graded": true
    }
   },
   {
@@ -672,19 +756,19 @@
    },
    "event_id": "401873054",
    "tip": "2026-11-15T18:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "NYJ",
     "name": "New York Jets",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png",
-    "score": null
+    "score": 12
    },
    "away": {
     "abbr": "BUF",
     "name": "Buffalo Bills",
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/buf.png",
-    "score": null
+    "score": 31
    },
    "has_report": true,
    "report_at": "2026-11-15T16:45:00+00:00",
@@ -713,7 +797,9 @@
       "edge": 0.05,
       "strength": "value",
       "team": "BUF",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.65
      },
      {
       "athlete_id": "3930086",
@@ -727,7 +813,9 @@
       "edge": 0.021,
       "strength": "lean",
       "team": "BUF",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.4
      },
      {
       "athlete_id": "4723820",
@@ -741,7 +829,9 @@
       "edge": 0.0543,
       "strength": "value",
       "team": "NYJ",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.7
      },
      {
       "athlete_id": "4685247",
@@ -755,10 +845,18 @@
       "edge": 0.0522,
       "strength": "value",
       "team": "NYJ",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.46
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 12,
+     "away_score": 31,
+     "home_won": false
+    },
+    "model_pick_correct": true,
+    "graded": true
    }
   },
   {
@@ -774,8 +872,8 @@
    },
    "event_id": "401873062",
    "tip": "2026-11-15T21:05:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "LV",
     "name": "Las Vegas Raiders",
@@ -805,8 +903,8 @@
    },
    "event_id": "401873061",
    "tip": "2026-11-15T21:05:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "ARI",
     "name": "Arizona Cardinals",
@@ -836,8 +934,8 @@
    },
    "event_id": "401873063",
    "tip": "2026-11-15T21:25:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "DAL",
     "name": "Dallas Cowboys",
@@ -856,7 +954,7 @@
   },
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "CIN -3.5",
     "home_spread": -3.5,
     "total": 49.5,
@@ -887,7 +985,7 @@
   },
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "BAL -4.5",
     "home_spread": -4.5,
     "total": 38.5,
@@ -918,26 +1016,26 @@
   }
  ],
  "track_record": {
-  "games": 0,
+  "games": 7,
   "model": {
-   "n": 0,
-   "brier": null,
-   "accuracy": null
+   "n": 7,
+   "brier": 0.1902,
+   "accuracy": 0.5714
   },
   "vegas": {
-   "n": 0,
-   "brier": null,
-   "accuracy": null
+   "n": 7,
+   "brier": 0.189,
+   "accuracy": 0.5714
   },
   "stats_only": {
-   "n": 0,
-   "brier": null,
-   "accuracy": null
+   "n": 7,
+   "brier": 0.1969,
+   "accuracy": 0.5714
   },
   "kalshi": {
-   "n": 0,
-   "brier": null,
-   "accuracy": null
+   "n": 7,
+   "brier": 0.1866,
+   "accuracy": 0.7143
   },
   "value_bets": {
    "n": 0,
@@ -946,16 +1044,16 @@
   },
   "props": {
    "value": {
-    "n": 0,
-    "hit_rate": null,
-    "expected_hit_rate": null,
-    "pnl_per_contract": 0
+    "n": 13,
+    "hit_rate": 0.5385,
+    "expected_hit_rate": 0.7149,
+    "pnl_per_contract": -1.48
    },
    "lean": {
-    "n": 0,
-    "hit_rate": null,
-    "expected_hit_rate": null,
-    "pnl_per_contract": 0
+    "n": 15,
+    "hit_rate": 0.5333,
+    "expected_hit_rate": 0.5931,
+    "pnl_per_contract": -0.28
    }
   }
  },
