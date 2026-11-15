@@ -2,15 +2,17 @@ name: pregame
 
 on:
   schedule:
-    # Every 15 min across NBA tip-off hours (UTC). Covers noon to 10:30 PM ET tip-offs in EST and EDT.
+    # Every 15 min across NBA tip-off and NFL kickoff hours (UTC): noon to 10:30 PM ET in EST and EDT.
     - cron: "*/15 14-23 * * *"
     - cron: "*/15 0-3 * * *"
+    # NFL international games kick off 9:30 AM ET on Sundays.
+    - cron: "*/15 12-13 * * 0"
     # Morning sweep: record overnight final scores for the track record.
     - cron: "0 11 * * *"
   workflow_dispatch:
     inputs:
       mode:
-        description: "run = normal T-60 check · preview-all = analyse every remaining game today (no Slack) · settle = fill final scores"
+        description: "run = normal T-60 check · preview-all = analyse every remaining game today (NBA) / this week (NFL) · settle = fill final scores"
         type: choice
         options: [run, preview-all, settle]
         default: run
@@ -29,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Analyse games tipping off within 75 min
+      - name: Analyse games starting within 75 min (NBA + NFL)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -37,11 +39,14 @@ jobs:
           MODE: ${{ github.event.inputs.mode || 'run' }}
         run: |
           python3 --version
+          # One league failing must not stop the other: run both, then fail if either failed.
+          rc=0
           case "$MODE" in
-            preview-all) python3 -m nba_odds run --all-today ;;
-            settle)      python3 -m nba_odds settle ;;
-            *)           python3 -m nba_odds run ;;
+            preview-all) python3 -m nba_odds run --all-today || rc=1; python3 -m nfl_odds run --all-week || rc=1 ;;
+            settle)      python3 -m nba_odds settle || rc=1;     python3 -m nfl_odds settle || rc=1 ;;
+            *)           python3 -m nba_odds run || rc=1;        python3 -m nfl_odds run || rc=1 ;;
           esac
+          exit $rc
 
       - name: Commit results
         if: always()

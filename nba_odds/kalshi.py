@@ -18,9 +18,9 @@ def code(espn_abbr: str) -> str:
     return ESPN_TO_KALSHI.get(espn_abbr, espn_abbr)
 
 
-def event_ticker(away_abbr: str, home_abbr: str, tip_utc: datetime) -> str:
+def event_ticker(away_abbr: str, home_abbr: str, tip_utc: datetime, series: str = SERIES, code_fn=code) -> str:
     d = tip_utc.astimezone(ET)
-    return f"{SERIES}-{d:%y}{d:%b}{d:%d}".upper() + f"{code(away_abbr)}{code(home_abbr)}"
+    return f"{series}-{d:%y}{d:%b}{d:%d}".upper() + f"{code_fn(away_abbr)}{code_fn(home_abbr)}"
 
 
 def _f(v) -> float | None:
@@ -31,8 +31,9 @@ def _f(v) -> float | None:
     return x
 
 
-def game_prices(away_abbr: str, home_abbr: str, tip_utc: datetime) -> dict | None:
-    ticker = event_ticker(away_abbr, home_abbr, tip_utc)
+def game_prices(away_abbr: str, home_abbr: str, tip_utc: datetime, series: str = SERIES, code_fn=code) -> dict | None:
+    """Kalshi game-winner prices. `series` / `code_fn` let other leagues (NFL) reuse this."""
+    ticker = event_ticker(away_abbr, home_abbr, tip_utc, series, code_fn)
     data = get_json(f"{BASE}/markets", {"event_ticker": ticker, "limit": 10})
     markets = data.get("markets") or []
     if not markets:
@@ -56,7 +57,7 @@ def game_prices(away_abbr: str, home_abbr: str, tip_utc: datetime) -> dict | Non
             "volume": _f(m.get("volume_fp")),
             "status": m.get("status"),
         }
-    home, away = sides.get(code(home_abbr)), sides.get(code(away_abbr))
+    home, away = sides.get(code_fn(home_abbr)), sides.get(code_fn(away_abbr))
     if not home or not away:
         return None
     # Implied P(home) from both books (home YES and 1 - away YES), averaged.
@@ -65,7 +66,7 @@ def game_prices(away_abbr: str, home_abbr: str, tip_utc: datetime) -> dict | Non
     wide = any(s["spread"] is None or s["spread"] > 0.06 for s in (home, away))
     return {
         "event_ticker": ticker,
-        "url": f"https://kalshi.com/markets/{SERIES.lower()}",
+        "url": f"https://kalshi.com/markets/{series.lower()}",
         "home": home,
         "away": away,
         "p_home": round(p_home, 4) if p_home is not None else None,

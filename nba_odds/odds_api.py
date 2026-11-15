@@ -12,15 +12,15 @@ from datetime import datetime
 from .http import get_json
 from .model import american_to_prob, devig
 
-URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
+URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds"
 
 
-def fetch_consensus() -> tuple[list[dict], str | None]:
+def fetch_consensus(sport: str = "basketball_nba") -> tuple[list[dict], str | None]:
     key = os.environ.get("ODDS_API_KEY")
     if not key:
         return [], None
     body, headers = get_json(
-        URL,
+        URL.format(sport=sport),
         {"apiKey": key, "regions": "us", "markets": "h2h", "oddsFormat": "american"},
         with_headers=True,
     )

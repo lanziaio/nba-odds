@@ -339,11 +339,12 @@ def hit_average(proj_player: dict) -> dict:
 
 # ---------- Kalshi props ----------
 
-def kalshi_props(away_abbr: str, home_abbr: str, tip) -> list[dict]:
+def kalshi_props(away_abbr: str, home_abbr: str, tip, series_map: dict | None = None, code_fn=code) -> list[dict]:
+    """Every open Kalshi prop line for one game. `series_map` / `code_fn` let other leagues (NFL) reuse this."""
     d = tip.astimezone(ET)
-    suffix = f"{d:%y}{d:%b}{d:%d}".upper() + f"{code(away_abbr)}{code(home_abbr)}"
+    suffix = f"{d:%y}{d:%b}{d:%d}".upper() + f"{code_fn(away_abbr)}{code_fn(home_abbr)}"
     out = []
-    for series, stat in KALSHI_SERIES.items():
+    for series, stat in (series_map or KALSHI_SERIES).items():
         time.sleep(0.3)  # stay well under Kalshi's public rate limit
         data = get_json(f"{BASE}/markets", {"event_ticker": f"{series}-{suffix}", "limit": 1000})
         for m in data.get("markets") or []:
@@ -354,7 +355,7 @@ def kalshi_props(away_abbr: str, home_abbr: str, tip) -> list[dict]:
             except (KeyError, TypeError, ValueError):
                 continue
             seg = m["ticker"].split("-")[2] if m["ticker"].count("-") >= 3 else ""
-            team_code = next((c for c in (code(away_abbr), code(home_abbr)) if seg.startswith(c)), None)
+            team_code = next((c for c in sorted((code_fn(away_abbr), code_fn(home_abbr)), key=len, reverse=True) if seg.startswith(c)), None)
 
             def f(k):
                 try:
@@ -396,7 +397,8 @@ def price_markets(markets: list[dict], side_players: dict[str, dict], team_code:
     return priced
 
 
-def pick(priced: list[dict], n: int = PICKS_PER_TEAM) -> list[dict]:
+def pick(priced: list[dict], n: int = PICKS_PER_TEAM, labels: dict | None = None) -> list[dict]:
+    labels = labels or STAT_LABEL
     cands = []
     for r in priced:
         if r["miss_prob"] > 0:
@@ -415,8 +417,8 @@ def pick(priced: list[dict], n: int = PICKS_PER_TEAM) -> list[dict]:
             cands.append({
                 "athlete_id": r["athlete_id"], "name": r["name"], "stat": r["stat"], "line": r["line"],
                 "side": side,
-                "label": (f'{r["name"]} {r["line"]}+ {STAT_LABEL[r["stat"]]}' if side == "yes"
-                          else f'{r["name"]} under {r["line"]} {STAT_LABEL[r["stat"]]}'),
+                "label": (f'{r["name"]} {r["line"]}+ {labels[r["stat"]]}' if side == "yes"
+                          else f'{r["name"]} under {r["line"]} {labels[r["stat"]]}'),
                 "proj": r["proj"], "avg": r["avg"], "p": round(p_side, 4), "ask": ask, "edge": r[f"edge_{side}"],
                 "p_model": r["p_model"] if side == "yes" else round(1 - r["p_model"], 4),
                 "p_market": (r["p_market"] if side == "yes" else round(1 - r["p_market"], 4)) if r["p_market"] else None,
