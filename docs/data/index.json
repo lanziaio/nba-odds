@@ -1,440 +1,253 @@
 {
- "generated_at": "2026-11-16T04:31:54+00:00",
- "slate_date_et": "20261115",
+ "generated_at": "2026-11-16T05:00:04+00:00",
+ "slate_date_et": "20261116",
  "slate": [
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "PHI -8.5",
+    "details": "BOS -8.5",
     "home_spread": -8.5,
-    "total": 225.5,
-    "home_ml": -305,
-    "away_ml": 248,
-    "home_ml_open": -253,
-    "away_ml_open": 208
+    "total": 211.5,
+    "home_ml": -378,
+    "away_ml": 300,
+    "home_ml_open": -426,
+    "away_ml_open": 333
    },
-   "event_id": "401909985",
-   "tip": "2026-11-15T18:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "PHI",
-    "name": "Philadelphia 76ers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-    "score": 131
-   },
-   "away": {
-    "abbr": "IND",
-    "name": "Indiana Pacers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
-    "score": 124
-   },
-   "has_report": true,
-   "report_at": "2026-11-15T16:45:00+00:00",
-   "summary": {
-    "event_id": "401909985",
-    "tip": "2026-11-15T18:00:00+00:00",
-    "preview": false,
-    "home": "PHI",
-    "away": "IND",
-    "p_home_final": 0.6839,
-    "p_home_stats": 0.5804,
-    "p_home_market": 0.7238134206219313,
-    "p_home_kalshi": 0.73,
-    "pick": "PHI",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "4017837",
-      "name": "Ivica Zubac",
-      "stat": "reb",
-      "line": 10,
-      "side": "no",
-      "label": "Ivica Zubac under 10 rebounds",
-      "p": 0.5178,
-      "ask": 0.44,
-      "edge": 0.0578,
-      "strength": "value",
-      "team": "IND",
-      "won": true,
-      "status": "won",
-      "pnl": 0.54
-     },
-     {
-      "athlete_id": "3133603",
-      "name": "Kelly Oubre Jr.",
-      "stat": "ast",
-      "line": 2,
-      "side": "no",
-      "label": "Kelly Oubre Jr. under 2 assists",
-      "p": 0.5818,
-      "ask": 0.54,
-      "edge": 0.0218,
-      "strength": "lean",
-      "team": "IND",
-      "won": false,
-      "status": "lost",
-      "pnl": -0.56
-     },
-     {
-      "athlete_id": "1966",
-      "name": "LeBron James",
-      "stat": "ast",
-      "line": 6,
-      "side": "no",
-      "label": "LeBron James under 6 assists",
-      "p": 0.3677,
-      "ask": 0.32,
-      "edge": 0.0277,
-      "strength": "lean",
-      "team": "PHI",
-      "won": false,
-      "status": "lost",
-      "pnl": -0.34
-     }
-    ],
-    "result": {
-     "home_score": 131,
-     "away_score": 124,
-     "home_won": true
-    },
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "Draft Kings",
-    "details": "LAL -3.5",
-    "home_spread": 3.5,
-    "total": 226.5,
-    "home_ml": 136,
-    "away_ml": -161,
-    "home_ml_open": 124,
-    "away_ml_open": -147
-   },
-   "event_id": "401909986",
-   "tip": "2026-11-15T21:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "PHX",
-    "name": "Phoenix Suns",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-    "score": 123
-   },
-   "away": {
-    "abbr": "LAL",
-    "name": "Los Angeles Lakers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
-    "score": 131
-   },
-   "has_report": false,
-   "report_at": "2026-11-15T19:45:00+00:00",
-   "summary": null
-  },
-  {
-   "odds": {
-    "provider": "Draft Kings",
-    "details": "CHA -1.5",
-    "home_spread": 1.5,
-    "total": 213.5,
-    "home_ml": -106,
-    "away_ml": -111,
-    "home_ml_open": -126,
-    "away_ml_open": 107
-   },
-   "event_id": "401909987",
-   "tip": "2026-11-15T21:30:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "LAC",
-    "name": "LA Clippers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-    "score": 113
-   },
-   "away": {
-    "abbr": "CHA",
-    "name": "Charlotte Hornets",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-    "score": 105
-   },
-   "has_report": false,
-   "report_at": "2026-11-15T20:15:00+00:00",
-   "summary": null
-  },
-  {
-   "odds": {
-    "provider": "Draft Kings",
-    "details": "SA -15.5",
-    "home_spread": 15.5,
-    "total": 224.5,
-    "home_ml": 740,
-    "away_ml": -1180,
-    "home_ml_open": 920,
-    "away_ml_open": -1640
-   },
-   "event_id": "401909988",
-   "tip": "2026-11-15T22:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "UTAH",
-    "name": "Utah Jazz",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
-    "score": 102
-   },
-   "away": {
-    "abbr": "SA",
-    "name": "San Antonio Spurs",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
-    "score": 110
-   },
-   "has_report": false,
-   "report_at": "2026-11-15T20:45:00+00:00",
-   "summary": null
-  },
-  {
-   "odds": {
-    "provider": "Draft Kings",
-    "details": "BOS -14.5",
-    "home_spread": -14.5,
-    "total": 218.5,
-    "home_ml": -880,
-    "away_ml": 599,
-    "home_ml_open": -610,
-    "away_ml_open": 450
-   },
-   "event_id": "401909989",
-   "tip": "2026-11-15T23:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401909994",
+   "tip": "2026-11-17T00:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
     "abbr": "BOS",
     "name": "Boston Celtics",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
-    "score": 131
+    "score": null
    },
    "away": {
-    "abbr": "DAL",
-    "name": "Dallas Mavericks",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png",
-    "score": 94
+    "abbr": "ORL",
+    "name": "Orlando Magic",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
+    "score": null
    },
    "has_report": false,
-   "report_at": "2026-11-15T21:45:00+00:00",
-   "summary": null
-  },
-  {
-   "odds": {
-    "provider": "Draft Kings",
-    "details": "NY -5.5",
-    "home_spread": 5.5,
-    "total": 217.5,
-    "home_ml": 170,
-    "away_ml": -204,
-    "home_ml_open": 133,
-    "away_ml_open": -158
-   },
-   "event_id": "401909990",
-   "tip": "2026-11-15T23:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "TOR",
-    "name": "Toronto Raptors",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-    "score": 108
-   },
-   "away": {
-    "abbr": "NY",
-    "name": "New York Knicks",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-    "score": 112
-   },
-   "has_report": false,
-   "report_at": "2026-11-15T21:45:00+00:00",
+   "report_at": "2026-11-16T22:45:00+00:00",
    "summary": null
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "HOU -7.5",
-    "home_spread": 7.5,
-    "total": 223.5,
-    "home_ml": 262,
-    "away_ml": -326,
-    "home_ml_open": 284,
-    "away_ml_open": -356
+    "details": "CLE -9.5",
+    "home_spread": -9.5,
+    "total": 243.5,
+    "home_ml": -395,
+    "away_ml": 312,
+    "home_ml_open": -400,
+    "away_ml_open": 315
    },
-   "event_id": "401909991",
-   "tip": "2026-11-16T00:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401909995",
+   "tip": "2026-11-17T00:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "CLE",
+    "name": "Cleveland Cavaliers",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "CHI",
+    "name": "Chicago Bulls",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-16T22:45:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "MEM -3.5",
+    "home_spread": 3.5,
+    "total": 229.5,
+    "home_ml": 146,
+    "away_ml": -173,
+    "home_ml_open": 185,
+    "away_ml_open": -223
+   },
+   "event_id": "401909996",
+   "tip": "2026-11-17T00:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
     "abbr": "WSH",
     "name": "Washington Wizards",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-    "score": 119
+    "score": null
+   },
+   "away": {
+    "abbr": "MEM",
+    "name": "Memphis Grizzlies",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-16T22:45:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "PHI -5.5",
+    "home_spread": 5.5,
+    "total": 225.5,
+    "home_ml": 191,
+    "away_ml": -230,
+    "home_ml_open": 172,
+    "away_ml_open": -207
+   },
+   "event_id": "401909997",
+   "tip": "2026-11-17T00:30:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "BKN",
+    "name": "Brooklyn Nets",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "PHI",
+    "name": "Philadelphia 76ers",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-16T23:15:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "HOU -2.5",
+    "home_spread": 2.5,
+    "total": 229.5,
+    "home_ml": 124,
+    "away_ml": -148,
+    "home_ml_open": 119,
+    "away_ml_open": -141
+   },
+   "event_id": "401909998",
+   "tip": "2026-11-17T00:30:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "MIA",
+    "name": "Miami Heat",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
+    "score": null
    },
    "away": {
     "abbr": "HOU",
     "name": "Houston Rockets",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-    "score": 147
-   },
-   "has_report": true,
-   "report_at": "2026-11-15T22:45:00+00:00",
-   "summary": {
-    "event_id": "401909991",
-    "tip": "2026-11-16T00:00:00+00:00",
-    "preview": false,
-    "home": "WSH",
-    "away": "HOU",
-    "p_home_final": 0.2925,
-    "p_home_stats": 0.3618,
-    "p_home_market": 0.26523547431076133,
-    "p_home_kalshi": 0.255,
-    "pick": "HOU",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "4871144",
-      "name": "Alperen Sengun",
-      "stat": "pra",
-      "line": 40,
-      "side": "yes",
-      "label": "Alperen Sengun 40+ pts+reb+ast",
-      "p": 0.4957,
-      "ask": 0.39,
-      "edge": 0.0857,
-      "strength": "value",
-      "team": "HOU",
-      "won": false,
-      "status": "lost",
-      "pnl": -0.41
-     },
-     {
-      "athlete_id": "4711272",
-      "name": "Reed Sheppard",
-      "stat": "reb",
-      "line": 2,
-      "side": "no",
-      "label": "Reed Sheppard under 2 rebounds",
-      "p": 0.3404,
-      "ask": 0.25,
-      "edge": 0.0704,
-      "strength": "value",
-      "team": "HOU",
-      "won": true,
-      "status": "won",
-      "pnl": 0.73
-     },
-     {
-      "athlete_id": "5160992",
-      "name": "Alex Sarr",
-      "stat": "pts",
-      "line": 15,
-      "side": "yes",
-      "label": "Alex Sarr 15+ points",
-      "p": 0.3321,
-      "ask": 0.23,
-      "edge": 0.0821,
-      "strength": "value",
-      "team": "WSH",
-      "won": true,
-      "status": "won",
-      "pnl": 0.75
-     },
-     {
-      "athlete_id": "5142718",
-      "name": "AJ Dybantsa",
-      "stat": "tpm",
-      "line": 2,
-      "side": "no",
-      "label": "AJ Dybantsa under 2 threes",
-      "p": 0.7287,
-      "ask": 0.67,
-      "edge": 0.0387,
-      "strength": "lean",
-      "team": "WSH",
-      "won": false,
-      "status": "lost",
-      "pnl": -0.69
-     }
-    ],
-    "result": {
-     "home_score": 119,
-     "away_score": 147,
-     "home_won": false
-    },
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "ATL -8.5",
-    "home_spread": 8.5,
-    "total": 233.5,
-    "home_ml": 261,
-    "away_ml": -324,
-    "home_ml_open": 220,
-    "away_ml_open": -268
-   },
-   "event_id": "401909992",
-   "tip": "2026-11-16T01:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "MIL",
-    "name": "Milwaukee Bucks",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-    "score": 106
-   },
-   "away": {
-    "abbr": "ATL",
-    "name": "Atlanta Hawks",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-    "score": 113
+    "score": null
    },
    "has_report": false,
-   "report_at": "2026-11-15T23:45:00+00:00",
+   "report_at": "2026-11-16T23:15:00+00:00",
    "summary": null
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "OKC -11.5",
-    "home_spread": 11.5,
-    "total": 223.5,
-    "home_ml": 361,
-    "away_ml": -468,
-    "home_ml_open": 336,
-    "away_ml_open": -430
+    "details": "MIN -2.5",
+    "home_spread": -2.5,
+    "total": 228.5,
+    "home_ml": -142,
+    "away_ml": 120,
+    "home_ml_open": -143,
+    "away_ml_open": 121
    },
-   "event_id": "401909993",
-   "tip": "2026-11-16T02:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401909999",
+   "tip": "2026-11-17T01:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
-    "abbr": "SAC",
-    "name": "Sacramento Kings",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png",
-    "score": 103
+    "abbr": "MIN",
+    "name": "Minnesota Timberwolves",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
+    "score": null
    },
    "away": {
-    "abbr": "OKC",
-    "name": "Oklahoma City Thunder",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-    "score": 125
+    "abbr": "POR",
+    "name": "Portland Trail Blazers",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
+    "score": null
    },
    "has_report": false,
-   "report_at": "2026-11-16T00:45:00+00:00",
+   "report_at": "2026-11-16T23:45:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "GS -3.5",
+    "home_spread": 3.5,
+    "total": 225.5,
+    "home_ml": 128,
+    "away_ml": -152,
+    "home_ml_open": 111,
+    "away_ml_open": -131
+   },
+   "event_id": "401910000",
+   "tip": "2026-11-17T01:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "NO",
+    "name": "New Orleans Pelicans",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "GS",
+    "name": "Golden State Warriors",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-16T23:45:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "DEN -10.5",
+    "home_spread": -10.5,
+    "total": 228.5,
+    "home_ml": -438,
+    "away_ml": 341,
+    "home_ml_open": -370,
+    "away_ml_open": 294
+   },
+   "event_id": "401910001",
+   "tip": "2026-11-17T02:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "DEN",
+    "name": "Denver Nuggets",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "PHX",
+    "name": "Phoenix Suns",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-17T00:45:00+00:00",
    "summary": null
   }
  ],
