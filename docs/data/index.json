@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T02:56:15+00:00",
+ "generated_at": "2026-11-16T03:31:48+00:00",
  "slate_date_et": "20261115",
  "slate": [
   {
@@ -311,7 +311,9 @@
       "edge": 0.0857,
       "strength": "value",
       "team": "HOU",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.41
      },
      {
       "athlete_id": "4711272",
@@ -325,7 +327,9 @@
       "edge": 0.0704,
       "strength": "value",
       "team": "HOU",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.73
      },
      {
       "athlete_id": "5160992",
@@ -339,7 +343,9 @@
       "edge": 0.0821,
       "strength": "value",
       "team": "WSH",
-      "won": null
+      "won": true,
+      "status": "won",
+      "pnl": 0.75
      },
      {
       "athlete_id": "5142718",
@@ -353,10 +359,18 @@
       "edge": 0.0387,
       "strength": "lean",
       "team": "WSH",
-      "won": null
+      "won": false,
+      "status": "lost",
+      "pnl": -0.69
      }
     ],
-    "result": null
+    "result": {
+     "home_score": 119,
+     "away_score": 147,
+     "home_won": false
+    },
+    "model_pick_correct": true,
+    "graded": true
    }
   },
   {
@@ -372,19 +386,19 @@
    },
    "event_id": "401909992",
    "tip": "2026-11-16T01:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "MIL",
     "name": "Milwaukee Bucks",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-    "score": null
+    "score": 106
    },
    "away": {
     "abbr": "ATL",
     "name": "Atlanta Hawks",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
-    "score": null
+    "score": 113
    },
    "has_report": false,
    "report_at": "2026-11-15T23:45:00+00:00",
@@ -423,26 +437,26 @@
   }
  ],
  "track_record": {
-  "games": 10,
+  "games": 11,
   "model": {
-   "n": 10,
-   "brier": 0.1607,
-   "accuracy": 0.8
+   "n": 11,
+   "brier": 0.1539,
+   "accuracy": 0.8182
   },
   "vegas": {
-   "n": 10,
-   "brier": 0.1655,
-   "accuracy": 0.8
+   "n": 11,
+   "brier": 0.1569,
+   "accuracy": 0.8182
   },
   "stats_only": {
-   "n": 10,
-   "brier": 0.1557,
-   "accuracy": 0.8
+   "n": 11,
+   "brier": 0.1534,
+   "accuracy": 0.8182
   },
   "kalshi": {
-   "n": 10,
-   "brier": 0.1624,
-   "accuracy": 0.8
+   "n": 11,
+   "brier": 0.1536,
+   "accuracy": 0.8182
   },
   "value_bets": {
    "n": 1,
@@ -451,16 +465,16 @@
   },
   "props": {
    "value": {
-    "n": 18,
-    "hit_rate": 0.3889,
-    "expected_hit_rate": 0.5391,
-    "pnl_per_contract": -1.51
+    "n": 21,
+    "hit_rate": 0.4286,
+    "expected_hit_rate": 0.5177,
+    "pnl_per_contract": -0.44
    },
    "lean": {
-    "n": 19,
-    "hit_rate": 0.4737,
-    "expected_hit_rate": 0.5961,
-    "pnl_per_contract": -1.67
+    "n": 20,
+    "hit_rate": 0.45,
+    "expected_hit_rate": 0.6028,
+    "pnl_per_contract": -2.36
    }
   }
  },

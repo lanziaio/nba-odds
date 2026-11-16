@@ -929,7 +929,9 @@
     "edge": 0.0857,
     "strength": "value",
     "team": "HOU",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.41
    },
    {
     "athlete_id": "4711272",
@@ -943,7 +945,9 @@
     "edge": 0.0704,
     "strength": "value",
     "team": "HOU",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.73
    },
    {
     "athlete_id": "5160992",
@@ -957,7 +961,9 @@
     "edge": 0.0821,
     "strength": "value",
     "team": "WSH",
-    "won": null
+    "won": true,
+    "status": "won",
+    "pnl": 0.75
    },
    {
     "athlete_id": "5142718",
@@ -971,9 +977,17 @@
     "edge": 0.0387,
     "strength": "lean",
     "team": "WSH",
-    "won": null
+    "won": false,
+    "status": "lost",
+    "pnl": -0.69
    }
   ],
-  "result": null
+  "result": {
+   "home_score": 119,
+   "away_score": 147,
+   "home_won": false
+  },
+  "model_pick_correct": true,
+  "graded": true
  }
 ]
