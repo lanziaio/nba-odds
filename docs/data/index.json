@@ -1,15 +1,15 @@
 {
- "generated_at": "2026-11-16T17:08:37+00:00",
+ "generated_at": "2026-11-16T22:47:00+00:00",
  "slate_date_et": "20261116",
  "slate": [
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "BOS -8.5",
-    "home_spread": -8.5,
-    "total": 212.5,
-    "home_ml": -360,
-    "away_ml": 287,
+    "details": "BOS -9.5",
+    "home_spread": -9.5,
+    "total": 213.5,
+    "home_ml": -375,
+    "away_ml": 298,
     "home_ml_open": -426,
     "away_ml_open": 333
    },
@@ -29,9 +29,69 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909994",
+    "tip": "2026-11-17T00:00:00+00:00",
+    "preview": false,
+    "home": "BOS",
+    "away": "ORL",
+    "p_home_final": 0.7504,
+    "p_home_stats": 0.7305,
+    "p_home_market": 0.758576874205845,
+    "p_home_kalshi": 0.765,
+    "pick": "BOS",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4566434",
+      "name": "Franz Wagner",
+      "stat": "ast",
+      "line": 6,
+      "side": "no",
+      "label": "Franz Wagner under 6 assists",
+      "p": 0.4899,
+      "ask": 0.38,
+      "edge": 0.0899,
+      "strength": "value",
+      "ticker": "KXNBAAST-26NOV16ORLBOS-ORLFWAGNER22-6",
+      "team": "ORL",
+      "won": null
+     },
+     {
+      "athlete_id": "4066320",
+      "name": "Desmond Bane",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "Desmond Bane under 25 pts+reb+ast",
+      "p": 0.5993,
+      "ask": 0.51,
+      "edge": 0.0693,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV16ORLBOS-ORLDBANE3-25",
+      "team": "ORL",
+      "won": null
+     },
+     {
+      "athlete_id": "4683689",
+      "name": "Jordan Walsh",
+      "stat": "pts",
+      "line": 5,
+      "side": "yes",
+      "label": "Jordan Walsh 5+ points",
+      "p": 0.5624,
+      "ask": 0.51,
+      "edge": 0.0324,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV16ORLBOS-BOSJWALSH27-5",
+      "team": "BOS",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -39,8 +99,8 @@
     "details": "CLE -8.5",
     "home_spread": -8.5,
     "total": 241.5,
-    "home_ml": -359,
-    "away_ml": 286,
+    "home_ml": -344,
+    "away_ml": 276,
     "home_ml_open": -400,
     "away_ml_open": 315
    },
@@ -60,9 +120,84 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909995",
+    "tip": "2026-11-17T00:00:00+00:00",
+    "preview": false,
+    "home": "CLE",
+    "away": "CHI",
+    "p_home_final": 0.7224,
+    "p_home_stats": 0.6665,
+    "p_home_market": 0.7444516069619671,
+    "p_home_kalshi": 0.755,
+    "pick": "CLE",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "2595516",
+      "name": "Norman Powell",
+      "stat": "pts",
+      "line": 25,
+      "side": "no",
+      "label": "Norman Powell under 25 points",
+      "p": 0.7139,
+      "ask": 0.63,
+      "edge": 0.0639,
+      "strength": "value",
+      "ticker": "KXNBAPTS-26NOV16CHICLE-CHINPOWELL24-25",
+      "team": "CHI",
+      "won": null
+     },
+     {
+      "athlete_id": "4395626",
+      "name": "Tre Jones",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "Tre Jones under 25 pts+reb+ast",
+      "p": 0.8962,
+      "ask": 0.84,
+      "edge": 0.0462,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV16CHICLE-CHITJONES30-25",
+      "team": "CHI",
+      "won": null
+     },
+     {
+      "athlete_id": "3908809",
+      "name": "Donovan Mitchell",
+      "stat": "pra",
+      "line": 40,
+      "side": "no",
+      "label": "Donovan Mitchell under 40 pts+reb+ast",
+      "p": 0.7271,
+      "ask": 0.63,
+      "edge": 0.0771,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV16CHICLE-CLEDMITCHELL45-40",
+      "team": "CLE",
+      "won": null
+     },
+     {
+      "athlete_id": "4066328",
+      "name": "Jarrett Allen",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "Jarrett Allen under 25 pts+reb+ast",
+      "p": 0.5243,
+      "ask": 0.43,
+      "edge": 0.0743,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV16CHICLE-CLEJALLEN31-25",
+      "team": "CLE",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -70,8 +205,8 @@
     "details": "MEM -3.5",
     "home_spread": 3.5,
     "total": 232.5,
-    "home_ml": 136,
-    "away_ml": -161,
+    "home_ml": 131,
+    "away_ml": -155,
     "home_ml_open": 185,
     "away_ml_open": -223
    },
@@ -91,15 +226,90 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909996",
+    "tip": "2026-11-17T00:00:00+00:00",
+    "preview": false,
+    "home": "WSH",
+    "away": "MEM",
+    "p_home_final": 0.3845,
+    "p_home_stats": 0.315,
+    "p_home_market": 0.41595302177636406,
+    "p_home_kalshi": 0.4225,
+    "pick": "MEM",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "5041935",
+      "name": "Cameron Boozer",
+      "stat": "pts",
+      "line": 20,
+      "side": "no",
+      "label": "Cameron Boozer under 20 points",
+      "p": 0.5983,
+      "ask": 0.53,
+      "edge": 0.0483,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV16MEMWAS-MEMCBOOZER27-20",
+      "team": "MEM",
+      "won": null
+     },
+     {
+      "athlete_id": "4433083",
+      "name": "Cam Spencer",
+      "stat": "ast",
+      "line": 6,
+      "side": "no",
+      "label": "Cam Spencer under 6 assists",
+      "p": 0.2862,
+      "ask": 0.24,
+      "edge": 0.0262,
+      "strength": "lean",
+      "ticker": "KXNBAAST-26NOV16MEMWAS-MEMCSPENCER24-6",
+      "team": "MEM",
+      "won": null
+     },
+     {
+      "athlete_id": "5142718",
+      "name": "AJ Dybantsa",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "AJ Dybantsa under 25 pts+reb+ast",
+      "p": 0.6457,
+      "ask": 0.54,
+      "edge": 0.0857,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV16MEMWAS-WASADYBANTSA4-25",
+      "team": "WSH",
+      "won": null
+     },
+     {
+      "athlete_id": "4277905",
+      "name": "Trae Young",
+      "stat": "ast",
+      "line": 8,
+      "side": "no",
+      "label": "Trae Young under 8 assists",
+      "p": 0.4661,
+      "ask": 0.38,
+      "edge": 0.0661,
+      "strength": "value",
+      "ticker": "KXNBAAST-26NOV16MEMWAS-WASTYOUNG3-8",
+      "team": "WSH",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "PHI -5.5",
-    "home_spread": 5.5,
+    "details": "PHI -4.5",
+    "home_spread": 4.5,
     "total": 226.5,
     "home_ml": 180,
     "away_ml": -217,
@@ -129,11 +339,11 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "HOU -2.5",
-    "home_spread": 2.5,
-    "total": 231.5,
-    "home_ml": 124,
-    "away_ml": -148,
+    "details": "HOU -1.5",
+    "home_spread": 1.5,
+    "total": 232.5,
+    "home_ml": 110,
+    "away_ml": -130,
     "home_ml_open": 119,
     "away_ml_open": -141
    },
@@ -194,8 +404,8 @@
     "details": "GS -3.5",
     "home_spread": 3.5,
     "total": 223.5,
-    "home_ml": 131,
-    "away_ml": -155,
+    "home_ml": 136,
+    "away_ml": -161,
     "home_ml_open": 111,
     "away_ml_open": -131
    },
