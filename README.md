@@ -101,7 +101,7 @@ cd docs && python3 -m http.server 8765   # dashboard at http://localhost:8765
 
 ## Schedule (GitHub Actions)
 
-`.github/workflows/pregame.yml` runs every 15 minutes from 14:00 to 03:59 UTC (all NBA tip-off and NFL kickoff times in EST and EDT), from 12:00 on Sundays for the 9:30 AM ET international games, plus an 11:00 UTC sweep for overnight scores. Each run reports every game tipping off within the next 75 minutes that hasn't been reported yet (`docs/data/state.json`), so each game is posted once, roughly 45 to 75 minutes before tip-off (GitHub can start scheduled runs a few minutes late). Results are committed back to the repo.
+`.github/workflows/pregame.yml` does not rely on a tight cron: GitHub drops most `*/15` scheduled runs on busy days (on 2026-11-15 only 3 of ~40 fired and 9 games got no report). Instead, each run does a pass, then asks `scripts/next_wake.py` when the next report is due across both leagues (75 minutes before tip-off, or every 30 minutes while a game is live for scores), sleeps until then and runs again. Before GitHub's 6-hour job limit it hands off to a fresh run of itself. The crons (11:00 UTC to settle overnight games and load the slate, backups at 14, 17, 20 and 23 UTC, and 12:00 UTC on Sundays) only need to start that chain once a day. Each game is reported once (`state.json`), 73 to 75 minutes before tip-off. Results are committed back to the repo.
 
 Minutes: about 56 runs/day of under a minute. That's free on a public repo, or about 1,700 of the 2,000 free minutes/month on a private repo.
 

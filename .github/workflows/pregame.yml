@@ -1,24 +1,30 @@
 name: pregame
 
+# GitHub's scheduled cron is best-effort and drops most */15 runs on busy days
+# (2026-11-15: 3 of ~40 fired, so the 4 PM NFL games, SNF and 6 NBA games got no
+# T-60 report). So a run doesn't just check once: after its first pass it sleeps
+# until the next report is due (scripts/next_wake.py), runs again, and before the
+# 6-hour job limit hands off to a fresh run of itself. The crons below only need
+# to start that chain once a day; the extra ones are backups.
 on:
   schedule:
-    # Every 15 min across NBA tip-off and NFL kickoff hours (UTC): noon to 10:30 PM ET in EST and EDT.
-    - cron: "*/15 14-23 * * *"
-    - cron: "*/15 0-3 * * *"
-    # NFL international games kick off 9:30 AM ET on Sundays.
-    - cron: "*/15 12-13 * * 0"
-    # Morning sweep: record overnight final scores for the track record.
-    - cron: "0 11 * * *"
+    - cron: "0 11 * * *"     # morning: settle overnight games, load today's slate, start the chain
+    - cron: "0 14 * * *"     # backups in case the ones before were dropped
+    - cron: "0 17 * * *"
+    - cron: "0 20 * * *"
+    - cron: "0 23 * * *"
+    - cron: "0 12 * * 0"     # Sunday: 9:30 AM ET international NFL games
   workflow_dispatch:
     inputs:
       mode:
-        description: "run = normal T-60 check · preview-all = analyse every remaining game today (NBA) / this week (NFL) · settle = fill final scores"
+        description: "run = T-60 check, then keep watching · preview-all = analyse every remaining game today (NBA) / this week (NFL) · settle = fill final scores · chain = internal hand-off"
         type: choice
-        options: [run, preview-all, settle]
+        options: [run, preview-all, settle, chain]
         default: run
 
 permissions:
   contents: write
+  actions: write   # to hand off to the next run of this workflow
 
 concurrency:
   group: pregame
@@ -27,40 +33,60 @@ concurrency:
 jobs:
   pregame:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+      MODE: ${{ github.event.inputs.mode || 'run' }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v5
 
-      - name: Analyse games starting within 75 min (NBA + NFL)
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
-          MODE: ${{ github.event.inputs.mode || 'run' }}
-        run: |
-          python3 --version
-          # One league failing must not stop the other: run both, then fail if either failed.
-          rc=0
-          case "$MODE" in
-            preview-all) python3 -m nba_odds run --all-today || rc=1; python3 -m nfl_odds run --all-week || rc=1 ;;
-            settle)      python3 -m nba_odds settle || rc=1;     python3 -m nfl_odds settle || rc=1 ;;
-            *)           python3 -m nba_odds run || rc=1;        python3 -m nfl_odds run || rc=1 ;;
-          esac
-          exit $rc
-
-      - name: Commit results
-        if: always()
+      - name: Run, then stay awake for every T-60 window (NBA + NFL)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data data/cache
-          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
-          git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
-          exit 1
+
+          commit() {
+            git add docs/data data/cache
+            if git diff --cached --quiet; then return 0; fi
+            git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && return 0; sleep 5; done
+            echo "::warning::push failed"
+          }
+          pass() {  # one league failing must not stop the other
+            rc=0
+            python3 -m nba_odds run || rc=1
+            python3 -m nfl_odds run || rc=1
+            commit
+            return $rc
+          }
+
+          case "$MODE" in
+            preview-all) python3 -m nba_odds run --all-today || true; python3 -m nfl_odds run --all-week || true; commit; exit 0 ;;
+            settle)      python3 -m nba_odds settle || true; python3 -m nfl_odds settle || true; commit; exit 0 ;;
+          esac
+
+          deadline=$(( $(date +%s) + 340*60 ))
+          pass || echo "::warning::first pass had a failure"
+          while true; do
+            wait_s=$(python3 scripts/next_wake.py || echo 600)
+            if [ "$wait_s" = "none" ]; then echo "nothing pending in either league; done"; break; fi
+            [ "$wait_s" -lt 120 ] && wait_s=120   # never spin on a game that keeps failing
+            if [ $(( $(date +%s) + wait_s )) -gt "$deadline" ]; then
+              echo "next wake in ${wait_s}s is past this job's limit; handing off"
+              gh workflow run pregame.yml --ref "${GITHUB_REF_NAME}" -f mode=chain
+              break
+            fi
+            echo "sleeping ${wait_s}s (until $(date -u -d "+${wait_s} sec" +%H:%MZ))"
+            sleep "$wait_s"
+            git pull --rebase -q || true   # pick up code or data pushed meanwhile
+            pass || echo "::warning::pass had a failure"
+          done
 
   tests:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.mode != 'chain'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
