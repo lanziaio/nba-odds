@@ -1028,7 +1028,9 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV16ORLBOS-ORLFWAGNER22-6",
     "team": "ORL",
-    "won": null
+    "won": null,
+    "close": 0.395,
+    "clv": 0.015
    },
    {
     "athlete_id": "4066320",
@@ -1043,7 +1045,9 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16ORLBOS-ORLDBANE3-25",
     "team": "ORL",
-    "won": null
+    "won": null,
+    "close": 0.505,
+    "clv": -0.005
    },
    {
     "athlete_id": "4683689",
@@ -1058,10 +1062,13 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16ORLBOS-BOSJWALSH27-5",
     "team": "BOS",
-    "won": null
+    "won": null,
+    "close": 0.505,
+    "clv": -0.005
    }
   ],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-16T23:47:00+00:00"
  },
  {
   "event_id": "401909995",
@@ -1089,7 +1096,9 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV16CHICLE-CHINPOWELL24-25",
     "team": "CHI",
-    "won": null
+    "won": null,
+    "close": 0.635,
+    "clv": 0.005
    },
    {
     "athlete_id": "4395626",
@@ -1104,7 +1113,9 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CHITJONES30-25",
     "team": "CHI",
-    "won": null
+    "won": null,
+    "close": 0.83,
+    "clv": -0.01
    },
    {
     "athlete_id": "3908809",
@@ -1119,7 +1130,9 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CLEDMITCHELL45-40",
     "team": "CLE",
-    "won": null
+    "won": null,
+    "close": 0.61,
+    "clv": -0.02
    },
    {
     "athlete_id": "4066328",
@@ -1134,10 +1147,13 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CLEJALLEN31-25",
     "team": "CLE",
-    "won": null
+    "won": null,
+    "close": 0.48,
+    "clv": 0.05
    }
   ],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-16T23:47:00+00:00"
  },
  {
   "event_id": "401909996",
@@ -1165,7 +1181,9 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16MEMWAS-MEMCBOOZER27-20",
     "team": "MEM",
-    "won": null
+    "won": null,
+    "close": 0.525,
+    "clv": -0.005
    },
    {
     "athlete_id": "4433083",
@@ -1180,7 +1198,9 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV16MEMWAS-MEMCSPENCER24-6",
     "team": "MEM",
-    "won": null
+    "won": null,
+    "close": 0.245,
+    "clv": 0.005
    },
    {
     "athlete_id": "5142718",
@@ -1195,7 +1215,9 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16MEMWAS-WASADYBANTSA4-25",
     "team": "WSH",
-    "won": null
+    "won": null,
+    "close": 0.53,
+    "clv": -0.01
    },
    {
     "athlete_id": "4277905",
@@ -1210,10 +1232,13 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV16MEMWAS-WASTYOUNG3-8",
     "team": "WSH",
-    "won": null
+    "won": null,
+    "close": 0.38,
+    "clv": 0.0
    }
   ],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-16T23:47:00+00:00"
  },
  {
   "event_id": "401909997",
@@ -1337,6 +1362,143 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
     "team": "MIA",
+    "won": null
+   }
+  ],
+  "result": null
+ },
+ {
+  "event_id": "401909999",
+  "tip": "2026-11-17T01:00:00+00:00",
+  "preview": false,
+  "home": "MIN",
+  "away": "POR",
+  "p_home_final": 0.5718,
+  "p_home_stats": 0.6182,
+  "p_home_market": 0.551441114716549,
+  "p_home_kalshi": 0.545,
+  "pick": "MIN",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "6606",
+    "name": "Damian Lillard",
+    "stat": "reb",
+    "line": 4,
+    "side": "no",
+    "label": "Damian Lillard under 4 rebounds",
+    "p": 0.6423,
+    "ask": 0.57,
+    "edge": 0.0523,
+    "strength": "value",
+    "ticker": "KXNBAREB-26NOV16PORMIN-PORDLILLARD0-4",
+    "team": "POR",
+    "won": null
+   },
+   {
+    "athlete_id": "4432847",
+    "name": "Terrence Shannon Jr.",
+    "stat": "tpm",
+    "line": 2,
+    "side": "no",
+    "label": "Terrence Shannon Jr. under 2 threes",
+    "p": 0.6672,
+    "ask": 0.62,
+    "edge": 0.0272,
+    "strength": "lean",
+    "ticker": "KXNBA3PT-26NOV16PORMIN-MINTSHANNON4-2",
+    "team": "MIN",
+    "won": null
+   },
+   {
+    "athlete_id": "4433247",
+    "name": "Jonathan Kuminga",
+    "stat": "pra",
+    "line": 25,
+    "side": "yes",
+    "label": "Jonathan Kuminga 25+ pts+reb+ast",
+    "p": 0.3662,
+    "ask": 0.32,
+    "edge": 0.0262,
+    "strength": "lean",
+    "ticker": "KXNBAPRA-26NOV16PORMIN-MINJKUMINGA0-25",
+    "team": "MIN",
+    "won": null
+   }
+  ],
+  "result": null
+ },
+ {
+  "event_id": "401910000",
+  "tip": "2026-11-17T01:00:00+00:00",
+  "preview": false,
+  "home": "NO",
+  "away": "GS",
+  "p_home_final": 0.38,
+  "p_home_stats": 0.3015,
+  "p_home_market": 0.41595302177636406,
+  "p_home_kalshi": 0.405,
+  "pick": "GS",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "4709138",
+    "name": "Brandin Podziemski",
+    "stat": "pra",
+    "line": 30,
+    "side": "no",
+    "label": "Brandin Podziemski under 30 pts+reb+ast",
+    "p": 0.6471,
+    "ask": 0.57,
+    "edge": 0.0571,
+    "strength": "value",
+    "ticker": "KXNBAPRA-26NOV16GSWNOP-GSWBPODZIEMSKI2-30",
+    "team": "GS",
+    "won": null
+   },
+   {
+    "athlete_id": "5175737",
+    "name": "Yaxel Lendeborg",
+    "stat": "pra",
+    "line": 30,
+    "side": "no",
+    "label": "Yaxel Lendeborg under 30 pts+reb+ast",
+    "p": 0.3369,
+    "ask": 0.26,
+    "edge": 0.0569,
+    "strength": "value",
+    "ticker": "KXNBAPRA-26NOV16GSWNOP-GSWYLENDEBORG1-30",
+    "team": "GS",
+    "won": null
+   },
+   {
+    "athlete_id": "5144091",
+    "name": "Jeremiah Fears",
+    "stat": "ast",
+    "line": 6,
+    "side": "no",
+    "label": "Jeremiah Fears under 6 assists",
+    "p": 0.4729,
+    "ask": 0.4,
+    "edge": 0.0529,
+    "strength": "value",
+    "ticker": "KXNBAAST-26NOV16GSWNOP-NOPJFEARS0-6",
+    "team": "NO",
+    "won": null
+   },
+   {
+    "athlete_id": "4397136",
+    "name": "Saddiq Bey",
+    "stat": "reb",
+    "line": 4,
+    "side": "no",
+    "label": "Saddiq Bey under 4 rebounds",
+    "p": 0.2994,
+    "ask": 0.24,
+    "edge": 0.0394,
+    "strength": "lean",
+    "ticker": "KXNBAREB-26NOV16GSWNOP-NOPSBEY41-4",
+    "team": "NO",
     "won": null
    }
   ],
