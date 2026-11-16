@@ -1214,5 +1214,132 @@
    }
   ],
   "result": null
+ },
+ {
+  "event_id": "401909997",
+  "tip": "2026-11-17T00:30:00+00:00",
+  "preview": false,
+  "home": "BKN",
+  "away": "PHI",
+  "p_home_final": 0.4248,
+  "p_home_stats": 0.6242,
+  "p_home_market": 0.3428509625784123,
+  "p_home_kalshi": 0.335,
+  "pick": "PHI",
+  "best_value": {
+   "side": "home",
+   "team": "BKN",
+   "edge": 0.0648,
+   "ask": 0.34
+  },
+  "prop_picks": [
+   {
+    "athlete_id": "5124612",
+    "name": "VJ Edgecombe",
+    "stat": "ast",
+    "line": 4,
+    "side": "yes",
+    "label": "VJ Edgecombe 4+ assists",
+    "p": 0.5604,
+    "ask": 0.51,
+    "edge": 0.0304,
+    "strength": "lean",
+    "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
+    "team": "PHI",
+    "won": null
+   },
+   {
+    "athlete_id": "3064514",
+    "name": "Julius Randle",
+    "stat": "pra",
+    "line": 30,
+    "side": "no",
+    "label": "Julius Randle under 30 pts+reb+ast",
+    "p": 0.557,
+    "ask": 0.43,
+    "edge": 0.107,
+    "strength": "value",
+    "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
+    "team": "BKN",
+    "won": null
+   },
+   {
+    "athlete_id": "5101761",
+    "name": "Mikel Brown Jr.",
+    "stat": "reb",
+    "line": 2,
+    "side": "no",
+    "label": "Mikel Brown Jr. under 2 rebounds",
+    "p": 0.4406,
+    "ask": 0.36,
+    "edge": 0.0606,
+    "strength": "value",
+    "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
+    "team": "BKN",
+    "won": null
+   }
+  ],
+  "result": null
+ },
+ {
+  "event_id": "401909998",
+  "tip": "2026-11-17T00:30:00+00:00",
+  "preview": false,
+  "home": "MIA",
+  "away": "HOU",
+  "p_home_final": 0.4512,
+  "p_home_stats": 0.4372,
+  "p_home_market": 0.4572564612326044,
+  "p_home_kalshi": 0.445,
+  "pick": "HOU",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "2991230",
+    "name": "Fred VanVleet",
+    "stat": "tpm",
+    "line": 3,
+    "side": "yes",
+    "label": "Fred VanVleet 3+ threes",
+    "p": 0.5949,
+    "ask": 0.54,
+    "edge": 0.0349,
+    "strength": "lean",
+    "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
+    "team": "HOU",
+    "won": null
+   },
+   {
+    "athlete_id": "4711272",
+    "name": "Reed Sheppard",
+    "stat": "reb",
+    "line": 2,
+    "side": "no",
+    "label": "Reed Sheppard under 2 rebounds",
+    "p": 0.4383,
+    "ask": 0.39,
+    "edge": 0.0283,
+    "strength": "lean",
+    "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
+    "team": "HOU",
+    "won": null
+   },
+   {
+    "athlete_id": "4278053",
+    "name": "Davion Mitchell",
+    "stat": "pts",
+    "line": 20,
+    "side": "no",
+    "label": "Davion Mitchell under 20 points",
+    "p": 0.8758,
+    "ask": 0.84,
+    "edge": 0.0258,
+    "strength": "lean",
+    "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
+    "team": "MIA",
+    "won": null
+   }
+  ],
+  "result": null
  }
 ]

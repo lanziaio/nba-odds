@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T22:47:00+00:00",
+ "generated_at": "2026-11-16T23:16:59+00:00",
  "slate_date_et": "20261116",
  "slate": [
   {
@@ -7,7 +7,7 @@
     "provider": "DraftKings",
     "details": "BOS -9.5",
     "home_spread": -9.5,
-    "total": 213.5,
+    "total": 214.5,
     "home_ml": -375,
     "away_ml": 298,
     "home_ml_open": -426,
@@ -332,15 +332,80 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-16T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909997",
+    "tip": "2026-11-17T00:30:00+00:00",
+    "preview": false,
+    "home": "BKN",
+    "away": "PHI",
+    "p_home_final": 0.4248,
+    "p_home_stats": 0.6242,
+    "p_home_market": 0.3428509625784123,
+    "p_home_kalshi": 0.335,
+    "pick": "PHI",
+    "best_value": {
+     "side": "home",
+     "team": "BKN",
+     "edge": 0.0648,
+     "ask": 0.34
+    },
+    "prop_picks": [
+     {
+      "athlete_id": "5124612",
+      "name": "VJ Edgecombe",
+      "stat": "ast",
+      "line": 4,
+      "side": "yes",
+      "label": "VJ Edgecombe 4+ assists",
+      "p": 0.5604,
+      "ask": 0.51,
+      "edge": 0.0304,
+      "strength": "lean",
+      "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
+      "team": "PHI",
+      "won": null
+     },
+     {
+      "athlete_id": "3064514",
+      "name": "Julius Randle",
+      "stat": "pra",
+      "line": 30,
+      "side": "no",
+      "label": "Julius Randle under 30 pts+reb+ast",
+      "p": 0.557,
+      "ask": 0.43,
+      "edge": 0.107,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
+      "team": "BKN",
+      "won": null
+     },
+     {
+      "athlete_id": "5101761",
+      "name": "Mikel Brown Jr.",
+      "stat": "reb",
+      "line": 2,
+      "side": "no",
+      "label": "Mikel Brown Jr. under 2 rebounds",
+      "p": 0.4406,
+      "ask": 0.36,
+      "edge": 0.0606,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
+      "team": "BKN",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "HOU -1.5",
-    "home_spread": 1.5,
+    "details": "HOU -2.5",
+    "home_spread": 2.5,
     "total": 232.5,
     "home_ml": 110,
     "away_ml": -130,
@@ -363,9 +428,69 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-16T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909998",
+    "tip": "2026-11-17T00:30:00+00:00",
+    "preview": false,
+    "home": "MIA",
+    "away": "HOU",
+    "p_home_final": 0.4512,
+    "p_home_stats": 0.4372,
+    "p_home_market": 0.4572564612326044,
+    "p_home_kalshi": 0.445,
+    "pick": "HOU",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "2991230",
+      "name": "Fred VanVleet",
+      "stat": "tpm",
+      "line": 3,
+      "side": "yes",
+      "label": "Fred VanVleet 3+ threes",
+      "p": 0.5949,
+      "ask": 0.54,
+      "edge": 0.0349,
+      "strength": "lean",
+      "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
+      "team": "HOU",
+      "won": null
+     },
+     {
+      "athlete_id": "4711272",
+      "name": "Reed Sheppard",
+      "stat": "reb",
+      "line": 2,
+      "side": "no",
+      "label": "Reed Sheppard under 2 rebounds",
+      "p": 0.4383,
+      "ask": 0.39,
+      "edge": 0.0283,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
+      "team": "HOU",
+      "won": null
+     },
+     {
+      "athlete_id": "4278053",
+      "name": "Davion Mitchell",
+      "stat": "pts",
+      "line": 20,
+      "side": "no",
+      "label": "Davion Mitchell under 20 points",
+      "p": 0.8758,
+      "ask": 0.84,
+      "edge": 0.0258,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
+      "team": "MIA",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -404,8 +529,8 @@
     "details": "GS -3.5",
     "home_spread": 3.5,
     "total": 223.5,
-    "home_ml": 136,
-    "away_ml": -161,
+    "home_ml": 131,
+    "away_ml": -155,
     "home_ml_open": 111,
     "away_ml_open": -131
    },
