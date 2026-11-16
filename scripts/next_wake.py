@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 INDEXES = [ROOT / "docs/data/index.json", ROOT / "docs/data/nfl/index.json"]
 LIVE_REFRESH = timedelta(minutes=30)   # update scores while games are on
 AFTER_OPEN = timedelta(minutes=2)      # wake just after the window opens
+CLOSE_LEAD = timedelta(minutes=4)      # closing prices: inside calib.CLOSE_BEFORE (15 min), before tip-off
 
 
 def next_wake(now: datetime, slates: list[list[dict]]) -> datetime | None:
@@ -35,9 +36,12 @@ def next_wake(now: datetime, slates: list[list[dict]]) -> datetime | None:
                     continue  # ESPN hasn't flipped the state yet; nothing to report
                 wakes.append(max(now, datetime.fromisoformat(g["report_at"]) + AFTER_OPEN))
             elif g.get("state") == "pre":
-                # Reported (or previewed); wake at kickoff to flip it to live.
+                # Reported: wake just before kickoff to record the closing Kalshi prices (CLV),
+                # then just after it to flip the game to live.
                 tip = datetime.fromisoformat(g["tip"])
-                if tip > now:
+                if tip - CLOSE_LEAD > now:
+                    wakes.append(tip - CLOSE_LEAD)
+                elif tip > now:
                     wakes.append(tip + timedelta(minutes=5))
     return min(wakes) if wakes else None
 

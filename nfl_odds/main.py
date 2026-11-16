@@ -14,6 +14,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from nba_odds import calib
+from nba_odds import props as nba_props
 from nba_odds.main import _brier, _contract_pnl, _history_row, _load, _prop_record, _save, _value_bets
 
 from . import espn, props, report
@@ -21,6 +23,8 @@ from . import espn, props, report
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data" / "nfl"          # published with the dashboard
 CACHE = ROOT / "data" / "cache" / "nfl_box"     # not published
+LINES = ROOT / "data" / "lines" / "nfl"          # every priced Kalshi line, graded after the game (not published)
+CALIB = DATA / "calibration.json"
 ET = ZoneInfo("America/New_York")
 
 
@@ -60,16 +64,9 @@ def settle(history: list[dict], now: datetime) -> int:
             h["result"] = {"home_score": g["home"]["score"], "away_score": g["away"]["score"],
                            "home_won": g["home"]["score"] > g["away"]["score"]}
             n += 1
-    for h in history:
-        if h["result"] is None or h.get("graded"):
-            continue
-        box = None
-        if h.get("prop_picks"):
-            try:
-                box = espn.box_lines(h["event_id"], CACHE)
-            except Exception as e:
-                print(f"  warn: box score for {h['event_id']} not available yet: {e}", file=sys.stderr)
-        grade_row(h, box)
+    graded = calib.grade_settled(history, LINES, lambda eid: espn.box_lines(eid, CACHE), grade_row, props.grade)
+    if graded or (LINES.exists() and not CALIB.exists()):
+        calib.write_summary(LINES, CALIB, props.MARKET_WEIGHT, nba_props.PICK_MIN_EDGE)
     return n
 
 
@@ -101,6 +98,8 @@ def write_index(games: list[dict], history: list[dict], now: datetime, meta: dic
             "kalshi": _brier(settled, "p_home_kalshi"),
             "value_bets": _value_bets([h for h in settled if h.get("best_value")]),
             "props": _prop_record([pk for h in settled for pk in h.get("prop_picks", [])]),
+            "clv": calib.clv_record([h for h in history if not h["preview"]]),
+            "calibration": _load(CALIB, None),
         },
         "notes": meta.get("notes", []),
     }
@@ -134,6 +133,7 @@ def cmd_run(args) -> int:
     notes: list[str] = []
     if due:
         ctx = report.RunContext(CACHE)
+        ctx.market_weight = calib.market_weight(CALIB, props.MARKET_WEIGHT)
         preview = args.all_week
         for g in due:
             label = f'{g["away"]["abbr"]}@{g["home"]["abbr"]}'
@@ -143,11 +143,14 @@ def cmd_run(args) -> int:
                 failures += 1
                 print(f"  ! {label}: report failed\n{traceback.format_exc()}", file=sys.stderr)
                 continue
+            all_lines = (r.get("props") or {}).pop("all_lines", None)
             existing = _load(DATA / "reports" / f'{g["event_id"]}.json', None)
             if preview and existing and not existing.get("preview"):
                 print(f"  {label}: final report already out, preview not saved")
                 continue
             _save(DATA / "reports" / f'{g["event_id"]}.json', r)
+            if all_lines and not preview:
+                calib.save_lines(LINES, g["event_id"], g["tip"], all_lines)
             hist = {h["event_id"]: h for h in history}
             old = hist.get(g["event_id"])
             if old is None or old["preview"] or not preview:
@@ -163,6 +166,13 @@ def cmd_run(args) -> int:
         notes = ctx.errors
         for e in ctx.errors:
             print(f"  warn: {e}", file=sys.stderr)
+
+    try:
+        c = calib.capture_close(history, DATA / "reports", now)
+        if c:
+            print(f"  closing prices recorded for {c} picks")
+    except Exception as e:
+        print(f"  warn: closing prices failed: {e}", file=sys.stderr)
 
     try:
         n = settle(history, now)

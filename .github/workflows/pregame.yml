@@ -49,7 +49,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           commit() {
-            git add docs/data data/cache
+            git add docs/data data/cache data/lines
             if git diff --cached --quiet; then return 0; fi
             git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
             for i in 1 2 3; do git pull --rebase -q && git push -q && return 0; sleep 5; done

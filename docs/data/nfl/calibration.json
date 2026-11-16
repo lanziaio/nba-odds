@@ -1,0 +1,256 @@
+{
+ "lines": 2229,
+ "games": 7,
+ "model": {
+  "brier": 0.1739,
+  "log_loss": 0.5234
+ },
+ "market": {
+  "brier": 0.1545,
+  "log_loss": 0.4695
+ },
+ "blend": {
+  "brier": 0.1559,
+  "log_loss": 0.4728
+ },
+ "fitted_market_weight": 1.0,
+ "market_weight_in_use": 0.85,
+ "default_market_weight": 0.85,
+ "weight_source": "default",
+ "fit_needs": {
+  "games": 40,
+  "lines": 4000
+ },
+ "buckets": {
+  "model": [
+   {
+    "from": 0,
+    "to": 0.1,
+    "n": 569,
+    "predicted": 0.049,
+    "actual": 0.083
+   },
+   {
+    "from": 0.1,
+    "to": 0.2,
+    "n": 401,
+    "predicted": 0.145,
+    "actual": 0.165
+   },
+   {
+    "from": 0.2,
+    "to": 0.3,
+    "n": 281,
+    "predicted": 0.249,
+    "actual": 0.278
+   },
+   {
+    "from": 0.3,
+    "to": 0.4,
+    "n": 197,
+    "predicted": 0.351,
+    "actual": 0.345
+   },
+   {
+    "from": 0.4,
+    "to": 0.5,
+    "n": 169,
+    "predicted": 0.446,
+    "actual": 0.462
+   },
+   {
+    "from": 0.5,
+    "to": 0.6,
+    "n": 154,
+    "predicted": 0.551,
+    "actual": 0.481
+   },
+   {
+    "from": 0.6,
+    "to": 0.7,
+    "n": 126,
+    "predicted": 0.648,
+    "actual": 0.556
+   },
+   {
+    "from": 0.7,
+    "to": 0.8,
+    "n": 127,
+    "predicted": 0.749,
+    "actual": 0.614
+   },
+   {
+    "from": 0.8,
+    "to": 0.9,
+    "n": 107,
+    "predicted": 0.847,
+    "actual": 0.701
+   },
+   {
+    "from": 0.9,
+    "to": 1.0,
+    "n": 42,
+    "predicted": 0.935,
+    "actual": 0.738
+   }
+  ],
+  "market": [
+   {
+    "from": 0,
+    "to": 0.1,
+    "n": 614,
+    "predicted": 0.054,
+    "actual": 0.05
+   },
+   {
+    "from": 0.1,
+    "to": 0.2,
+    "n": 380,
+    "predicted": 0.144,
+    "actual": 0.147
+   },
+   {
+    "from": 0.2,
+    "to": 0.3,
+    "n": 252,
+    "predicted": 0.248,
+    "actual": 0.27
+   },
+   {
+    "from": 0.3,
+    "to": 0.4,
+    "n": 193,
+    "predicted": 0.345,
+    "actual": 0.373
+   },
+   {
+    "from": 0.4,
+    "to": 0.5,
+    "n": 168,
+    "predicted": 0.446,
+    "actual": 0.429
+   },
+   {
+    "from": 0.5,
+    "to": 0.6,
+    "n": 152,
+    "predicted": 0.549,
+    "actual": 0.507
+   },
+   {
+    "from": 0.6,
+    "to": 0.7,
+    "n": 154,
+    "predicted": 0.646,
+    "actual": 0.597
+   },
+   {
+    "from": 0.7,
+    "to": 0.8,
+    "n": 133,
+    "predicted": 0.752,
+    "actual": 0.692
+   },
+   {
+    "from": 0.8,
+    "to": 0.9,
+    "n": 111,
+    "predicted": 0.841,
+    "actual": 0.811
+   },
+   {
+    "from": 0.9,
+    "to": 1.0,
+    "n": 16,
+    "predicted": 0.924,
+    "actual": 0.938
+   }
+  ],
+  "blend": [
+   {
+    "from": 0,
+    "to": 0.1,
+    "n": 617,
+    "predicted": 0.055,
+    "actual": 0.052
+   },
+   {
+    "from": 0.1,
+    "to": 0.2,
+    "n": 373,
+    "predicted": 0.144,
+    "actual": 0.153
+   },
+   {
+    "from": 0.2,
+    "to": 0.3,
+    "n": 262,
+    "predicted": 0.247,
+    "actual": 0.263
+   },
+   {
+    "from": 0.3,
+    "to": 0.4,
+    "n": 195,
+    "predicted": 0.346,
+    "actual": 0.39
+   },
+   {
+    "from": 0.4,
+    "to": 0.5,
+    "n": 167,
+    "predicted": 0.446,
+    "actual": 0.437
+   },
+   {
+    "from": 0.5,
+    "to": 0.6,
+    "n": 152,
+    "predicted": 0.55,
+    "actual": 0.513
+   },
+   {
+    "from": 0.6,
+    "to": 0.7,
+    "n": 149,
+    "predicted": 0.649,
+    "actual": 0.597
+   },
+   {
+    "from": 0.7,
+    "to": 0.8,
+    "n": 131,
+    "predicted": 0.751,
+    "actual": 0.679
+   },
+   {
+    "from": 0.8,
+    "to": 0.9,
+    "n": 112,
+    "predicted": 0.844,
+    "actual": 0.786
+   },
+   {
+    "from": 0.9,
+    "to": 1.0,
+    "n": 15,
+    "predicted": 0.922,
+    "actual": 0.933
+   }
+  ]
+ },
+ "paper_bets": {
+  "value": {
+   "n": 8,
+   "hit_rate": 0.25,
+   "pnl_per_contract": -2.57,
+   "roi": -0.5814
+  },
+  "lean_or_better": {
+   "n": 50,
+   "hit_rate": 0.34,
+   "pnl_per_contract": -11.66,
+   "roi": -0.4211
+  }
+ }
+}

@@ -30,7 +30,9 @@ KALSHI_SERIES = {"KXNBAPTS": "pts", "KXNBAREB": "reb", "KXNBAAST": "ast", "KXNBA
 RECENCY = 0.90          # weight of game i back = RECENCY ** i (production rates)
 MIN_RECENCY = 0.75      # minutes react faster to role changes
 PRIOR_GAMES = 8         # last season's per-minute rates count as this many extra games
-MARKET_WEIGHT = 0.60    # log-odds weight of Kalshi's own price: 12 games can't beat a market that knows careers
+MARKET_WEIGHT = 0.60    # log-odds weight of Kalshi's own price (default until calib has 40 graded games).
+                        # Every-line check 2026-11-15 (2,380 lines, 11 games): model buckets calibrated; the pick
+                        # rule on all lines +6% ROI in both halves at 0.60, ~no bets left at 0.80+. Kept.
 DEFENSE_SHRINK = 10     # games of pseudo-sample pulling a team's "allowed" factor toward 1.0
 VAR_SHRINK = 8          # games of pseudo-sample pulling a player's variance toward the prior
 TEAM_MINUTES = 240.0
@@ -374,8 +376,10 @@ def kalshi_props(away_abbr: str, home_abbr: str, tip, series_map: dict | None = 
     return out
 
 
-def price_markets(markets: list[dict], side_players: dict[str, dict], team_code: str) -> list[dict]:
-    """Attach model probability + edge to each Kalshi line for one team's players."""
+def price_markets(markets: list[dict], side_players: dict[str, dict], team_code: str,
+                  w: float = MARKET_WEIGHT) -> list[dict]:
+    """Attach model probability + edge to each Kalshi line for one team's players. `w` = Kalshi's
+    log-odds weight in the blend (the fitted one from calib once there's enough evidence)."""
     by_name = {norm_name(p["name"]): p for p in side_players.values()}
     priced = []
     for m in markets:
@@ -386,7 +390,7 @@ def price_markets(markets: list[dict], side_players: dict[str, dict], team_code:
             continue
         p_model = p_at_least(m["line"], p["proj"][m["stat"]], p["_var"][m["stat"]], m["stat"])
         p_mkt = (m["yes_bid"] + m["yes_ask"]) / 2 if m["yes_bid"] and m["yes_ask"] else None
-        prob = expit(MARKET_WEIGHT * logit(p_mkt) + (1 - MARKET_WEIGHT) * logit(p_model)) if p_mkt else p_model
+        prob = expit(w * logit(p_mkt) + (1 - w) * logit(p_model)) if p_mkt else p_model
         row = {**m, "athlete_id": p["athlete_id"], "name": p["name"], "proj": p["proj"][m["stat"]],
                "recent": p["_recent"][m["stat"]],
                "avg": p["avg"][m["stat"]], "p_model": round(p_model, 4), "p_market": round(p_mkt, 4) if p_mkt else None,

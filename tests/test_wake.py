@@ -31,6 +31,11 @@ class NextWakeTests(unittest.TestCase):
         self.assertEqual(nw.next_wake(NOW, [[game(NOW, state="in")]]), NOW + nw.LIVE_REFRESH)
         self.assertIsNone(nw.next_wake(NOW, [[game(NOW - timedelta(hours=4), state="post", has_report=True)], []]))
 
+    def test_reported_game_wakes_for_closing_price_then_kickoff(self):
+        tip = NOW + timedelta(hours=1)
+        self.assertEqual(nw.next_wake(NOW, [[game(tip, has_report=True)]]), tip - nw.CLOSE_LEAD)
+        self.assertEqual(nw.next_wake(tip - timedelta(minutes=2), [[game(tip, has_report=True)]]), tip + timedelta(minutes=5))
+
     def test_earliest_across_leagues(self):
         nba, nfl = NOW + timedelta(hours=5), NOW + timedelta(hours=2)
         self.assertEqual(nw.next_wake(NOW, [[game(nba)], [game(nfl)]]), nfl - timedelta(minutes=73))

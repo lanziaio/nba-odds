@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from nba_odds import odds_api
+from nba_odds import calib, odds_api
 
 from . import espn, kalshi, model, players, props
 
@@ -26,6 +26,7 @@ class RunContext:
         self.injuries = espn.injuries()
         self.consensus, self.odds_api_remaining = [], None
         self.errors: list[str] = []
+        self.market_weight = props.MARKET_WEIGHT  # main.py swaps in the fitted one (calib) when ready
         try:
             self.consensus, self.odds_api_remaining = odds_api.fetch_consensus("americanfootball_nfl")
         except Exception as e:  # optional source: never block the report
@@ -250,7 +251,8 @@ def _props(game: dict, sides: dict, odds: dict, tip: datetime, ctx: RunContext) 
         ctx.errors.append(f"Kalshi props {game['away']['abbr']}@{game['home']['abbr']}: {e}")
 
     out = {"source": "Kalshi player props" if markets else None, "markets_found": len(markets),
-           "picks": {}, "players": {}, "defense": {}, "factors": {}}
+           "picks": {}, "players": {}, "defense": {}, "factors": {},
+           "market_weight": ctx.market_weight, "all_lines": []}
     for side, other in (("home", "away"), ("away", "home")):
         s, o = sides[side], sides[other]
         a = s["availability"]
@@ -265,7 +267,8 @@ def _props(game: dict, sides: dict, odds: dict, tip: datetime, ctx: RunContext) 
                    "backup_starting": backup_starting} if qb else None
         allowed = props.allowed_factors(o["id"], o["_boxes"], ctx.league)
         proj = props.project_team(s["_games"], s["_pts"], inj, allowed, ctx.league, implied[side], team_spread[side], qb_info)
-        priced = props.price_markets(markets, proj["players"], kalshi.code(s["abbr"]))
+        priced = props.price_markets(markets, proj["players"], kalshi.code(s["abbr"]), w=ctx.market_weight)
+        out["all_lines"] += calib.compact_lines(priced, s["abbr"])  # popped by main.py into data/lines (not published)
         out["picks"][side] = props.pick(priced)
         out["defense"][other] = allowed
         out["factors"][side] = proj["factor"]

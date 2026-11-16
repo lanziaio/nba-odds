@@ -33,7 +33,10 @@ KALSHI_SERIES = {"KXNFLPASSYDS": "pass_yds", "KXNFLPASSTDS": "pass_td", "KXNFLRS
                  "KXNFLRECYDS": "rec_yds", "KXNFLREC": "rec", "KXNFLTD": "td"}
 
 RECENCY = 0.85          # weight of game i back = RECENCY ** i
-MARKET_WEIGHT = 0.70    # log-odds weight of Kalshi's own price: NFL samples are ~9 games, roles change weekly
+MARKET_WEIGHT = 0.85    # log-odds weight of Kalshi's own price (default until calib has 40 graded games).
+                        # Every-line check 2026-11-15 (2,229 lines, 7 games): the model is overconfident (says 85%,
+                        # hits 70%; receiving worst), Kalshi is calibrated, log loss improves all the way to 1.0 and the
+                        # pick rule loses at every weight. Was 0.70.
 DEFENSE_SHRINK = 4      # games of pseudo-sample pulling an "allowed" factor toward 1.0
 VAR_SHRINK = 6          # games of pseudo-sample pulling a player's spread toward the typical one
 FREED_CAP = 0.40        # a healthy player gains at most +40% of his own base from injured teammates
@@ -293,7 +296,8 @@ def kalshi_props(away_abbr: str, home_abbr: str, tip) -> list[dict]:
     return [m for m in rows if "D/ST" not in m["player"]]
 
 
-def price_markets(markets: list[dict], side_players: dict[str, dict], team_code: str) -> list[dict]:
+def price_markets(markets: list[dict], side_players: dict[str, dict], team_code: str,
+                  w: float = MARKET_WEIGHT) -> list[dict]:
     by_name = {nba_props.norm_name(p["name"]): p for p in side_players.values() if p.get("name")}
     priced = []
     for m in markets:
@@ -304,7 +308,7 @@ def price_markets(markets: list[dict], side_players: dict[str, dict], team_code:
             continue
         p_model = p_at_least(m["line"], p["proj"][m["stat"]], p["_var"][m["stat"]], m["stat"])
         p_mkt = (m["yes_bid"] + m["yes_ask"]) / 2 if m["yes_bid"] and m["yes_ask"] else None
-        prob = expit(MARKET_WEIGHT * logit(p_mkt) + (1 - MARKET_WEIGHT) * logit(p_model)) if p_mkt else p_model
+        prob = expit(w * logit(p_mkt) + (1 - w) * logit(p_model)) if p_mkt else p_model
         row = {**m, "athlete_id": p["athlete_id"], "name": p["name"], "proj": p["proj"][m["stat"]],
                "recent": p["_recent"][m["stat"]], "avg": p["avg"][m["stat"]],
                "p_model": round(p_model, 4), "p_market": round(p_mkt, 4) if p_mkt else None,

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import espn, kalshi, model, odds_api, players, props
+from . import calib, espn, kalshi, model, odds_api, players, props
 
 ET = ZoneInfo("America/New_York")
 AZ = ZoneInfo("America/Phoenix")  # display time: MST all year, no DST
@@ -25,6 +25,7 @@ class RunContext:
         self.injuries = espn.injuries()
         self.consensus, self.odds_api_remaining = [], None
         self.errors: list[str] = []
+        self.market_weight = props.MARKET_WEIGHT  # main.py swaps in the fitted one (calib) when ready
         try:
             self.consensus, self.odds_api_remaining = odds_api.fetch_consensus()
         except Exception as e:  # optional source: never block the report
@@ -218,7 +219,8 @@ def _props(game: dict, sides: dict, odds: dict, tip: datetime, ctx: RunContext) 
         ctx.errors.append(f"Kalshi props {game['away']['abbr']}@{game['home']['abbr']}: {e}")
 
     out = {"source": "Kalshi player props" if markets else None, "markets_found": len(markets),
-           "picks": {}, "players": {}, "defense": {}, "team_target": {}}
+           "picks": {}, "players": {}, "defense": {}, "team_target": {},
+           "market_weight": ctx.market_weight, "all_lines": []}
     for side, other in (("home", "away"), ("away", "home")):
         s, o = sides[side], sides[other]
         inj = {r["athlete_id"]: players.status_weight(r)
@@ -229,7 +231,8 @@ def _props(game: dict, sides: dict, odds: dict, tip: datetime, ctx: RunContext) 
             ids = sorted(recent_ids)
             seasons = dict(zip(ids, pool.map(lambda a: _season_safe(a, ctx), ids)))
         proj = props.project_team(s["id"], s["_games"], inj, allowed, ctx.league, implied[side], total, seasons)
-        priced = props.price_markets(markets, proj["players"], kalshi.code(s["abbr"]))
+        priced = props.price_markets(markets, proj["players"], kalshi.code(s["abbr"]), w=ctx.market_weight)
+        out["all_lines"] += calib.compact_lines(priced, s["abbr"])  # popped by main.py into data/lines (not published)
         out["picks"][side] = props.pick(priced)
         out["defense"][other] = allowed  # what `other` allows, used for `side`'s players
         out["team_target"][side] = proj["target"]

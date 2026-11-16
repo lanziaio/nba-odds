@@ -17,7 +17,8 @@
     {key: "props-lean", label: "Props · lean"},
     {key: "game", label: "Game winner bets"},
   ];
-  const state = {period: "all", kind: "all", logLimit: 50, rows: [], picks: []};
+  const state = {period: "all", kind: "all", logLimit: 50, rows: [], picks: [], calib: null};
+  const cents = v => v == null ? "–" : (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "¢";
 
   // ---------- flatten history into one list of picks ----------
   function flatten(history) {
@@ -40,11 +41,11 @@
       if (bv) {
         const pSide = bv.side === "home" ? pHome : 1 - pHome;
         out.push({kind: "game", date, game, label: `${bv.team} to win (Kalshi YES)`, p: pSide, price: bv.ask, edge: bv.edge,
-                  status: bv.status || (settled ? "pending" : "pending"), pnl: bv.pnl ?? null});
+                  status: bv.status || (settled ? "pending" : "pending"), pnl: bv.pnl ?? null, clv: bv.clv ?? null});
       }
       for (const pk of h.prop_picks || []) {
         out.push({kind: `props-${pk.strength}`, date, game, label: `${pk.team} · ${pk.label}`, p: pk.p, price: pk.ask, edge: pk.edge,
-                  stat: pk.stat, side: pk.side, status: pk.status || "pending", pnl: pk.pnl ?? null});
+                  stat: pk.stat, side: pk.side, status: pk.status || "pending", pnl: pk.pnl ?? null, clv: pk.clv ?? null});
       }
     }
     return out;
@@ -74,6 +75,9 @@
   // ---------- KPI tiles ----------
   function tiles(bets, winners) {
     const s = summarize(bets), w = winners.filter(graded);
+    const c = bets.filter(p => p.clv != null);
+    const avgClv = c.length ? c.reduce((a, p) => a + p.clv, 0) / c.length : null;
+    const beat = c.length ? c.filter(p => p.clv > 0).length / c.length : null;
     const wAcc = w.length ? w.filter(p => p.status === "won").length / w.length : null;
     const vegas = w.filter(p => p.vegasFavWon != null), vAcc = vegas.length ? vegas.filter(p => p.vegasFavWon).length / vegas.length : null;
     const tile = (k, v, d, cls = "") => `<div class="stat"><div class="k">${k}</div><div class="v ${cls}">${v}</div><div class="d">${d}</div></div>`;
@@ -82,6 +86,8 @@
       ${tile("Hit rate", pct(s.hit), `model expected ${pct(s.expected)}`)}
       ${tile("P&L ($1 contracts)", money(s.n ? s.pnl : null), "after Kalshi fees", s.pnl > 0 ? "pos" : s.pnl < 0 ? "neg" : "")}
       ${tile("ROI", s.roi == null ? "–" : (s.roi * 100).toFixed(1) + "%", "profit ÷ amount staked")}
+      ${tile("Closing-line value", cents(avgClv), c.length ? `beat the close on ${pct(beat)} of ${c.length} bets` : "recorded just before each tip-off",
+             avgClv > 0 ? "pos" : avgClv < 0 ? "neg" : "")}
       ${tile("Winner picks", pct(wAcc), `n=${w.length} · Vegas favourite ${pct(vAcc)}`)}
     </div>`;
   }
@@ -183,6 +189,36 @@
       <div class="muted small">Brier = average squared error of the probability; lower is better calibrated.</div></div>`;
   }
 
+  // ---------- every priced line (calibration.json, written after each night's games) ----------
+  function calibCard(c) {
+    if (!c || !c.lines) return `<div class="card bd"><h3>Model vs Kalshi on every line</h3><div class="muted small">Appears after the first games with saved lines are graded.</div></div>`;
+    const sc = [["Our model", c.model], ["Kalshi price", c.market], [`Blend in use (${Math.round(c.market_weight_in_use * 100)}% Kalshi)`, c.blend]];
+    const best = Math.min(...sc.map(([, v]) => v.log_loss ?? Infinity));
+    const scRows = sc.map(([l, v]) => `<tr><td>${l}</td><td>${v.brier?.toFixed(3) ?? "–"}</td><td class="${v.log_loss === best ? "pos" : ""}">${v.log_loss?.toFixed(3) ?? "–"}</td></tr>`).join("");
+    const mb = Object.fromEntries((c.buckets.market || []).map(b => [b.from, b]));
+    const bRows = (c.buckets.model || []).map(b => {
+      const k = mb[b.from];
+      const off = Math.abs(b.predicted - b.actual) >= 0.08 ? "neg" : "";
+      return `<tr><td>${Math.round(b.from * 100)}–${Math.round(b.to * 100)}%</td><td>${b.n}</td><td>${pct(b.predicted)}</td><td class="${off}">${pct(b.actual)}</td>
+        <td>${k ? pct(k.actual) + ` <span class="muted">(${k.n})</span>` : "–"}</td></tr>`;
+    }).join("");
+    const pb = c.paper_bets || {};
+    const pbRow = (l, v) => v ? `<tr><td>${l}</td><td>${v.n}</td><td>${pct(v.hit_rate)}</td><td class="${v.pnl_per_contract > 0 ? "pos" : v.pnl_per_contract < 0 ? "neg" : ""}">${v.n ? money(v.pnl_per_contract) : "–"}</td>
+      <td>${v.roi == null ? "–" : (v.roi * 100).toFixed(1) + "%"}</td></tr>` : "";
+    const src = c.weight_source === "fitted"
+      ? `fitted from these lines (best fit ${Math.round(c.fitted_market_weight * 100)}%)`
+      : `default until ${c.fit_needs.games} games are graded (${c.games} so far); best fit so far ${c.fitted_market_weight == null ? "–" : Math.round(c.fitted_market_weight * 100) + "%"}`;
+    return `<div class="card bd wide"><h3>Model vs Kalshi on every line <span class="muted">· ${c.lines.toLocaleString()} lines, ${c.games} games</span></h3>
+      <div class="muted small">Every Kalshi prop line priced at T-60 is graded after the game, not just the picks. Lower is better.</div>
+      <table class="bdt"><tr><th></th><th>Brier ↓</th><th>Log loss ↓</th></tr>${scRows}</table>
+      <div class="muted small">Kalshi weight in the blend: ${Math.round(c.market_weight_in_use * 100)}%, ${src}.</div>
+      <h3 style="margin-top:12px">Calibration: when the model says X%, how often does it hit?</h3>
+      <table class="bdt"><tr><th>Model said</th><th>Lines</th><th>Avg said</th><th>Hit</th><th title="Hit rate of lines Kalshi priced in this band">Kalshi band</th></tr>${bRows}</table>
+      <h3 style="margin-top:12px">If we had bet every line the rule allows</h3>
+      <table class="bdt"><tr><th></th><th>Bets</th><th>Hit</th><th>P&L</th><th>ROI</th></tr>${pbRow("Value (5¢+)", pb.value)}${pbRow("Lean or better (2¢+)", pb.lean_or_better)}</table>
+      <div class="muted small">Lines of one player's ladder move together, so the real sample is smaller than the line count.</div></div>`;
+  }
+
   // ---------- pick log ----------
   function log(list) {
     const shown = list.slice().sort((a, b) => b.date.localeCompare(a.date)).slice(0, state.logLimit);
@@ -191,12 +227,13 @@
       <td>${shortDate(p.date)}</td><td>${esc(p.game)}</td><td class="lbl">${esc(p.label)}</td><td>${kindLabel[p.kind]}</td>
       <td>${pct(p.p)}</td><td>${p.price == null ? "–" : p.price.toFixed(2)}</td>
       <td>${p.edge == null ? "–" : "+" + (p.edge * 100).toFixed(1) + "¢"}</td>
+      <td class="${p.clv > 0 ? "pos" : p.clv < 0 ? "neg" : ""}">${cents(p.clv)}</td>
       <td><span class="res ${p.status}">${p.status}</span></td>
       <td class="${p.pnl > 0 ? "pos" : p.pnl < 0 ? "neg" : ""}">${p.pnl == null ? "–" : money(p.pnl)}</td></tr>`).join("");
     const more = list.length > state.logLimit ? `<button class="more" data-more>Show more (${list.length - state.logLimit} older)</button>` : "";
     return `<div class="card"><h3>Pick log <span class="muted">· ${list.length} picks</span></h3>
-      <div class="log-wrap"><table class="log"><tr><th>Date</th><th>Game</th><th>Pick</th><th>Type</th><th>Model</th><th>Price</th><th>Edge</th><th>Result</th><th>P&L</th></tr>${rows ||
-        '<tr><td colspan="9" class="muted">No picks yet.</td></tr>'}</table></div>${more}</div>`;
+      <div class="log-wrap"><table class="log"><tr><th>Date</th><th>Game</th><th>Pick</th><th>Type</th><th>Model</th><th>Price</th><th>Edge</th><th title="Closing mid on our side minus the price we took">CLV</th><th>Result</th><th>P&L</th></tr>${rows ||
+        '<tr><td colspan="10" class="muted">No picks yet.</td></tr>'}</table></div>${more}</div>`;
   }
 
   // ---------- render ----------
@@ -221,8 +258,9 @@
         ${breakdown("Props by stat", props, p => STAT[p.stat], Object.values(STAT))}
         ${breakdown("Props: over vs under", props, p => p.side === "yes" ? "Over (YES)" : "Under (NO)", ["Over (YES)", "Under (NO)"])}
         ${breakdown("By edge at pick time", bets, edgeBucket, ["2–5¢", "5–8¢", "8¢+"])}
-        ${breakdown("Calibration: model probability vs hit rate", bets, probBucket, ["< 40%", "40–50%", "50–60%", "60–70%", "70%+"])}
+        ${breakdown("Our picks: model probability vs hit rate", bets, probBucket, ["< 40%", "40–50%", "50–60%", "60–70%", "70%+"])}
         ${winnerTable(winners)}
+        ${calibCard(state.calib)}
       </div>` +
       log(scoped.filter(p => state.kind === "all" || p.kind === state.kind || (state.kind === "all" && p.kind === "winner")));
     wireChart(root);
@@ -236,16 +274,23 @@
   // base: "data/" (NBA) or "data/nfl/" (NFL); both hold the same history.json layout.
   async function load(base = "data/", sport = "nba") {
     const token = state.token = (state.token || 0) + 1;
-    let picks = [];
+    let picks = [], calib = null;
     try {
       const history = await (await fetch(base + "history.json?t=" + Date.now())).json();
       picks = flatten(history);
     } catch (e) {
       picks = [];
     }
+    try {
+      const r = await fetch(base + "calibration.json?t=" + Date.now());
+      calib = r.ok ? await r.json() : null;
+    } catch (e) {
+      calib = null;
+    }
     if (token !== state.token) return;  // a newer load (other league) won
     STAT = STATS[sport] || STATS.nba;
     state.picks = picks;
+    state.calib = calib;
     render();
   }
 

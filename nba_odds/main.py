@@ -14,11 +14,13 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import espn, model, props, report, slack
+from . import calib, espn, model, props, report, slack
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"           # published with the dashboard
 CACHE = ROOT / "data" / "cache" / "box"  # not published
+LINES = ROOT / "data" / "lines" / "nba"   # every priced Kalshi line, graded after the game (not published)
+CALIB = DATA / "calibration.json"
 ET = ZoneInfo("America/New_York")
 
 
@@ -46,6 +48,7 @@ def _history_row(r: dict) -> dict:
         "pick": r["pick"]["team"],
         "best_value": r.get("best_value"),
         "prop_picks": [{**{k: pk[k] for k in ("athlete_id", "name", "stat", "line", "side", "label", "p", "ask", "edge", "strength")},
+                        "ticker": pk.get("ticker"),
                         "team": r[side]["abbr"], "won": None}
                        for side in ("away", "home") for pk in ((r.get("props") or {}).get("picks") or {}).get(side, [])],
         "result": None,
@@ -122,17 +125,11 @@ def settle(history: list[dict], now: datetime) -> int:
             h["result"] = {"home_score": g["home"]["score"], "away_score": g["away"]["score"],
                            "home_won": g["home"]["score"] > g["away"]["score"]}
             n += 1
-    # Grade every settled row that isn't fully graded yet (also retries props whose box score failed).
-    for h in history:
-        if h["result"] is None or h.get("graded"):
-            continue
-        box = None
-        if h.get("prop_picks"):
-            try:
-                box = espn.box_lines(h["event_id"], CACHE)
-            except Exception as e:
-                print(f"  warn: box score for {h['event_id']} not available yet: {e}", file=sys.stderr)
-        grade_row(h, box)
+    # Grade every settled row that isn't fully graded yet (also retries props whose box score failed),
+    # plus every Kalshi line priced for it; refresh the calibration summary when new lines come in.
+    graded = calib.grade_settled(history, LINES, lambda eid: espn.box_lines(eid, CACHE), grade_row, props.grade)
+    if graded or (LINES.exists() and not CALIB.exists()):
+        calib.write_summary(LINES, CALIB, props.MARKET_WEIGHT, props.PICK_MIN_EDGE)
     return n
 
 
@@ -165,6 +162,8 @@ def write_index(games: list[dict], history: list[dict], now: datetime, meta: dic
             "kalshi": _brier(settled, "p_home_kalshi"),
             "value_bets": _value_bets([h for h in settled if h.get("best_value")]),
             "props": _prop_record([pk for h in settled for pk in h.get("prop_picks", [])]),
+            "clv": calib.clv_record([h for h in history if not h["preview"]]),
+            "calibration": _load(CALIB, None),
         },
         "notes": meta.get("notes", []),
     }
@@ -201,6 +200,7 @@ def cmd_run(args) -> int:
     notes: list[str] = []
     if due:
         ctx = report.RunContext(CACHE)
+        ctx.market_weight = calib.market_weight(CALIB, props.MARKET_WEIGHT)
         if ctx.odds_api_remaining is not None:
             print(f"  The Odds API credits remaining: {ctx.odds_api_remaining}")
         preview = args.all_today
@@ -212,11 +212,14 @@ def cmd_run(args) -> int:
                 failures += 1
                 print(f"  ! {label}: report failed\n{traceback.format_exc()}", file=sys.stderr)
                 continue
+            all_lines = (r.get("props") or {}).pop("all_lines", None)
             existing = _load(DATA / "reports" / f'{g["event_id"]}.json', None)
             if preview and existing and not existing.get("preview"):
                 print(f"  {label}: final report already out, preview not saved")
                 continue
             _save(DATA / "reports" / f'{g["event_id"]}.json', r)
+            if all_lines and not preview:
+                calib.save_lines(LINES, g["event_id"], g["tip"], all_lines)
             hist = {h["event_id"]: h for h in history}
             old = hist.get(g["event_id"])
             if old is None or old["preview"] or not preview:
@@ -239,6 +242,13 @@ def cmd_run(args) -> int:
         notes = ctx.errors
         for e in ctx.errors:
             print(f"  warn: {e}", file=sys.stderr)
+
+    try:
+        c = calib.capture_close(history, DATA / "reports", now)
+        if c:
+            print(f"  closing prices recorded for {c} picks")
+    except Exception as e:
+        print(f"  warn: closing prices failed: {e}", file=sys.stderr)
 
     try:
         n = settle(history, now)

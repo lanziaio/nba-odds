@@ -99,6 +99,22 @@ python3 -m unittest discover -s tests    # tests
 cd docs && python3 -m http.server 8765   # dashboard at http://localhost:8765
 ```
 
+## Calibration and closing-line value
+
+Four picks a game is far too few to tell skill from luck, so two faster checks run alongside the record:
+
+- **Every line, graded.** Each report saves every Kalshi prop line it priced (~250 per NBA game, ~300 per NFL game) to `data/lines/<sport>/<event>.json` (not published). After the game they are graded like picks, and `nba_odds/calib.py` writes `docs/data[/nfl]/calibration.json`: model vs Kalshi vs blend (Brier, log loss), a calibration table, what the pick rule would have done on every line, and the Kalshi weight that would have predicted best. Once a league has 40 graded games (and 4,000 lines), that fitted weight (kept within 50-95%) replaces the default automatically. Lines on one player's ladder move together, so the real sample is closer to player-games than to lines.
+- **Closing-line value.** A few minutes before tip-off the job records each pick's Kalshi mid (the run wakes at T-4 min for it). CLV = closing mid on our side minus the ask we took; beating the close consistently is the standard early sign of a real edge.
+
+Starting weights (from 2026-11-13 to 15, rebuilt with `scripts/backfill_lines.py`):
+
+| | Lines | Model log loss | Kalshi log loss | Pick rule on every line | Kalshi weight |
+|---|---|---|---|---|---|
+| NBA | 2,380 (11 games) | 0.506 | 0.489 | +6% ROI (237 bets), positive in both halves | 60% (kept) |
+| NFL | 2,229 (7 games) | 0.523 | 0.470 | loses at every weight; model says 85%, hits 70% | 85% (was 70%) |
+
+Both tabs show this under **Track record → Model vs Kalshi on every line**.
+
 ## Schedule (GitHub Actions)
 
 `.github/workflows/pregame.yml` does not rely on a tight cron: GitHub drops most `*/15` scheduled runs on busy days (on 2026-11-15 only 3 of ~40 fired and 9 games got no report). Instead, each run does a pass, then asks `scripts/next_wake.py` when the next report is due across both leagues (75 minutes before tip-off, or every 30 minutes while a game is live for scores), sleeps until then and runs again. Before GitHub's 6-hour job limit it hands off to a fresh run of itself. The crons (11:00 UTC to settle overnight games and load the slate, backups at 14, 17, 20 and 23 UTC, and 12:00 UTC on Sundays) only need to start that chain once a day. Each game is reported once (`state.json`), 73 to 75 minutes before tip-off. Results are committed back to the repo.
