@@ -1028,9 +1028,11 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV16ORLBOS-ORLFWAGNER22-6",
     "team": "ORL",
-    "won": null,
+    "won": false,
     "close": 0.395,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "lost",
+    "pnl": -0.4
    },
    {
     "athlete_id": "4066320",
@@ -1045,9 +1047,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16ORLBOS-ORLDBANE3-25",
     "team": "ORL",
-    "won": null,
+    "won": false,
     "close": 0.505,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.53
    },
    {
     "athlete_id": "4683689",
@@ -1062,13 +1066,22 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16ORLBOS-BOSJWALSH27-5",
     "team": "BOS",
-    "won": null,
+    "won": true,
     "close": 0.505,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.47
    }
   ],
-  "result": null,
-  "close_at": "2026-11-16T23:47:00+00:00"
+  "result": {
+   "home_score": 105,
+   "away_score": 115,
+   "home_won": false
+  },
+  "close_at": "2026-11-16T23:47:00+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401909995",
@@ -1096,9 +1109,11 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV16CHICLE-CHINPOWELL24-25",
     "team": "CHI",
-    "won": null,
+    "won": false,
     "close": 0.635,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.65
    },
    {
     "athlete_id": "4395626",
@@ -1113,9 +1128,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CHITJONES30-25",
     "team": "CHI",
-    "won": null,
+    "won": true,
     "close": 0.83,
-    "clv": -0.01
+    "clv": -0.01,
+    "status": "won",
+    "pnl": 0.15
    },
    {
     "athlete_id": "3908809",
@@ -1130,9 +1147,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CLEDMITCHELL45-40",
     "team": "CLE",
-    "won": null,
+    "won": false,
     "close": 0.61,
-    "clv": -0.02
+    "clv": -0.02,
+    "status": "lost",
+    "pnl": -0.65
    },
    {
     "athlete_id": "4066328",
@@ -1147,13 +1166,22 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16CHICLE-CLEJALLEN31-25",
     "team": "CLE",
-    "won": null,
+    "won": false,
     "close": 0.48,
-    "clv": 0.05
+    "clv": 0.05,
+    "status": "lost",
+    "pnl": -0.45
    }
   ],
-  "result": null,
-  "close_at": "2026-11-16T23:47:00+00:00"
+  "result": {
+   "home_score": 126,
+   "away_score": 115,
+   "home_won": true
+  },
+  "close_at": "2026-11-16T23:47:00+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401909996",
@@ -1181,9 +1209,11 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16MEMWAS-MEMCBOOZER27-20",
     "team": "MEM",
-    "won": null,
+    "won": false,
     "close": 0.525,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.55
    },
    {
     "athlete_id": "4433083",
@@ -1198,9 +1228,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV16MEMWAS-MEMCSPENCER24-6",
     "team": "MEM",
-    "won": null,
+    "won": false,
     "close": 0.245,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.26
    },
    {
     "athlete_id": "5142718",
@@ -1215,9 +1247,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16MEMWAS-WASADYBANTSA4-25",
     "team": "WSH",
-    "won": null,
+    "won": false,
     "close": 0.53,
-    "clv": -0.01
+    "clv": -0.01,
+    "status": "lost",
+    "pnl": -0.56
    },
    {
     "athlete_id": "4277905",
@@ -1232,13 +1266,22 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV16MEMWAS-WASTYOUNG3-8",
     "team": "WSH",
-    "won": null,
+    "won": false,
     "close": 0.38,
-    "clv": 0.0
+    "clv": 0.0,
+    "status": "lost",
+    "pnl": -0.4
    }
   ],
-  "result": null,
-  "close_at": "2026-11-16T23:47:00+00:00"
+  "result": {
+   "home_score": 120,
+   "away_score": 136,
+   "home_won": false
+  },
+  "close_at": "2026-11-16T23:47:00+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401909997",
