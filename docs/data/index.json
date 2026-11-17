@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T00:02:00+00:00",
+ "generated_at": "2026-11-17T00:25:59+00:00",
  "slate_date_et": "20261116",
  "slate": [
   {
@@ -15,8 +15,8 @@
    },
    "event_id": "401909994",
    "tip": "2026-11-17T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "BOS",
     "name": "Boston Celtics",
@@ -113,8 +113,8 @@
    },
    "event_id": "401909995",
    "tip": "2026-11-17T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "CLE",
     "name": "Cleveland Cavaliers",
@@ -228,8 +228,8 @@
    },
    "event_id": "401909996",
    "tip": "2026-11-17T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "WSH",
     "name": "Washington Wizards",
@@ -335,9 +335,9 @@
     "provider": "DraftKings",
     "details": "PHI -5.5",
     "home_spread": 5.5,
-    "total": 226.5,
-    "home_ml": 180,
-    "away_ml": -217,
+    "total": 227.5,
+    "home_ml": 191,
+    "away_ml": -230,
     "home_ml_open": 172,
     "away_ml_open": -207
    },
@@ -374,7 +374,9 @@
      "side": "home",
      "team": "BKN",
      "edge": 0.0648,
-     "ask": 0.34
+     "ask": 0.34,
+     "close": 0.325,
+     "clv": -0.015
     },
     "prop_picks": [
      {
@@ -390,7 +392,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
       "team": "PHI",
-      "won": null
+      "won": null,
+      "close": 0.515,
+      "clv": 0.005
      },
      {
       "athlete_id": "3064514",
@@ -405,7 +409,9 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
       "team": "BKN",
-      "won": null
+      "won": null,
+      "close": 0.435,
+      "clv": 0.005
      },
      {
       "athlete_id": "5101761",
@@ -420,10 +426,13 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
       "team": "BKN",
-      "won": null
+      "won": null,
+      "close": 0.365,
+      "clv": 0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-17T00:25:59+00:00"
    }
   },
   {
@@ -432,8 +441,8 @@
     "details": "HOU -1.5",
     "home_spread": 1.5,
     "total": 233.5,
-    "home_ml": 105,
-    "away_ml": -125,
+    "home_ml": 102,
+    "away_ml": -120,
     "home_ml_open": 119,
     "away_ml_open": -141
    },
@@ -481,7 +490,9 @@
       "strength": "lean",
       "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
       "team": "HOU",
-      "won": null
+      "won": null,
+      "close": 0.545,
+      "clv": 0.005
      },
      {
       "athlete_id": "4711272",
@@ -496,7 +507,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
       "team": "HOU",
-      "won": null
+      "won": null,
+      "close": 0.39,
+      "clv": 0.0
      },
      {
       "athlete_id": "4278053",
@@ -511,10 +524,13 @@
       "strength": "lean",
       "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
       "team": "MIA",
-      "won": null
+      "won": null,
+      "close": 0.835,
+      "clv": -0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-17T00:25:59+00:00"
    }
   },
   {
@@ -788,9 +804,9 @@
    }
   },
   "clv": {
-   "n": 11,
-   "avg_clv": 0.0018,
-   "beat_close": 0.3636
+   "n": 18,
+   "avg_clv": 0.0011,
+   "beat_close": 0.4444
   },
   "calibration": {
    "lines": 2380,
