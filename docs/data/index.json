@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T01:19:59+00:00",
+ "generated_at": "2026-11-17T01:50:02+00:00",
  "slate_date_et": "20261116",
  "slate": [
   {
@@ -16,7 +16,7 @@
    "event_id": "401909994",
    "tip": "2026-11-17T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "BOS",
     "name": "Boston Celtics",
@@ -229,7 +229,7 @@
    "event_id": "401909996",
    "tip": "2026-11-17T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "WSH",
     "name": "Washington Wizards",
@@ -344,7 +344,7 @@
    "event_id": "401909997",
    "tip": "2026-11-17T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
@@ -449,7 +449,7 @@
    "event_id": "401909998",
    "tip": "2026-11-17T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "MIA",
     "name": "Miami Heat",
@@ -801,7 +801,9 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV16PHXDEN-PHXMBRIDGES22-30",
       "team": "PHX",
-      "won": null
+      "won": null,
+      "close": 0.765,
+      "clv": -0.005
      },
      {
       "athlete_id": "3155526",
@@ -816,7 +818,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV16PHXDEN-PHXDBROOKS3-2",
       "team": "PHX",
-      "won": null
+      "won": null,
+      "close": 0.435,
+      "clv": 0.005
      },
      {
       "athlete_id": "4431767",
@@ -831,10 +835,13 @@
       "strength": "value",
       "ticker": "KXNBA3PT-26NOV16PHXDEN-DENCBRAUN0-1",
       "team": "DEN",
-      "won": null
+      "won": null,
+      "close": 0.265,
+      "clv": -0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-17T01:50:02+00:00"
    }
   }
  ],
@@ -880,9 +887,9 @@
    }
   },
   "clv": {
-   "n": 25,
-   "avg_clv": 0.0014,
-   "beat_close": 0.48
+   "n": 28,
+   "avg_clv": 0.0011,
+   "beat_close": 0.4643
   },
   "calibration": {
    "lines": 2380,
