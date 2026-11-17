@@ -1,970 +1,184 @@
 {
- "generated_at": "2026-11-17T04:35:22+00:00",
- "slate_date_et": "20261116",
+ "generated_at": "2026-11-17T19:28:12+00:00",
+ "slate_date_et": "20261117",
  "slate": [
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "BOS -8.5",
-    "home_spread": -8.5,
-    "total": 212.5,
-    "home_ml": -358,
-    "away_ml": 286,
-    "home_ml_open": -426,
-    "away_ml_open": 333
+    "details": "NY -4.5",
+    "home_spread": 4.5,
+    "total": 214.5,
+    "home_ml": 150,
+    "away_ml": -179,
+    "home_ml_open": 128,
+    "away_ml_open": -152
    },
-   "event_id": "401909994",
-   "tip": "2026-11-17T00:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401910002",
+   "tip": "2026-11-18T00:30:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
-    "abbr": "BOS",
-    "name": "Boston Celtics",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
-    "score": 105
+    "abbr": "TOR",
+    "name": "Toronto Raptors",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
+    "score": null
    },
    "away": {
-    "abbr": "ORL",
-    "name": "Orlando Magic",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png",
-    "score": 115
+    "abbr": "NY",
+    "name": "New York Knicks",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+    "score": null
    },
-   "has_report": true,
-   "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": {
-    "event_id": "401909994",
-    "tip": "2026-11-17T00:00:00+00:00",
-    "preview": false,
-    "home": "BOS",
-    "away": "ORL",
-    "p_home_final": 0.7504,
-    "p_home_stats": 0.7305,
-    "p_home_market": 0.758576874205845,
-    "p_home_kalshi": 0.765,
-    "pick": "BOS",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "4566434",
-      "name": "Franz Wagner",
-      "stat": "ast",
-      "line": 6,
-      "side": "no",
-      "label": "Franz Wagner under 6 assists",
-      "p": 0.4899,
-      "ask": 0.38,
-      "edge": 0.0899,
-      "strength": "value",
-      "ticker": "KXNBAAST-26NOV16ORLBOS-ORLFWAGNER22-6",
-      "team": "ORL",
-      "won": false,
-      "close": 0.395,
-      "clv": 0.015,
-      "status": "lost",
-      "pnl": -0.4
-     },
-     {
-      "athlete_id": "4066320",
-      "name": "Desmond Bane",
-      "stat": "pra",
-      "line": 25,
-      "side": "no",
-      "label": "Desmond Bane under 25 pts+reb+ast",
-      "p": 0.5993,
-      "ask": 0.51,
-      "edge": 0.0693,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16ORLBOS-ORLDBANE3-25",
-      "team": "ORL",
-      "won": false,
-      "close": 0.505,
-      "clv": -0.005,
-      "status": "lost",
-      "pnl": -0.53
-     },
-     {
-      "athlete_id": "4683689",
-      "name": "Jordan Walsh",
-      "stat": "pts",
-      "line": 5,
-      "side": "yes",
-      "label": "Jordan Walsh 5+ points",
-      "p": 0.5624,
-      "ask": 0.51,
-      "edge": 0.0324,
-      "strength": "lean",
-      "ticker": "KXNBAPTS-26NOV16ORLBOS-BOSJWALSH27-5",
-      "team": "BOS",
-      "won": true,
-      "close": 0.505,
-      "clv": -0.005,
-      "status": "won",
-      "pnl": 0.47
-     }
-    ],
-    "result": {
-     "home_score": 105,
-     "away_score": 115,
-     "home_won": false
-    },
-    "close_at": "2026-11-16T23:47:00+00:00",
-    "model_pick_correct": false,
-    "graded": true,
-    "lines_graded": true
-   }
+   "has_report": false,
+   "report_at": "2026-11-17T23:15:00+00:00",
+   "summary": null
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "CLE -8.5",
-    "home_spread": -8.5,
-    "total": 241.5,
-    "home_ml": -327,
-    "away_ml": 263,
-    "home_ml_open": -400,
-    "away_ml_open": 315
-   },
-   "event_id": "401909995",
-   "tip": "2026-11-17T00:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "CLE",
-    "name": "Cleveland Cavaliers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
-    "score": 126
-   },
-   "away": {
-    "abbr": "CHI",
-    "name": "Chicago Bulls",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-    "score": 115
-   },
-   "has_report": true,
-   "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": {
-    "event_id": "401909995",
-    "tip": "2026-11-17T00:00:00+00:00",
-    "preview": false,
-    "home": "CLE",
-    "away": "CHI",
-    "p_home_final": 0.7224,
-    "p_home_stats": 0.6665,
-    "p_home_market": 0.7444516069619671,
-    "p_home_kalshi": 0.755,
-    "pick": "CLE",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "2595516",
-      "name": "Norman Powell",
-      "stat": "pts",
-      "line": 25,
-      "side": "no",
-      "label": "Norman Powell under 25 points",
-      "p": 0.7139,
-      "ask": 0.63,
-      "edge": 0.0639,
-      "strength": "value",
-      "ticker": "KXNBAPTS-26NOV16CHICLE-CHINPOWELL24-25",
-      "team": "CHI",
-      "won": false,
-      "close": 0.635,
-      "clv": 0.005,
-      "status": "lost",
-      "pnl": -0.65
-     },
-     {
-      "athlete_id": "4395626",
-      "name": "Tre Jones",
-      "stat": "pra",
-      "line": 25,
-      "side": "no",
-      "label": "Tre Jones under 25 pts+reb+ast",
-      "p": 0.8962,
-      "ask": 0.84,
-      "edge": 0.0462,
-      "strength": "lean",
-      "ticker": "KXNBAPRA-26NOV16CHICLE-CHITJONES30-25",
-      "team": "CHI",
-      "won": true,
-      "close": 0.83,
-      "clv": -0.01,
-      "status": "won",
-      "pnl": 0.15
-     },
-     {
-      "athlete_id": "3908809",
-      "name": "Donovan Mitchell",
-      "stat": "pra",
-      "line": 40,
-      "side": "no",
-      "label": "Donovan Mitchell under 40 pts+reb+ast",
-      "p": 0.7271,
-      "ask": 0.63,
-      "edge": 0.0771,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16CHICLE-CLEDMITCHELL45-40",
-      "team": "CLE",
-      "won": false,
-      "close": 0.61,
-      "clv": -0.02,
-      "status": "lost",
-      "pnl": -0.65
-     },
-     {
-      "athlete_id": "4066328",
-      "name": "Jarrett Allen",
-      "stat": "pra",
-      "line": 25,
-      "side": "no",
-      "label": "Jarrett Allen under 25 pts+reb+ast",
-      "p": 0.5243,
-      "ask": 0.43,
-      "edge": 0.0743,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16CHICLE-CLEJALLEN31-25",
-      "team": "CLE",
-      "won": false,
-      "close": 0.48,
-      "clv": 0.05,
-      "status": "lost",
-      "pnl": -0.45
-     }
-    ],
-    "result": {
-     "home_score": 126,
-     "away_score": 115,
-     "home_won": true
-    },
-    "close_at": "2026-11-16T23:47:00+00:00",
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "MEM -3.5",
-    "home_spread": 3.5,
-    "total": 231.5,
-    "home_ml": 143,
-    "away_ml": -170,
-    "home_ml_open": 185,
-    "away_ml_open": -223
-   },
-   "event_id": "401909996",
-   "tip": "2026-11-17T00:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "WSH",
-    "name": "Washington Wizards",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
-    "score": 120
-   },
-   "away": {
-    "abbr": "MEM",
-    "name": "Memphis Grizzlies",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-    "score": 136
-   },
-   "has_report": true,
-   "report_at": "2026-11-16T22:45:00+00:00",
-   "summary": {
-    "event_id": "401909996",
-    "tip": "2026-11-17T00:00:00+00:00",
-    "preview": false,
-    "home": "WSH",
-    "away": "MEM",
-    "p_home_final": 0.3845,
-    "p_home_stats": 0.315,
-    "p_home_market": 0.41595302177636406,
-    "p_home_kalshi": 0.4225,
-    "pick": "MEM",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "5041935",
-      "name": "Cameron Boozer",
-      "stat": "pts",
-      "line": 20,
-      "side": "no",
-      "label": "Cameron Boozer under 20 points",
-      "p": 0.5983,
-      "ask": 0.53,
-      "edge": 0.0483,
-      "strength": "lean",
-      "ticker": "KXNBAPTS-26NOV16MEMWAS-MEMCBOOZER27-20",
-      "team": "MEM",
-      "won": false,
-      "close": 0.525,
-      "clv": -0.005,
-      "status": "lost",
-      "pnl": -0.55
-     },
-     {
-      "athlete_id": "4433083",
-      "name": "Cam Spencer",
-      "stat": "ast",
-      "line": 6,
-      "side": "no",
-      "label": "Cam Spencer under 6 assists",
-      "p": 0.2862,
-      "ask": 0.24,
-      "edge": 0.0262,
-      "strength": "lean",
-      "ticker": "KXNBAAST-26NOV16MEMWAS-MEMCSPENCER24-6",
-      "team": "MEM",
-      "won": false,
-      "close": 0.245,
-      "clv": 0.005,
-      "status": "lost",
-      "pnl": -0.26
-     },
-     {
-      "athlete_id": "5142718",
-      "name": "AJ Dybantsa",
-      "stat": "pra",
-      "line": 25,
-      "side": "no",
-      "label": "AJ Dybantsa under 25 pts+reb+ast",
-      "p": 0.6457,
-      "ask": 0.54,
-      "edge": 0.0857,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16MEMWAS-WASADYBANTSA4-25",
-      "team": "WSH",
-      "won": false,
-      "close": 0.53,
-      "clv": -0.01,
-      "status": "lost",
-      "pnl": -0.56
-     },
-     {
-      "athlete_id": "4277905",
-      "name": "Trae Young",
-      "stat": "ast",
-      "line": 8,
-      "side": "no",
-      "label": "Trae Young under 8 assists",
-      "p": 0.4661,
-      "ask": 0.38,
-      "edge": 0.0661,
-      "strength": "value",
-      "ticker": "KXNBAAST-26NOV16MEMWAS-WASTYOUNG3-8",
-      "team": "WSH",
-      "won": false,
-      "close": 0.38,
-      "clv": 0.0,
-      "status": "lost",
-      "pnl": -0.4
-     }
-    ],
-    "result": {
-     "home_score": 120,
-     "away_score": 136,
-     "home_won": false
-    },
-    "close_at": "2026-11-16T23:47:00+00:00",
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "PHI -5.5",
-    "home_spread": 5.5,
+    "details": "MIN -1.5",
+    "home_spread": -1.5,
     "total": 227.5,
-    "home_ml": 191,
-    "away_ml": -230,
-    "home_ml_open": 172,
-    "away_ml_open": -207
+    "home_ml": -125,
+    "away_ml": 105,
+    "home_ml_open": -132,
+    "away_ml_open": 111
    },
-   "event_id": "401909997",
-   "tip": "2026-11-17T00:30:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "BKN",
-    "name": "Brooklyn Nets",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-    "score": 123
-   },
-   "away": {
-    "abbr": "PHI",
-    "name": "Philadelphia 76ers",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-    "score": 135
-   },
-   "has_report": true,
-   "report_at": "2026-11-16T23:15:00+00:00",
-   "summary": {
-    "event_id": "401909997",
-    "tip": "2026-11-17T00:30:00+00:00",
-    "preview": false,
-    "home": "BKN",
-    "away": "PHI",
-    "p_home_final": 0.4248,
-    "p_home_stats": 0.6242,
-    "p_home_market": 0.3428509625784123,
-    "p_home_kalshi": 0.335,
-    "pick": "PHI",
-    "best_value": {
-     "side": "home",
-     "team": "BKN",
-     "edge": 0.0648,
-     "ask": 0.34,
-     "close": 0.325,
-     "clv": -0.015,
-     "status": "lost",
-     "pnl": -0.36
-    },
-    "prop_picks": [
-     {
-      "athlete_id": "5124612",
-      "name": "VJ Edgecombe",
-      "stat": "ast",
-      "line": 4,
-      "side": "yes",
-      "label": "VJ Edgecombe 4+ assists",
-      "p": 0.5604,
-      "ask": 0.51,
-      "edge": 0.0304,
-      "strength": "lean",
-      "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
-      "team": "PHI",
-      "won": true,
-      "close": 0.515,
-      "clv": 0.005,
-      "status": "won",
-      "pnl": 0.47
-     },
-     {
-      "athlete_id": "3064514",
-      "name": "Julius Randle",
-      "stat": "pra",
-      "line": 30,
-      "side": "no",
-      "label": "Julius Randle under 30 pts+reb+ast",
-      "p": 0.557,
-      "ask": 0.43,
-      "edge": 0.107,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
-      "team": "BKN",
-      "won": false,
-      "close": 0.435,
-      "clv": 0.005,
-      "status": "lost",
-      "pnl": -0.45
-     },
-     {
-      "athlete_id": "5101761",
-      "name": "Mikel Brown Jr.",
-      "stat": "reb",
-      "line": 2,
-      "side": "no",
-      "label": "Mikel Brown Jr. under 2 rebounds",
-      "p": 0.4406,
-      "ask": 0.36,
-      "edge": 0.0606,
-      "strength": "value",
-      "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
-      "team": "BKN",
-      "won": true,
-      "close": 0.365,
-      "clv": 0.005,
-      "status": "won",
-      "pnl": 0.62
-     }
-    ],
-    "result": {
-     "home_score": 123,
-     "away_score": 135,
-     "home_won": false
-    },
-    "close_at": "2026-11-17T00:25:59+00:00",
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "HOU -1.5",
-    "home_spread": 1.5,
-    "total": 233.5,
-    "home_ml": 101,
-    "away_ml": -120,
-    "home_ml_open": 119,
-    "away_ml_open": -141
-   },
-   "event_id": "401909998",
-   "tip": "2026-11-17T00:30:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "MIA",
-    "name": "Miami Heat",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-    "score": 128
-   },
-   "away": {
-    "abbr": "HOU",
-    "name": "Houston Rockets",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
-    "score": 110
-   },
-   "has_report": true,
-   "report_at": "2026-11-16T23:15:00+00:00",
-   "summary": {
-    "event_id": "401909998",
-    "tip": "2026-11-17T00:30:00+00:00",
-    "preview": false,
-    "home": "MIA",
-    "away": "HOU",
-    "p_home_final": 0.4512,
-    "p_home_stats": 0.4372,
-    "p_home_market": 0.4572564612326044,
-    "p_home_kalshi": 0.445,
-    "pick": "HOU",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "2991230",
-      "name": "Fred VanVleet",
-      "stat": "tpm",
-      "line": 3,
-      "side": "yes",
-      "label": "Fred VanVleet 3+ threes",
-      "p": 0.5949,
-      "ask": 0.54,
-      "edge": 0.0349,
-      "strength": "lean",
-      "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
-      "team": "HOU",
-      "won": false,
-      "close": 0.545,
-      "clv": 0.005,
-      "status": "lost",
-      "pnl": -0.56
-     },
-     {
-      "athlete_id": "4711272",
-      "name": "Reed Sheppard",
-      "stat": "reb",
-      "line": 2,
-      "side": "no",
-      "label": "Reed Sheppard under 2 rebounds",
-      "p": 0.4383,
-      "ask": 0.39,
-      "edge": 0.0283,
-      "strength": "lean",
-      "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
-      "team": "HOU",
-      "won": false,
-      "close": 0.39,
-      "clv": 0.0,
-      "status": "lost",
-      "pnl": -0.41
-     },
-     {
-      "athlete_id": "4278053",
-      "name": "Davion Mitchell",
-      "stat": "pts",
-      "line": 20,
-      "side": "no",
-      "label": "Davion Mitchell under 20 points",
-      "p": 0.8758,
-      "ask": 0.84,
-      "edge": 0.0258,
-      "strength": "lean",
-      "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
-      "team": "MIA",
-      "won": true,
-      "close": 0.835,
-      "clv": -0.005,
-      "status": "won",
-      "pnl": 0.15
-     }
-    ],
-    "result": {
-     "home_score": 128,
-     "away_score": 110,
-     "home_won": true
-    },
-    "close_at": "2026-11-17T00:25:59+00:00",
-    "model_pick_correct": false,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "MIN -2.5",
-    "home_spread": -2.5,
-    "total": 227.5,
-    "home_ml": -130,
-    "away_ml": 110,
-    "home_ml_open": -143,
-    "away_ml_open": 121
-   },
-   "event_id": "401909999",
-   "tip": "2026-11-17T01:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401910003",
+   "tip": "2026-11-18T01:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-    "score": 106
+    "score": null
    },
    "away": {
     "abbr": "POR",
     "name": "Portland Trail Blazers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-    "score": 98
+    "score": null
    },
-   "has_report": true,
-   "report_at": "2026-11-16T23:45:00+00:00",
-   "summary": {
-    "event_id": "401909999",
-    "tip": "2026-11-17T01:00:00+00:00",
-    "preview": false,
-    "home": "MIN",
-    "away": "POR",
-    "p_home_final": 0.5718,
-    "p_home_stats": 0.6182,
-    "p_home_market": 0.551441114716549,
-    "p_home_kalshi": 0.545,
-    "pick": "MIN",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "6606",
-      "name": "Damian Lillard",
-      "stat": "reb",
-      "line": 4,
-      "side": "no",
-      "label": "Damian Lillard under 4 rebounds",
-      "p": 0.6423,
-      "ask": 0.57,
-      "edge": 0.0523,
-      "strength": "value",
-      "ticker": "KXNBAREB-26NOV16PORMIN-PORDLILLARD0-4",
-      "team": "POR",
-      "won": true,
-      "close": 0.575,
-      "clv": 0.005,
-      "status": "won",
-      "pnl": 0.41
-     },
-     {
-      "athlete_id": "4432847",
-      "name": "Terrence Shannon Jr.",
-      "stat": "tpm",
-      "line": 2,
-      "side": "no",
-      "label": "Terrence Shannon Jr. under 2 threes",
-      "p": 0.6672,
-      "ask": 0.62,
-      "edge": 0.0272,
-      "strength": "lean",
-      "ticker": "KXNBA3PT-26NOV16PORMIN-MINTSHANNON4-2",
-      "team": "MIN",
-      "won": false,
-      "close": 0.625,
-      "clv": 0.005,
-      "status": "lost",
-      "pnl": -0.64
-     },
-     {
-      "athlete_id": "4433247",
-      "name": "Jonathan Kuminga",
-      "stat": "pra",
-      "line": 25,
-      "side": "yes",
-      "label": "Jonathan Kuminga 25+ pts+reb+ast",
-      "p": 0.3662,
-      "ask": 0.32,
-      "edge": 0.0262,
-      "strength": "lean",
-      "ticker": "KXNBAPRA-26NOV16PORMIN-MINJKUMINGA0-25",
-      "team": "MIN",
-      "won": false,
-      "close": 0.295,
-      "clv": -0.025,
-      "status": "lost",
-      "pnl": -0.34
-     }
-    ],
-    "result": {
-     "home_score": 106,
-     "away_score": 98,
-     "home_won": true
-    },
-    "close_at": "2026-11-17T00:46:59+00:00",
-    "model_pick_correct": true,
-    "graded": true,
-    "lines_graded": true
-   }
+   "has_report": false,
+   "report_at": "2026-11-17T23:45:00+00:00",
+   "summary": null
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "GS -3.5",
-    "home_spread": 3.5,
-    "total": 223.5,
-    "home_ml": 136,
-    "away_ml": -161,
-    "home_ml_open": 111,
-    "away_ml_open": -131
-   },
-   "event_id": "401910000",
-   "tip": "2026-11-17T01:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
-   "home": {
-    "abbr": "NO",
-    "name": "New Orleans Pelicans",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-    "score": 115
-   },
-   "away": {
-    "abbr": "GS",
-    "name": "Golden State Warriors",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-    "score": 94
-   },
-   "has_report": true,
-   "report_at": "2026-11-16T23:45:00+00:00",
-   "summary": {
-    "event_id": "401910000",
-    "tip": "2026-11-17T01:00:00+00:00",
-    "preview": false,
-    "home": "NO",
-    "away": "GS",
-    "p_home_final": 0.38,
-    "p_home_stats": 0.3015,
-    "p_home_market": 0.41595302177636406,
-    "p_home_kalshi": 0.405,
-    "pick": "GS",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "4709138",
-      "name": "Brandin Podziemski",
-      "stat": "pra",
-      "line": 30,
-      "side": "no",
-      "label": "Brandin Podziemski under 30 pts+reb+ast",
-      "p": 0.6471,
-      "ask": 0.57,
-      "edge": 0.0571,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16GSWNOP-GSWBPODZIEMSKI2-30",
-      "team": "GS",
-      "won": true,
-      "close": 0.565,
-      "clv": -0.005,
-      "status": "won",
-      "pnl": 0.41
-     },
-     {
-      "athlete_id": "5175737",
-      "name": "Yaxel Lendeborg",
-      "stat": "pra",
-      "line": 30,
-      "side": "no",
-      "label": "Yaxel Lendeborg under 30 pts+reb+ast",
-      "p": 0.3369,
-      "ask": 0.26,
-      "edge": 0.0569,
-      "strength": "value",
-      "ticker": "KXNBAPRA-26NOV16GSWNOP-GSWYLENDEBORG1-30",
-      "team": "GS",
-      "won": false,
-      "close": 0.26,
-      "clv": 0.0,
-      "status": "lost",
-      "pnl": -0.28
-     },
-     {
-      "athlete_id": "5144091",
-      "name": "Jeremiah Fears",
-      "stat": "ast",
-      "line": 6,
-      "side": "no",
-      "label": "Jeremiah Fears under 6 assists",
-      "p": 0.4729,
-      "ask": 0.4,
-      "edge": 0.0529,
-      "strength": "value",
-      "ticker": "KXNBAAST-26NOV16GSWNOP-NOPJFEARS0-6",
-      "team": "NO",
-      "won": false,
-      "close": 0.415,
-      "clv": 0.015,
-      "status": "lost",
-      "pnl": -0.42
-     },
-     {
-      "athlete_id": "4397136",
-      "name": "Saddiq Bey",
-      "stat": "reb",
-      "line": 4,
-      "side": "no",
-      "label": "Saddiq Bey under 4 rebounds",
-      "p": 0.2994,
-      "ask": 0.24,
-      "edge": 0.0394,
-      "strength": "lean",
-      "ticker": "KXNBAREB-26NOV16GSWNOP-NOPSBEY41-4",
-      "team": "NO",
-      "won": false,
-      "close": 0.26,
-      "clv": 0.02,
-      "status": "lost",
-      "pnl": -0.26
-     }
-    ],
-    "result": {
-     "home_score": 115,
-     "away_score": 94,
-     "home_won": true
-    },
-    "close_at": "2026-11-17T00:46:59+00:00",
-    "model_pick_correct": false,
-    "graded": true,
-    "lines_graded": true
-   }
-  },
-  {
-   "odds": {
-    "provider": "DraftKings",
-    "details": "DEN -9.5",
+    "details": "SA -9.5",
     "home_spread": -9.5,
-    "total": 229.5,
-    "home_ml": -426,
-    "away_ml": 333,
-    "home_ml_open": -370,
-    "away_ml_open": 294
+    "total": 222.5,
+    "home_ml": -437,
+    "away_ml": 340,
+    "home_ml_open": -345,
+    "away_ml_open": 277
    },
-   "event_id": "401910001",
-   "tip": "2026-11-17T02:00:00+00:00",
-   "state": "post",
-   "status": "STATUS_FINAL",
+   "event_id": "401910004",
+   "tip": "2026-11-18T01:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
    "home": {
-    "abbr": "DEN",
-    "name": "Denver Nuggets",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png",
-    "score": 105
+    "abbr": "SA",
+    "name": "San Antonio Spurs",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+    "score": null
    },
    "away": {
-    "abbr": "PHX",
-    "name": "Phoenix Suns",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
-    "score": 117
+    "abbr": "DET",
+    "name": "Detroit Pistons",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png",
+    "score": null
    },
-   "has_report": true,
-   "report_at": "2026-11-17T00:45:00+00:00",
-   "summary": {
-    "event_id": "401910001",
-    "tip": "2026-11-17T02:00:00+00:00",
-    "preview": false,
-    "home": "DEN",
-    "away": "PHX",
-    "p_home_final": 0.7642,
-    "p_home_stats": 0.7293,
-    "p_home_market": 0.7781133730985667,
-    "p_home_kalshi": 0.79,
-    "pick": "DEN",
-    "best_value": null,
-    "prop_picks": [
-     {
-      "athlete_id": "4066383",
-      "name": "Miles Bridges",
-      "stat": "pra",
-      "line": 30,
-      "side": "no",
-      "label": "Miles Bridges under 30 pts+reb+ast",
-      "p": 0.8354,
-      "ask": 0.77,
-      "edge": 0.0454,
-      "strength": "lean",
-      "ticker": "KXNBAPRA-26NOV16PHXDEN-PHXMBRIDGES22-30",
-      "team": "PHX",
-      "won": null,
-      "close": 0.765,
-      "clv": -0.005
-     },
-     {
-      "athlete_id": "3155526",
-      "name": "Dillon Brooks",
-      "stat": "ast",
-      "line": 2,
-      "side": "no",
-      "label": "Dillon Brooks under 2 assists",
-      "p": 0.486,
-      "ask": 0.43,
-      "edge": 0.036,
-      "strength": "lean",
-      "ticker": "KXNBAAST-26NOV16PHXDEN-PHXDBROOKS3-2",
-      "team": "PHX",
-      "won": null,
-      "close": 0.435,
-      "clv": 0.005
-     },
-     {
-      "athlete_id": "4431767",
-      "name": "Christian Braun",
-      "stat": "tpm",
-      "line": 1,
-      "side": "no",
-      "label": "Christian Braun under 1 threes",
-      "p": 0.3413,
-      "ask": 0.27,
-      "edge": 0.0513,
-      "strength": "value",
-      "ticker": "KXNBA3PT-26NOV16PHXDEN-DENCBRAUN0-1",
-      "team": "DEN",
-      "won": null,
-      "close": 0.265,
-      "clv": -0.005
-     }
-    ],
-    "result": null,
-    "close_at": "2026-11-17T01:50:02+00:00"
-   }
+   "has_report": false,
+   "report_at": "2026-11-17T23:45:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "LAC -6.5",
+    "home_spread": -6.5,
+    "total": 225.5,
+    "home_ml": -238,
+    "away_ml": 197,
+    "home_ml_open": -199,
+    "away_ml_open": 166
+   },
+   "event_id": "401910006",
+   "tip": "2026-11-18T03:30:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "LAC",
+    "name": "LA Clippers",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "UTAH",
+    "name": "Utah Jazz",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-18T02:15:00+00:00",
+   "summary": null
+  },
+  {
+   "odds": {
+    "provider": "DraftKings",
+    "details": "LAL -7.5",
+    "home_spread": -7.5,
+    "total": 221.5,
+    "home_ml": -289,
+    "away_ml": 236,
+    "home_ml_open": -391,
+    "away_ml_open": 309
+   },
+   "event_id": "401910005",
+   "tip": "2026-11-18T04:00:00+00:00",
+   "state": "pre",
+   "status": "STATUS_SCHEDULED",
+   "home": {
+    "abbr": "LAL",
+    "name": "Los Angeles Lakers",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png",
+    "score": null
+   },
+   "away": {
+    "abbr": "CHA",
+    "name": "Charlotte Hornets",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
+    "score": null
+   },
+   "has_report": false,
+   "report_at": "2026-11-18T02:45:00+00:00",
+   "summary": null
   }
  ],
  "track_record": {
-  "games": 18,
+  "games": 19,
   "model": {
-   "n": 18,
-   "brier": 0.1961,
-   "accuracy": 0.7222
+   "n": 19,
+   "brier": 0.2165,
+   "accuracy": 0.6842
   },
   "vegas": {
-   "n": 18,
-   "brier": 0.1941,
-   "accuracy": 0.7222
+   "n": 19,
+   "brier": 0.2158,
+   "accuracy": 0.6842
   },
   "stats_only": {
-   "n": 18,
-   "brier": 0.2095,
-   "accuracy": 0.6667
+   "n": 19,
+   "brier": 0.2265,
+   "accuracy": 0.6316
   },
   "kalshi": {
-   "n": 18,
-   "brier": 0.1941,
-   "accuracy": 0.7222
+   "n": 19,
+   "brier": 0.2168,
+   "accuracy": 0.6842
   },
   "value_bets": {
    "n": 2,
@@ -973,16 +187,16 @@
   },
   "props": {
    "value": {
-    "n": 34,
-    "hit_rate": 0.3529,
-    "expected_hit_rate": 0.5334,
-    "pnl_per_contract": -3.79
+    "n": 35,
+    "hit_rate": 0.3429,
+    "expected_hit_rate": 0.5279,
+    "pnl_per_contract": -4.08
    },
    "lean": {
-    "n": 31,
-    "hit_rate": 0.4194,
-    "expected_hit_rate": 0.5871,
-    "pnl_per_contract": -4.14
+    "n": 33,
+    "hit_rate": 0.4242,
+    "expected_hit_rate": 0.5916,
+    "pnl_per_contract": -4.38
    }
   },
   "clv": {
@@ -991,19 +205,19 @@
    "beat_close": 0.4643
   },
   "calibration": {
-   "lines": 4038,
-   "games": 18,
+   "lines": 4296,
+   "games": 19,
    "model": {
-    "brier": 0.1686,
-    "log_loss": 0.5105
+    "brier": 0.1675,
+    "log_loss": 0.5076
    },
    "market": {
-    "brier": 0.1612,
-    "log_loss": 0.489
+    "brier": 0.1603,
+    "log_loss": 0.4866
    },
    "blend": {
-    "brier": 0.1628,
-    "log_loss": 0.4933
+    "brier": 0.1618,
+    "log_loss": 0.4908
    },
    "fitted_market_weight": 1.0,
    "market_weight_in_use": 0.6,
@@ -1018,71 +232,71 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 684,
+      "n": 725,
       "predicted": 0.052,
-      "actual": 0.077
+      "actual": 0.073
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 597,
+      "n": 641,
       "predicted": 0.148,
-      "actual": 0.171
+      "actual": 0.167
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 424,
-      "predicted": 0.249,
-      "actual": 0.285
+      "n": 450,
+      "predicted": 0.25,
+      "actual": 0.282
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 402,
+      "n": 428,
       "predicted": 0.347,
-      "actual": 0.361
+      "actual": 0.367
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 306,
-      "predicted": 0.451,
-      "actual": 0.467
+      "n": 325,
+      "predicted": 0.45,
+      "actual": 0.474
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 395,
+      "n": 420,
       "predicted": 0.55,
-      "actual": 0.587
+      "actual": 0.581
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 302,
+      "n": 322,
       "predicted": 0.65,
-      "actual": 0.659
+      "actual": 0.671
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 361,
+      "n": 385,
       "predicted": 0.75,
-      "actual": 0.74
+      "actual": 0.745
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 317,
-      "predicted": 0.849,
-      "actual": 0.886
+      "n": 337,
+      "predicted": 0.848,
+      "actual": 0.881
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 177,
-      "predicted": 0.938,
+      "n": 187,
+      "predicted": 0.937,
       "actual": 0.898
      }
     ],
@@ -1090,159 +304,159 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 544,
+      "n": 585,
       "predicted": 0.057,
-      "actual": 0.039
+      "actual": 0.036
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 626,
+      "n": 662,
       "predicted": 0.147,
-      "actual": 0.141
+      "actual": 0.139
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 453,
+      "n": 487,
       "predicted": 0.247,
-      "actual": 0.245
+      "actual": 0.24
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 386,
+      "n": 406,
       "predicted": 0.348,
-      "actual": 0.355
+      "actual": 0.352
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 346,
+      "n": 365,
       "predicted": 0.448,
-      "actual": 0.474
+      "actual": 0.485
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 344,
-      "predicted": 0.551,
-      "actual": 0.558
+      "n": 368,
+      "predicted": 0.55,
+      "actual": 0.562
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 342,
-      "predicted": 0.65,
-      "actual": 0.64
+      "n": 360,
+      "predicted": 0.649,
+      "actual": 0.639
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 374,
-      "predicted": 0.749,
-      "actual": 0.765
+      "n": 407,
+      "predicted": 0.75,
+      "actual": 0.771
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 363,
-      "predicted": 0.845,
-      "actual": 0.86
+      "n": 383,
+      "predicted": 0.846,
+      "actual": 0.856
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 187,
+      "n": 197,
       "predicted": 0.929,
-      "actual": 0.92
+      "actual": 0.919
      }
     ],
     "blend": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 592,
+      "n": 632,
       "predicted": 0.056,
-      "actual": 0.051
+      "actual": 0.047
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 625,
+      "n": 666,
       "predicted": 0.146,
-      "actual": 0.15
+      "actual": 0.147
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 455,
-      "predicted": 0.249,
-      "actual": 0.273
+      "n": 482,
+      "predicted": 0.248,
+      "actual": 0.266
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 379,
+      "n": 406,
       "predicted": 0.348,
-      "actual": 0.343
+      "actual": 0.35
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 329,
+      "n": 347,
       "predicted": 0.45,
-      "actual": 0.48
+      "actual": 0.49
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 352,
+      "n": 376,
       "predicted": 0.548,
-      "actual": 0.56
+      "actual": 0.559
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 346,
+      "n": 364,
       "predicted": 0.649,
-      "actual": 0.662
+      "actual": 0.665
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 379,
+      "n": 408,
       "predicted": 0.752,
-      "actual": 0.757
+      "actual": 0.762
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 333,
-      "predicted": 0.849,
-      "actual": 0.877
+      "n": 353,
+      "predicted": 0.848,
+      "actual": 0.873
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 175,
+      "n": 186,
       "predicted": 0.932,
-      "actual": 0.92
+      "actual": 0.919
      }
     ]
    },
    "paper_bets": {
     "value": {
-     "n": 93,
-     "hit_rate": 0.4194,
-     "pnl_per_contract": -8.49,
-     "roi": -0.1859
+     "n": 94,
+     "hit_rate": 0.4149,
+     "pnl_per_contract": -8.78,
+     "roi": -0.1912
     },
     "lean_or_better": {
-     "n": 426,
-     "hit_rate": 0.5282,
-     "pnl_per_contract": -12.0,
-     "roi": -0.0525
+     "n": 435,
+     "hit_rate": 0.5218,
+     "pnl_per_contract": -15.01,
+     "roi": -0.0643
     }
    }
   }

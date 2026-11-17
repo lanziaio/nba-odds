@@ -1661,9 +1661,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV16PHXDEN-PHXMBRIDGES22-30",
     "team": "PHX",
-    "won": null,
+    "won": true,
     "close": 0.765,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.21
    },
    {
     "athlete_id": "3155526",
@@ -1678,9 +1680,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV16PHXDEN-PHXDBROOKS3-2",
     "team": "PHX",
-    "won": null,
+    "won": false,
     "close": 0.435,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.45
    },
    {
     "athlete_id": "4431767",
@@ -1695,12 +1699,21 @@
     "strength": "value",
     "ticker": "KXNBA3PT-26NOV16PHXDEN-DENCBRAUN0-1",
     "team": "DEN",
-    "won": null,
+    "won": false,
     "close": 0.265,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.29
    }
   ],
-  "result": null,
-  "close_at": "2026-11-17T01:50:02+00:00"
+  "result": {
+   "home_score": 105,
+   "away_score": 117,
+   "home_won": false
+  },
+  "close_at": "2026-11-17T01:50:02+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  }
 ]
