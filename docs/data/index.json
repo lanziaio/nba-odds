@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T03:05:04+00:00",
+ "generated_at": "2026-11-17T03:35:08+00:00",
  "slate_date_et": "20261116",
  "slate": [
   {
@@ -386,19 +386,19 @@
    },
    "event_id": "401909997",
    "tip": "2026-11-17T00:30:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-    "score": null
+    "score": 123
    },
    "away": {
     "abbr": "PHI",
     "name": "Philadelphia 76ers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-    "score": null
+    "score": 135
    },
    "has_report": true,
    "report_at": "2026-11-16T23:15:00+00:00",
@@ -419,7 +419,9 @@
      "edge": 0.0648,
      "ask": 0.34,
      "close": 0.325,
-     "clv": -0.015
+     "clv": -0.015,
+     "status": "lost",
+     "pnl": -0.36
     },
     "prop_picks": [
      {
@@ -435,9 +437,11 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
       "team": "PHI",
-      "won": null,
+      "won": true,
       "close": 0.515,
-      "clv": 0.005
+      "clv": 0.005,
+      "status": "won",
+      "pnl": 0.47
      },
      {
       "athlete_id": "3064514",
@@ -452,9 +456,11 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
       "team": "BKN",
-      "won": null,
+      "won": false,
       "close": 0.435,
-      "clv": 0.005
+      "clv": 0.005,
+      "status": "lost",
+      "pnl": -0.45
      },
      {
       "athlete_id": "5101761",
@@ -469,13 +475,22 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
       "team": "BKN",
-      "won": null,
+      "won": true,
       "close": 0.365,
-      "clv": 0.005
+      "clv": 0.005,
+      "status": "won",
+      "pnl": 0.62
      }
     ],
-    "result": null,
-    "close_at": "2026-11-17T00:25:59+00:00"
+    "result": {
+     "home_score": 123,
+     "away_score": 135,
+     "home_won": false
+    },
+    "close_at": "2026-11-17T00:25:59+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -533,9 +548,11 @@
       "strength": "lean",
       "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
       "team": "HOU",
-      "won": null,
+      "won": false,
       "close": 0.545,
-      "clv": 0.005
+      "clv": 0.005,
+      "status": "lost",
+      "pnl": -0.56
      },
      {
       "athlete_id": "4711272",
@@ -550,9 +567,11 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
       "team": "HOU",
-      "won": null,
+      "won": false,
       "close": 0.39,
-      "clv": 0.0
+      "clv": 0.0,
+      "status": "lost",
+      "pnl": -0.41
      },
      {
       "athlete_id": "4278053",
@@ -567,13 +586,22 @@
       "strength": "lean",
       "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
       "team": "MIA",
-      "won": null,
+      "won": true,
       "close": 0.835,
-      "clv": -0.005
+      "clv": -0.005,
+      "status": "won",
+      "pnl": 0.15
      }
     ],
-    "result": null,
-    "close_at": "2026-11-17T00:25:59+00:00"
+    "result": {
+     "home_score": 128,
+     "away_score": 110,
+     "home_won": true
+    },
+    "close_at": "2026-11-17T00:25:59+00:00",
+    "model_pick_correct": false,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -589,19 +617,19 @@
    },
    "event_id": "401909999",
    "tip": "2026-11-17T01:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-    "score": null
+    "score": 106
    },
    "away": {
     "abbr": "POR",
     "name": "Portland Trail Blazers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-    "score": null
+    "score": 98
    },
    "has_report": true,
    "report_at": "2026-11-16T23:45:00+00:00",
@@ -687,19 +715,19 @@
    },
    "event_id": "401910000",
    "tip": "2026-11-17T01:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "NO",
     "name": "New Orleans Pelicans",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
-    "score": null
+    "score": 115
    },
    "away": {
     "abbr": "GS",
     "name": "Golden State Warriors",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png",
-    "score": null
+    "score": 94
    },
    "has_report": true,
    "report_at": "2026-11-16T23:45:00+00:00",
@@ -889,44 +917,44 @@
   }
  ],
  "track_record": {
-  "games": 14,
+  "games": 16,
   "model": {
-   "n": 14,
-   "brier": 0.1772,
-   "accuracy": 0.7857
+   "n": 16,
+   "brier": 0.1851,
+   "accuracy": 0.75
   },
   "vegas": {
-   "n": 14,
-   "brier": 0.1814,
-   "accuracy": 0.7857
+   "n": 16,
+   "brier": 0.1845,
+   "accuracy": 0.75
   },
   "stats_only": {
-   "n": 14,
-   "brier": 0.1737,
-   "accuracy": 0.7857
+   "n": 16,
+   "brier": 0.1961,
+   "accuracy": 0.6875
   },
   "kalshi": {
-   "n": 14,
-   "brier": 0.1795,
-   "accuracy": 0.7857
+   "n": 16,
+   "brier": 0.1833,
+   "accuracy": 0.75
   },
   "value_bets": {
-   "n": 1,
+   "n": 2,
    "wins": 1,
-   "pnl_per_contract": 0.39
+   "pnl_per_contract": 0.03
   },
   "props": {
    "value": {
-    "n": 28,
-    "hit_rate": 0.3214,
-    "expected_hit_rate": 0.5371,
-    "pnl_per_contract": -4.08
+    "n": 30,
+    "hit_rate": 0.3333,
+    "expected_hit_rate": 0.5345,
+    "pnl_per_contract": -3.91
    },
    "lean": {
-    "n": 24,
-    "hit_rate": 0.4583,
-    "expected_hit_rate": 0.5999,
-    "pnl_per_contract": -2.55
+    "n": 28,
+    "hit_rate": 0.4643,
+    "expected_hit_rate": 0.6024,
+    "pnl_per_contract": -2.9
    }
   },
   "clv": {
@@ -935,19 +963,19 @@
    "beat_close": 0.4643
   },
   "calibration": {
-   "lines": 3079,
-   "games": 14,
+   "lines": 3539,
+   "games": 16,
    "model": {
-    "brier": 0.1706,
-    "log_loss": 0.5148
+    "brier": 0.1702,
+    "log_loss": 0.5142
    },
    "market": {
-    "brier": 0.163,
-    "log_loss": 0.4937
+    "brier": 0.1629,
+    "log_loss": 0.4935
    },
    "blend": {
-    "brier": 0.1645,
-    "log_loss": 0.4976
+    "brier": 0.1644,
+    "log_loss": 0.4973
    },
    "fitted_market_weight": 1.0,
    "market_weight_in_use": 0.6,
@@ -962,231 +990,231 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 521,
+      "n": 586,
       "predicted": 0.052,
-      "actual": 0.083
+      "actual": 0.08
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 460,
+      "n": 526,
       "predicted": 0.148,
-      "actual": 0.189
+      "actual": 0.175
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 319,
-      "predicted": 0.248,
-      "actual": 0.301
+      "n": 369,
+      "predicted": 0.249,
+      "actual": 0.298
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 309,
+      "n": 350,
       "predicted": 0.346,
-      "actual": 0.346
+      "actual": 0.36
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 240,
-      "predicted": 0.451,
-      "actual": 0.504
+      "n": 277,
+      "predicted": 0.452,
+      "actual": 0.484
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 295,
+      "n": 346,
       "predicted": 0.55,
-      "actual": 0.597
+      "actual": 0.587
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 243,
-      "predicted": 0.651,
-      "actual": 0.658
+      "n": 269,
+      "predicted": 0.65,
+      "actual": 0.654
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 258,
+      "n": 310,
       "predicted": 0.751,
-      "actual": 0.744
+      "actual": 0.748
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 246,
-      "predicted": 0.85,
-      "actual": 0.882
+      "n": 279,
+      "predicted": 0.849,
+      "actual": 0.878
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 130,
+      "n": 157,
       "predicted": 0.938,
-      "actual": 0.938
+      "actual": 0.917
      }
     ],
     "market": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 409,
-      "predicted": 0.057,
-      "actual": 0.046
+      "n": 465,
+      "predicted": 0.058,
+      "actual": 0.043
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 485,
-      "predicted": 0.146,
-      "actual": 0.144
+      "n": 553,
+      "predicted": 0.147,
+      "actual": 0.145
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 348,
+      "n": 400,
       "predicted": 0.246,
-      "actual": 0.264
+      "actual": 0.253
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 295,
+      "n": 336,
       "predicted": 0.348,
-      "actual": 0.359
+      "actual": 0.366
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 264,
+      "n": 306,
       "predicted": 0.449,
       "actual": 0.477
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 258,
-      "predicted": 0.55,
-      "actual": 0.589
+      "n": 296,
+      "predicted": 0.549,
+      "actual": 0.568
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 270,
-      "predicted": 0.65,
-      "actual": 0.663
+      "n": 308,
+      "predicted": 0.649,
+      "actual": 0.649
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 284,
-      "predicted": 0.748,
-      "actual": 0.757
+      "n": 324,
+      "predicted": 0.749,
+      "actual": 0.765
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 273,
+      "n": 320,
       "predicted": 0.846,
-      "actual": 0.868
+      "actual": 0.863
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 135,
-      "predicted": 0.927,
-      "actual": 0.926
+      "n": 161,
+      "predicted": 0.929,
+      "actual": 0.913
      }
     ],
     "blend": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 453,
+      "n": 512,
       "predicted": 0.056,
-      "actual": 0.055
+      "actual": 0.053
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 476,
-      "predicted": 0.146,
-      "actual": 0.166
+      "n": 543,
+      "predicted": 0.147,
+      "actual": 0.16
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 352,
+      "n": 407,
       "predicted": 0.248,
-      "actual": 0.278
+      "actual": 0.27
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 280,
+      "n": 319,
       "predicted": 0.347,
-      "actual": 0.357
+      "actual": 0.361
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 262,
-      "predicted": 0.45,
-      "actual": 0.469
+      "n": 302,
+      "predicted": 0.451,
+      "actual": 0.477
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 262,
-      "predicted": 0.547,
-      "actual": 0.603
+      "n": 306,
+      "predicted": 0.548,
+      "actual": 0.578
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 271,
+      "n": 303,
       "predicted": 0.649,
-      "actual": 0.664
+      "actual": 0.657
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 285,
-      "predicted": 0.75,
-      "actual": 0.761
+      "n": 331,
+      "predicted": 0.751,
+      "actual": 0.764
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 252,
+      "n": 292,
       "predicted": 0.849,
-      "actual": 0.877
+      "actual": 0.873
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 128,
-      "predicted": 0.93,
-      "actual": 0.938
+      "n": 154,
+      "predicted": 0.931,
+      "actual": 0.922
      }
     ]
    },
    "paper_bets": {
     "value": {
-     "n": 79,
-     "hit_rate": 0.4177,
-     "pnl_per_contract": -7.16,
-     "roi": -0.1854
+     "n": 89,
+     "hit_rate": 0.4157,
+     "pnl_per_contract": -8.61,
+     "roi": -0.1963
     },
     "lean_or_better": {
-     "n": 334,
-     "hit_rate": 0.5389,
-     "pnl_per_contract": -5.14,
-     "roi": -0.0288
+     "n": 379,
+     "hit_rate": 0.5303,
+     "pnl_per_contract": -9.29,
+     "roi": -0.0458
     }
    }
   }

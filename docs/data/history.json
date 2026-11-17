@@ -1300,7 +1300,9 @@
    "edge": 0.0648,
    "ask": 0.34,
    "close": 0.325,
-   "clv": -0.015
+   "clv": -0.015,
+   "status": "lost",
+   "pnl": -0.36
   },
   "prop_picks": [
    {
@@ -1316,9 +1318,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV16PHIBKN-PHIVEDGECOMBE77-4",
     "team": "PHI",
-    "won": null,
+    "won": true,
     "close": 0.515,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.47
    },
    {
     "athlete_id": "3064514",
@@ -1333,9 +1337,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV16PHIBKN-BKNJRANDLE30-30",
     "team": "BKN",
-    "won": null,
+    "won": false,
     "close": 0.435,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.45
    },
    {
     "athlete_id": "5101761",
@@ -1350,13 +1356,22 @@
     "strength": "value",
     "ticker": "KXNBAREB-26NOV16PHIBKN-BKNMBROWN0-2",
     "team": "BKN",
-    "won": null,
+    "won": true,
     "close": 0.365,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.62
    }
   ],
-  "result": null,
-  "close_at": "2026-11-17T00:25:59+00:00"
+  "result": {
+   "home_score": 123,
+   "away_score": 135,
+   "home_won": false
+  },
+  "close_at": "2026-11-17T00:25:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401909998",
@@ -1384,9 +1399,11 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV16HOUMIA-HOUFVANVLEET5-3",
     "team": "HOU",
-    "won": null,
+    "won": false,
     "close": 0.545,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.56
    },
    {
     "athlete_id": "4711272",
@@ -1401,9 +1418,11 @@
     "strength": "lean",
     "ticker": "KXNBAREB-26NOV16HOUMIA-HOURSHEPPARD15-2",
     "team": "HOU",
-    "won": null,
+    "won": false,
     "close": 0.39,
-    "clv": 0.0
+    "clv": 0.0,
+    "status": "lost",
+    "pnl": -0.41
    },
    {
     "athlete_id": "4278053",
@@ -1418,13 +1437,22 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV16HOUMIA-MIADMITCHELL2-20",
     "team": "MIA",
-    "won": null,
+    "won": true,
     "close": 0.835,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.15
    }
   ],
-  "result": null,
-  "close_at": "2026-11-17T00:25:59+00:00"
+  "result": {
+   "home_score": 128,
+   "away_score": 110,
+   "home_won": true
+  },
+  "close_at": "2026-11-17T00:25:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401909999",
