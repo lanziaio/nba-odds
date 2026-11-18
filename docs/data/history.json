@@ -1742,9 +1742,11 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV17NYKTOR-NYKJHART3-1",
     "team": "NY",
-    "won": null,
+    "won": false,
     "close": 0.315,
-    "clv": 0.025
+    "clv": 0.025,
+    "status": "lost",
+    "pnl": -0.31
    },
    {
     "athlete_id": "3934672",
@@ -1759,9 +1761,11 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV17NYKTOR-NYKJBRUNSON11-30",
     "team": "NY",
-    "won": null,
+    "won": false,
     "close": 0.665,
-    "clv": -0.015
+    "clv": -0.015,
+    "status": "lost",
+    "pnl": -0.7
    },
    {
     "athlete_id": "5093267",
@@ -1776,9 +1780,11 @@
     "strength": "lean",
     "ticker": "KXNBAREB-26NOV17NYKTOR-TORCMURRAYBOYLES30-6",
     "team": "TOR",
-    "won": null,
+    "won": true,
     "close": 0.455,
-    "clv": 0.035
+    "clv": 0.035,
+    "status": "won",
+    "pnl": 0.56
    },
    {
     "athlete_id": "4433134",
@@ -1793,13 +1799,22 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV17NYKTOR-TORSBARNES4-30",
     "team": "TOR",
-    "won": null,
+    "won": true,
     "close": 0.385,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "won",
+    "pnl": 0.61
    }
   ],
-  "result": null,
-  "close_at": "2026-11-18T00:25:59+00:00"
+  "result": {
+   "home_score": 102,
+   "away_score": 111,
+   "home_won": false
+  },
+  "close_at": "2026-11-18T00:25:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910003",
