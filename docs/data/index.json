@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T02:47:00+00:00",
+ "generated_at": "2026-11-18T03:17:06+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -15,19 +15,19 @@
    },
    "event_id": "401910002",
    "tip": "2026-11-18T00:30:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "TOR",
     "name": "Toronto Raptors",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png",
-    "score": null
+    "score": 102
    },
    "away": {
     "abbr": "NY",
     "name": "New York Knicks",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
-    "score": null
+    "score": 111
    },
    "has_report": true,
    "report_at": "2026-11-17T23:15:00+00:00",
@@ -402,7 +402,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17UTALAC-UTAMBAMBA44-10",
       "team": "UTAH",
-      "won": null
+      "won": null,
+      "close": 0.495,
+      "clv": -0.015
      },
      {
       "athlete_id": "4432811",
@@ -417,7 +419,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV17UTALAC-UTAJGREEN5-2",
       "team": "UTAH",
-      "won": null
+      "won": null,
+      "close": 0.595,
+      "clv": -0.015
      },
      {
       "athlete_id": "4432170",
@@ -432,7 +436,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17UTALAC-LACIJACKSON23-8",
       "team": "LAC",
-      "won": null
+      "won": null,
+      "close": 0.695,
+      "clv": -0.005
      },
      {
       "athlete_id": "4066648",
@@ -447,17 +453,20 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV17UTALAC-LACRHACHIMURA28-20",
       "team": "LAC",
-      "won": null
+      "won": null,
+      "close": 0.525,
+      "clv": 0.055
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-18T03:17:06+00:00"
    }
   },
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "LAL -7.5",
-    "home_spread": -7.5,
+    "details": "LAL -6.5",
+    "home_spread": -6.5,
     "total": 221.5,
     "home_ml": -289,
     "away_ml": 236,
@@ -602,9 +611,9 @@
    }
   },
   "clv": {
-   "n": 40,
-   "avg_clv": -0.0033,
-   "beat_close": 0.45
+   "n": 44,
+   "avg_clv": -0.0025,
+   "beat_close": 0.4318
   },
   "calibration": {
    "lines": 4296,
