@@ -1,0 +1,3157 @@
+{
+ "event_id": "401910006",
+ "props": {
+  "source": "Kalshi player props",
+  "markets_found": 258,
+  "picks": {
+   "home": [
+    {
+     "athlete_id": "4432170",
+     "name": "Isaiah Jackson",
+     "stat": "reb",
+     "line": 8,
+     "side": "no",
+     "label": "Isaiah Jackson under 8 rebounds",
+     "proj": 5.0,
+     "avg": 5.3,
+     "p": 0.7729,
+     "ask": 0.7,
+     "edge": 0.0529,
+     "p_model": 0.8614,
+     "p_market": 0.695,
+     "strength": "value",
+     "last5_avg": 4.2,
+     "last10": [
+      2.0,
+      3.0,
+      4.0,
+      4.0,
+      8.0,
+      8.0,
+      7.0,
+      5.0,
+      6.0,
+      6.0
+     ],
+     "hits": 8,
+     "games": 10,
+     "ticker": "KXNBAREB-26NOV17UTALAC-LACIJACKSON23-8"
+    },
+    {
+     "athlete_id": "4066648",
+     "name": "Rui Hachimura",
+     "stat": "pra",
+     "line": 20,
+     "side": "no",
+     "label": "Rui Hachimura under 20 pts+reb+ast",
+     "proj": 16.8,
+     "avg": 20.2,
+     "p": 0.5374,
+     "ask": 0.47,
+     "edge": 0.0474,
+     "p_model": 0.6422,
+     "p_market": 0.465,
+     "strength": "lean",
+     "last5_avg": 20.4,
+     "last10": [
+      6.0,
+      21.0,
+      19.0,
+      19.0,
+      37.0,
+      31.0,
+      17.0,
+      9.0,
+      23.0,
+      20.0
+     ],
+     "hits": 5,
+     "games": 10,
+     "ticker": "KXNBAPRA-26NOV17UTALAC-LACRHACHIMURA28-20"
+    }
+   ],
+   "away": [
+    {
+     "athlete_id": "4277919",
+     "name": "Mo Bamba",
+     "stat": "reb",
+     "line": 10,
+     "side": "no",
+     "label": "Mo Bamba under 10 rebounds",
+     "proj": 7.2,
+     "avg": 5.8,
+     "p": 0.6252,
+     "ask": 0.51,
+     "edge": 0.0952,
+     "p_model": 0.7771,
+     "p_market": 0.505,
+     "strength": "value",
+     "last5_avg": 5.0,
+     "last10": [
+      5.0,
+      9.0,
+      1.0,
+      7.0,
+      3.0,
+      10.0,
+      8.0,
+      4.0,
+      4.0,
+      7.0
+     ],
+     "hits": 9,
+     "games": 10,
+     "ticker": "KXNBAREB-26NOV17UTALAC-UTAMBAMBA44-10"
+    },
+    {
+     "athlete_id": "4432811",
+     "name": "Josh Green",
+     "stat": "ast",
+     "line": 2,
+     "side": "no",
+     "label": "Josh Green under 2 assists",
+     "proj": 1.0,
+     "avg": 1.0,
+     "p": 0.6621,
+     "ask": 0.61,
+     "edge": 0.0321,
+     "p_model": 0.7392,
+     "p_market": 0.605,
+     "strength": "lean",
+     "last5_avg": 1.4,
+     "last10": [
+      1.0,
+      0.0,
+      1.0,
+      4.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      2.0
+     ],
+     "hits": 8,
+     "games": 10,
+     "ticker": "KXNBAAST-26NOV17UTALAC-UTAJGREEN5-2"
+    }
+   ]
+  },
+  "players": {
+   "home": [
+    {
+     "athlete_id": "4396907",
+     "name": "Darius Garland",
+     "role": "starter",
+     "minutes": 32.0,
+     "avg": {
+      "pts": 21.3,
+      "reb": 2.3,
+      "ast": 6.9,
+      "tpm": 2.5,
+      "pra": 30.5
+     },
+     "proj": {
+      "pts": 21.8,
+      "reb": 2.8,
+      "ast": 7.2,
+      "tpm": 2.6,
+      "pra": 31.9
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 22,
+       "p": 0.516
+      },
+      "reb": {
+       "line": 3,
+       "p": 0.474
+      },
+      "ast": {
+       "line": 7,
+       "p": 0.58
+      },
+      "tpm": {
+       "line": 3,
+       "p": 0.482
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.9149,
+       "yes_ask": 0.92,
+       "no_ask": 0.11,
+       "edge_yes": -0.0151,
+       "edge_no": -0.0349
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.7039,
+       "yes_ask": 0.7,
+       "no_ask": 0.32,
+       "edge_yes": -0.0161,
+       "edge_no": -0.0439
+      },
+      {
+       "stat": "ast",
+       "line": 8,
+       "p_yes": 0.4154,
+       "yes_ask": 0.41,
+       "no_ask": 0.6,
+       "edge_yes": -0.0146,
+       "edge_no": -0.0354
+      },
+      {
+       "stat": "ast",
+       "line": 10,
+       "p_yes": 0.1871,
+       "yes_ask": 0.19,
+       "no_ask": 0.82,
+       "edge_yes": -0.0229,
+       "edge_no": -0.0271
+      },
+      {
+       "stat": "ast",
+       "line": 12,
+       "p_yes": 0.0642,
+       "yes_ask": 0.08,
+       "no_ask": 0.95,
+       "edge_yes": -0.0258,
+       "edge_no": -0.0242
+      },
+      {
+       "stat": "pra",
+       "line": 30,
+       "p_yes": 0.6566,
+       "yes_ask": 0.69,
+       "no_ask": 0.32,
+       "edge_yes": -0.0534,
+       "edge_no": 0.0034
+      },
+      {
+       "stat": "pra",
+       "line": 35,
+       "p_yes": 0.4331,
+       "yes_ask": 0.48,
+       "no_ask": 0.54,
+       "edge_yes": -0.0669,
+       "edge_no": 0.0069
+      },
+      {
+       "stat": "pra",
+       "line": 40,
+       "p_yes": 0.2247,
+       "yes_ask": 0.27,
+       "no_ask": 0.76,
+       "edge_yes": -0.0653,
+       "edge_no": -0.0047
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.8608,
+       "yes_ask": 0.88,
+       "no_ask": 0.13,
+       "edge_yes": -0.0292,
+       "edge_no": -0.0008
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.6665,
+       "yes_ask": 0.7,
+       "no_ask": 0.31,
+       "edge_yes": -0.0535,
+       "edge_no": 0.0035
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.4096,
+       "yes_ask": 0.45,
+       "no_ask": 0.56,
+       "edge_yes": -0.0604,
+       "edge_no": 0.0104
+      },
+      {
+       "stat": "pts",
+       "line": 30,
+       "p_yes": 0.1869,
+       "yes_ask": 0.22,
+       "no_ask": 0.79,
+       "edge_yes": -0.0531,
+       "edge_no": 0.0031
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.7369,
+       "yes_ask": 0.78,
+       "no_ask": 0.23,
+       "edge_yes": -0.0631,
+       "edge_no": 0.0131
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.3318,
+       "yes_ask": 0.35,
+       "no_ask": 0.66,
+       "edge_yes": -0.0382,
+       "edge_no": -0.0118
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.1037,
+       "yes_ask": 0.1,
+       "no_ask": 0.91,
+       "edge_yes": -0.0063,
+       "edge_no": -0.0237
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.9194,
+       "yes_ask": 0.92,
+       "no_ask": 0.09,
+       "edge_yes": -0.0106,
+       "edge_no": -0.0194
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.7431,
+       "yes_ask": 0.77,
+       "no_ask": 0.27,
+       "edge_yes": -0.0469,
+       "edge_no": -0.0331
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.5016,
+       "yes_ask": 0.52,
+       "no_ask": 0.49,
+       "edge_yes": -0.0384,
+       "edge_no": -0.0116
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.2853,
+       "yes_ask": 0.31,
+       "no_ask": 0.71,
+       "edge_yes": -0.0447,
+       "edge_no": -0.0153
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.1413,
+       "yes_ask": 0.16,
+       "no_ask": 0.85,
+       "edge_yes": -0.0287,
+       "edge_no": -0.0013
+      }
+     ]
+    },
+    {
+     "athlete_id": "2991139",
+     "name": "Kris Dunn",
+     "role": "starter",
+     "minutes": 20.3,
+     "avg": {
+      "pts": 7.8,
+      "reb": 3.8,
+      "ast": 4.2,
+      "tpm": 0.8,
+      "pra": 15.8
+     },
+     "proj": {
+      "pts": 6.1,
+      "reb": 2.9,
+      "ast": 2.9,
+      "tpm": 0.7,
+      "pra": 11.9
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 8,
+       "p": 0.355
+      },
+      "reb": {
+       "line": 4,
+       "p": 0.33
+      },
+      "ast": {
+       "line": 5,
+       "p": 0.188
+      },
+      "tpm": {
+       "line": 1,
+       "p": 0.503
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.7829,
+       "yes_ask": 0.81,
+       "no_ask": 0.2,
+       "edge_yes": -0.0471,
+       "edge_no": -0.0029
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.3808,
+       "yes_ask": 0.42,
+       "no_ask": 0.59,
+       "edge_yes": -0.0592,
+       "edge_no": 0.0092
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.1243,
+       "yes_ask": 0.15,
+       "no_ask": 0.86,
+       "edge_yes": -0.0357,
+       "edge_no": 0.0057
+      },
+      {
+       "stat": "ast",
+       "line": 8,
+       "p_yes": 0.0289,
+       "yes_ask": 0.05,
+       "no_ask": 0.98,
+       "edge_yes": -0.0311,
+       "edge_no": -0.0189
+      },
+      {
+       "stat": "pra",
+       "line": 10,
+       "p_yes": 0.6932,
+       "yes_ask": 0.71,
+       "no_ask": 0.32,
+       "edge_yes": -0.0368,
+       "edge_no": -0.0332
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.3304,
+       "yes_ask": 0.36,
+       "no_ask": 0.65,
+       "edge_yes": -0.0496,
+       "edge_no": -0.0004
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.0878,
+       "yes_ask": 0.12,
+       "no_ask": 0.89,
+       "edge_yes": -0.0422,
+       "edge_no": 0.0122
+      },
+      {
+       "stat": "pts",
+       "line": 5,
+       "p_yes": 0.6292,
+       "yes_ask": 0.61,
+       "no_ask": 0.4,
+       "edge_yes": -0.0008,
+       "edge_no": -0.0492
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.1784,
+       "yes_ask": 0.18,
+       "no_ask": 0.83,
+       "edge_yes": -0.0216,
+       "edge_no": -0.0184
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.0236,
+       "yes_ask": 0.05,
+       "no_ask": 0.98,
+       "edge_yes": -0.0364,
+       "edge_no": -0.0136
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.7973,
+       "yes_ask": 0.81,
+       "no_ask": 0.2,
+       "edge_yes": -0.0327,
+       "edge_no": -0.0173
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.3715,
+       "yes_ask": 0.41,
+       "no_ask": 0.61,
+       "edge_yes": -0.0585,
+       "edge_no": -0.0015
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.1068,
+       "yes_ask": 0.14,
+       "no_ask": 0.87,
+       "edge_yes": -0.0432,
+       "edge_no": 0.0132
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.023,
+       "yes_ask": 0.05,
+       "no_ask": 0.97,
+       "edge_yes": -0.037,
+       "edge_no": -0.003
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.4834,
+       "yes_ask": 0.48,
+       "no_ask": 0.54,
+       "edge_yes": -0.0166,
+       "edge_no": -0.0434
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.1553,
+       "yes_ask": 0.17,
+       "no_ask": 0.86,
+       "edge_yes": -0.0247,
+       "edge_no": -0.0253
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.043,
+       "yes_ask": 0.06,
+       "no_ask": 0.96,
+       "edge_yes": -0.027,
+       "edge_no": -0.013
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.0058,
+       "yes_ask": 0.04,
+       "no_ask": null,
+       "edge_yes": -0.0442,
+       "edge_no": null
+      }
+     ]
+    },
+    {
+     "athlete_id": "3936099",
+     "name": "Derrick Jones Jr.",
+     "role": "starter",
+     "minutes": 26.6,
+     "avg": {
+      "pts": 11.5,
+      "reb": 4.8,
+      "ast": 1.3,
+      "tpm": 2.2,
+      "pra": 17.6
+     },
+     "proj": {
+      "pts": 11.1,
+      "reb": 4.2,
+      "ast": 1.3,
+      "tpm": 1.5,
+      "pra": 16.6
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 12,
+       "p": 0.463
+      },
+      "reb": {
+       "line": 5,
+       "p": 0.408
+      },
+      "ast": {
+       "line": 2,
+       "p": 0.344
+      },
+      "tpm": {
+       "line": 3,
+       "p": 0.191
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.3773,
+       "yes_ask": 0.41,
+       "no_ask": 0.61,
+       "edge_yes": -0.0527,
+       "edge_no": -0.0073
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.0744,
+       "yes_ask": 0.09,
+       "no_ask": 0.95,
+       "edge_yes": -0.0256,
+       "edge_no": -0.0344
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0167,
+       "yes_ask": 0.03,
+       "no_ask": null,
+       "edge_yes": -0.0233,
+       "edge_no": null
+      },
+      {
+       "stat": "pra",
+       "line": 10,
+       "p_yes": 0.8796,
+       "yes_ask": 0.85,
+       "no_ask": 0.16,
+       "edge_yes": 0.0196,
+       "edge_no": -0.0496
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.6071,
+       "yes_ask": 0.58,
+       "no_ask": 0.44,
+       "edge_yes": 0.0071,
+       "edge_no": -0.0671
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.2755,
+       "yes_ask": 0.29,
+       "no_ask": 0.75,
+       "edge_yes": -0.0345,
+       "edge_no": -0.0455
+      },
+      {
+       "stat": "pts",
+       "line": 5,
+       "p_yes": 0.8962,
+       "yes_ask": 0.86,
+       "no_ask": 0.15,
+       "edge_yes": 0.0262,
+       "edge_no": -0.0562
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.5627,
+       "yes_ask": 0.51,
+       "no_ask": 0.5,
+       "edge_yes": 0.0327,
+       "edge_no": -0.0827
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.2022,
+       "yes_ask": 0.2,
+       "no_ask": 0.81,
+       "edge_yes": -0.0178,
+       "edge_no": -0.0322
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.0401,
+       "yes_ask": 0.06,
+       "no_ask": 0.95,
+       "edge_yes": -0.0299,
+       "edge_no": -0.0001
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.8972,
+       "yes_ask": 0.89,
+       "no_ask": 0.12,
+       "edge_yes": -0.0028,
+       "edge_no": -0.0272
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.6042,
+       "yes_ask": 0.62,
+       "no_ask": 0.4,
+       "edge_yes": -0.0358,
+       "edge_no": -0.0242
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.2686,
+       "yes_ask": 0.29,
+       "no_ask": 0.73,
+       "edge_yes": -0.0414,
+       "edge_no": -0.0186
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.0956,
+       "yes_ask": 0.12,
+       "no_ask": 0.89,
+       "edge_yes": -0.0344,
+       "edge_no": 0.0044
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.7353,
+       "yes_ask": 0.71,
+       "no_ask": 0.3,
+       "edge_yes": 0.0053,
+       "edge_no": -0.0553
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.4076,
+       "yes_ask": 0.39,
+       "no_ask": 0.62,
+       "edge_yes": -0.0024,
+       "edge_no": -0.0476
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.1556,
+       "yes_ask": 0.14,
+       "no_ask": 0.87,
+       "edge_yes": 0.0056,
+       "edge_no": -0.0356
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.0558,
+       "yes_ask": 0.06,
+       "no_ask": 0.96,
+       "edge_yes": -0.0142,
+       "edge_no": -0.0258
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0222,
+       "yes_ask": 0.03,
+       "no_ask": 0.98,
+       "edge_yes": -0.0178,
+       "edge_no": -0.0122
+      }
+     ]
+    },
+    {
+     "athlete_id": "4066648",
+     "name": "Rui Hachimura",
+     "role": "starter",
+     "minutes": 25.5,
+     "avg": {
+      "pts": 12.6,
+      "reb": 6.0,
+      "ast": 1.6,
+      "tpm": 1.9,
+      "pra": 20.2
+     },
+     "proj": {
+      "pts": 11.3,
+      "reb": 4.3,
+      "ast": 1.1,
+      "tpm": 1.5,
+      "pra": 16.8
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 13,
+       "p": 0.419
+      },
+      "reb": {
+       "line": 6,
+       "p": 0.28
+      },
+      "ast": {
+       "line": 2,
+       "p": 0.267
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.441
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.324,
+       "yes_ask": 0.37,
+       "no_ask": 0.64,
+       "edge_yes": -0.066,
+       "edge_no": 0.016
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.0645,
+       "yes_ask": 0.06,
+       "no_ask": 0.95,
+       "edge_yes": -0.0055,
+       "edge_no": -0.0245
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0258,
+       "yes_ask": 0.04,
+       "no_ask": null,
+       "edge_yes": -0.0242,
+       "edge_no": null
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.7334,
+       "yes_ask": 0.8,
+       "no_ask": 0.21,
+       "edge_yes": -0.0866,
+       "edge_no": 0.0366
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.4626,
+       "yes_ask": 0.54,
+       "no_ask": 0.47,
+       "edge_yes": -0.0974,
+       "edge_no": 0.0474
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.2206,
+       "yes_ask": 0.29,
+       "no_ask": 0.73,
+       "edge_yes": -0.0894,
+       "edge_no": 0.0294
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.6983,
+       "yes_ask": 0.75,
+       "no_ask": 0.26,
+       "edge_yes": -0.0717,
+       "edge_no": 0.0217
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.3813,
+       "yes_ask": 0.45,
+       "no_ask": 0.56,
+       "edge_yes": -0.0887,
+       "edge_no": 0.0387
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.1351,
+       "yes_ask": 0.19,
+       "no_ask": 0.82,
+       "edge_yes": -0.0749,
+       "edge_no": 0.0249
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.034,
+       "yes_ask": 0.07,
+       "no_ask": 0.94,
+       "edge_yes": -0.046,
+       "edge_no": 0.016
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.9353,
+       "yes_ask": 0.96,
+       "no_ask": 0.05,
+       "edge_yes": -0.0347,
+       "edge_no": 0.0047
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.672,
+       "yes_ask": 0.73,
+       "no_ask": 0.28,
+       "edge_yes": -0.078,
+       "edge_no": 0.028
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.3579,
+       "yes_ask": 0.42,
+       "no_ask": 0.59,
+       "edge_yes": -0.0821,
+       "edge_no": 0.0321
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.1479,
+       "yes_ask": 0.19,
+       "no_ask": 0.82,
+       "edge_yes": -0.0621,
+       "edge_no": 0.0121
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.8224,
+       "yes_ask": 0.86,
+       "no_ask": 0.16,
+       "edge_yes": -0.0476,
+       "edge_no": 0.0076
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.5307,
+       "yes_ask": 0.6,
+       "no_ask": 0.42,
+       "edge_yes": -0.0893,
+       "edge_no": 0.0293
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.2692,
+       "yes_ask": 0.34,
+       "no_ask": 0.68,
+       "edge_yes": -0.0908,
+       "edge_no": 0.0308
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.1167,
+       "yes_ask": 0.17,
+       "no_ask": 0.84,
+       "edge_yes": -0.0633,
+       "edge_no": 0.0333
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0425,
+       "yes_ask": 0.08,
+       "no_ask": 0.94,
+       "edge_yes": -0.0475,
+       "edge_no": 0.0075
+      }
+     ]
+    },
+    {
+     "athlete_id": "3448",
+     "name": "Brook Lopez",
+     "role": "starter",
+     "minutes": 26.5,
+     "avg": {
+      "pts": 14.1,
+      "reb": 5.3,
+      "ast": 1.8,
+      "tpm": 1.4,
+      "pra": 21.2
+     },
+     "proj": {
+      "pts": 13.4,
+      "reb": 5.4,
+      "ast": 2.1,
+      "tpm": 1.6,
+      "pra": 20.9
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 15,
+       "p": 0.435
+      },
+      "reb": {
+       "line": 6,
+       "p": 0.439
+      },
+      "ast": {
+       "line": 2,
+       "p": 0.501
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.475
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.5033,
+       "yes_ask": 0.51,
+       "no_ask": 0.5,
+       "edge_yes": -0.0267,
+       "edge_no": -0.0233
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.1427,
+       "yes_ask": 0.12,
+       "no_ask": 0.9,
+       "edge_yes": 0.0127,
+       "edge_no": -0.0527
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0792,
+       "yes_ask": 0.04,
+       "no_ask": null,
+       "edge_yes": 0.0292,
+       "edge_no": null
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.7809,
+       "yes_ask": 0.79,
+       "no_ask": 0.22,
+       "edge_yes": -0.0291,
+       "edge_no": -0.0209
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.5652,
+       "yes_ask": 0.57,
+       "no_ask": 0.44,
+       "edge_yes": -0.0248,
+       "edge_no": -0.0252
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.2953,
+       "yes_ask": 0.28,
+       "no_ask": 0.74,
+       "edge_yes": -0.0047,
+       "edge_no": -0.0553
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.7227,
+       "yes_ask": 0.73,
+       "no_ask": 0.28,
+       "edge_yes": -0.0273,
+       "edge_no": -0.0227
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.4109,
+       "yes_ask": 0.4,
+       "no_ask": 0.61,
+       "edge_yes": -0.0091,
+       "edge_no": -0.0409
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.1685,
+       "yes_ask": 0.17,
+       "no_ask": 0.85,
+       "edge_yes": -0.0115,
+       "edge_no": -0.0285
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.0526,
+       "yes_ask": 0.06,
+       "no_ask": 0.95,
+       "edge_yes": -0.0174,
+       "edge_no": -0.0126
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.9507,
+       "yes_ask": 0.96,
+       "no_ask": 0.05,
+       "edge_yes": -0.0193,
+       "edge_no": -0.0107
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.7638,
+       "yes_ask": 0.79,
+       "no_ask": 0.22,
+       "edge_yes": -0.0462,
+       "edge_no": -0.0038
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.4667,
+       "yes_ask": 0.49,
+       "no_ask": 0.52,
+       "edge_yes": -0.0433,
+       "edge_no": -0.0067
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.2254,
+       "yes_ask": 0.24,
+       "no_ask": 0.77,
+       "edge_yes": -0.0346,
+       "edge_no": -0.0154
+      },
+      {
+       "stat": "reb",
+       "line": 10,
+       "p_yes": 0.0849,
+       "yes_ask": 0.09,
+       "no_ask": 0.92,
+       "edge_yes": -0.0151,
+       "edge_no": -0.0149
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.7845,
+       "yes_ask": 0.78,
+       "no_ask": 0.23,
+       "edge_yes": -0.0155,
+       "edge_no": -0.0345
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.469,
+       "yes_ask": 0.47,
+       "no_ask": 0.54,
+       "edge_yes": -0.021,
+       "edge_no": -0.029
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.2275,
+       "yes_ask": 0.24,
+       "no_ask": 0.77,
+       "edge_yes": -0.0325,
+       "edge_no": -0.0175
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.091,
+       "yes_ask": 0.11,
+       "no_ask": 0.91,
+       "edge_yes": -0.029,
+       "edge_no": -0.011
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0245,
+       "yes_ask": 0.03,
+       "no_ask": 0.98,
+       "edge_yes": -0.0155,
+       "edge_no": -0.0145
+      }
+     ]
+    },
+    {
+     "athlete_id": "4702352",
+     "name": "Kobe Sanders",
+     "role": "rotation",
+     "minutes": 19.0,
+     "avg": {
+      "pts": 8.8,
+      "reb": 2.9,
+      "ast": 2.7,
+      "tpm": 1.5,
+      "pra": 14.4
+     },
+     "proj": {
+      "pts": 7.5,
+      "reb": 2.5,
+      "ast": 2.0,
+      "tpm": 1.1,
+      "pra": 12.0
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 9,
+       "p": 0.427
+      },
+      "reb": {
+       "line": 3,
+       "p": 0.443
+      },
+      "ast": {
+       "line": 3,
+       "p": 0.318
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.288
+      }
+     },
+     "lines": []
+    },
+    {
+     "athlete_id": "5254165",
+     "name": "Keaton Wagler",
+     "role": "rotation",
+     "minutes": 20.9,
+     "avg": {
+      "pts": 12.3,
+      "reb": 3.4,
+      "ast": 3.3,
+      "tpm": 1.8,
+      "pra": 19.0
+     },
+     "proj": {
+      "pts": 12.1,
+      "reb": 3.1,
+      "ast": 3.2,
+      "tpm": 1.6,
+      "pra": 18.4
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 13,
+       "p": 0.467
+      },
+      "reb": {
+       "line": 4,
+       "p": 0.374
+      },
+      "ast": {
+       "line": 4,
+       "p": 0.397
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.475
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.8062,
+       "yes_ask": 0.8,
+       "no_ask": 0.22,
+       "edge_yes": -0.0138,
+       "edge_no": -0.0462
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.408,
+       "yes_ask": 0.42,
+       "no_ask": 0.59,
+       "edge_yes": -0.032,
+       "edge_no": -0.018
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.1279,
+       "yes_ask": 0.15,
+       "no_ask": 0.86,
+       "edge_yes": -0.0321,
+       "edge_no": 0.0021
+      },
+      {
+       "stat": "ast",
+       "line": 8,
+       "p_yes": 0.0305,
+       "yes_ask": 0.05,
+       "no_ask": 0.96,
+       "edge_yes": -0.0295,
+       "edge_no": -0.0005
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.7298,
+       "yes_ask": 0.73,
+       "no_ask": 0.3,
+       "edge_yes": -0.0202,
+       "edge_no": -0.0498
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.4336,
+       "yes_ask": 0.45,
+       "no_ask": 0.57,
+       "edge_yes": -0.0364,
+       "edge_no": -0.0236
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.1894,
+       "yes_ask": 0.24,
+       "no_ask": 0.79,
+       "edge_yes": -0.0706,
+       "edge_no": 0.0006
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.6806,
+       "yes_ask": 0.67,
+       "no_ask": 0.34,
+       "edge_yes": -0.0094,
+       "edge_no": -0.0406
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.3253,
+       "yes_ask": 0.34,
+       "no_ask": 0.67,
+       "edge_yes": -0.0347,
+       "edge_no": -0.0153
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.1034,
+       "yes_ask": 0.15,
+       "no_ask": 0.87,
+       "edge_yes": -0.0566,
+       "edge_no": 0.0166
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.8095,
+       "yes_ask": 0.82,
+       "no_ask": 0.19,
+       "edge_yes": -0.0305,
+       "edge_no": -0.0195
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.422,
+       "yes_ask": 0.46,
+       "no_ask": 0.55,
+       "edge_yes": -0.058,
+       "edge_no": 0.008
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.1428,
+       "yes_ask": 0.19,
+       "no_ask": 0.84,
+       "edge_yes": -0.0672,
+       "edge_no": 0.0072
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.0342,
+       "yes_ask": 0.06,
+       "no_ask": 0.96,
+       "edge_yes": -0.0358,
+       "edge_no": -0.0042
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.7787,
+       "yes_ask": 0.77,
+       "no_ask": 0.24,
+       "edge_yes": -0.0113,
+       "edge_no": -0.0387
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.463,
+       "yes_ask": 0.46,
+       "no_ask": 0.55,
+       "edge_yes": -0.017,
+       "edge_no": -0.033
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.2216,
+       "yes_ask": 0.23,
+       "no_ask": 0.78,
+       "edge_yes": -0.0284,
+       "edge_no": -0.0216
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.0882,
+       "yes_ask": 0.1,
+       "no_ask": 0.91,
+       "edge_yes": -0.0218,
+       "edge_no": -0.0082
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0325,
+       "yes_ask": 0.05,
+       "no_ask": 0.97,
+       "edge_yes": -0.0275,
+       "edge_no": -0.0125
+      }
+     ]
+    },
+    {
+     "athlete_id": "4432170",
+     "name": "Isaiah Jackson",
+     "role": "rotation",
+     "minutes": 15.8,
+     "avg": {
+      "pts": 8.3,
+      "reb": 5.3,
+      "ast": 2.1,
+      "tpm": 0.2,
+      "pra": 15.7
+     },
+     "proj": {
+      "pts": 7.1,
+      "reb": 5.0,
+      "ast": 1.3,
+      "tpm": 0.1,
+      "pra": 13.4
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 9,
+       "p": 0.378
+      },
+      "reb": {
+       "line": 6,
+       "p": 0.384
+      },
+      "ast": {
+       "line": 3,
+       "p": 0.155
+      },
+      "tpm": {
+       "line": 1,
+       "p": 0.064
+      }
+     },
+     "lines": [
+      {
+       "stat": "pts",
+       "line": 5,
+       "p_yes": 0.7468,
+       "yes_ask": 0.78,
+       "no_ask": 0.25,
+       "edge_yes": -0.0532,
+       "edge_no": -0.0168
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.3255,
+       "yes_ask": 0.35,
+       "no_ask": 0.66,
+       "edge_yes": -0.0445,
+       "edge_no": -0.0055
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.0833,
+       "yes_ask": 0.12,
+       "no_ask": 0.89,
+       "edge_yes": -0.0467,
+       "edge_no": 0.0167
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.003,
+       "yes_ask": 0.03,
+       "no_ask": null,
+       "edge_yes": -0.037,
+       "edge_no": null
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.76,
+       "yes_ask": 0.79,
+       "no_ask": 0.23,
+       "edge_yes": -0.05,
+       "edge_no": -0.01
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.4738,
+       "yes_ask": 0.54,
+       "no_ask": 0.47,
+       "edge_yes": -0.0862,
+       "edge_no": 0.0362
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.2271,
+       "yes_ask": 0.31,
+       "no_ask": 0.7,
+       "edge_yes": -0.1029,
+       "edge_no": 0.0529
+      },
+      {
+       "stat": "reb",
+       "line": 10,
+       "p_yes": 0.0862,
+       "yes_ask": 0.16,
+       "no_ask": 0.86,
+       "edge_yes": -0.0838,
+       "edge_no": 0.0438
+      }
+     ]
+    }
+   ],
+   "away": [
+    {
+     "athlete_id": "4873138",
+     "name": "Ace Bailey",
+     "role": "starter",
+     "minutes": 31.2,
+     "avg": {
+      "pts": 13.4,
+      "reb": 6.4,
+      "ast": 2.0,
+      "tpm": 1.6,
+      "pra": 21.8
+     },
+     "proj": {
+      "pts": 14.4,
+      "reb": 5.8,
+      "ast": 1.9,
+      "tpm": 1.7,
+      "pra": 22.1
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 14,
+       "p": 0.556
+      },
+      "reb": {
+       "line": 7,
+       "p": 0.365
+      },
+      "ast": {
+       "line": 2,
+       "p": 0.54
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.507
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.5612,
+       "yes_ask": 0.58,
+       "no_ask": 0.43,
+       "edge_yes": -0.0388,
+       "edge_no": -0.0112
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.1501,
+       "yes_ask": 0.16,
+       "no_ask": 0.85,
+       "edge_yes": -0.0199,
+       "edge_no": -0.0101
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0243,
+       "yes_ask": 0.04,
+       "no_ask": null,
+       "edge_yes": -0.0257,
+       "edge_no": null
+      },
+      {
+       "stat": "pra",
+       "line": 15,
+       "p_yes": 0.8521,
+       "yes_ask": 0.87,
+       "no_ask": 0.15,
+       "edge_yes": -0.0279,
+       "edge_no": -0.0121
+      },
+      {
+       "stat": "pra",
+       "line": 20,
+       "p_yes": 0.6432,
+       "yes_ask": 0.66,
+       "no_ask": 0.36,
+       "edge_yes": -0.0368,
+       "edge_no": -0.0232
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.3877,
+       "yes_ask": 0.41,
+       "no_ask": 0.62,
+       "edge_yes": -0.0423,
+       "edge_no": -0.0277
+      },
+      {
+       "stat": "pra",
+       "line": 30,
+       "p_yes": 0.1862,
+       "yes_ask": 0.22,
+       "no_ask": 0.82,
+       "edge_yes": -0.0538,
+       "edge_no": -0.0262
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.7822,
+       "yes_ask": 0.79,
+       "no_ask": 0.22,
+       "edge_yes": -0.0278,
+       "edge_no": -0.0222
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.4825,
+       "yes_ask": 0.48,
+       "no_ask": 0.53,
+       "edge_yes": -0.0175,
+       "edge_no": -0.0325
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.2142,
+       "yes_ask": 0.22,
+       "no_ask": 0.79,
+       "edge_yes": -0.0258,
+       "edge_no": -0.0242
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.0674,
+       "yes_ask": 0.08,
+       "no_ask": 0.93,
+       "edge_yes": -0.0226,
+       "edge_no": -0.0074
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.9653,
+       "yes_ask": 0.97,
+       "no_ask": 0.04,
+       "edge_yes": -0.0147,
+       "edge_no": -0.0153
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.7939,
+       "yes_ask": 0.8,
+       "no_ask": 0.21,
+       "edge_yes": -0.0261,
+       "edge_no": -0.0239
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.5167,
+       "yes_ask": 0.53,
+       "no_ask": 0.48,
+       "edge_yes": -0.0333,
+       "edge_no": -0.0167
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.2462,
+       "yes_ask": 0.25,
+       "no_ask": 0.76,
+       "edge_yes": -0.0238,
+       "edge_no": -0.0262
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.8281,
+       "yes_ask": 0.84,
+       "no_ask": 0.17,
+       "edge_yes": -0.0219,
+       "edge_no": -0.0081
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.5601,
+       "yes_ask": 0.6,
+       "no_ask": 0.41,
+       "edge_yes": -0.0599,
+       "edge_no": 0.0099
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.2988,
+       "yes_ask": 0.35,
+       "no_ask": 0.67,
+       "edge_yes": -0.0712,
+       "edge_no": 0.0112
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.132,
+       "yes_ask": 0.17,
+       "no_ask": 0.84,
+       "edge_yes": -0.048,
+       "edge_no": 0.018
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0498,
+       "yes_ask": 0.08,
+       "no_ask": 0.94,
+       "edge_yes": -0.0402,
+       "edge_no": 0.0002
+      }
+     ]
+    },
+    {
+     "athlete_id": "5041955",
+     "name": "Darryn Peterson",
+     "role": "starter",
+     "minutes": 32.3,
+     "avg": {
+      "pts": 17.1,
+      "reb": 4.3,
+      "ast": 3.8,
+      "tpm": 2.3,
+      "pra": 25.2
+     },
+     "proj": {
+      "pts": 19.2,
+      "reb": 5.0,
+      "ast": 3.9,
+      "tpm": 2.5,
+      "pra": 28.1
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 18,
+       "p": 0.588
+      },
+      "reb": {
+       "line": 5,
+       "p": 0.56
+      },
+      "ast": {
+       "line": 4,
+       "p": 0.547
+      },
+      "tpm": {
+       "line": 3,
+       "p": 0.456
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.9096,
+       "yes_ask": 0.92,
+       "no_ask": 0.09,
+       "edge_yes": -0.0204,
+       "edge_no": -0.0096
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.6004,
+       "yes_ask": 0.64,
+       "no_ask": 0.37,
+       "edge_yes": -0.0596,
+       "edge_no": 0.0096
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.2592,
+       "yes_ask": 0.31,
+       "no_ask": 0.7,
+       "edge_yes": -0.0708,
+       "edge_no": 0.0208
+      },
+      {
+       "stat": "ast",
+       "line": 8,
+       "p_yes": 0.0756,
+       "yes_ask": 0.11,
+       "no_ask": 0.9,
+       "edge_yes": -0.0444,
+       "edge_no": 0.0144
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.7128,
+       "yes_ask": 0.75,
+       "no_ask": 0.26,
+       "edge_yes": -0.0572,
+       "edge_no": 0.0072
+      },
+      {
+       "stat": "pra",
+       "line": 30,
+       "p_yes": 0.4893,
+       "yes_ask": 0.53,
+       "no_ask": 0.48,
+       "edge_yes": -0.0607,
+       "edge_no": 0.0107
+      },
+      {
+       "stat": "pra",
+       "line": 35,
+       "p_yes": 0.2851,
+       "yes_ask": 0.34,
+       "no_ask": 0.69,
+       "edge_yes": -0.0749,
+       "edge_no": 0.0049
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.9223,
+       "yes_ask": 0.94,
+       "no_ask": 0.07,
+       "edge_yes": -0.0277,
+       "edge_no": -0.0023
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.7583,
+       "yes_ask": 0.78,
+       "no_ask": 0.23,
+       "edge_yes": -0.0417,
+       "edge_no": -0.0083
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.539,
+       "yes_ask": 0.58,
+       "no_ask": 0.43,
+       "edge_yes": -0.061,
+       "edge_no": 0.011
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.2848,
+       "yes_ask": 0.32,
+       "no_ask": 0.69,
+       "edge_yes": -0.0552,
+       "edge_no": 0.0052
+      },
+      {
+       "stat": "pts",
+       "line": 30,
+       "p_yes": 0.1191,
+       "yes_ask": 0.15,
+       "no_ask": 0.86,
+       "edge_yes": -0.0409,
+       "edge_no": 0.0109
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.9366,
+       "yes_ask": 0.92,
+       "no_ask": 0.09,
+       "edge_yes": 0.0066,
+       "edge_no": -0.0366
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.677,
+       "yes_ask": 0.64,
+       "no_ask": 0.37,
+       "edge_yes": 0.017,
+       "edge_no": -0.067
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.3481,
+       "yes_ask": 0.33,
+       "no_ask": 0.68,
+       "edge_yes": -0.0019,
+       "edge_no": -0.0481
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.1252,
+       "yes_ask": 0.13,
+       "no_ask": 0.89,
+       "edge_yes": -0.0148,
+       "edge_no": -0.0252
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.9104,
+       "yes_ask": 0.91,
+       "no_ask": 0.1,
+       "edge_yes": -0.0096,
+       "edge_no": -0.0204
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.7201,
+       "yes_ask": 0.73,
+       "no_ask": 0.28,
+       "edge_yes": -0.0299,
+       "edge_no": -0.0201
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.4794,
+       "yes_ask": 0.5,
+       "no_ask": 0.51,
+       "edge_yes": -0.0406,
+       "edge_no": -0.0094
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.2789,
+       "yes_ask": 0.31,
+       "no_ask": 0.7,
+       "edge_yes": -0.0511,
+       "edge_no": 0.0011
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.1402,
+       "yes_ask": 0.17,
+       "no_ask": 0.84,
+       "edge_yes": -0.0398,
+       "edge_no": 0.0098
+      }
+     ]
+    },
+    {
+     "athlete_id": "4433627",
+     "name": "Keyonte George",
+     "role": "starter",
+     "minutes": 32.8,
+     "avg": {
+      "pts": 20.3,
+      "reb": 4.5,
+      "ast": 6.6,
+      "tpm": 1.9,
+      "pra": 31.4
+     },
+     "proj": {
+      "pts": 21.0,
+      "reb": 4.6,
+      "ast": 6.0,
+      "tpm": 1.9,
+      "pra": 31.6
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 21,
+       "p": 0.52
+      },
+      "reb": {
+       "line": 5,
+       "p": 0.479
+      },
+      "ast": {
+       "line": 7,
+       "p": 0.392
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.517
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.8353,
+       "yes_ask": 0.87,
+       "no_ask": 0.15,
+       "edge_yes": -0.0447,
+       "edge_no": 0.0047
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.5787,
+       "yes_ask": 0.62,
+       "no_ask": 0.39,
+       "edge_yes": -0.0613,
+       "edge_no": 0.0113
+      },
+      {
+       "stat": "ast",
+       "line": 8,
+       "p_yes": 0.3119,
+       "yes_ask": 0.34,
+       "no_ask": 0.67,
+       "edge_yes": -0.0481,
+       "edge_no": -0.0019
+      },
+      {
+       "stat": "ast",
+       "line": 10,
+       "p_yes": 0.1363,
+       "yes_ask": 0.15,
+       "no_ask": 0.86,
+       "edge_yes": -0.0237,
+       "edge_no": -0.0063
+      },
+      {
+       "stat": "pra",
+       "line": 25,
+       "p_yes": 0.7944,
+       "yes_ask": 0.83,
+       "no_ask": 0.18,
+       "edge_yes": -0.0456,
+       "edge_no": 0.0056
+      },
+      {
+       "stat": "pra",
+       "line": 30,
+       "p_yes": 0.6118,
+       "yes_ask": 0.64,
+       "no_ask": 0.37,
+       "edge_yes": -0.0482,
+       "edge_no": -0.0018
+      },
+      {
+       "stat": "pra",
+       "line": 35,
+       "p_yes": 0.4013,
+       "yes_ask": 0.41,
+       "no_ask": 0.6,
+       "edge_yes": -0.0287,
+       "edge_no": -0.0213
+      },
+      {
+       "stat": "pra",
+       "line": 40,
+       "p_yes": 0.2352,
+       "yes_ask": 0.24,
+       "no_ask": 0.77,
+       "edge_yes": -0.0248,
+       "edge_no": -0.0252
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.8031,
+       "yes_ask": 0.84,
+       "no_ask": 0.17,
+       "edge_yes": -0.0469,
+       "edge_no": 0.0169
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.5815,
+       "yes_ask": 0.6,
+       "no_ask": 0.41,
+       "edge_yes": -0.0385,
+       "edge_no": -0.0115
+      },
+      {
+       "stat": "pts",
+       "line": 25,
+       "p_yes": 0.3571,
+       "yes_ask": 0.36,
+       "no_ask": 0.65,
+       "edge_yes": -0.0229,
+       "edge_no": -0.0271
+      },
+      {
+       "stat": "pts",
+       "line": 30,
+       "p_yes": 0.1818,
+       "yes_ask": 0.18,
+       "no_ask": 0.83,
+       "edge_yes": -0.0182,
+       "edge_no": -0.0218
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.9111,
+       "yes_ask": 0.9,
+       "no_ask": 0.11,
+       "edge_yes": 0.0011,
+       "edge_no": -0.0311
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.6081,
+       "yes_ask": 0.58,
+       "no_ask": 0.43,
+       "edge_yes": 0.0081,
+       "edge_no": -0.0581
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.2858,
+       "yes_ask": 0.27,
+       "no_ask": 0.74,
+       "edge_yes": -0.0042,
+       "edge_no": -0.0458
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.1006,
+       "yes_ask": 0.1,
+       "no_ask": 0.91,
+       "edge_yes": -0.0094,
+       "edge_no": -0.0206
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.8343,
+       "yes_ask": 0.87,
+       "no_ask": 0.15,
+       "edge_yes": -0.0457,
+       "edge_no": 0.0057
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.5732,
+       "yes_ask": 0.62,
+       "no_ask": 0.4,
+       "edge_yes": -0.0668,
+       "edge_no": 0.0068
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.3429,
+       "yes_ask": 0.38,
+       "no_ask": 0.63,
+       "edge_yes": -0.0571,
+       "edge_no": 0.0071
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.1759,
+       "yes_ask": 0.2,
+       "no_ask": 0.82,
+       "edge_yes": -0.0441,
+       "edge_no": -0.0159
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0845,
+       "yes_ask": 0.1,
+       "no_ask": 0.92,
+       "edge_yes": -0.0255,
+       "edge_no": -0.0145
+      }
+     ]
+    },
+    {
+     "athlete_id": "4065663",
+     "name": "Josh Okogie",
+     "role": "rotation",
+     "minutes": 21.6,
+     "avg": {
+      "pts": 4.5,
+      "reb": 3.4,
+      "ast": 1.0,
+      "tpm": 0.8,
+      "pra": 8.9
+     },
+     "proj": {
+      "pts": 5.5,
+      "reb": 3.8,
+      "ast": 1.0,
+      "tpm": 0.9,
+      "pra": 10.3
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 5,
+       "p": 0.592
+      },
+      "reb": {
+       "line": 4,
+       "p": 0.49
+      },
+      "ast": {
+       "line": 1,
+       "p": 0.527
+      },
+      "tpm": {
+       "line": 1,
+       "p": 0.587
+      }
+     },
+     "lines": [
+      {
+       "stat": "pts",
+       "line": 5,
+       "p_yes": 0.6119,
+       "yes_ask": 0.63,
+       "no_ask": 0.38,
+       "edge_yes": -0.0381,
+       "edge_no": -0.0119
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.1931,
+       "yes_ask": 0.21,
+       "no_ask": 0.8,
+       "edge_yes": -0.0369,
+       "edge_no": -0.0131
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.0246,
+       "yes_ask": 0.04,
+       "no_ask": 0.98,
+       "edge_yes": -0.0254,
+       "edge_no": -0.0146
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.8521,
+       "yes_ask": 0.87,
+       "no_ask": 0.14,
+       "edge_yes": -0.0279,
+       "edge_no": -0.0021
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.5049,
+       "yes_ask": 0.52,
+       "no_ask": 0.49,
+       "edge_yes": -0.0351,
+       "edge_no": -0.0149
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.2161,
+       "yes_ask": 0.22,
+       "no_ask": 0.79,
+       "edge_yes": -0.0239,
+       "edge_no": -0.0261
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.0703,
+       "yes_ask": 0.07,
+       "no_ask": 0.94,
+       "edge_yes": -0.0097,
+       "edge_no": -0.0203
+      }
+     ]
+    },
+    {
+     "athlete_id": "4432811",
+     "name": "Josh Green",
+     "role": "rotation",
+     "minutes": 20.3,
+     "avg": {
+      "pts": 3.7,
+      "reb": 1.6,
+      "ast": 1.0,
+      "tpm": 0.7,
+      "pra": 6.3
+     },
+     "proj": {
+      "pts": 4.7,
+      "reb": 2.2,
+      "ast": 1.0,
+      "tpm": 0.9,
+      "pra": 7.9
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 4,
+       "p": 0.621
+      },
+      "reb": {
+       "line": 2,
+       "p": 0.572
+      },
+      "ast": {
+       "line": 1,
+       "p": 0.569
+      },
+      "tpm": {
+       "line": 1,
+       "p": 0.593
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.3379,
+       "yes_ask": 0.4,
+       "no_ask": 0.61,
+       "edge_yes": -0.0821,
+       "edge_no": 0.0321
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.0681,
+       "yes_ask": 0.1,
+       "no_ask": 0.91,
+       "edge_yes": -0.0419,
+       "edge_no": 0.0119
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0117,
+       "yes_ask": 0.03,
+       "no_ask": 0.99,
+       "edge_yes": -0.0283,
+       "edge_no": -0.0117
+      },
+      {
+       "stat": "pts",
+       "line": 5,
+       "p_yes": 0.4932,
+       "yes_ask": 0.48,
+       "no_ask": 0.53,
+       "edge_yes": -0.0068,
+       "edge_no": -0.0432
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.1235,
+       "yes_ask": 0.14,
+       "no_ask": 0.87,
+       "edge_yes": -0.0265,
+       "edge_no": -0.0035
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.0156,
+       "yes_ask": 0.04,
+       "no_ask": 0.98,
+       "edge_yes": -0.0344,
+       "edge_no": -0.0056
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.6193,
+       "yes_ask": 0.67,
+       "no_ask": 0.37,
+       "edge_yes": -0.0707,
+       "edge_no": -0.0093
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.2279,
+       "yes_ask": 0.25,
+       "no_ask": 0.77,
+       "edge_yes": -0.0421,
+       "edge_no": -0.0179
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.0638,
+       "yes_ask": 0.08,
+       "no_ask": 0.95,
+       "edge_yes": -0.0262,
+       "edge_no": -0.0238
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.5884,
+       "yes_ask": 0.6,
+       "no_ask": 0.43,
+       "edge_yes": -0.0316,
+       "edge_no": -0.0384
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.2408,
+       "yes_ask": 0.26,
+       "no_ask": 0.76,
+       "edge_yes": -0.0392,
+       "edge_no": -0.0208
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.0727,
+       "yes_ask": 0.09,
+       "no_ask": 0.93,
+       "edge_yes": -0.0273,
+       "edge_no": -0.0127
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.0135,
+       "yes_ask": 0.04,
+       "no_ask": null,
+       "edge_yes": -0.0365,
+       "edge_no": null
+      }
+     ]
+    },
+    {
+     "athlete_id": "5105839",
+     "name": "Brice Sensabaugh",
+     "role": "rotation",
+     "minutes": 23.7,
+     "avg": {
+      "pts": 8.4,
+      "reb": 3.2,
+      "ast": 1.4,
+      "tpm": 1.4,
+      "pra": 13.0
+     },
+     "proj": {
+      "pts": 13.0,
+      "reb": 4.1,
+      "ast": 1.8,
+      "tpm": 1.7,
+      "pra": 19.0
+     },
+     "miss_prob": 0.0,
+     "hit_avg": {
+      "pts": {
+       "line": 9,
+       "p": 0.722
+      },
+      "reb": {
+       "line": 4,
+       "p": 0.578
+      },
+      "ast": {
+       "line": 2,
+       "p": 0.512
+      },
+      "tpm": {
+       "line": 2,
+       "p": 0.482
+      }
+     },
+     "lines": [
+      {
+       "stat": "ast",
+       "line": 2,
+       "p_yes": 0.5715,
+       "yes_ask": 0.62,
+       "no_ask": 0.4,
+       "edge_yes": -0.0685,
+       "edge_no": 0.0085
+      },
+      {
+       "stat": "ast",
+       "line": 4,
+       "p_yes": 0.1652,
+       "yes_ask": 0.2,
+       "no_ask": 0.81,
+       "edge_yes": -0.0548,
+       "edge_no": 0.0048
+      },
+      {
+       "stat": "ast",
+       "line": 6,
+       "p_yes": 0.0283,
+       "yes_ask": 0.05,
+       "no_ask": 0.98,
+       "edge_yes": -0.0317,
+       "edge_no": -0.0183
+      },
+      {
+       "stat": "pts",
+       "line": 10,
+       "p_yes": 0.7061,
+       "yes_ask": 0.73,
+       "no_ask": 0.28,
+       "edge_yes": -0.0439,
+       "edge_no": -0.0061
+      },
+      {
+       "stat": "pts",
+       "line": 15,
+       "p_yes": 0.4119,
+       "yes_ask": 0.41,
+       "no_ask": 0.6,
+       "edge_yes": -0.0181,
+       "edge_no": -0.0319
+      },
+      {
+       "stat": "pts",
+       "line": 20,
+       "p_yes": 0.1838,
+       "yes_ask": 0.18,
+       "no_ask": 0.83,
+       "edge_yes": -0.0162,
+       "edge_no": -0.0238
+      },
+      {
+       "stat": "reb",
+       "line": 2,
+       "p_yes": 0.8732,
+       "yes_ask": 0.85,
+       "no_ask": 0.16,
+       "edge_yes": 0.0132,
+       "edge_no": -0.0432
+      },
+      {
+       "stat": "reb",
+       "line": 4,
+       "p_yes": 0.5284,
+       "yes_ask": 0.5,
+       "no_ask": 0.51,
+       "edge_yes": 0.0084,
+       "edge_no": -0.0584
+      },
+      {
+       "stat": "reb",
+       "line": 6,
+       "p_yes": 0.217,
+       "yes_ask": 0.21,
+       "no_ask": 0.8,
+       "edge_yes": -0.013,
+       "edge_no": -0.037
+      },
+      {
+       "stat": "reb",
+       "line": 8,
+       "p_yes": 0.0586,
+       "yes_ask": 0.07,
+       "no_ask": 0.96,
+       "edge_yes": -0.0214,
+       "edge_no": -0.0286
+      },
+      {
+       "stat": "tpm",
+       "line": 1,
+       "p_yes": 0.8146,
+       "yes_ask": 0.84,
+       "no_ask": 0.17,
+       "edge_yes": -0.0354,
+       "edge_no": 0.0054
+      },
+      {
+       "stat": "tpm",
+       "line": 2,
+       "p_yes": 0.5382,
+       "yes_ask": 0.58,
+       "no_ask": 0.43,
+       "edge_yes": -0.0618,
+       "edge_no": 0.0118
+      },
+      {
+       "stat": "tpm",
+       "line": 3,
+       "p_yes": 0.2964,
+       "yes_ask": 0.34,
+       "no_ask": 0.68,
+       "edge_yes": -0.0636,
+       "edge_no": 0.0036
+      },
+      {
+       "stat": "tpm",
+       "line": 4,
+       "p_yes": 0.1398,
+       "yes_ask": 0.17,
+       "no_ask": 0.85,
+       "edge_yes": -0.0402,
+       "edge_no": 0.0002
+      },
+      {
+       "stat": "tpm",
+       "line": 5,
+       "p_yes": 0.0543,
+       "yes_ask": 0.07,
+       "no_ask": 0.95,
+       "edge_yes": -0.0257,
+       "edge_no": -0.0143
+      }
+     ]
+    }
+   ]
+  },
+  "defense": {
+   "away": {
+    "pts": 1.018,
+    "reb": 1.026,
+    "ast": 0.94,
+    "tpm": 0.975,
+    "pra": 1.009,
+    "games": 12
+   },
+   "home": {
+    "pts": 1.013,
+    "reb": 0.998,
+    "ast": 1.005,
+    "tpm": 0.988,
+    "pra": 1.008,
+    "games": 12
+   }
+  },
+  "team_target": {
+   "home": {
+    "reb": 40.7,
+    "ast": 26.3,
+    "tpm": 14.3,
+    "pts": 116.5
+   },
+   "away": {
+    "reb": 43.5,
+    "ast": 23.4,
+    "tpm": 12.9,
+    "pts": 111.0
+   }
+  },
+  "market_weight": 0.6
+ },
+ "generated_at": "2026-11-18T02:17:03+00:00",
+ "preview": false,
+ "tip": "2026-11-18T03:30:00+00:00",
+ "tip_et": "Tue Nov 17, 10:30 PM ET",
+ "tip_az": "Tue Nov 17, 8:30 PM AZ",
+ "home": {
+  "id": "12",
+  "abbr": "LAC",
+  "name": "LA Clippers",
+  "nickname": "Clippers",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "LAC",
+   "wins": 4,
+   "losses": 8,
+   "gp": 12,
+   "diff_pg": -4.17,
+   "streak": "W2",
+   "last10": "3-7",
+   "home_record": "4-3",
+   "road_record": "0-5",
+   "seed": 13,
+   "conference": "West"
+  },
+  "form": {
+   "games": 2,
+   "wins": 2,
+   "losses": 0,
+   "avg_margin": 4.5,
+   "results": [
+    {
+     "date": "2026-11-15T21:30:00+00:00",
+     "opp": "CHA",
+     "home": true,
+     "score": "113-105",
+     "won": true
+    },
+    {
+     "date": "2026-11-14T03:30:00+00:00",
+     "opp": "OKC",
+     "home": true,
+     "score": "113-112",
+     "won": true
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4396907",
+     "name": "Darius Garland",
+     "role": "starter",
+     "mpg": 33.2,
+     "ppg": 21.2,
+     "impact": 2.77,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "2991139",
+     "name": "Kris Dunn",
+     "role": "starter",
+     "mpg": 27.1,
+     "ppg": 7.8,
+     "impact": 1.47,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3936099",
+     "name": "Derrick Jones Jr.",
+     "role": "starter",
+     "mpg": 26.5,
+     "ppg": 11.5,
+     "impact": 1.79,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4066648",
+     "name": "Rui Hachimura",
+     "role": "starter",
+     "mpg": 24.2,
+     "ppg": 12.6,
+     "impact": 0.68,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.83,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "3448",
+     "name": "Brook Lopez",
+     "role": "starter",
+     "mpg": 24.5,
+     "ppg": 14.1,
+     "impact": 2.47,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4702352",
+     "name": "Kobe Sanders",
+     "role": "rotation",
+     "mpg": 23.2,
+     "ppg": 8.8,
+     "impact": 0.86,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5254165",
+     "name": "Keaton Wagler",
+     "role": "rotation",
+     "mpg": 23.2,
+     "ppg": 12.3,
+     "impact": 1.81,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4432170",
+     "name": "Isaiah Jackson",
+     "role": "rotation",
+     "mpg": 18.1,
+     "ppg": 8.3,
+     "impact": 1.65,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 5,
+   "starters_total": 5,
+   "all_starters_available": true,
+   "all_core_available": true,
+   "missing": [],
+   "uncertain": [],
+   "injury_margin_loss": 0.0
+  },
+  "core_games_sampled": 12
+ },
+ "away": {
+  "id": "26",
+  "abbr": "UTAH",
+  "name": "Utah Jazz",
+  "nickname": "Jazz",
+  "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
+  "score": 0,
+  "winner": null,
+  "standing": {
+   "abbr": "UTAH",
+   "wins": 1,
+   "losses": 13,
+   "gp": 14,
+   "diff_pg": -10.93,
+   "streak": "L12",
+   "last10": "0-10",
+   "home_record": "1-7",
+   "road_record": "0-6",
+   "seed": 15,
+   "conference": "West"
+  },
+  "form": {
+   "games": 3,
+   "wins": 0,
+   "losses": 3,
+   "avg_margin": -10.0,
+   "results": [
+    {
+     "date": "2026-11-15T22:00:00+00:00",
+     "opp": "SA",
+     "home": true,
+     "score": "102-110",
+     "won": false
+    },
+    {
+     "date": "2026-11-14T01:30:00+00:00",
+     "opp": "HOU",
+     "home": false,
+     "score": "118-125",
+     "won": false
+    },
+    {
+     "date": "2026-11-12T02:00:00+00:00",
+     "opp": "ORL",
+     "home": true,
+     "score": "108-123",
+     "won": false
+    }
+   ],
+   "back_to_back": false,
+   "rest_days": 1
+  },
+  "availability": {
+   "players": [
+    {
+     "athlete_id": "4873138",
+     "name": "Ace Bailey",
+     "role": "starter",
+     "mpg": 32.6,
+     "ppg": 14.2,
+     "impact": 1.71,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5041955",
+     "name": "Darryn Peterson",
+     "role": "starter",
+     "mpg": 31.5,
+     "ppg": 18.0,
+     "impact": 2.53,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4433627",
+     "name": "Keyonte George",
+     "role": "starter",
+     "mpg": 30.4,
+     "ppg": 20.3,
+     "impact": 2.72,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 0.92,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4397077",
+     "name": "Jaxson Hayes",
+     "role": "starter",
+     "mpg": 19.7,
+     "ppg": 8.4,
+     "impact": 1.42,
+     "status": "Out",
+     "detail": "Knee Strain",
+     "comment": "Hayes (knee) has been ruled out for Tuesday's game against the Clippers.",
+     "miss_prob": 1.0,
+     "played_share": 0.83,
+     "expected_loss": 1.18
+    },
+    {
+     "athlete_id": "4066336",
+     "name": "Lauri Markkanen",
+     "role": "starter",
+     "mpg": 14.8,
+     "ppg": 18.3,
+     "impact": 2.69,
+     "status": "Out",
+     "detail": "Hand Fracture",
+     "comment": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.",
+     "miss_prob": 1.0,
+     "played_share": 0.5,
+     "expected_loss": 1.34
+    },
+    {
+     "athlete_id": "4065663",
+     "name": "Josh Okogie",
+     "role": "rotation",
+     "mpg": 20.3,
+     "ppg": 4.8,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "4432811",
+     "name": "Josh Green",
+     "role": "rotation",
+     "mpg": 19.1,
+     "ppg": 3.7,
+     "impact": 0.0,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    },
+    {
+     "athlete_id": "5105839",
+     "name": "Brice Sensabaugh",
+     "role": "rotation",
+     "mpg": 17.2,
+     "ppg": 8.8,
+     "impact": 0.86,
+     "status": "Available",
+     "detail": null,
+     "comment": null,
+     "miss_prob": 0.0,
+     "played_share": 1.0,
+     "expected_loss": 0.0
+    }
+   ],
+   "starters_available": 3,
+   "starters_total": 5,
+   "all_starters_available": false,
+   "all_core_available": false,
+   "missing": [
+    "Jaxson Hayes",
+    "Lauri Markkanen"
+   ],
+   "uncertain": [],
+   "injury_margin_loss": 2.52
+  },
+  "core_games_sampled": 12
+ },
+ "market": {
+  "source": "Draft Kings moneyline via ESPN",
+  "p_home": 0.6687141274796093,
+  "p_home_open": 0.639037110365309,
+  "home_ml": -229,
+  "away_ml": 190,
+  "home_ml_open": -199,
+  "away_ml_open": 166,
+  "home_spread": -5.5,
+  "total": 227.5,
+  "books": null,
+  "range": null
+ },
+ "kalshi": {
+  "event_ticker": "KXNBAGAME-26NOV17UTALAC",
+  "url": "https://kalshi.com/markets/kxnbagame",
+  "home": {
+   "ticker": "KXNBAGAME-26NOV17UTALAC-LAC",
+   "bid": 0.67,
+   "ask": 0.68,
+   "last": 0.67,
+   "mid": 0.675,
+   "spread": 0.01,
+   "volume": 159070.91,
+   "status": "active"
+  },
+  "away": {
+   "ticker": "KXNBAGAME-26NOV17UTALAC-UTA",
+   "bid": 0.32,
+   "ask": 0.33,
+   "last": 0.33,
+   "mid": 0.325,
+   "spread": 0.01,
+   "volume": 183439.58,
+   "status": "active"
+  },
+  "p_home": 0.675,
+  "illiquid": false,
+  "volume": 342510.49
+ },
+ "model": {
+  "p_home_stats": 0.7863,
+  "expected_home_margin": 9.5,
+  "components": {
+   "season_rating_edge": 4.1,
+   "home_court": 2.0,
+   "form_edge": 0.9,
+   "rest_edge": 0.0,
+   "injury_edge": 2.52
+  },
+  "p_home_final": 0.7073,
+  "market_weight": 0.7
+ },
+ "pick": {
+  "side": "home",
+  "team": "LAC",
+  "prob": 0.7073
+ },
+ "edges": {
+  "home": 0.0073,
+  "away": -0.0573
+ },
+ "best_value": null,
+ "flags": [
+  "UTAH without: Jaxson Hayes, Lauri Markkanen",
+  "UTAH on a 12-game losing streak",
+  "LAC full strength (all 5 regular starters + rotation available)",
+  "Stats model (79%) and Vegas (67%) disagree on P(home)"
+ ]
+}

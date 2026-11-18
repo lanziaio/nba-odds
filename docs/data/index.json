@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T02:05:14+00:00",
+ "generated_at": "2026-11-18T02:16:59+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -131,7 +131,7 @@
    "event_id": "401910003",
    "tip": "2026-11-18T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
@@ -246,7 +246,7 @@
    "event_id": "401910004",
    "tip": "2026-11-18T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "SA",
     "name": "San Antonio Spurs",
@@ -352,7 +352,7 @@
     "provider": "Draft Kings",
     "details": "LAC -5.5",
     "home_spread": -5.5,
-    "total": 226.5,
+    "total": 227.5,
     "home_ml": -229,
     "away_ml": 190,
     "home_ml_open": -199,
@@ -374,18 +374,93 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T02:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910006",
+    "tip": "2026-11-18T03:30:00+00:00",
+    "preview": false,
+    "home": "LAC",
+    "away": "UTAH",
+    "p_home_final": 0.7073,
+    "p_home_stats": 0.7863,
+    "p_home_market": 0.6687141274796093,
+    "p_home_kalshi": 0.675,
+    "pick": "LAC",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4277919",
+      "name": "Mo Bamba",
+      "stat": "reb",
+      "line": 10,
+      "side": "no",
+      "label": "Mo Bamba under 10 rebounds",
+      "p": 0.6252,
+      "ask": 0.51,
+      "edge": 0.0952,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV17UTALAC-UTAMBAMBA44-10",
+      "team": "UTAH",
+      "won": null
+     },
+     {
+      "athlete_id": "4432811",
+      "name": "Josh Green",
+      "stat": "ast",
+      "line": 2,
+      "side": "no",
+      "label": "Josh Green under 2 assists",
+      "p": 0.6621,
+      "ask": 0.61,
+      "edge": 0.0321,
+      "strength": "lean",
+      "ticker": "KXNBAAST-26NOV17UTALAC-UTAJGREEN5-2",
+      "team": "UTAH",
+      "won": null
+     },
+     {
+      "athlete_id": "4432170",
+      "name": "Isaiah Jackson",
+      "stat": "reb",
+      "line": 8,
+      "side": "no",
+      "label": "Isaiah Jackson under 8 rebounds",
+      "p": 0.7729,
+      "ask": 0.7,
+      "edge": 0.0529,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV17UTALAC-LACIJACKSON23-8",
+      "team": "LAC",
+      "won": null
+     },
+     {
+      "athlete_id": "4066648",
+      "name": "Rui Hachimura",
+      "stat": "pra",
+      "line": 20,
+      "side": "no",
+      "label": "Rui Hachimura under 20 pts+reb+ast",
+      "p": 0.5374,
+      "ask": 0.47,
+      "edge": 0.0474,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV17UTALAC-LACRHACHIMURA28-20",
+      "team": "LAC",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "Draft Kings",
     "details": "LAL -6.5",
     "home_spread": -6.5,
-    "total": 223.5,
-    "home_ml": -288,
-    "away_ml": 235,
+    "total": 222.5,
+    "home_ml": -289,
+    "away_ml": 236,
     "home_ml_open": -391,
     "away_ml_open": 309
    },
