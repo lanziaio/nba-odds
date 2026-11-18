@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T22:47:18+00:00",
+ "generated_at": "2026-11-18T23:17:00+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -8,8 +8,8 @@
     "details": "CLE -4.5",
     "home_spread": -4.5,
     "total": 238.5,
-    "home_ml": -196,
-    "away_ml": 164,
+    "home_ml": -185,
+    "away_ml": 155,
     "home_ml_open": -196,
     "away_ml_open": 164
    },
@@ -114,8 +114,8 @@
     "details": "HOU -8.5",
     "home_spread": 8.5,
     "total": 225.5,
-    "home_ml": 261,
-    "away_ml": -324,
+    "home_ml": 276,
+    "away_ml": -344,
     "home_ml_open": 217,
     "away_ml_open": -264
    },
@@ -308,11 +308,11 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "PHI -1.5",
-    "home_spread": 1.5,
-    "total": 221.5,
-    "home_ml": -105,
-    "away_ml": -113,
+    "details": "ORL -2.5",
+    "home_spread": -2.5,
+    "total": 220.5,
+    "home_ml": -134,
+    "away_ml": 113,
     "home_ml_open": 103,
     "away_ml_open": -122
    },
@@ -408,18 +408,98 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910011",
+    "tip": "2026-11-19T00:30:00+00:00",
+    "preview": false,
+    "home": "BKN",
+    "away": "CHI",
+    "p_home_final": 0.5823,
+    "p_home_stats": 0.6926,
+    "p_home_market": 0.5315767461313258,
+    "p_home_kalshi": 0.525,
+    "pick": "BKN",
+    "best_value": {
+     "side": "home",
+     "team": "BKN",
+     "edge": 0.0323,
+     "ask": 0.53
+    },
+    "prop_picks": [
+     {
+      "athlete_id": "4871145",
+      "name": "Josh Giddey",
+      "stat": "reb",
+      "line": 6,
+      "side": "no",
+      "label": "Josh Giddey under 6 rebounds",
+      "p": 0.4913,
+      "ask": 0.41,
+      "edge": 0.0613,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV18CHIBKN-CHIJGIDDEY3-6",
+      "team": "CHI",
+      "won": null
+     },
+     {
+      "athlete_id": "2595516",
+      "name": "Norman Powell",
+      "stat": "pts",
+      "line": 25,
+      "side": "no",
+      "label": "Norman Powell under 25 points",
+      "p": 0.6774,
+      "ask": 0.6,
+      "edge": 0.0574,
+      "strength": "value",
+      "ticker": "KXNBAPTS-26NOV18CHIBKN-CHINPOWELL24-25",
+      "team": "CHI",
+      "won": null
+     },
+     {
+      "athlete_id": "3064514",
+      "name": "Julius Randle",
+      "stat": "pra",
+      "line": 35,
+      "side": "no",
+      "label": "Julius Randle under 35 pts+reb+ast",
+      "p": 0.6285,
+      "ask": 0.52,
+      "edge": 0.0885,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV18CHIBKN-BKNJRANDLE30-35",
+      "team": "BKN",
+      "won": null
+     },
+     {
+      "athlete_id": "5101761",
+      "name": "Mikel Brown Jr.",
+      "stat": "reb",
+      "line": 2,
+      "side": "no",
+      "label": "Mikel Brown Jr. under 2 rebounds",
+      "p": 0.4826,
+      "ask": 0.4,
+      "edge": 0.0626,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV18CHIBKN-BKNMBROWN0-2",
+      "team": "BKN",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "TOR -4.5",
-    "home_spread": -4.5,
-    "total": 225.5,
-    "home_ml": -203,
-    "away_ml": 169,
+    "details": "TOR -3.5",
+    "home_spread": -3.5,
+    "total": 224.5,
+    "home_ml": -176,
+    "away_ml": 147,
     "home_ml_open": -276,
     "away_ml_open": 226
    },
@@ -439,9 +519,84 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910012",
+    "tip": "2026-11-19T00:30:00+00:00",
+    "preview": false,
+    "home": "TOR",
+    "away": "WSH",
+    "p_home_final": 0.5754,
+    "p_home_stats": 0.4882,
+    "p_home_market": 0.6116614137775777,
+    "p_home_kalshi": 0.615,
+    "pick": "TOR",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "5142718",
+      "name": "AJ Dybantsa",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "AJ Dybantsa under 25 pts+reb+ast",
+      "p": 0.6355,
+      "ask": 0.53,
+      "edge": 0.0855,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV18WASTOR-WASADYBANTSA4-25",
+      "team": "WSH",
+      "won": null
+     },
+     {
+      "athlete_id": "6583",
+      "name": "Anthony Davis",
+      "stat": "tpm",
+      "line": 1,
+      "side": "no",
+      "label": "Anthony Davis under 1 threes",
+      "p": 0.5588,
+      "ask": 0.49,
+      "edge": 0.0488,
+      "strength": "lean",
+      "ticker": "KXNBA3PT-26NOV18WASTOR-WASADAVIS23-1",
+      "team": "WSH",
+      "won": null
+     },
+     {
+      "athlete_id": "5093267",
+      "name": "Collin Murray-Boyles",
+      "stat": "ast",
+      "line": 2,
+      "side": "yes",
+      "label": "Collin Murray-Boyles 2+ assists",
+      "p": 0.7562,
+      "ask": 0.7,
+      "edge": 0.0362,
+      "strength": "lean",
+      "ticker": "KXNBAAST-26NOV18WASTOR-TORCMURRAYBOYLES30-2",
+      "team": "TOR",
+      "won": null
+     },
+     {
+      "athlete_id": "4684272",
+      "name": "Ja'Kobe Walter",
+      "stat": "pts",
+      "line": 15,
+      "side": "yes",
+      "label": "Ja'Kobe Walter 15+ points",
+      "p": 0.5134,
+      "ask": 0.46,
+      "edge": 0.0334,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV18WASTOR-TORJWALTER14-15",
+      "team": "TOR",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -541,7 +696,7 @@
     "provider": "Draft Kings",
     "details": "BOS -2.5",
     "home_spread": 2.5,
-    "total": 218.5,
+    "total": 219.5,
     "home_ml": 120,
     "away_ml": -142,
     "home_ml_open": 119,
@@ -572,9 +727,9 @@
     "provider": "Draft Kings",
     "details": "LAL -12.5",
     "home_spread": -12.5,
-    "total": 231.5,
-    "home_ml": -567,
-    "away_ml": 424,
+    "total": 230.5,
+    "home_ml": -545,
+    "away_ml": 411,
     "home_ml_open": -578,
     "away_ml_open": 431
    },
@@ -601,8 +756,8 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "PHX -6.5",
-    "home_spread": 6.5,
+    "details": "PHX -7.5",
+    "home_spread": 7.5,
     "total": 226.5,
     "home_ml": 221,
     "away_ml": -269,
