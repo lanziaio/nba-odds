@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T03:55:59+00:00",
+ "generated_at": "2026-11-18T04:05:00+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -187,9 +187,11 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV17PORMIN-PORDLILLARD0-30",
       "team": "POR",
-      "won": null,
+      "won": false,
       "close": 0.355,
-      "clv": -0.165
+      "clv": -0.165,
+      "status": "lost",
+      "pnl": -0.54
      },
      {
       "athlete_id": "5105565",
@@ -204,9 +206,11 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV17PORMIN-PORDCLINGAN23-14",
       "team": "POR",
-      "won": null,
+      "won": true,
       "close": 0.73,
-      "clv": 0.01
+      "clv": 0.01,
+      "status": "won",
+      "pnl": 0.26
      },
      {
       "athlete_id": "3032976",
@@ -221,9 +225,11 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV17PORMIN-MINRGOBERT27-14",
       "team": "MIN",
-      "won": null,
+      "won": false,
       "close": 0.215,
-      "clv": -0.025
+      "clv": -0.025,
+      "status": "lost",
+      "pnl": -0.26
      },
      {
       "athlete_id": "4432816",
@@ -238,13 +244,22 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV17PORMIN-MINLBALL1-35",
       "team": "MIN",
-      "won": null,
+      "won": false,
       "close": 0.295,
-      "clv": -0.035
+      "clv": -0.035,
+      "status": "lost",
+      "pnl": -0.35
      }
     ],
-    "result": null,
-    "close_at": "2026-11-18T00:55:59+00:00"
+    "result": {
+     "home_score": 106,
+     "away_score": 105,
+     "home_won": true
+    },
+    "close_at": "2026-11-18T00:55:59+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -302,9 +317,11 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17DETSAS-DETPREED7-8",
       "team": "DET",
-      "won": null,
+      "won": false,
       "close": 0.405,
-      "clv": -0.035
+      "clv": -0.035,
+      "status": "lost",
+      "pnl": -0.46
      },
      {
       "athlete_id": "2596112",
@@ -319,9 +336,11 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17DETSAS-DETJGREENSF-4",
       "team": "DET",
-      "won": null,
+      "won": false,
       "close": 0.6,
-      "clv": -0.01
+      "clv": -0.01,
+      "status": "lost",
+      "pnl": -0.63
      },
      {
       "athlete_id": "4066259",
@@ -336,9 +355,11 @@
       "strength": "value",
       "ticker": "KXNBAAST-26NOV17DETSAS-SASDFOX4-6",
       "team": "SA",
-      "won": null,
+      "won": true,
       "close": 0.555,
-      "clv": -0.005
+      "clv": -0.005,
+      "status": "won",
+      "pnl": 0.42
      },
      {
       "athlete_id": "5104157",
@@ -353,13 +374,22 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV17DETSAS-SASVWEMBANYAMA1-40",
       "team": "SA",
-      "won": null,
+      "won": false,
       "close": 0.405,
-      "clv": 0.045
+      "clv": 0.045,
+      "status": "lost",
+      "pnl": -0.38
      }
     ],
-    "result": null,
-    "close_at": "2026-11-18T00:55:59+00:00"
+    "result": {
+     "home_score": 93,
+     "away_score": 105,
+     "home_won": false
+    },
+    "close_at": "2026-11-18T00:55:59+00:00",
+    "model_pick_correct": false,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -480,8 +510,8 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "LAL -6.5",
-    "home_spread": -6.5,
+    "details": "LAL -7.5",
+    "home_spread": -7.5,
     "total": 221.5,
     "home_ml": -289,
     "away_ml": 236,
@@ -594,26 +624,26 @@
   }
  ],
  "track_record": {
-  "games": 20,
+  "games": 22,
   "model": {
-   "n": 20,
-   "brier": 0.2152,
-   "accuracy": 0.7
+   "n": 22,
+   "brier": 0.2326,
+   "accuracy": 0.6818
   },
   "vegas": {
-   "n": 20,
-   "brier": 0.2146,
-   "accuracy": 0.7
+   "n": 22,
+   "brier": 0.2323,
+   "accuracy": 0.6818
   },
   "stats_only": {
-   "n": 20,
-   "brier": 0.2245,
-   "accuracy": 0.65
+   "n": 22,
+   "brier": 0.2407,
+   "accuracy": 0.6364
   },
   "kalshi": {
-   "n": 20,
-   "brier": 0.2156,
-   "accuracy": 0.7
+   "n": 22,
+   "brier": 0.233,
+   "accuracy": 0.6818
   },
   "value_bets": {
    "n": 2,
@@ -622,16 +652,16 @@
   },
   "props": {
    "value": {
-    "n": 35,
-    "hit_rate": 0.3429,
-    "expected_hit_rate": 0.5279,
-    "pnl_per_contract": -4.08
+    "n": 40,
+    "hit_rate": 0.325,
+    "expected_hit_rate": 0.5351,
+    "pnl_per_contract": -5.67
    },
    "lean": {
-    "n": 37,
-    "hit_rate": 0.4324,
-    "expected_hit_rate": 0.5816,
-    "pnl_per_contract": -4.22
+    "n": 40,
+    "hit_rate": 0.425,
+    "expected_hit_rate": 0.5744,
+    "pnl_per_contract": -4.57
    }
   },
   "clv": {
@@ -640,19 +670,19 @@
    "beat_close": 0.4167
   },
   "calibration": {
-   "lines": 4525,
-   "games": 20,
+   "lines": 5015,
+   "games": 22,
    "model": {
-    "brier": 0.1667,
-    "log_loss": 0.5057
+    "brier": 0.1674,
+    "log_loss": 0.5076
    },
    "market": {
-    "brier": 0.1598,
-    "log_loss": 0.4855
+    "brier": 0.1603,
+    "log_loss": 0.4871
    },
    "blend": {
-    "brier": 0.1612,
-    "log_loss": 0.4895
+    "brier": 0.1618,
+    "log_loss": 0.4911
    },
    "fitted_market_weight": 1.0,
    "market_weight_in_use": 0.6,
@@ -667,231 +697,231 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 767,
+      "n": 844,
       "predicted": 0.052,
-      "actual": 0.073
+      "actual": 0.072
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 678,
+      "n": 747,
       "predicted": 0.148,
-      "actual": 0.164
+      "actual": 0.165
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 479,
+      "n": 536,
       "predicted": 0.249,
-      "actual": 0.282
+      "actual": 0.285
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 447,
+      "n": 490,
       "predicted": 0.348,
-      "actual": 0.367
+      "actual": 0.373
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 343,
+      "n": 383,
       "predicted": 0.449,
-      "actual": 0.478
+      "actual": 0.475
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 441,
+      "n": 493,
       "predicted": 0.55,
-      "actual": 0.578
+      "actual": 0.57
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 341,
+      "n": 377,
       "predicted": 0.651,
-      "actual": 0.674
+      "actual": 0.676
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 400,
+      "n": 450,
       "predicted": 0.75,
-      "actual": 0.75
+      "actual": 0.756
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 355,
-      "predicted": 0.848,
-      "actual": 0.882
+      "n": 396,
+      "predicted": 0.849,
+      "actual": 0.876
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 196,
-      "predicted": 0.937,
-      "actual": 0.903
+      "n": 218,
+      "predicted": 0.938,
+      "actual": 0.899
      }
     ],
     "market": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 616,
+      "n": 686,
       "predicted": 0.057,
-      "actual": 0.037
+      "actual": 0.039
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 699,
+      "n": 782,
       "predicted": 0.147,
-      "actual": 0.136
+      "actual": 0.139
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 518,
-      "predicted": 0.247,
-      "actual": 0.237
+      "n": 572,
+      "predicted": 0.248,
+      "actual": 0.234
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 421,
+      "n": 467,
       "predicted": 0.348,
-      "actual": 0.354
+      "actual": 0.364
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 388,
+      "n": 427,
       "predicted": 0.448,
       "actual": 0.485
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 386,
+      "n": 425,
       "predicted": 0.55,
-      "actual": 0.557
+      "actual": 0.56
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 381,
+      "n": 427,
       "predicted": 0.649,
-      "actual": 0.638
+      "actual": 0.649
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 425,
-      "predicted": 0.75,
-      "actual": 0.776
+      "n": 467,
+      "predicted": 0.751,
+      "actual": 0.773
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 406,
-      "predicted": 0.845,
+      "n": 453,
+      "predicted": 0.846,
       "actual": 0.857
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 207,
-      "predicted": 0.929,
-      "actual": 0.923
+      "n": 228,
+      "predicted": 0.93,
+      "actual": 0.921
      }
     ],
     "blend": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 667,
+      "n": 740,
       "predicted": 0.056,
-      "actual": 0.049
+      "actual": 0.05
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 704,
+      "n": 783,
       "predicted": 0.146,
-      "actual": 0.145
+      "actual": 0.148
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 511,
+      "n": 558,
       "predicted": 0.248,
-      "actual": 0.262
+      "actual": 0.263
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 424,
+      "n": 480,
       "predicted": 0.348,
-      "actual": 0.349
+      "actual": 0.352
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 368,
+      "n": 403,
       "predicted": 0.45,
-      "actual": 0.495
+      "actual": 0.496
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 397,
-      "predicted": 0.548,
-      "actual": 0.554
+      "n": 445,
+      "predicted": 0.549,
+      "actual": 0.553
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 381,
+      "n": 419,
       "predicted": 0.649,
-      "actual": 0.664
+      "actual": 0.668
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 429,
+      "n": 474,
       "predicted": 0.752,
-      "actual": 0.767
+      "actual": 0.77
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 370,
+      "n": 413,
       "predicted": 0.848,
-      "actual": 0.873
+      "actual": 0.869
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 196,
+      "n": 219,
       "predicted": 0.932,
-      "actual": 0.923
+      "actual": 0.922
      }
     ]
    },
    "paper_bets": {
     "value": {
-     "n": 94,
-     "hit_rate": 0.4149,
-     "pnl_per_contract": -8.78,
-     "roi": -0.1912
+     "n": 110,
+     "hit_rate": 0.4182,
+     "pnl_per_contract": -10.62,
+     "roi": -0.195
     },
     "lean_or_better": {
-     "n": 458,
-     "hit_rate": 0.524,
-     "pnl_per_contract": -13.67,
-     "roi": -0.0558
+     "n": 537,
+     "hit_rate": 0.5009,
+     "pnl_per_contract": -26.31,
+     "roi": -0.0923
     }
    }
   }
