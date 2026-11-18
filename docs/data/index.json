@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T00:34:59+00:00",
+ "generated_at": "2026-11-18T00:55:59+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -15,8 +15,8 @@
    },
    "event_id": "401910002",
    "tip": "2026-11-18T00:30:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "TOR",
     "name": "Toronto Raptors",
@@ -172,7 +172,9 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV17PORMIN-PORDLILLARD0-30",
       "team": "POR",
-      "won": null
+      "won": null,
+      "close": 0.355,
+      "clv": -0.165
      },
      {
       "athlete_id": "5105565",
@@ -187,7 +189,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV17PORMIN-PORDCLINGAN23-14",
       "team": "POR",
-      "won": null
+      "won": null,
+      "close": 0.73,
+      "clv": 0.01
      },
      {
       "athlete_id": "3032976",
@@ -202,7 +206,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV17PORMIN-MINRGOBERT27-14",
       "team": "MIN",
-      "won": null
+      "won": null,
+      "close": 0.215,
+      "clv": -0.025
      },
      {
       "athlete_id": "4432816",
@@ -217,10 +223,13 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV17PORMIN-MINLBALL1-35",
       "team": "MIN",
-      "won": null
+      "won": null,
+      "close": 0.295,
+      "clv": -0.035
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-18T00:55:59+00:00"
    }
   },
   {
@@ -278,7 +287,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17DETSAS-DETPREED7-8",
       "team": "DET",
-      "won": null
+      "won": null,
+      "close": 0.405,
+      "clv": -0.035
      },
      {
       "athlete_id": "2596112",
@@ -293,7 +304,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV17DETSAS-DETJGREENSF-4",
       "team": "DET",
-      "won": null
+      "won": null,
+      "close": 0.6,
+      "clv": -0.01
      },
      {
       "athlete_id": "4066259",
@@ -308,7 +321,9 @@
       "strength": "value",
       "ticker": "KXNBAAST-26NOV17DETSAS-SASDFOX4-6",
       "team": "SA",
-      "won": null
+      "won": null,
+      "close": 0.555,
+      "clv": -0.005
      },
      {
       "athlete_id": "5104157",
@@ -323,17 +338,20 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV17DETSAS-SASVWEMBANYAMA1-40",
       "team": "SA",
-      "won": null
+      "won": null,
+      "close": 0.405,
+      "clv": 0.045
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-18T00:55:59+00:00"
    }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "LAC -6.5",
-    "home_spread": -6.5,
+    "details": "LAC -5.5",
+    "home_spread": -5.5,
     "total": 226.5,
     "home_ml": -229,
     "away_ml": 190,
@@ -434,9 +452,9 @@
    }
   },
   "clv": {
-   "n": 32,
-   "avg_clv": 0.0028,
-   "beat_close": 0.5
+   "n": 40,
+   "avg_clv": -0.0033,
+   "beat_close": 0.45
   },
   "calibration": {
    "lines": 4296,
