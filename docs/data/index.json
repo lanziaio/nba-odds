@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T17:07:02+00:00",
+ "generated_at": "2026-11-18T22:46:59+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -7,7 +7,7 @@
     "provider": "DraftKings",
     "details": "CLE -4.5",
     "home_spread": -4.5,
-    "total": 237.5,
+    "total": 238.5,
     "home_ml": -196,
     "away_ml": 164,
     "home_ml_open": -196,
@@ -29,18 +29,93 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910007",
+    "tip": "2026-11-19T00:00:00+00:00",
+    "preview": false,
+    "home": "CLE",
+    "away": "MEM",
+    "p_home_final": 0.5875,
+    "p_home_stats": 0.4689,
+    "p_home_market": 0.6361132966168371,
+    "p_home_kalshi": 0.635,
+    "pick": "CLE",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "5041935",
+      "name": "Cameron Boozer",
+      "stat": "pts",
+      "line": 20,
+      "side": "no",
+      "label": "Cameron Boozer under 20 points",
+      "p": 0.5951,
+      "ask": 0.52,
+      "edge": 0.0551,
+      "strength": "value",
+      "ticker": "KXNBAPTS-26NOV18MEMCLE-MEMCBOOZER27-20",
+      "team": "MEM",
+      "won": null
+     },
+     {
+      "athlete_id": "4684806",
+      "name": "Taylor Hendricks",
+      "stat": "pts",
+      "line": 10,
+      "side": "yes",
+      "label": "Taylor Hendricks 10+ points",
+      "p": 0.4023,
+      "ask": 0.34,
+      "edge": 0.0423,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV18MEMCLE-MEMTHENDRICKS22-10",
+      "team": "MEM",
+      "won": null
+     },
+     {
+      "athlete_id": "4066328",
+      "name": "Jarrett Allen",
+      "stat": "reb",
+      "line": 10,
+      "side": "no",
+      "label": "Jarrett Allen under 10 rebounds",
+      "p": 0.6242,
+      "ask": 0.56,
+      "edge": 0.0442,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18MEMCLE-CLEJALLEN31-10",
+      "team": "CLE",
+      "won": null
+     },
+     {
+      "athlete_id": "5041951",
+      "name": "Meleek Thomas",
+      "stat": "reb",
+      "line": 4,
+      "side": "no",
+      "label": "Meleek Thomas under 4 rebounds",
+      "p": 0.5784,
+      "ask": 0.52,
+      "edge": 0.0384,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18MEMCLE-CLEMTHOMAS15-4",
+      "team": "CLE",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "HOU -7.5",
-    "home_spread": 7.5,
+    "details": "HOU -8.5",
+    "home_spread": 8.5,
     "total": 225.5,
-    "home_ml": 247,
-    "away_ml": -304,
+    "home_ml": 261,
+    "away_ml": -324,
     "home_ml_open": 217,
     "away_ml_open": -264
    },
@@ -60,18 +135,78 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/hou.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910008",
+    "tip": "2026-11-19T00:00:00+00:00",
+    "preview": false,
+    "home": "IND",
+    "away": "HOU",
+    "p_home_final": 0.2944,
+    "p_home_stats": 0.3669,
+    "p_home_market": 0.26605757887603226,
+    "p_home_kalshi": 0.245,
+    "pick": "HOU",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "3202",
+      "name": "Kevin Durant",
+      "stat": "pra",
+      "line": 40,
+      "side": "no",
+      "label": "Kevin Durant under 40 pts+reb+ast",
+      "p": 0.8423,
+      "ask": 0.78,
+      "edge": 0.0423,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV18HOUIND-HOUKDURANT7-40",
+      "team": "HOU",
+      "won": null
+     },
+     {
+      "athlete_id": "4871144",
+      "name": "Alperen Sengun",
+      "stat": "pra",
+      "line": 35,
+      "side": "no",
+      "label": "Alperen Sengun under 35 pts+reb+ast",
+      "p": 0.4384,
+      "ask": 0.39,
+      "edge": 0.0284,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV18HOUIND-HOUASENGUN28-35",
+      "team": "HOU",
+      "won": null
+     },
+     {
+      "athlete_id": "4017837",
+      "name": "Ivica Zubac",
+      "stat": "reb",
+      "line": 8,
+      "side": "no",
+      "label": "Ivica Zubac under 8 rebounds",
+      "p": 0.4254,
+      "ask": 0.35,
+      "edge": 0.0554,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV18HOUIND-INDIZUBAC40-8",
+      "team": "IND",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "MIA -11.5",
-    "home_spread": -11.5,
-    "total": 236.5,
+    "details": "MIA -12.5",
+    "home_spread": -12.5,
+    "total": 235.5,
     "home_ml": -700,
-    "away_ml": 505,
+    "away_ml": 504,
     "home_ml_open": -770,
     "away_ml_open": 539
    },
@@ -91,18 +226,93 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910009",
+    "tip": "2026-11-19T00:00:00+00:00",
+    "preview": false,
+    "home": "MIA",
+    "away": "MIL",
+    "p_home_final": 0.8462,
+    "p_home_stats": 0.8579,
+    "p_home_market": 0.8408910103420844,
+    "p_home_kalshi": 0.845,
+    "pick": "MIA",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "5105623",
+      "name": "Kel'el Ware",
+      "stat": "reb",
+      "line": 8,
+      "side": "yes",
+      "label": "Kel'el Ware 8+ rebounds",
+      "p": 0.4287,
+      "ask": 0.37,
+      "edge": 0.0387,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18MILMIA-MILKWARE9-8",
+      "team": "MIL",
+      "won": null
+     },
+     {
+      "athlete_id": "4395725",
+      "name": "Tyler Herro",
+      "stat": "pra",
+      "line": 30,
+      "side": "no",
+      "label": "Tyler Herro under 30 pts+reb+ast",
+      "p": 0.4827,
+      "ask": 0.43,
+      "edge": 0.0327,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV18MILMIA-MILTHERRO11-30",
+      "team": "MIL",
+      "won": null
+     },
+     {
+      "athlete_id": "3059319",
+      "name": "Andrew Wiggins",
+      "stat": "pts",
+      "line": 10,
+      "side": "yes",
+      "label": "Andrew Wiggins 10+ points",
+      "p": 0.5567,
+      "ask": 0.49,
+      "edge": 0.0467,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV18MILMIA-MIAAWIGGINS22-10",
+      "team": "MIA",
+      "won": null
+     },
+     {
+      "athlete_id": "5107157",
+      "name": "Ryan Conwell",
+      "stat": "pts",
+      "line": 10,
+      "side": "yes",
+      "label": "Ryan Conwell 10+ points",
+      "p": 0.4821,
+      "ask": 0.43,
+      "edge": 0.0321,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV18MILMIA-MIARCONWELL4-10",
+      "team": "MIA",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
     "details": "PHI -1.5",
     "home_spread": 1.5,
-    "total": 222.5,
-    "home_ml": -101,
-    "away_ml": -117,
+    "total": 221.5,
+    "home_ml": -105,
+    "away_ml": -113,
     "home_ml_open": 103,
     "away_ml_open": -122
    },
@@ -122,18 +332,63 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T22:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910010",
+    "tip": "2026-11-19T00:00:00+00:00",
+    "preview": false,
+    "home": "ORL",
+    "away": "PHI",
+    "p_home_final": 0.5263,
+    "p_home_stats": 0.6066,
+    "p_home_market": 0.49121458379090716,
+    "p_home_kalshi": 0.505,
+    "pick": "ORL",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4566434",
+      "name": "Franz Wagner",
+      "stat": "pra",
+      "line": 40,
+      "side": "no",
+      "label": "Franz Wagner under 40 pts+reb+ast",
+      "p": 0.6778,
+      "ask": 0.57,
+      "edge": 0.0878,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV18PHIORL-ORLFWAGNER22-40",
+      "team": "ORL",
+      "won": null
+     },
+     {
+      "athlete_id": "4277847",
+      "name": "Wendell Carter Jr.",
+      "stat": "pra",
+      "line": 20,
+      "side": "no",
+      "label": "Wendell Carter Jr. under 20 pts+reb+ast",
+      "p": 0.504,
+      "ask": 0.43,
+      "edge": 0.054,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV18PHIORL-ORLWCARTER34-20",
+      "team": "ORL",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "BKN -2.5",
-    "home_spread": -2.5,
+    "details": "BKN -1.5",
+    "home_spread": -1.5,
     "total": 239.5,
-    "home_ml": -152,
-    "away_ml": 128,
+    "home_ml": -124,
+    "away_ml": 105,
     "home_ml_open": -152,
     "away_ml_open": 128
    },
@@ -160,11 +415,11 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "TOR -6.5",
-    "home_spread": -6.5,
-    "total": 226.5,
-    "home_ml": -249,
-    "away_ml": 205,
+    "details": "TOR -4.5",
+    "home_spread": -4.5,
+    "total": 225.5,
+    "home_ml": -203,
+    "away_ml": 169,
     "home_ml_open": -276,
     "away_ml_open": 226
    },
@@ -191,11 +446,11 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "DET -6.5",
-    "home_spread": 6.5,
-    "total": 227.5,
-    "home_ml": 217,
-    "away_ml": -264,
+    "details": "DET -4.5",
+    "home_spread": 4.5,
+    "total": 226.5,
+    "home_ml": 155,
+    "away_ml": -185,
     "home_ml_open": 247,
     "away_ml_open": -305
    },
@@ -225,8 +480,8 @@
     "details": "OKC -6.5",
     "home_spread": -6.5,
     "total": 228.5,
-    "home_ml": -270,
-    "away_ml": 221,
+    "home_ml": -249,
+    "away_ml": 205,
     "home_ml_open": -270,
     "away_ml_open": 221
    },
@@ -255,7 +510,7 @@
     "provider": "DraftKings",
     "details": "DAL -4.5",
     "home_spread": -4.5,
-    "total": 224.5,
+    "total": 225.5,
     "home_ml": -197,
     "away_ml": 164,
     "home_ml_open": -208,
@@ -286,7 +541,7 @@
     "provider": "DraftKings",
     "details": "BOS -2.5",
     "home_spread": 2.5,
-    "total": 219.5,
+    "total": 218.5,
     "home_ml": 120,
     "away_ml": -142,
     "home_ml_open": 119,
@@ -315,11 +570,11 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "LAL -10.5",
-    "home_spread": -10.5,
-    "total": 228.5,
-    "home_ml": -437,
-    "away_ml": 341,
+    "details": "LAL -12.5",
+    "home_spread": -12.5,
+    "total": 231.5,
+    "home_ml": -567,
+    "away_ml": 424,
     "home_ml_open": -578,
     "away_ml_open": 431
    },
@@ -348,9 +603,9 @@
     "provider": "DraftKings",
     "details": "PHX -6.5",
     "home_spread": 6.5,
-    "total": 227.5,
-    "home_ml": 211,
-    "away_ml": -257,
+    "total": 226.5,
+    "home_ml": 221,
+    "away_ml": -269,
     "home_ml_open": 182,
     "away_ml_open": -219
    },
