@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T23:46:59+00:00",
+ "generated_at": "2026-11-18T00:25:59+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -57,7 +57,9 @@
       "strength": "lean",
       "ticker": "KXNBA3PT-26NOV17NYKTOR-NYKJHART3-1",
       "team": "NY",
-      "won": null
+      "won": null,
+      "close": 0.315,
+      "clv": 0.025
      },
      {
       "athlete_id": "3934672",
@@ -72,7 +74,9 @@
       "strength": "lean",
       "ticker": "KXNBAPTS-26NOV17NYKTOR-NYKJBRUNSON11-30",
       "team": "NY",
-      "won": null
+      "won": null,
+      "close": 0.665,
+      "clv": -0.015
      },
      {
       "athlete_id": "5093267",
@@ -87,7 +91,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV17NYKTOR-TORCMURRAYBOYLES30-6",
       "team": "TOR",
-      "won": null
+      "won": null,
+      "close": 0.455,
+      "clv": 0.035
      },
      {
       "athlete_id": "4433134",
@@ -102,10 +108,13 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV17NYKTOR-TORSBARNES4-30",
       "team": "TOR",
-      "won": null
+      "won": null,
+      "close": 0.385,
+      "clv": 0.015
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-18T00:25:59+00:00"
    }
   },
   {
@@ -113,9 +122,9 @@
     "provider": "DraftKings",
     "details": "MIN -2.5",
     "home_spread": -2.5,
-    "total": 226.5,
-    "home_ml": -130,
-    "away_ml": 110,
+    "total": 227.5,
+    "home_ml": -135,
+    "away_ml": 114,
     "home_ml_open": -132,
     "away_ml_open": 111
    },
@@ -325,9 +334,9 @@
     "provider": "DraftKings",
     "details": "LAC -6.5",
     "home_spread": -6.5,
-    "total": 225.5,
-    "home_ml": -238,
-    "away_ml": 197,
+    "total": 226.5,
+    "home_ml": -229,
+    "away_ml": 190,
     "home_ml_open": -199,
     "away_ml_open": 166
    },
@@ -354,8 +363,8 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "LAL -7.5",
-    "home_spread": -7.5,
+    "details": "LAL -6.5",
+    "home_spread": -6.5,
     "total": 223.5,
     "home_ml": -299,
     "away_ml": 243,
@@ -425,9 +434,9 @@
    }
   },
   "clv": {
-   "n": 28,
-   "avg_clv": 0.0011,
-   "beat_close": 0.4643
+   "n": 32,
+   "avg_clv": 0.0028,
+   "beat_close": 0.5
   },
   "calibration": {
    "lines": 4296,
