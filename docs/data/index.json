@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T02:16:59+00:00",
+ "generated_at": "2026-11-18T02:47:00+00:00",
  "slate_date_et": "20261117",
  "slate": [
   {
@@ -131,7 +131,7 @@
    "event_id": "401910003",
    "tip": "2026-11-18T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
@@ -246,7 +246,7 @@
    "event_id": "401910004",
    "tip": "2026-11-18T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "SA",
     "name": "San Antonio Spurs",
@@ -456,9 +456,9 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "LAL -6.5",
-    "home_spread": -6.5,
-    "total": 222.5,
+    "details": "LAL -7.5",
+    "home_spread": -7.5,
+    "total": 221.5,
     "home_ml": -289,
     "away_ml": 236,
     "home_ml_open": -391,
@@ -480,9 +480,84 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-18T02:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910005",
+    "tip": "2026-11-18T04:00:00+00:00",
+    "preview": false,
+    "home": "LAL",
+    "away": "CHA",
+    "p_home_final": 0.7217,
+    "p_home_stats": 0.7392,
+    "p_home_market": 0.713979000617629,
+    "p_home_kalshi": 0.725,
+    "pick": "LAL",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4576060",
+      "name": "Ryan Kalkbrenner",
+      "stat": "pts",
+      "line": 5,
+      "side": "yes",
+      "label": "Ryan Kalkbrenner 5+ points",
+      "p": 0.5775,
+      "ask": 0.49,
+      "edge": 0.0675,
+      "strength": "value",
+      "ticker": "KXNBAPTS-26NOV17CHALAL-CHARKALKBRENNER11-5",
+      "team": "CHA",
+      "won": null
+     },
+     {
+      "athlete_id": "4433287",
+      "name": "Brandon Miller",
+      "stat": "pra",
+      "line": 20,
+      "side": "no",
+      "label": "Brandon Miller under 20 pts+reb+ast",
+      "p": 0.2997,
+      "ask": 0.23,
+      "edge": 0.0497,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV17CHALAL-CHABMILLER24-20",
+      "team": "CHA",
+      "won": null
+     },
+     {
+      "athlete_id": "4433137",
+      "name": "Ziaire Williams",
+      "stat": "pra",
+      "line": 15,
+      "side": "yes",
+      "label": "Ziaire Williams 15+ pts+reb+ast",
+      "p": 0.4553,
+      "ask": 0.4,
+      "edge": 0.0353,
+      "strength": "lean",
+      "ticker": "KXNBAPRA-26NOV17CHALAL-LALZWILLIAMS11-15",
+      "team": "LAL",
+      "won": null
+     },
+     {
+      "athlete_id": "3907498",
+      "name": "Matisse Thybulle",
+      "stat": "tpm",
+      "line": 2,
+      "side": "yes",
+      "label": "Matisse Thybulle 2+ threes",
+      "p": 0.4935,
+      "ask": 0.45,
+      "edge": 0.0235,
+      "strength": "lean",
+      "ticker": "KXNBA3PT-26NOV17CHALAL-LALMTHYBULLE26-2",
+      "team": "LAL",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   }
  ],
  "track_record": {
