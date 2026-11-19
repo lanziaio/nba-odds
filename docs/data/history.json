@@ -2576,7 +2576,9 @@
    "edge": 0.0323,
    "ask": 0.53,
    "close": 0.535,
-   "clv": 0.005
+   "clv": 0.005,
+   "status": "lost",
+   "pnl": -0.55
   },
   "prop_picks": [
    {
@@ -2592,9 +2594,11 @@
     "strength": "value",
     "ticker": "KXNBAREB-26NOV18CHIBKN-CHIJGIDDEY3-6",
     "team": "CHI",
-    "won": null,
+    "won": false,
     "close": 0.405,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.43
    },
    {
     "athlete_id": "2595516",
@@ -2609,9 +2613,11 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV18CHIBKN-CHINPOWELL24-25",
     "team": "CHI",
-    "won": null,
+    "won": true,
     "close": 0.615,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "won",
+    "pnl": 0.38
    },
    {
     "athlete_id": "3064514",
@@ -2626,9 +2632,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18CHIBKN-BKNJRANDLE30-35",
     "team": "BKN",
-    "won": null,
+    "won": true,
     "close": 0.555,
-    "clv": 0.035
+    "clv": 0.035,
+    "status": "won",
+    "pnl": 0.46
    },
    {
     "athlete_id": "5101761",
@@ -2643,13 +2651,22 @@
     "strength": "value",
     "ticker": "KXNBAREB-26NOV18CHIBKN-BKNMBROWN0-2",
     "team": "BKN",
-    "won": null,
+    "won": true,
     "close": 0.455,
-    "clv": 0.055
+    "clv": 0.055,
+    "status": "won",
+    "pnl": 0.58
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T00:25:59+00:00"
+  "result": {
+   "home_score": 107,
+   "away_score": 137,
+   "home_won": false
+  },
+  "close_at": "2026-11-19T00:25:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910012",
@@ -2677,9 +2694,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18WASTOR-WASADYBANTSA4-25",
     "team": "WSH",
-    "won": null,
+    "won": false,
     "close": 0.535,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.55
    },
    {
     "athlete_id": "6583",
@@ -2694,9 +2713,11 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV18WASTOR-WASADAVIS23-1",
     "team": "WSH",
-    "won": null,
+    "won": false,
     "close": 0.505,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "lost",
+    "pnl": -0.51
    },
    {
     "athlete_id": "5093267",
@@ -2711,9 +2732,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV18WASTOR-TORCMURRAYBOYLES30-2",
     "team": "TOR",
-    "won": null,
+    "won": false,
     "close": 0.65,
-    "clv": -0.05
+    "clv": -0.05,
+    "status": "lost",
+    "pnl": -0.72
    },
    {
     "athlete_id": "4684272",
@@ -2728,13 +2751,22 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV18WASTOR-TORJWALTER14-15",
     "team": "TOR",
-    "won": null,
+    "won": true,
     "close": 0.465,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.52
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T00:25:59+00:00"
+  "result": {
+   "home_score": 99,
+   "away_score": 103,
+   "home_won": false
+  },
+  "close_at": "2026-11-19T00:25:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910013",
