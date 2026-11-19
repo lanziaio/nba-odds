@@ -2794,9 +2794,11 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV18DETNOP-DETPREED7-15",
     "team": "DET",
-    "won": null,
+    "won": true,
     "close": 0.315,
-    "clv": -0.015
+    "clv": -0.015,
+    "status": "won",
+    "pnl": 0.65
    },
    {
     "athlete_id": "4684742",
@@ -2811,9 +2813,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV18DETNOP-DETATHOMPSON9-6",
     "team": "DET",
-    "won": null,
+    "won": true,
     "close": 0.415,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.56
    },
    {
     "athlete_id": "4395628",
@@ -2828,9 +2832,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18DETNOP-NOPZWILLIAMSON1-35",
     "team": "NO",
-    "won": null,
+    "won": true,
     "close": 0.755,
-    "clv": 0.085
+    "clv": 0.085,
+    "status": "won",
+    "pnl": 0.31
    },
    {
     "athlete_id": "5144091",
@@ -2845,13 +2851,22 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18DETNOP-NOPJFEARS0-30",
     "team": "NO",
-    "won": null,
+    "won": true,
     "close": 0.575,
-    "clv": 0.065
+    "clv": 0.065,
+    "status": "won",
+    "pnl": 0.47
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T00:55:59+00:00"
+  "result": {
+   "home_score": 109,
+   "away_score": 122,
+   "home_won": false
+  },
+  "close_at": "2026-11-19T00:55:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910014",
@@ -2879,9 +2894,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV18ATLOKC-ATLOOKONGWU17-25",
     "team": "ATL",
-    "won": null,
+    "won": true,
     "close": 0.48,
-    "clv": 0.0
+    "clv": 0.0,
+    "status": "won",
+    "pnl": 0.5
    },
    {
     "athlete_id": "4397020",
@@ -2896,9 +2913,11 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV18ATLOKC-ATLLDORT0-10",
     "team": "ATL",
-    "won": null,
+    "won": false,
     "close": 0.595,
-    "clv": 0.105
+    "clv": 0.105,
+    "status": "lost",
+    "pnl": -0.51
    },
    {
     "athlete_id": "4900671",
@@ -2913,9 +2932,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18ATLOKC-OKCAMITCHELL25-25",
     "team": "OKC",
-    "won": null,
+    "won": false,
     "close": 0.48,
-    "clv": 0.03
+    "clv": 0.03,
+    "status": "lost",
+    "pnl": -0.47
    },
    {
     "athlete_id": "4222252",
@@ -2930,13 +2951,22 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV18ATLOKC-OKCIHARTENSTEIN55-4",
     "team": "OKC",
-    "won": null,
+    "won": false,
     "close": 0.445,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "lost",
+    "pnl": -0.45
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T00:55:59+00:00"
+  "result": {
+   "home_score": 112,
+   "away_score": 117,
+   "home_won": false
+  },
+  "close_at": "2026-11-19T00:55:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910016",
@@ -2964,9 +2994,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV18GSWDAL-GSWBPODZIEMSKI2-30",
     "team": "GS",
-    "won": null,
+    "won": true,
     "close": 0.625,
-    "clv": 0.025
+    "clv": 0.025,
+    "status": "won",
+    "pnl": 0.38
    },
    {
     "athlete_id": "5175737",
@@ -2981,9 +3013,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV18GSWDAL-GSWYLENDEBORG1-4",
     "team": "GS",
-    "won": null,
+    "won": false,
     "close": 0.445,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "lost",
+    "pnl": -0.46
    },
    {
     "athlete_id": "5041939",
@@ -2998,9 +3032,11 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV18GSWDAL-DALCFLAGG32-35",
     "team": "DAL",
-    "won": null,
+    "won": false,
     "close": 0.425,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "lost",
+    "pnl": -0.43
    },
    {
     "athlete_id": "4278078",
@@ -3015,13 +3051,22 @@
     "strength": "value",
     "ticker": "KXNBAREB-26NOV18GSWDAL-DALPWASHINGTON25-6",
     "team": "DAL",
-    "won": null,
+    "won": true,
     "close": 0.425,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.56
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T00:55:59+00:00"
+  "result": {
+   "home_score": 116,
+   "away_score": 94,
+   "home_won": true
+  },
+  "close_at": "2026-11-19T00:55:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910015",
