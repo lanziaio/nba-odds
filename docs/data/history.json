@@ -2936,5 +2936,81 @@
   ],
   "result": null,
   "close_at": "2026-11-19T00:55:59+00:00"
+ },
+ {
+  "event_id": "401910015",
+  "tip": "2026-11-19T02:30:00+00:00",
+  "preview": false,
+  "home": "DEN",
+  "away": "BOS",
+  "p_home_final": 0.4141,
+  "p_home_stats": 0.3414,
+  "p_home_market": 0.4466313398940197,
+  "p_home_kalshi": 0.445,
+  "pick": "BOS",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "4251",
+    "name": "Paul George",
+    "stat": "pra",
+    "line": 25,
+    "side": "no",
+    "label": "Paul George under 25 pts+reb+ast",
+    "p": 0.4018,
+    "ask": 0.36,
+    "edge": 0.0218,
+    "strength": "lean",
+    "ticker": "KXNBAPRA-26NOV18BOSDEN-BOSPGEORGE13-25",
+    "team": "BOS",
+    "won": null
+   },
+   {
+    "athlete_id": "4065648",
+    "name": "Jayson Tatum",
+    "stat": "ast",
+    "line": 8,
+    "side": "no",
+    "label": "Jayson Tatum under 8 assists",
+    "p": 0.6515,
+    "ask": 0.61,
+    "edge": 0.0215,
+    "strength": "lean",
+    "ticker": "KXNBAAST-26NOV18BOSDEN-BOSJTATUM0-8",
+    "team": "BOS",
+    "won": null
+   },
+   {
+    "athlete_id": "4431767",
+    "name": "Christian Braun",
+    "stat": "tpm",
+    "line": 1,
+    "side": "no",
+    "label": "Christian Braun under 1 threes",
+    "p": 0.3311,
+    "ask": 0.26,
+    "edge": 0.0511,
+    "strength": "value",
+    "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCBRAUN0-1",
+    "team": "DEN",
+    "won": null
+   },
+   {
+    "athlete_id": "3138196",
+    "name": "Cameron Johnson",
+    "stat": "tpm",
+    "line": 2,
+    "side": "no",
+    "label": "Cameron Johnson under 2 threes",
+    "p": 0.4275,
+    "ask": 0.38,
+    "edge": 0.0275,
+    "strength": "lean",
+    "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCJOHNSON23-2",
+    "team": "DEN",
+    "won": null
+   }
+  ],
+  "result": null
  }
 ]
