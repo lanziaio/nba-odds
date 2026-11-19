@@ -3094,9 +3094,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV18BOSDEN-BOSPGEORGE13-25",
     "team": "BOS",
-    "won": null,
+    "won": true,
     "close": 0.345,
-    "clv": -0.015
+    "clv": -0.015,
+    "status": "won",
+    "pnl": 0.62
    },
    {
     "athlete_id": "4065648",
@@ -3111,9 +3113,11 @@
     "strength": "lean",
     "ticker": "KXNBAAST-26NOV18BOSDEN-BOSJTATUM0-8",
     "team": "BOS",
-    "won": null,
+    "won": true,
     "close": 0.605,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.37
    },
    {
     "athlete_id": "4431767",
@@ -3128,9 +3132,11 @@
     "strength": "value",
     "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCBRAUN0-1",
     "team": "DEN",
-    "won": null,
+    "won": false,
     "close": 0.28,
-    "clv": 0.02
+    "clv": 0.02,
+    "status": "lost",
+    "pnl": -0.28
    },
    {
     "athlete_id": "3138196",
@@ -3145,13 +3151,22 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCJOHNSON23-2",
     "team": "DEN",
-    "won": null,
+    "won": true,
     "close": 0.38,
-    "clv": 0.0
+    "clv": 0.0,
+    "status": "won",
+    "pnl": 0.6
    }
   ],
-  "result": null,
-  "close_at": "2026-11-19T02:17:08+00:00"
+  "result": {
+   "home_score": 105,
+   "away_score": 101,
+   "home_won": true
+  },
+  "close_at": "2026-11-19T02:17:08+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910017",

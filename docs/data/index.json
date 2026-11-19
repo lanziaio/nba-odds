@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-19T05:29:54+00:00",
+ "generated_at": "2026-11-19T05:30:05+00:00",
  "slate_date_et": "20261119",
  "slate": [
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "MEM -8.5",
     "home_spread": -8.5,
     "total": 225.5,
@@ -35,7 +35,7 @@
   },
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "POR -9.5",
     "home_spread": 9.5,
     "total": 225.5,
@@ -66,7 +66,7 @@
   },
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "NY -1.5",
     "home_spread": 1.5,
     "total": 217.5,
@@ -97,7 +97,7 @@
   },
   {
    "odds": {
-    "provider": "Draft Kings",
+    "provider": "DraftKings",
     "details": "SA -16.5",
     "home_spread": -16.5,
     "total": 225.5,
@@ -128,26 +128,26 @@
   }
  ],
  "track_record": {
-  "games": 33,
+  "games": 34,
   "model": {
-   "n": 33,
-   "brier": 0.2388,
-   "accuracy": 0.6061
+   "n": 34,
+   "brier": 0.2418,
+   "accuracy": 0.5882
   },
   "vegas": {
-   "n": 33,
-   "brier": 0.2358,
-   "accuracy": 0.6364
+   "n": 34,
+   "brier": 0.2379,
+   "accuracy": 0.6176
   },
   "stats_only": {
-   "n": 33,
-   "brier": 0.2521,
-   "accuracy": 0.6364
+   "n": 34,
+   "brier": 0.2575,
+   "accuracy": 0.6176
   },
   "kalshi": {
-   "n": 33,
-   "brier": 0.2364,
-   "accuracy": 0.6061
+   "n": 34,
+   "brier": 0.2385,
+   "accuracy": 0.5882
   },
   "value_bets": {
    "n": 3,
@@ -156,16 +156,16 @@
   },
   "props": {
    "value": {
-    "n": 58,
-    "hit_rate": 0.3966,
-    "expected_hit_rate": 0.5509,
-    "pnl_per_contract": -4.95
+    "n": 59,
+    "hit_rate": 0.3898,
+    "expected_hit_rate": 0.5472,
+    "pnl_per_contract": -5.23
    },
    "lean": {
-    "n": 63,
-    "hit_rate": 0.5079,
-    "expected_hit_rate": 0.5589,
-    "pnl_per_contract": -0.91
+    "n": 66,
+    "hit_rate": 0.5303,
+    "expected_hit_rate": 0.5559,
+    "pnl_per_contract": 0.68
    }
   },
   "clv": {
@@ -174,19 +174,19 @@
    "beat_close": 0.5319
   },
   "calibration": {
-   "lines": 7516,
-   "games": 33,
+   "lines": 7763,
+   "games": 34,
    "model": {
-    "brier": 0.1716,
-    "log_loss": 0.5187
+    "brier": 0.1711,
+    "log_loss": 0.5173
    },
    "market": {
-    "brier": 0.1644,
-    "log_loss": 0.4983
+    "brier": 0.1642,
+    "log_loss": 0.4976
    },
    "blend": {
-    "brier": 0.1658,
-    "log_loss": 0.5022
+    "brier": 0.1655,
+    "log_loss": 0.5013
    },
    "fitted_market_weight": 1.0,
    "market_weight_in_use": 0.6,
@@ -201,231 +201,231 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 1234,
+      "n": 1281,
       "predicted": 0.053,
-      "actual": 0.082
+      "actual": 0.081
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 1131,
+      "n": 1164,
       "predicted": 0.148,
-      "actual": 0.181
+      "actual": 0.18
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 809,
+      "n": 839,
       "predicted": 0.249,
-      "actual": 0.283
+      "actual": 0.278
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 729,
+      "n": 751,
       "predicted": 0.349,
-      "actual": 0.376
+      "actual": 0.374
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 585,
+      "n": 603,
       "predicted": 0.449,
-      "actual": 0.467
+      "actual": 0.469
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 710,
+      "n": 733,
       "predicted": 0.549,
-      "actual": 0.582
+      "actual": 0.577
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 584,
+      "n": 605,
       "predicted": 0.65,
-      "actual": 0.671
+      "actual": 0.674
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 674,
+      "n": 693,
       "predicted": 0.75,
-      "actual": 0.761
+      "actual": 0.76
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 584,
+      "n": 605,
       "predicted": 0.849,
-      "actual": 0.872
+      "actual": 0.869
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 306,
-      "predicted": 0.936,
-      "actual": 0.892
+      "n": 315,
+      "predicted": 0.937,
+      "actual": 0.895
      }
     ],
     "market": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 1007,
-      "predicted": 0.058,
-      "actual": 0.05
+      "n": 1043,
+      "predicted": 0.059,
+      "actual": 0.049
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 1140,
-      "predicted": 0.147,
-      "actual": 0.154
+      "n": 1184,
+      "predicted": 0.148,
+      "actual": 0.153
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 855,
+      "n": 875,
       "predicted": 0.246,
       "actual": 0.242
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 709,
+      "n": 732,
       "predicted": 0.348,
-      "actual": 0.35
+      "actual": 0.347
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 655,
+      "n": 678,
       "predicted": 0.448,
-      "actual": 0.467
+      "actual": 0.465
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 618,
+      "n": 635,
       "predicted": 0.55,
-      "actual": 0.578
+      "actual": 0.572
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 649,
-      "predicted": 0.648,
-      "actual": 0.641
+      "n": 673,
+      "predicted": 0.647,
+      "actual": 0.642
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 689,
+      "n": 711,
       "predicted": 0.75,
       "actual": 0.772
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 696,
+      "n": 718,
       "predicted": 0.847,
-      "actual": 0.846
+      "actual": 0.844
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 328,
+      "n": 340,
       "predicted": 0.931,
-      "actual": 0.921
+      "actual": 0.924
      }
     ],
     "blend": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 1083,
+      "n": 1124,
       "predicted": 0.057,
       "actual": 0.057
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 1171,
+      "n": 1212,
       "predicted": 0.147,
-      "actual": 0.167
+      "actual": 0.166
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 831,
+      "n": 852,
       "predicted": 0.248,
-      "actual": 0.264
+      "actual": 0.262
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 713,
+      "n": 740,
       "predicted": 0.348,
-      "actual": 0.348
+      "actual": 0.345
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 623,
+      "n": 641,
       "predicted": 0.449,
-      "actual": 0.494
+      "actual": 0.493
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 653,
+      "n": 673,
       "predicted": 0.55,
-      "actual": 0.562
+      "actual": 0.559
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 627,
+      "n": 650,
       "predicted": 0.649,
-      "actual": 0.654
+      "actual": 0.655
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 705,
+      "n": 726,
       "predicted": 0.751,
-      "actual": 0.774
+      "actual": 0.775
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 631,
+      "n": 651,
       "predicted": 0.848,
-      "actual": 0.861
+      "actual": 0.857
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 309,
+      "n": 320,
       "predicted": 0.932,
-      "actual": 0.919
+      "actual": 0.922
      }
     ]
    },
    "paper_bets": {
     "value": {
-     "n": 167,
-     "hit_rate": 0.4611,
-     "pnl_per_contract": -10.24,
-     "roi": -0.122
+     "n": 168,
+     "hit_rate": 0.4583,
+     "pnl_per_contract": -10.52,
+     "roi": -0.1249
     },
     "lean_or_better": {
-     "n": 827,
-     "hit_rate": 0.4897,
-     "pnl_per_contract": -45.05,
-     "roi": -0.1038
+     "n": 833,
+     "hit_rate": 0.4922,
+     "pnl_per_contract": -42.99,
+     "roi": -0.0984
     }
    }
   }
