@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T01:16:59+00:00",
+ "generated_at": "2026-11-19T01:47:00+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -16,7 +16,7 @@
    "event_id": "401910007",
    "tip": "2026-11-19T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "CLE",
     "name": "Cleveland Cavaliers",
@@ -131,7 +131,7 @@
    "event_id": "401910008",
    "tip": "2026-11-19T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "IND",
     "name": "Indiana Pacers",
@@ -344,7 +344,7 @@
    "event_id": "401910010",
    "tip": "2026-11-19T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "ORL",
     "name": "Orlando Magic",
@@ -425,7 +425,7 @@
    "event_id": "401910011",
    "tip": "2026-11-19T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
@@ -547,7 +547,7 @@
    "event_id": "401910012",
    "tip": "2026-11-19T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "TOR",
     "name": "Toronto Raptors",
@@ -998,7 +998,7 @@
     "provider": "Draft Kings",
     "details": "BOS -2.5",
     "home_spread": 2.5,
-    "total": 219.5,
+    "total": 218.5,
     "home_ml": 115,
     "away_ml": -136,
     "home_ml_open": 119,
@@ -1104,7 +1104,7 @@
     "provider": "Draft Kings",
     "details": "LAL -11.5",
     "home_spread": -11.5,
-    "total": 230.5,
+    "total": 229.5,
     "home_ml": -567,
     "away_ml": 424,
     "home_ml_open": -578,
@@ -1126,16 +1126,91 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-19T01:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910017",
+    "tip": "2026-11-19T03:00:00+00:00",
+    "preview": false,
+    "home": "LAL",
+    "away": "UTAH",
+    "p_home_final": 0.7923,
+    "p_home_stats": 0.7267,
+    "p_home_market": 0.8166615357551235,
+    "p_home_kalshi": 0.82,
+    "pick": "LAL",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4277919",
+      "name": "Mo Bamba",
+      "stat": "pts",
+      "line": 10,
+      "side": "yes",
+      "label": "Mo Bamba 10+ points",
+      "p": 0.5152,
+      "ask": 0.46,
+      "edge": 0.0352,
+      "strength": "lean",
+      "ticker": "KXNBAPTS-26NOV18UTALAL-UTAMBAMBA44-10",
+      "team": "UTAH",
+      "won": null
+     },
+     {
+      "athlete_id": "4873138",
+      "name": "Ace Bailey",
+      "stat": "reb",
+      "line": 6,
+      "side": "no",
+      "label": "Ace Bailey under 6 rebounds",
+      "p": 0.631,
+      "ask": 0.58,
+      "edge": 0.031,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18UTALAL-UTAABAILEY19-6",
+      "team": "UTAH",
+      "won": null
+     },
+     {
+      "athlete_id": "3945274",
+      "name": "Luka Doncic",
+      "stat": "pra",
+      "line": 50,
+      "side": "no",
+      "label": "Luka Doncic under 50 pts+reb+ast",
+      "p": 0.4648,
+      "ask": 0.39,
+      "edge": 0.0548,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV18UTALAL-LALLDONCIC77-50",
+      "team": "LAL",
+      "won": null
+     },
+     {
+      "athlete_id": "4592691",
+      "name": "Jake LaRavia",
+      "stat": "reb",
+      "line": 4,
+      "side": "no",
+      "label": "Jake LaRavia under 4 rebounds",
+      "p": 0.4551,
+      "ask": 0.39,
+      "edge": 0.0451,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18UTALAL-LALJLARAVIA12-4",
+      "team": "LAL",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "Draft Kings",
     "details": "PHX -7.5",
     "home_spread": 7.5,
-    "total": 227.5,
+    "total": 226.5,
     "home_ml": 221,
     "away_ml": -269,
     "home_ml_open": 182,
@@ -1157,9 +1232,84 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-19T01:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910018",
+    "tip": "2026-11-19T03:00:00+00:00",
+    "preview": false,
+    "home": "SAC",
+    "away": "PHX",
+    "p_home_final": 0.3096,
+    "p_home_stats": 0.3342,
+    "p_home_market": 0.2993939098897354,
+    "p_home_kalshi": 0.285,
+    "pick": "PHX",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4066383",
+      "name": "Miles Bridges",
+      "stat": "reb",
+      "line": 6,
+      "side": "no",
+      "label": "Miles Bridges under 6 rebounds",
+      "p": 0.4948,
+      "ask": 0.45,
+      "edge": 0.0248,
+      "strength": "lean",
+      "ticker": "KXNBAREB-26NOV18PHXSAC-PHXMBRIDGES22-6",
+      "team": "PHX",
+      "won": null
+     },
+     {
+      "athlete_id": "4437244",
+      "name": "Jalen Green",
+      "stat": "ast",
+      "line": 2,
+      "side": "no",
+      "label": "Jalen Green under 2 assists",
+      "p": 0.3,
+      "ask": 0.26,
+      "edge": 0.02,
+      "strength": "lean",
+      "ticker": "KXNBAAST-26NOV18PHXSAC-PHXJGREEN4-2",
+      "team": "PHX",
+      "won": null
+     },
+     {
+      "athlete_id": "3155942",
+      "name": "Domantas Sabonis",
+      "stat": "reb",
+      "line": 12,
+      "side": "no",
+      "label": "Domantas Sabonis under 12 rebounds",
+      "p": 0.5794,
+      "ask": 0.43,
+      "edge": 0.1294,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV18PHXSAC-SACDSABONIS11-12",
+      "team": "SAC",
+      "won": null
+     },
+     {
+      "athlete_id": "5142620",
+      "name": "Darius Acuff Jr.",
+      "stat": "reb",
+      "line": 4,
+      "side": "no",
+      "label": "Darius Acuff Jr. under 4 rebounds",
+      "p": 0.6203,
+      "ask": 0.54,
+      "edge": 0.0603,
+      "strength": "value",
+      "ticker": "KXNBAREB-26NOV18PHXSAC-SACDACUFF5-4",
+      "team": "SAC",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   }
  ],
  "track_record": {
