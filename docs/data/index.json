@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T00:05:00+00:00",
+ "generated_at": "2026-11-19T00:25:59+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -15,8 +15,8 @@
    },
    "event_id": "401910007",
    "tip": "2026-11-19T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "CLE",
     "name": "Cleveland Cavaliers",
@@ -130,8 +130,8 @@
    },
    "event_id": "401910008",
    "tip": "2026-11-19T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "IND",
     "name": "Indiana Pacers",
@@ -228,8 +228,8 @@
    },
    "event_id": "401910009",
    "tip": "2026-11-19T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "MIA",
     "name": "Miami Heat",
@@ -343,8 +343,8 @@
    },
    "event_id": "401910010",
    "tip": "2026-11-19T00:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "ORL",
     "name": "Orlando Magic",
@@ -455,7 +455,9 @@
      "side": "home",
      "team": "BKN",
      "edge": 0.0323,
-     "ask": 0.53
+     "ask": 0.53,
+     "close": 0.535,
+     "clv": 0.005
     },
     "prop_picks": [
      {
@@ -471,7 +473,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV18CHIBKN-CHIJGIDDEY3-6",
       "team": "CHI",
-      "won": null
+      "won": null,
+      "close": 0.405,
+      "clv": -0.005
      },
      {
       "athlete_id": "2595516",
@@ -486,7 +490,9 @@
       "strength": "value",
       "ticker": "KXNBAPTS-26NOV18CHIBKN-CHINPOWELL24-25",
       "team": "CHI",
-      "won": null
+      "won": null,
+      "close": 0.615,
+      "clv": 0.015
      },
      {
       "athlete_id": "3064514",
@@ -501,7 +507,9 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV18CHIBKN-BKNJRANDLE30-35",
       "team": "BKN",
-      "won": null
+      "won": null,
+      "close": 0.555,
+      "clv": 0.035
      },
      {
       "athlete_id": "5101761",
@@ -516,10 +524,13 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV18CHIBKN-BKNMBROWN0-2",
       "team": "BKN",
-      "won": null
+      "won": null,
+      "close": 0.455,
+      "clv": 0.055
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-19T00:25:59+00:00"
    }
   },
   {
@@ -577,7 +588,9 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV18WASTOR-WASADYBANTSA4-25",
       "team": "WSH",
-      "won": null
+      "won": null,
+      "close": 0.535,
+      "clv": 0.005
      },
      {
       "athlete_id": "6583",
@@ -592,7 +605,9 @@
       "strength": "lean",
       "ticker": "KXNBA3PT-26NOV18WASTOR-WASADAVIS23-1",
       "team": "WSH",
-      "won": null
+      "won": null,
+      "close": 0.505,
+      "clv": 0.015
      },
      {
       "athlete_id": "5093267",
@@ -607,7 +622,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV18WASTOR-TORCMURRAYBOYLES30-2",
       "team": "TOR",
-      "won": null
+      "won": null,
+      "close": 0.65,
+      "clv": -0.05
      },
      {
       "athlete_id": "4684272",
@@ -622,10 +639,13 @@
       "strength": "lean",
       "ticker": "KXNBAPTS-26NOV18WASTOR-TORJWALTER14-15",
       "team": "TOR",
-      "won": null
+      "won": null,
+      "close": 0.465,
+      "clv": 0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-19T00:25:59+00:00"
    }
   },
   {
@@ -633,7 +653,7 @@
     "provider": "Draft Kings",
     "details": "DET -4.5",
     "home_spread": 4.5,
-    "total": 226.5,
+    "total": 225.5,
     "home_ml": 160,
     "away_ml": -191,
     "home_ml_open": 247,
@@ -1011,9 +1031,9 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "PHX -6.5",
-    "home_spread": 6.5,
-    "total": 226.5,
+    "details": "PHX -7.5",
+    "home_spread": 7.5,
+    "total": 227.5,
     "home_ml": 221,
     "away_ml": -269,
     "home_ml_open": 182,
@@ -1082,9 +1102,9 @@
    }
   },
   "clv": {
-   "n": 61,
-   "avg_clv": 0.0003,
-   "beat_close": 0.459
+   "n": 70,
+   "avg_clv": 0.0014,
+   "beat_close": 0.5
   },
   "calibration": {
    "lines": 5506,
