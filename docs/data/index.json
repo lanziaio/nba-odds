@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T01:47:00+00:00",
+ "generated_at": "2026-11-19T02:17:08+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -425,7 +425,7 @@
    "event_id": "401910011",
    "tip": "2026-11-19T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
@@ -547,7 +547,7 @@
    "event_id": "401910012",
    "tip": "2026-11-19T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "TOR",
     "name": "Toronto Raptors",
@@ -662,7 +662,7 @@
    "event_id": "401910013",
    "tip": "2026-11-19T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "NO",
     "name": "New Orleans Pelicans",
@@ -777,7 +777,7 @@
    "event_id": "401910014",
    "tip": "2026-11-19T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "OKC",
     "name": "Oklahoma City Thunder",
@@ -892,7 +892,7 @@
    "event_id": "401910016",
    "tip": "2026-11-19T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "DAL",
     "name": "Dallas Mavericks",
@@ -1048,7 +1048,9 @@
       "strength": "lean",
       "ticker": "KXNBAPRA-26NOV18BOSDEN-BOSPGEORGE13-25",
       "team": "BOS",
-      "won": null
+      "won": null,
+      "close": 0.345,
+      "clv": -0.015
      },
      {
       "athlete_id": "4065648",
@@ -1063,7 +1065,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV18BOSDEN-BOSJTATUM0-8",
       "team": "BOS",
-      "won": null
+      "won": null,
+      "close": 0.605,
+      "clv": -0.005
      },
      {
       "athlete_id": "4431767",
@@ -1078,7 +1082,9 @@
       "strength": "value",
       "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCBRAUN0-1",
       "team": "DEN",
-      "won": null
+      "won": null,
+      "close": 0.28,
+      "clv": 0.02
      },
      {
       "athlete_id": "3138196",
@@ -1093,10 +1099,13 @@
       "strength": "lean",
       "ticker": "KXNBA3PT-26NOV18BOSDEN-DENCJOHNSON23-2",
       "team": "DEN",
-      "won": null
+      "won": null,
+      "close": 0.38,
+      "clv": 0.0
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-19T02:17:08+00:00"
    }
   },
   {
@@ -1104,7 +1113,7 @@
     "provider": "Draft Kings",
     "details": "LAL -11.5",
     "home_spread": -11.5,
-    "total": 229.5,
+    "total": 230.5,
     "home_ml": -567,
     "away_ml": 424,
     "home_ml_open": -578,
@@ -1210,7 +1219,7 @@
     "provider": "Draft Kings",
     "details": "PHX -7.5",
     "home_spread": 7.5,
-    "total": 226.5,
+    "total": 227.5,
     "home_ml": 221,
     "away_ml": -269,
     "home_ml_open": 182,
@@ -1354,9 +1363,9 @@
    }
   },
   "clv": {
-   "n": 82,
-   "avg_clv": 0.0052,
-   "beat_close": 0.5366
+   "n": 86,
+   "avg_clv": 0.005,
+   "beat_close": 0.5233
   },
   "calibration": {
    "lines": 5506,
