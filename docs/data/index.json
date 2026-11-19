@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T02:34:59+00:00",
+ "generated_at": "2026-11-19T02:55:59+00:00",
  "slate_date_et": "20261118",
  "slate": [
   {
@@ -228,19 +228,19 @@
    },
    "event_id": "401910009",
    "tip": "2026-11-19T00:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "MIA",
     "name": "Miami Heat",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png",
-    "score": null
+    "score": 137
    },
    "away": {
     "abbr": "MIL",
     "name": "Milwaukee Bucks",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-    "score": null
+    "score": 130
    },
    "has_report": true,
    "report_at": "2026-11-18T22:45:00+00:00",
@@ -424,19 +424,19 @@
    },
    "event_id": "401910011",
    "tip": "2026-11-19T00:30:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-    "score": null
+    "score": 107
    },
    "away": {
     "abbr": "CHI",
     "name": "Chicago Bulls",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png",
-    "score": null
+    "score": 137
    },
    "has_report": true,
    "report_at": "2026-11-18T23:15:00+00:00",
@@ -662,7 +662,7 @@
    "event_id": "401910013",
    "tip": "2026-11-19T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_END_PERIOD",
    "home": {
     "abbr": "NO",
     "name": "New Orleans Pelicans",
@@ -1006,8 +1006,8 @@
    },
    "event_id": "401910015",
    "tip": "2026-11-19T02:30:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "DEN",
     "name": "Denver Nuggets",
@@ -1114,8 +1114,8 @@
     "details": "LAL -11.5",
     "home_spread": -11.5,
     "total": 229.5,
-    "home_ml": -567,
-    "away_ml": 424,
+    "home_ml": -545,
+    "away_ml": 411,
     "home_ml_open": -578,
     "away_ml_open": 431
    },
@@ -1163,7 +1163,9 @@
       "strength": "lean",
       "ticker": "KXNBAPTS-26NOV18UTALAL-UTAMBAMBA44-10",
       "team": "UTAH",
-      "won": null
+      "won": null,
+      "close": 0.275,
+      "clv": -0.185
      },
      {
       "athlete_id": "4873138",
@@ -1178,7 +1180,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV18UTALAL-UTAABAILEY19-6",
       "team": "UTAH",
-      "won": null
+      "won": null,
+      "close": 0.585,
+      "clv": 0.005
      },
      {
       "athlete_id": "3945274",
@@ -1193,7 +1197,9 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV18UTALAL-LALLDONCIC77-50",
       "team": "LAL",
-      "won": null
+      "won": null,
+      "close": 0.435,
+      "clv": 0.045
      },
      {
       "athlete_id": "4592691",
@@ -1208,10 +1214,13 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV18UTALAL-LALJLARAVIA12-4",
       "team": "LAL",
-      "won": null
+      "won": null,
+      "close": 0.56,
+      "clv": 0.17
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-19T02:55:59+00:00"
    }
   },
   {
@@ -1219,7 +1228,7 @@
     "provider": "Draft Kings",
     "details": "PHX -7.5",
     "home_spread": 7.5,
-    "total": 227.5,
+    "total": 226.5,
     "home_ml": 221,
     "away_ml": -269,
     "home_ml_open": 182,
@@ -1269,7 +1278,9 @@
       "strength": "lean",
       "ticker": "KXNBAREB-26NOV18PHXSAC-PHXMBRIDGES22-6",
       "team": "PHX",
-      "won": null
+      "won": null,
+      "close": 0.445,
+      "clv": -0.005
      },
      {
       "athlete_id": "4437244",
@@ -1284,7 +1295,9 @@
       "strength": "lean",
       "ticker": "KXNBAAST-26NOV18PHXSAC-PHXJGREEN4-2",
       "team": "PHX",
-      "won": null
+      "won": null,
+      "close": 0.27,
+      "clv": 0.01
      },
      {
       "athlete_id": "3155942",
@@ -1299,7 +1312,9 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV18PHXSAC-SACDSABONIS11-12",
       "team": "SAC",
-      "won": null
+      "won": null,
+      "close": 0.44,
+      "clv": 0.01
      },
      {
       "athlete_id": "5142620",
@@ -1314,10 +1329,13 @@
       "strength": "value",
       "ticker": "KXNBAREB-26NOV18PHXSAC-SACDACUFF5-4",
       "team": "SAC",
-      "won": null
+      "won": null,
+      "close": 0.535,
+      "clv": -0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-19T02:55:59+00:00"
    }
   }
  ],
@@ -1363,9 +1381,9 @@
    }
   },
   "clv": {
-   "n": 86,
-   "avg_clv": 0.005,
-   "beat_close": 0.5233
+   "n": 94,
+   "avg_clv": 0.0051,
+   "beat_close": 0.5319
   },
   "calibration": {
    "lines": 5506,
