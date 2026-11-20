@@ -657,12 +657,21 @@
     "strength": "lean",
     "ticker": "KXNFLREC-26NOV19INDHOU-INDDBURKS80-4",
     "team": "IND",
-    "won": null,
+    "won": true,
     "close": 0.865,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "won",
+    "pnl": 0.14
    }
   ],
-  "result": null,
-  "close_at": "2026-11-20T01:05:00+00:00"
+  "result": {
+   "home_score": 26,
+   "away_score": 3,
+   "home_won": true
+  },
+  "close_at": "2026-11-20T01:05:00+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  }
 ]
