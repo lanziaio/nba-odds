@@ -3385,7 +3385,9 @@
    "edge": 0.0639,
    "ask": 0.66,
    "close": 0.665,
-   "clv": 0.005
+   "clv": 0.005,
+   "status": "won",
+   "pnl": 0.32
   },
   "prop_picks": [
    {
@@ -3401,9 +3403,11 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV19GSWMEM-GSWBPODZIEMSKI2-20",
     "team": "GS",
-    "won": null,
+    "won": true,
     "close": 0.685,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "won",
+    "pnl": 0.31
    },
    {
     "athlete_id": "5175737",
@@ -3418,9 +3422,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV19GSWMEM-GSWYLENDEBORG1-30",
     "team": "GS",
-    "won": null,
+    "won": true,
     "close": 0.29,
-    "clv": -0.04
+    "clv": -0.04,
+    "status": "won",
+    "pnl": 0.65
    },
    {
     "athlete_id": "5041935",
@@ -3435,9 +3441,11 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV19GSWMEM-MEMCBOOZER27-20",
     "team": "MEM",
-    "won": null,
+    "won": true,
     "close": 0.565,
-    "clv": 0.025
+    "clv": 0.025,
+    "status": "won",
+    "pnl": 0.44
    },
    {
     "athlete_id": "4684806",
@@ -3452,13 +3460,22 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV19GSWMEM-MEMTHENDRICKS22-10",
     "team": "MEM",
-    "won": null,
+    "won": true,
     "close": 0.505,
-    "clv": 0.125
+    "clv": 0.125,
+    "status": "won",
+    "pnl": 0.6
    }
   ],
-  "result": null,
-  "close_at": "2026-11-20T00:55:59+00:00"
+  "result": {
+   "home_score": 126,
+   "away_score": 98,
+   "home_won": true
+  },
+  "close_at": "2026-11-20T00:55:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910020",
@@ -3486,9 +3503,11 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV19PORMIL-PORJHOLIDAY5-15",
     "team": "POR",
-    "won": null,
+    "won": true,
     "close": 0.515,
-    "clv": 0.085
+    "clv": 0.085,
+    "status": "won",
+    "pnl": 0.55
    },
    {
     "athlete_id": "6606",
@@ -3503,9 +3522,11 @@
     "strength": "lean",
     "ticker": "KXNBAREB-26NOV19PORMIL-PORDLILLARD0-4",
     "team": "POR",
-    "won": null,
+    "won": false,
     "close": 0.515,
-    "clv": -0.035
+    "clv": -0.035,
+    "status": "lost",
+    "pnl": -0.57
    },
    {
     "athlete_id": "4395725",
@@ -3520,9 +3541,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV19PORMIL-MILTHERRO11-30",
     "team": "MIL",
-    "won": null,
+    "won": true,
     "close": 0.525,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.46
    },
    {
     "athlete_id": "4591725",
@@ -3537,13 +3560,22 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV19PORMIL-MILRROLLINS13-20",
     "team": "MIL",
-    "won": null,
+    "won": true,
     "close": 0.505,
-    "clv": -0.025
+    "clv": -0.025,
+    "status": "won",
+    "pnl": 0.45
    }
   ],
-  "result": null,
-  "close_at": "2026-11-20T00:55:59+00:00"
+  "result": {
+   "home_score": 114,
+   "away_score": 124,
+   "home_won": false
+  },
+  "close_at": "2026-11-20T00:55:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910021",
@@ -3571,9 +3603,11 @@
     "strength": "lean",
     "ticker": "KXNBAREB-26NOV19NYKMIN-NYKKTOWNS32-12",
     "team": "NY",
-    "won": null,
+    "won": true,
     "close": 0.645,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.33
    },
    {
     "athlete_id": "3062679",
@@ -3588,9 +3622,11 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV19NYKMIN-NYKJHART3-2",
     "team": "NY",
-    "won": null,
+    "won": false,
     "close": 0.625,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.65
    },
    {
     "athlete_id": "5279133",
@@ -3605,9 +3641,11 @@
     "strength": "value",
     "ticker": "KXNBAPTS-26NOV19NYKMIN-MINJBERINGER19-5",
     "team": "MIN",
-    "won": null,
+    "won": true,
     "close": 0.46,
-    "clv": -0.04
+    "clv": -0.04,
+    "status": "won",
+    "pnl": 0.48
    },
    {
     "athlete_id": "4592492",
@@ -3622,13 +3660,22 @@
     "strength": "lean",
     "ticker": "KXNBAPTS-26NOV19NYKMIN-MINBHYLANDPG-10",
     "team": "MIN",
-    "won": null,
+    "won": false,
     "close": 0.405,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.43
    }
   ],
-  "result": null,
-  "close_at": "2026-11-20T00:55:59+00:00"
+  "result": {
+   "home_score": 99,
+   "away_score": 102,
+   "home_won": false
+  },
+  "close_at": "2026-11-20T00:55:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910022",
@@ -3656,9 +3703,11 @@
     "strength": "value",
     "ticker": "KXNBAAST-26NOV19LACSAS-LACDGARLAND10-6",
     "team": "LAC",
-    "won": null,
+    "won": false,
     "close": 0.555,
-    "clv": -0.015
+    "clv": -0.015,
+    "status": "lost",
+    "pnl": -0.59
    },
    {
     "athlete_id": "5254165",
@@ -3673,9 +3722,11 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV19LACSAS-LACKWAGLER1-15",
     "team": "LAC",
-    "won": null,
+    "won": false,
     "close": 0.585,
-    "clv": 0.015
+    "clv": 0.015,
+    "status": "lost",
+    "pnl": -0.59
    },
    {
     "athlete_id": "4845367",
@@ -3690,9 +3741,11 @@
     "strength": "lean",
     "ticker": "KXNBA3PT-26NOV19LACSAS-SASSCASTLE5-2",
     "team": "SA",
-    "won": null,
+    "won": false,
     "close": 0.485,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "lost",
+    "pnl": -0.51
    },
    {
     "athlete_id": "5104157",
@@ -3707,12 +3760,21 @@
     "strength": "lean",
     "ticker": "KXNBAPRA-26NOV19LACSAS-SASVWEMBANYAMA1-50",
     "team": "SA",
-    "won": null,
+    "won": false,
     "close": 0.24,
-    "clv": -0.02
+    "clv": -0.02,
+    "status": "lost",
+    "pnl": -0.28
    }
   ],
-  "result": null,
-  "close_at": "2026-11-20T00:55:59+00:00"
+  "result": {
+   "home_score": 124,
+   "away_score": 112,
+   "home_won": true
+  },
+  "close_at": "2026-11-20T00:55:59+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  }
 ]
