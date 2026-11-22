@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T19:47:06+00:00",
+ "generated_at": "2026-11-22T19:51:59+00:00",
  "sport": "nfl",
  "slate_label": "Week 11, 2026",
  "slate": [
@@ -90,7 +90,7 @@
    "event_id": "401873070",
    "tip": "2026-11-22T18:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "BUF",
     "name": "Buffalo Bills",
@@ -299,8 +299,8 @@
     "details": "LAC -3",
     "home_spread": -3.0,
     "total": 43.5,
-    "home_ml": -178,
-    "away_ml": 150,
+    "home_ml": -179,
+    "away_ml": 151,
     "home_ml_open": -440,
     "away_ml_open": 340
    },
@@ -320,9 +320,39 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-22T19:50:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401873074",
+    "tip": "2026-11-22T21:05:00+00:00",
+    "preview": false,
+    "home": "LAC",
+    "away": "NYJ",
+    "p_home_final": 0.5815,
+    "p_home_stats": 0.4716,
+    "p_home_market": 0.6169108459542216,
+    "p_home_kalshi": 0.605,
+    "pick": "LAC",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4427366",
+      "name": "Breece Hall",
+      "stat": "rec_yds",
+      "line": 10,
+      "side": "yes",
+      "label": "Breece Hall 10+ receiving yds",
+      "p": 0.7738,
+      "ask": 0.73,
+      "edge": 0.0238,
+      "strength": "lean",
+      "ticker": "KXNFLRECYDS-26NOV22NYJLAC-NYJBHALL20-10",
+      "team": "NYJ",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
