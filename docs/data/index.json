@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T01:35:02+00:00",
+ "generated_at": "2026-11-22T01:46:59+00:00",
  "slate_date_et": "20261121",
  "slate": [
   {
@@ -69,7 +69,7 @@
    "event_id": "401910024",
    "tip": "2026-11-22T00:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "NY",
     "name": "New York Knicks",
@@ -161,7 +161,7 @@
    "event_id": "401910026",
    "tip": "2026-11-22T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_END_PERIOD",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
@@ -242,11 +242,11 @@
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "BOS -11.5",
-    "home_spread": 11.5,
-    "total": 215.5,
-    "home_ml": 446,
-    "away_ml": -600,
+    "details": "BOS -12.5",
+    "home_spread": 12.5,
+    "total": 217.5,
+    "home_ml": 470,
+    "away_ml": -650,
     "home_ml_open": 359,
     "away_ml_open": -465
    },
@@ -266,9 +266,23 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-22T01:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910028",
+    "tip": "2026-11-22T03:00:00+00:00",
+    "preview": false,
+    "home": "SAC",
+    "away": "BOS",
+    "p_home_final": 0.1976,
+    "p_home_stats": 0.2802,
+    "p_home_market": 0.16835016835016833,
+    "p_home_kalshi": 0.165,
+    "pick": "BOS",
+    "best_value": null,
+    "prop_picks": [],
+    "result": null
+   }
   }
  ],
  "track_record": {
