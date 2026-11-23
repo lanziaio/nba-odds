@@ -700,13 +700,22 @@
     "strength": "lean",
     "ticker": "KXNFLRECYDS-26NOV22NYJLAC-NYJBHALL20-10",
     "team": "NYJ",
-    "won": null,
+    "won": true,
     "close": 0.725,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.25
    }
   ],
-  "result": null,
-  "close_at": "2026-11-22T21:00:59+00:00"
+  "result": {
+   "home_score": 24,
+   "away_score": 27,
+   "home_won": false
+  },
+  "close_at": "2026-11-22T21:00:59+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401873075",
@@ -766,9 +775,12 @@
     "strength": "lean",
     "ticker": "KXNFLRECYDS-26NOV22MINSF-MINJMASON27-10",
     "team": "MIN",
-    "won": null
+    "won": null,
+    "close": 0.715,
+    "clv": -0.005
    }
   ],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-23T01:05:00+00:00"
  }
 ]
