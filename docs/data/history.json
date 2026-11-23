@@ -4296,7 +4296,8 @@
   "pick": "MEM",
   "best_value": null,
   "prop_picks": [],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-23T23:46:59+00:00"
  },
  {
   "event_id": "401910037",
@@ -4311,7 +4312,8 @@
   "pick": "PHI",
   "best_value": null,
   "prop_picks": [],
-  "result": null
+  "result": null,
+  "close_at": "2026-11-23T23:46:59+00:00"
  },
  {
   "event_id": "401910038",
@@ -4356,6 +4358,52 @@
   "pick": "MIN",
   "best_value": null,
   "prop_picks": [],
+  "result": null
+ },
+ {
+  "event_id": "401910041",
+  "tip": "2026-11-24T01:00:00+00:00",
+  "preview": false,
+  "home": "CHI",
+  "away": "CLE",
+  "p_home_final": 0.2841,
+  "p_home_stats": 0.3689,
+  "p_home_market": 0.2515807284709235,
+  "p_home_kalshi": 0.2475,
+  "pick": "CLE",
+  "best_value": null,
+  "prop_picks": [],
+  "result": null
+ },
+ {
+  "event_id": "401910042",
+  "tip": "2026-11-24T01:00:00+00:00",
+  "preview": false,
+  "home": "NO",
+  "away": "PHX",
+  "p_home_final": 0.3815,
+  "p_home_stats": 0.3059,
+  "p_home_market": 0.41595302177636406,
+  "p_home_kalshi": 0.415,
+  "pick": "PHX",
+  "best_value": null,
+  "prop_picks": [
+   {
+    "athlete_id": "4397688",
+    "name": "Trey Murphy III",
+    "stat": "pra",
+    "line": 25,
+    "side": "no",
+    "label": "Trey Murphy III under 25 pts+reb+ast",
+    "p": 0.6913,
+    "ask": 0.61,
+    "edge": 0.0613,
+    "strength": "value",
+    "ticker": "KXNBAPRA-26NOV23PHXNOP-NOPTMURPHY25-25",
+    "team": "NO",
+    "won": null
+   }
+  ],
   "result": null
  }
 ]

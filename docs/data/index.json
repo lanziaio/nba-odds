@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T23:16:59+00:00",
+ "generated_at": "2026-11-23T23:46:59+00:00",
  "slate_date_et": "20261123",
  "slate": [
   {
@@ -8,8 +8,8 @@
     "details": "MEM -2.5",
     "home_spread": 2.5,
     "total": 213.5,
-    "home_ml": 130,
-    "away_ml": -154,
+    "home_ml": 125,
+    "away_ml": -148,
     "home_ml_open": 132,
     "away_ml_open": -157
    },
@@ -44,7 +44,8 @@
     "pick": "MEM",
     "best_value": null,
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-23T23:46:59+00:00"
    }
   },
   {
@@ -52,9 +53,9 @@
     "provider": "DraftKings",
     "details": "PHI -1.5",
     "home_spread": -1.5,
-    "total": 231.5,
-    "home_ml": -115,
-    "away_ml": -103,
+    "total": 230.5,
+    "home_ml": -113,
+    "away_ml": -104,
     "home_ml_open": -144,
     "away_ml_open": 121
    },
@@ -89,7 +90,8 @@
     "pick": "PHI",
     "best_value": null,
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-23T23:46:59+00:00"
    }
   },
   {
@@ -97,7 +99,7 @@
     "provider": "DraftKings",
     "details": "OKC -4.5",
     "home_spread": 4.5,
-    "total": 225.5,
+    "total": 226.5,
     "home_ml": 160,
     "away_ml": -191,
     "home_ml_open": 161,
@@ -232,7 +234,7 @@
     "provider": "DraftKings",
     "details": "CLE -8.5",
     "home_spread": 8.5,
-    "total": 242.5,
+    "total": 241.5,
     "home_ml": 282,
     "away_ml": -352,
     "home_ml_open": 284,
@@ -254,9 +256,23 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-23T23:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910041",
+    "tip": "2026-11-24T01:00:00+00:00",
+    "preview": false,
+    "home": "CHI",
+    "away": "CLE",
+    "p_home_final": 0.2841,
+    "p_home_stats": 0.3689,
+    "p_home_market": 0.2515807284709235,
+    "p_home_kalshi": 0.2475,
+    "pick": "CLE",
+    "best_value": null,
+    "prop_picks": [],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -285,9 +301,39 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-23T23:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401910042",
+    "tip": "2026-11-24T01:00:00+00:00",
+    "preview": false,
+    "home": "NO",
+    "away": "PHX",
+    "p_home_final": 0.3815,
+    "p_home_stats": 0.3059,
+    "p_home_market": 0.41595302177636406,
+    "p_home_kalshi": 0.415,
+    "pick": "PHX",
+    "best_value": null,
+    "prop_picks": [
+     {
+      "athlete_id": "4397688",
+      "name": "Trey Murphy III",
+      "stat": "pra",
+      "line": 25,
+      "side": "no",
+      "label": "Trey Murphy III under 25 pts+reb+ast",
+      "p": 0.6913,
+      "ask": 0.61,
+      "edge": 0.0613,
+      "strength": "value",
+      "ticker": "KXNBAPRA-26NOV23PHXNOP-NOPTMURPHY25-25",
+      "team": "NO",
+      "won": null
+     }
+    ],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -295,8 +341,8 @@
     "details": "HOU -12.5",
     "home_spread": -12.5,
     "total": 223.5,
-    "home_ml": -650,
-    "away_ml": 470,
+    "home_ml": -700,
+    "away_ml": 504,
     "home_ml_open": -610,
     "away_ml_open": 448
    },
@@ -357,8 +403,8 @@
     "details": "SA -12.5",
     "home_spread": 12.5,
     "total": 224.5,
-    "home_ml": 443,
-    "away_ml": -597,
+    "home_ml": 467,
+    "away_ml": -640,
     "home_ml_open": 348,
     "away_ml_open": -448
    },
