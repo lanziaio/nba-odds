@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T02:17:06+00:00",
+ "generated_at": "2026-11-24T02:47:08+00:00",
  "slate_date_et": "20261123",
  "slate": [
   {
@@ -15,19 +15,19 @@
    },
    "event_id": "401910036",
    "tip": "2026-11-24T00:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "CHA",
     "name": "Charlotte Hornets",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png",
-    "score": null
+    "score": 111
    },
    "away": {
     "abbr": "MEM",
     "name": "Memphis Grizzlies",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-    "score": null
+    "score": 117
    },
    "has_report": true,
    "report_at": "2026-11-23T22:45:00+00:00",
@@ -61,19 +61,19 @@
    },
    "event_id": "401910037",
    "tip": "2026-11-24T00:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "PHI",
     "name": "Philadelphia 76ers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
-    "score": null
+    "score": 111
    },
    "away": {
     "abbr": "POR",
     "name": "Portland Trail Blazers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png",
-    "score": null
+    "score": 128
    },
    "has_report": true,
    "report_at": "2026-11-23T22:45:00+00:00",
@@ -246,7 +246,7 @@
    "event_id": "401910041",
    "tip": "2026-11-24T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "CHI",
     "name": "Chicago Bulls",
@@ -292,7 +292,7 @@
    "event_id": "401910042",
    "tip": "2026-11-24T01:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "NO",
     "name": "New Orleans Pelicans",
@@ -356,7 +356,7 @@
    "event_id": "401910043",
    "tip": "2026-11-24T01:30:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "HOU",
     "name": "Houston Rockets",
@@ -393,7 +393,7 @@
     "provider": "DraftKings",
     "details": "LAL -12.5",
     "home_spread": -12.5,
-    "total": 224.5,
+    "total": 225.5,
     "home_ml": -750,
     "away_ml": 530,
     "home_ml_open": -700,
@@ -430,7 +430,8 @@
     "pick": "LAL",
     "best_value": null,
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-24T02:47:08+00:00"
    }
   },
   {
@@ -477,10 +478,13 @@
      "side": "home",
      "team": "SAC",
      "edge": 0.0553,
-     "ask": 0.28
+     "ask": 0.28,
+     "close": 0.28,
+     "clv": 0.0
     },
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-24T02:47:08+00:00"
    }
   }
  ],
@@ -526,9 +530,9 @@
    }
   },
   "clv": {
-   "n": 112,
-   "avg_clv": 0.0047,
-   "beat_close": 0.5089
+   "n": 113,
+   "avg_clv": 0.0046,
+   "beat_close": 0.5044
   },
   "calibration": {
    "lines": 14327,
