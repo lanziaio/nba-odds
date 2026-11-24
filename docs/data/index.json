@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T00:34:59+00:00",
+ "generated_at": "2026-11-24T00:56:00+00:00",
  "slate_date_et": "20261123",
  "slate": [
   {
@@ -16,7 +16,7 @@
    "event_id": "401910036",
    "tip": "2026-11-24T00:00:00+00:00",
    "state": "in",
-   "status": "STATUS_END_PERIOD",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "CHA",
     "name": "Charlotte Hornets",
@@ -107,8 +107,8 @@
    },
    "event_id": "401910038",
    "tip": "2026-11-24T00:30:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "IND",
     "name": "Indiana Pacers",
@@ -153,8 +153,8 @@
    },
    "event_id": "401910039",
    "tip": "2026-11-24T00:30:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "TOR",
     "name": "Toronto Raptors",
@@ -199,8 +199,8 @@
    },
    "event_id": "401910040",
    "tip": "2026-11-24T00:30:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
@@ -274,7 +274,8 @@
     "pick": "CLE",
     "best_value": null,
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-24T00:56:00+00:00"
    }
   },
   {
@@ -283,8 +284,8 @@
     "details": "PHX -3.5",
     "home_spread": 3.5,
     "total": 232.5,
-    "home_ml": 131,
-    "away_ml": -155,
+    "home_ml": 125,
+    "away_ml": -148,
     "home_ml_open": 125,
     "away_ml_open": -149
    },
@@ -332,10 +333,13 @@
       "strength": "value",
       "ticker": "KXNBAPRA-26NOV23PHXNOP-NOPTMURPHY25-25",
       "team": "NO",
-      "won": null
+      "won": null,
+      "close": 0.58,
+      "clv": -0.03
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-24T00:56:00+00:00"
    }
   },
   {
@@ -488,9 +492,9 @@
    }
   },
   "clv": {
-   "n": 111,
-   "avg_clv": 0.005,
-   "beat_close": 0.5135
+   "n": 112,
+   "avg_clv": 0.0047,
+   "beat_close": 0.5089
   },
   "calibration": {
    "lines": 14327,
