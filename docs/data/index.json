@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T04:05:06+00:00",
+ "generated_at": "2026-11-24T04:35:18+00:00",
  "slate_date_et": "20261123",
  "slate": [
   {
@@ -435,8 +435,15 @@
     "pick": "HOU",
     "best_value": null,
     "prop_picks": [],
-    "result": null,
-    "close_at": "2026-11-24T01:19:59+00:00"
+    "result": {
+     "home_score": 116,
+     "away_score": 104,
+     "home_won": true
+    },
+    "close_at": "2026-11-24T01:19:59+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -540,26 +547,26 @@
   }
  ],
  "track_record": {
-  "games": 69,
+  "games": 70,
   "model": {
-   "n": 69,
-   "brier": 0.2303,
-   "accuracy": 0.6087
+   "n": 70,
+   "brier": 0.2273,
+   "accuracy": 0.6143
   },
   "vegas": {
-   "n": 69,
-   "brier": 0.2317,
-   "accuracy": 0.6232
+   "n": 70,
+   "brier": 0.2288,
+   "accuracy": 0.6286
   },
   "stats_only": {
-   "n": 69,
-   "brier": 0.2332,
-   "accuracy": 0.6232
+   "n": 70,
+   "brier": 0.2303,
+   "accuracy": 0.6286
   },
   "kalshi": {
-   "n": 69,
-   "brier": 0.2313,
-   "accuracy": 0.6087
+   "n": 70,
+   "brier": 0.2284,
+   "accuracy": 0.6143
   },
   "value_bets": {
    "n": 4,
@@ -586,19 +593,19 @@
    "beat_close": 0.5044
   },
   "calibration": {
-   "lines": 15964,
-   "games": 69,
+   "lines": 16187,
+   "games": 70,
    "model": {
-    "brier": 0.1725,
-    "log_loss": 0.5216
+    "brier": 0.1724,
+    "log_loss": 0.5212
    },
    "market": {
-    "brier": 0.1664,
-    "log_loss": 0.5028
+    "brier": 0.1661,
+    "log_loss": 0.5021
    },
    "blend": {
-    "brier": 0.1663,
-    "log_loss": 0.5028
+    "brier": 0.1661,
+    "log_loss": 0.5021
    },
    "fitted_market_weight": 0.95,
    "market_weight_in_use": 0.95,
@@ -613,70 +620,70 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 2654,
+      "n": 2689,
       "predicted": 0.053,
       "actual": 0.084
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 2324,
+      "n": 2364,
       "predicted": 0.148,
-      "actual": 0.186
+      "actual": 0.185
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 1766,
+      "n": 1790,
       "predicted": 0.249,
-      "actual": 0.281
+      "actual": 0.282
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 1515,
+      "n": 1531,
       "predicted": 0.349,
-      "actual": 0.358
+      "actual": 0.357
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 1283,
-      "predicted": 0.45,
-      "actual": 0.472
+      "n": 1305,
+      "predicted": 0.449,
+      "actual": 0.475
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 1440,
-      "predicted": 0.55,
-      "actual": 0.568
+      "n": 1460,
+      "predicted": 0.549,
+      "actual": 0.567
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 1289,
+      "n": 1310,
       "predicted": 0.651,
-      "actual": 0.657
+      "actual": 0.656
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 1415,
+      "n": 1428,
       "predicted": 0.75,
-      "actual": 0.771
+      "actual": 0.772
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 1254,
+      "n": 1274,
       "predicted": 0.848,
-      "actual": 0.849
+      "actual": 0.848
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 644,
+      "n": 652,
       "predicted": 0.937,
       "actual": 0.916
      }
@@ -685,142 +692,142 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 2131,
+      "n": 2160,
       "predicted": 0.059,
       "actual": 0.056
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 2427,
+      "n": 2471,
       "predicted": 0.147,
       "actual": 0.157
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 1841,
+      "n": 1862,
       "predicted": 0.246,
       "actual": 0.249
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 1462,
+      "n": 1488,
       "predicted": 0.347,
-      "actual": 0.352
+      "actual": 0.351
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 1416,
+      "n": 1430,
       "predicted": 0.448,
       "actual": 0.448
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 1329,
-      "predicted": 0.55,
-      "actual": 0.555
-     },
-     {
-      "from": 0.6,
-      "to": 0.7,
-      "n": 1328,
-      "predicted": 0.647,
-      "actual": 0.64
-     },
-     {
-      "from": 0.7,
-      "to": 0.8,
-      "n": 1472,
-      "predicted": 0.749,
-      "actual": 0.746
-     },
-     {
-      "from": 0.8,
-      "to": 0.9,
-      "n": 1476,
-      "predicted": 0.847,
-      "actual": 0.855
-     },
-     {
-      "from": 0.9,
-      "to": 1.0,
-      "n": 702,
-      "predicted": 0.93,
-      "actual": 0.934
-     }
-    ],
-    "blend": [
-     {
-      "from": 0,
-      "to": 0.1,
-      "n": 2207,
-      "predicted": 0.06,
-      "actual": 0.058
-     },
-     {
-      "from": 0.1,
-      "to": 0.2,
-      "n": 2406,
-      "predicted": 0.149,
-      "actual": 0.161
-     },
-     {
-      "from": 0.2,
-      "to": 0.3,
-      "n": 1841,
-      "predicted": 0.248,
-      "actual": 0.254
-     },
-     {
-      "from": 0.3,
-      "to": 0.4,
-      "n": 1448,
-      "predicted": 0.349,
-      "actual": 0.349
-     },
-     {
-      "from": 0.4,
-      "to": 0.5,
-      "n": 1386,
-      "predicted": 0.448,
-      "actual": 0.451
-     },
-     {
-      "from": 0.5,
-      "to": 0.6,
-      "n": 1357,
+      "n": 1346,
       "predicted": 0.55,
       "actual": 0.558
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 1330,
-      "predicted": 0.649,
-      "actual": 0.644
+      "n": 1351,
+      "predicted": 0.647,
+      "actual": 0.64
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 1470,
-      "predicted": 0.751,
-      "actual": 0.748
+      "n": 1493,
+      "predicted": 0.749,
+      "actual": 0.747
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 1462,
-      "predicted": 0.848,
-      "actual": 0.857
+      "n": 1498,
+      "predicted": 0.847,
+      "actual": 0.856
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 677,
+      "n": 704,
+      "predicted": 0.93,
+      "actual": 0.935
+     }
+    ],
+    "blend": [
+     {
+      "from": 0,
+      "to": 0.1,
+      "n": 2237,
+      "predicted": 0.06,
+      "actual": 0.057
+     },
+     {
+      "from": 0.1,
+      "to": 0.2,
+      "n": 2449,
+      "predicted": 0.148,
+      "actual": 0.161
+     },
+     {
+      "from": 0.2,
+      "to": 0.3,
+      "n": 1862,
+      "predicted": 0.248,
+      "actual": 0.253
+     },
+     {
+      "from": 0.3,
+      "to": 0.4,
+      "n": 1474,
+      "predicted": 0.348,
+      "actual": 0.348
+     },
+     {
+      "from": 0.4,
+      "to": 0.5,
+      "n": 1400,
+      "predicted": 0.448,
+      "actual": 0.45
+     },
+     {
+      "from": 0.5,
+      "to": 0.6,
+      "n": 1374,
+      "predicted": 0.55,
+      "actual": 0.561
+     },
+     {
+      "from": 0.6,
+      "to": 0.7,
+      "n": 1353,
+      "predicted": 0.649,
+      "actual": 0.643
+     },
+     {
+      "from": 0.7,
+      "to": 0.8,
+      "n": 1491,
+      "predicted": 0.751,
+      "actual": 0.749
+     },
+     {
+      "from": 0.8,
+      "to": 0.9,
+      "n": 1484,
+      "predicted": 0.848,
+      "actual": 0.858
+     },
+     {
+      "from": 0.9,
+      "to": 1.0,
+      "n": 679,
       "predicted": 0.931,
       "actual": 0.935
      }
