@@ -4411,8 +4411,15 @@
   "pick": "CLE",
   "best_value": null,
   "prop_picks": [],
-  "result": null,
-  "close_at": "2026-11-24T00:56:00+00:00"
+  "result": {
+   "home_score": 122,
+   "away_score": 108,
+   "home_won": true
+  },
+  "close_at": "2026-11-24T00:56:00+00:00",
+  "model_pick_correct": false,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910042",
@@ -4440,13 +4447,22 @@
     "strength": "value",
     "ticker": "KXNBAPRA-26NOV23PHXNOP-NOPTMURPHY25-25",
     "team": "NO",
-    "won": null,
+    "won": true,
     "close": 0.58,
-    "clv": -0.03
+    "clv": -0.03,
+    "status": "won",
+    "pnl": 0.37
    }
   ],
-  "result": null,
-  "close_at": "2026-11-24T00:56:00+00:00"
+  "result": {
+   "home_score": 119,
+   "away_score": 123,
+   "home_won": false
+  },
+  "close_at": "2026-11-24T00:56:00+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  },
  {
   "event_id": "401910043",
