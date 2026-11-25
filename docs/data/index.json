@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T23:16:59+00:00",
+ "generated_at": "2026-11-25T23:46:59+00:00",
  "slate_date_et": "20261125",
  "slate": [
   {
@@ -16,7 +16,7 @@
    "event_id": "401909317",
    "tip": "2026-11-25T22:00:00+00:00",
    "state": "in",
-   "status": "STATUS_HALFTIME",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "PHI",
     "name": "Philadelphia 76ers",
@@ -51,8 +51,8 @@
   {
    "odds": {
     "provider": "DraftKings",
-    "details": "CHA -3.5",
-    "home_spread": -3.5,
+    "details": "CHA -4.5",
+    "home_spread": -4.5,
     "total": 218.5,
     "home_ml": -180,
     "away_ml": 151,
@@ -90,7 +90,8 @@
     "pick": "CHA",
     "best_value": null,
     "prop_picks": [],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-25T23:46:59+00:00"
    }
   },
   {
@@ -98,7 +99,7 @@
     "provider": "DraftKings",
     "details": "NY -4.5",
     "home_spread": -4.5,
-    "total": 219.5,
+    "total": 220.5,
     "home_ml": -180,
     "away_ml": 151,
     "home_ml_open": -224,
@@ -143,7 +144,7 @@
     "provider": "DraftKings",
     "details": "OKC -2.5",
     "home_spread": -2.5,
-    "total": 222.5,
+    "total": 223.5,
     "home_ml": -135,
     "away_ml": 114,
     "home_ml_open": -345,
@@ -215,9 +216,23 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-25T23:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909321",
+    "tip": "2026-11-26T01:00:00+00:00",
+    "preview": false,
+    "home": "MEM",
+    "away": "LAC",
+    "p_home_final": 0.7311,
+    "p_home_stats": 0.7953,
+    "p_home_market": 0.6999512115791187,
+    "p_home_kalshi": 0.705,
+    "pick": "MEM",
+    "best_value": null,
+    "prop_picks": [],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -246,16 +261,30 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-25T23:45:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909322",
+    "tip": "2026-11-26T01:00:00+00:00",
+    "preview": false,
+    "home": "MIL",
+    "away": "BKN",
+    "p_home_final": 0.553,
+    "p_home_stats": 0.6331,
+    "p_home_market": 0.5176079587973764,
+    "p_home_kalshi": 0.515,
+    "pick": "MIL",
+    "best_value": null,
+    "prop_picks": [],
+    "result": null
+   }
   },
   {
    "odds": {
     "provider": "DraftKings",
     "details": "HOU -9.5",
     "home_spread": -9.5,
-    "total": 223.5,
+    "total": 222.5,
     "home_ml": -395,
     "away_ml": 312,
     "home_ml_open": -369,
