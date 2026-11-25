@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T22:46:59+00:00",
+ "generated_at": "2026-11-25T23:16:59+00:00",
  "slate_date_et": "20261125",
  "slate": [
   {
@@ -16,7 +16,7 @@
    "event_id": "401909317",
    "tip": "2026-11-25T22:00:00+00:00",
    "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "status": "STATUS_HALFTIME",
    "home": {
     "abbr": "PHI",
     "name": "Philadelphia 76ers",
@@ -53,9 +53,9 @@
     "provider": "DraftKings",
     "details": "CHA -3.5",
     "home_spread": -3.5,
-    "total": 217.5,
-    "home_ml": -174,
-    "away_ml": 146,
+    "total": 218.5,
+    "home_ml": -180,
+    "away_ml": 151,
     "home_ml_open": -163,
     "away_ml_open": 137
    },
@@ -120,9 +120,23 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-25T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909319",
+    "tip": "2026-11-26T00:30:00+00:00",
+    "preview": false,
+    "home": "NY",
+    "away": "CLE",
+    "p_home_final": 0.6211,
+    "p_home_stats": 0.6296,
+    "p_home_market": 0.617381798305548,
+    "p_home_kalshi": 0.625,
+    "pick": "NY",
+    "best_value": null,
+    "prop_picks": [],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -151,9 +165,28 @@
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
     "score": null
    },
-   "has_report": false,
+   "has_report": true,
    "report_at": "2026-11-25T23:15:00+00:00",
-   "summary": null
+   "summary": {
+    "event_id": "401909320",
+    "tip": "2026-11-26T00:30:00+00:00",
+    "preview": false,
+    "home": "OKC",
+    "away": "MIN",
+    "p_home_final": 0.4702,
+    "p_home_stats": 0.2932,
+    "p_home_market": 0.551441114716549,
+    "p_home_kalshi": 0.55,
+    "pick": "MIN",
+    "best_value": {
+     "side": "away",
+     "team": "MIN",
+     "edge": 0.0598,
+     "ask": 0.45
+    },
+    "prop_picks": [],
+    "result": null
+   }
   },
   {
    "odds": {
@@ -222,7 +255,7 @@
     "provider": "DraftKings",
     "details": "HOU -9.5",
     "home_spread": -9.5,
-    "total": 222.5,
+    "total": 223.5,
     "home_ml": -395,
     "away_ml": 312,
     "home_ml_open": -369,
@@ -249,7 +282,16 @@
    "summary": null
   },
   {
-   "odds": null,
+   "odds": {
+    "provider": "DraftKings",
+    "details": "GS -7.5",
+    "home_spread": -7.5,
+    "total": 215.5,
+    "home_ml": -324,
+    "away_ml": 261,
+    "home_ml_open": -241,
+    "away_ml_open": 199
+   },
    "event_id": "401909324",
    "tip": "2026-11-26T03:00:00+00:00",
    "state": "pre",
