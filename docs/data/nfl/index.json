@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T04:35:11+00:00",
+ "generated_at": "2026-11-26T05:05:13+00:00",
  "sport": "nfl",
  "slate_label": "Week 12, 2026",
  "slate": [
@@ -45,8 +45,15 @@
     "pick": "LAR",
     "best_value": null,
     "prop_picks": [],
-    "result": null,
-    "close_at": "2026-11-26T00:56:00+00:00"
+    "result": {
+     "home_score": 26,
+     "away_score": 13,
+     "home_won": true
+    },
+    "close_at": "2026-11-26T00:56:00+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -86,8 +93,8 @@
     "details": "DAL -8.5",
     "home_spread": -8.5,
     "total": 48.5,
-    "home_ml": -450,
-    "away_ml": 350,
+    "home_ml": -448,
+    "away_ml": 349,
     "home_ml_open": -120,
     "away_ml_open": 100
    },
@@ -117,8 +124,8 @@
     "details": "BUF -3",
     "home_spread": -3.0,
     "total": 45.5,
-    "home_ml": -148,
-    "away_ml": 125,
+    "home_ml": -151,
+    "away_ml": 127,
     "home_ml_open": -135,
     "away_ml_open": 114
    },
@@ -148,8 +155,8 @@
     "details": "DEN -3.5",
     "home_spread": 3.5,
     "total": 36.5,
-    "home_ml": 169,
-    "away_ml": -202,
+    "home_ml": 171,
+    "away_ml": -204,
     "home_ml_open": -102,
     "away_ml_open": -118
    },
@@ -179,8 +186,8 @@
     "details": "CIN -10",
     "home_spread": -10.0,
     "total": 49.5,
-    "home_ml": -534,
-    "away_ml": 405,
+    "home_ml": -536,
+    "away_ml": 407,
     "home_ml_open": -290,
     "away_ml_open": 235
    },
@@ -210,8 +217,8 @@
     "details": "NYG -6",
     "home_spread": 6.0,
     "total": 41.5,
-    "home_ml": 236,
-    "away_ml": -287,
+    "home_ml": 235,
+    "away_ml": -286,
     "home_ml_open": -135,
     "away_ml_open": 114
    },
@@ -334,7 +341,7 @@
     "details": "HOU -6.5",
     "home_spread": -6.5,
     "total": 47.5,
-    "home_ml": -333,
+    "home_ml": -332,
     "away_ml": 267,
     "home_ml_open": -118,
     "away_ml_open": -102
@@ -365,8 +372,8 @@
     "details": "NE -1.5",
     "home_spread": 1.5,
     "total": 35.5,
-    "home_ml": -103,
-    "away_ml": -115,
+    "home_ml": -102,
+    "away_ml": -116,
     "home_ml_open": -135,
     "away_ml_open": 114
    },
@@ -396,7 +403,7 @@
     "details": "WSH -7",
     "home_spread": 7.0,
     "total": 41.5,
-    "home_ml": 262,
+    "home_ml": 263,
     "away_ml": -325,
     "home_ml_open": 180,
     "away_ml_open": -218
@@ -516,26 +523,26 @@
   }
  ],
  "track_record": {
-  "games": 14,
+  "games": 15,
   "model": {
-   "n": 14,
-   "brier": 0.238,
-   "accuracy": 0.5
+   "n": 15,
+   "brier": 0.2334,
+   "accuracy": 0.5333
   },
   "vegas": {
-   "n": 14,
-   "brier": 0.2383,
-   "accuracy": 0.5
+   "n": 15,
+   "brier": 0.2353,
+   "accuracy": 0.5333
   },
   "stats_only": {
-   "n": 14,
-   "brier": 0.2418,
-   "accuracy": 0.5714
+   "n": 15,
+   "brier": 0.2326,
+   "accuracy": 0.6
   },
   "kalshi": {
-   "n": 14,
-   "brier": 0.2395,
-   "accuracy": 0.5714
+   "n": 15,
+   "brier": 0.2364,
+   "accuracy": 0.6
   },
   "value_bets": {
    "n": 0,
@@ -562,19 +569,19 @@
    "beat_close": 0.3333
   },
   "calibration": {
-   "lines": 4494,
-   "games": 14,
+   "lines": 4882,
+   "games": 15,
    "model": {
-    "brier": 0.1704,
-    "log_loss": 0.5169
+    "brier": 0.1684,
+    "log_loss": 0.5119
    },
    "market": {
-    "brier": 0.1518,
-    "log_loss": 0.464
+    "brier": 0.1507,
+    "log_loss": 0.4613
    },
    "blend": {
-    "brier": 0.1532,
-    "log_loss": 0.4676
+    "brier": 0.152,
+    "log_loss": 0.4647
    },
    "fitted_market_weight": 1.0,
    "market_weight_in_use": 0.85,
@@ -589,216 +596,216 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 1150,
+      "n": 1265,
       "predicted": 0.049,
-      "actual": 0.085
+      "actual": 0.084
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 806,
-      "predicted": 0.146,
-      "actual": 0.15
+      "n": 873,
+      "predicted": 0.145,
+      "actual": 0.143
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 555,
-      "predicted": 0.249,
-      "actual": 0.259
+      "n": 602,
+      "predicted": 0.248,
+      "actual": 0.252
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 402,
+      "n": 436,
       "predicted": 0.348,
-      "actual": 0.356
+      "actual": 0.339
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 342,
+      "n": 369,
       "predicted": 0.445,
-      "actual": 0.418
+      "actual": 0.401
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 315,
+      "n": 345,
       "predicted": 0.55,
-      "actual": 0.489
+      "actual": 0.467
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 264,
+      "n": 284,
       "predicted": 0.649,
-      "actual": 0.545
+      "actual": 0.546
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 249,
+      "n": 266,
       "predicted": 0.75,
-      "actual": 0.627
+      "actual": 0.617
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 203,
-      "predicted": 0.846,
-      "actual": 0.704
+      "n": 219,
+      "predicted": 0.847,
+      "actual": 0.699
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 81,
+      "n": 82,
       "predicted": 0.932,
-      "actual": 0.778
+      "actual": 0.768
      }
     ],
     "market": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 1242,
+      "n": 1368,
       "predicted": 0.054,
-      "actual": 0.054
+      "actual": 0.053
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 774,
-      "predicted": 0.144,
-      "actual": 0.146
+      "n": 835,
+      "predicted": 0.145,
+      "actual": 0.14
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 515,
+      "n": 558,
       "predicted": 0.246,
-      "actual": 0.231
+      "actual": 0.222
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 391,
-      "predicted": 0.347,
-      "actual": 0.355
+      "n": 423,
+      "predicted": 0.348,
+      "actual": 0.348
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 332,
-      "predicted": 0.445,
-      "actual": 0.449
+      "n": 361,
+      "predicted": 0.446,
+      "actual": 0.432
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 301,
+      "n": 326,
       "predicted": 0.547,
-      "actual": 0.512
+      "actual": 0.494
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 305,
+      "n": 325,
       "predicted": 0.645,
-      "actual": 0.603
+      "actual": 0.588
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 262,
-      "predicted": 0.75,
-      "actual": 0.698
+      "n": 282,
+      "predicted": 0.749,
+      "actual": 0.688
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 217,
+      "n": 234,
       "predicted": 0.842,
-      "actual": 0.806
+      "actual": 0.795
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 28,
-      "predicted": 0.923,
-      "actual": 0.929
+      "n": 29,
+      "predicted": 0.922,
+      "actual": 0.897
      }
     ],
     "blend": [
      {
       "from": 0,
       "to": 0.1,
-      "n": 1246,
+      "n": 1371,
       "predicted": 0.055,
-      "actual": 0.057
+      "actual": 0.056
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 762,
+      "n": 824,
       "predicted": 0.145,
-      "actual": 0.144
+      "actual": 0.138
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 539,
+      "n": 582,
       "predicted": 0.247,
-      "actual": 0.234
+      "actual": 0.225
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 388,
-      "predicted": 0.35,
-      "actual": 0.376
+      "n": 419,
+      "predicted": 0.349,
+      "actual": 0.365
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 329,
+      "n": 358,
       "predicted": 0.446,
-      "actual": 0.447
+      "actual": 0.43
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 308,
+      "n": 336,
       "predicted": 0.55,
-      "actual": 0.513
+      "actual": 0.494
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 296,
-      "predicted": 0.648,
-      "actual": 0.611
+      "n": 318,
+      "predicted": 0.649,
+      "actual": 0.597
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 255,
+      "n": 271,
       "predicted": 0.751,
-      "actual": 0.682
+      "actual": 0.675
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 216,
+      "n": 233,
       "predicted": 0.843,
-      "actual": 0.782
+      "actual": 0.773
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 28,
+      "n": 29,
       "predicted": 0.92,
-      "actual": 0.964
+      "actual": 0.931
      }
     ]
    },
@@ -810,10 +817,10 @@
      "roi": -0.2811
     },
     "lean_or_better": {
-     "n": 87,
-     "hit_rate": 0.4138,
-     "pnl_per_contract": -11.26,
-     "roi": -0.2471
+     "n": 88,
+     "hit_rate": 0.4091,
+     "pnl_per_contract": -11.91,
+     "roi": -0.2578
     }
    }
   }
