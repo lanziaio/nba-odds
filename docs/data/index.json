@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T03:05:00+00:00",
+ "generated_at": "2026-11-26T03:35:03+00:00",
  "slate_date_et": "20261125",
  "slate": [
   {
@@ -150,8 +150,15 @@
     "pick": "NY",
     "best_value": null,
     "prop_picks": [],
-    "result": null,
-    "close_at": "2026-11-26T00:16:59+00:00"
+    "result": {
+     "home_score": 121,
+     "away_score": 102,
+     "home_won": true
+    },
+    "close_at": "2026-11-26T00:16:59+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -167,19 +174,19 @@
    },
    "event_id": "401909320",
    "tip": "2026-11-26T00:30:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "OKC",
     "name": "Oklahoma City Thunder",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/okc.png",
-    "score": null
+    "score": 106
    },
    "away": {
     "abbr": "MIN",
     "name": "Minnesota Timberwolves",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png",
-    "score": null
+    "score": 113
    },
    "has_report": true,
    "report_at": "2026-11-25T23:15:00+00:00",
@@ -200,11 +207,20 @@
      "edge": 0.0598,
      "ask": 0.45,
      "close": 0.445,
-     "clv": -0.005
+     "clv": -0.005,
+     "status": "won",
+     "pnl": 0.53
     },
     "prop_picks": [],
-    "result": null,
-    "close_at": "2026-11-26T00:16:59+00:00"
+    "result": {
+     "home_score": 106,
+     "away_score": 113,
+     "home_won": false
+    },
+    "close_at": "2026-11-26T00:16:59+00:00",
+    "model_pick_correct": true,
+    "graded": true,
+    "lines_graded": true
    }
   },
   {
@@ -220,19 +236,19 @@
    },
    "event_id": "401909321",
    "tip": "2026-11-26T01:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "MEM",
     "name": "Memphis Grizzlies",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
-    "score": null
+    "score": 115
    },
    "away": {
     "abbr": "LAC",
     "name": "LA Clippers",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png",
-    "score": null
+    "score": 97
    },
    "has_report": true,
    "report_at": "2026-11-25T23:45:00+00:00",
@@ -266,19 +282,19 @@
    },
    "event_id": "401909322",
    "tip": "2026-11-26T01:00:00+00:00",
-   "state": "in",
-   "status": "STATUS_IN_PROGRESS",
+   "state": "post",
+   "status": "STATUS_FINAL",
    "home": {
     "abbr": "MIL",
     "name": "Milwaukee Bucks",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mil.png",
-    "score": null
+    "score": 97
    },
    "away": {
     "abbr": "BKN",
     "name": "Brooklyn Nets",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png",
-    "score": null
+    "score": 104
    },
    "has_report": true,
    "report_at": "2026-11-25T23:45:00+00:00",
@@ -358,8 +374,8 @@
    },
    "event_id": "401909324",
    "tip": "2026-11-26T03:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "GS",
     "name": "Golden State Warriors",
@@ -404,8 +420,8 @@
    },
    "event_id": "401909325",
    "tip": "2026-11-26T03:00:00+00:00",
-   "state": "pre",
-   "status": "STATUS_SCHEDULED",
+   "state": "in",
+   "status": "STATUS_IN_PROGRESS",
    "home": {
     "abbr": "POR",
     "name": "Portland Trail Blazers",
@@ -446,31 +462,31 @@
   }
  ],
  "track_record": {
-  "games": 77,
+  "games": 79,
   "model": {
-   "n": 77,
-   "brier": 0.2263,
-   "accuracy": 0.6104
+   "n": 79,
+   "brier": 0.2252,
+   "accuracy": 0.6203
   },
   "vegas": {
-   "n": 77,
-   "brier": 0.2278,
-   "accuracy": 0.6234
+   "n": 79,
+   "brier": 0.2277,
+   "accuracy": 0.6203
   },
   "stats_only": {
-   "n": 77,
-   "brier": 0.2304,
-   "accuracy": 0.6234
+   "n": 79,
+   "brier": 0.2274,
+   "accuracy": 0.6329
   },
   "kalshi": {
-   "n": 77,
-   "brier": 0.2272,
-   "accuracy": 0.6104
+   "n": 79,
+   "brier": 0.227,
+   "accuracy": 0.6076
   },
   "value_bets": {
-   "n": 5,
-   "wins": 2,
-   "pnl_per_contract": -0.5
+   "n": 6,
+   "wins": 3,
+   "pnl_per_contract": 0.03
   },
   "props": {
    "value": {
@@ -492,21 +508,21 @@
    "beat_close": 0.5043
   },
   "calibration": {
-   "lines": 17752,
-   "games": 77,
+   "lines": 18232,
+   "games": 79,
    "model": {
-    "brier": 0.1729,
-    "log_loss": 0.5224
+    "brier": 0.1727,
+    "log_loss": 0.5218
    },
    "market": {
-    "brier": 0.1664,
-    "log_loss": 0.5027
+    "brier": 0.1663,
+    "log_loss": 0.5025
    },
    "blend": {
-    "brier": 0.1664,
-    "log_loss": 0.5027
+    "brier": 0.1663,
+    "log_loss": 0.5025
    },
-   "fitted_market_weight": 1.0,
+   "fitted_market_weight": 0.95,
    "market_weight_in_use": 0.95,
    "default_market_weight": 0.6,
    "weight_source": "fitted",
@@ -519,70 +535,70 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 2958,
-      "predicted": 0.053,
-      "actual": 0.086
+      "n": 3042,
+      "predicted": 0.054,
+      "actual": 0.084
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 2578,
+      "n": 2647,
       "predicted": 0.148,
-      "actual": 0.185
+      "actual": 0.186
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 1975,
+      "n": 2030,
       "predicted": 0.249,
-      "actual": 0.285
+      "actual": 0.282
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 1686,
+      "n": 1724,
       "predicted": 0.349,
       "actual": 0.364
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 1432,
-      "predicted": 0.45,
-      "actual": 0.476
+      "n": 1478,
+      "predicted": 0.449,
+      "actual": 0.472
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 1604,
+      "n": 1647,
       "predicted": 0.549,
-      "actual": 0.567
+      "actual": 0.563
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 1438,
+      "n": 1473,
       "predicted": 0.651,
       "actual": 0.663
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 1587,
+      "n": 1625,
       "predicted": 0.75,
-      "actual": 0.771
+      "actual": 0.77
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 1375,
+      "n": 1421,
       "predicted": 0.847,
       "actual": 0.847
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 704,
+      "n": 718,
       "predicted": 0.937,
       "actual": 0.918
      }
@@ -591,71 +607,71 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 2363,
+      "n": 2421,
       "predicted": 0.059,
       "actual": 0.055
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 2704,
+      "n": 2790,
       "predicted": 0.147,
       "actual": 0.156
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 2044,
+      "n": 2094,
       "predicted": 0.246,
-      "actual": 0.251
+      "actual": 0.25
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 1648,
+      "n": 1693,
       "predicted": 0.347,
-      "actual": 0.355
+      "actual": 0.353
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 1568,
+      "n": 1609,
       "predicted": 0.448,
-      "actual": 0.45
+      "actual": 0.447
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 1474,
+      "n": 1510,
       "predicted": 0.55,
-      "actual": 0.561
+      "actual": 0.557
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 1501,
+      "n": 1547,
       "predicted": 0.647,
-      "actual": 0.642
+      "actual": 0.639
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 1629,
+      "n": 1671,
       "predicted": 0.75,
       "actual": 0.751
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 1638,
-      "predicted": 0.846,
+      "n": 1679,
+      "predicted": 0.847,
       "actual": 0.851
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 768,
-      "predicted": 0.93,
+      "n": 791,
+      "predicted": 0.929,
       "actual": 0.938
      }
     ],
@@ -663,70 +679,70 @@
      {
       "from": 0,
       "to": 0.1,
-      "n": 2451,
+      "n": 2513,
       "predicted": 0.06,
       "actual": 0.057
      },
      {
       "from": 0.1,
       "to": 0.2,
-      "n": 2683,
+      "n": 2768,
       "predicted": 0.149,
       "actual": 0.16
      },
      {
       "from": 0.2,
       "to": 0.3,
-      "n": 2035,
+      "n": 2083,
       "predicted": 0.248,
-      "actual": 0.257
+      "actual": 0.256
      },
      {
       "from": 0.3,
       "to": 0.4,
-      "n": 1636,
+      "n": 1681,
       "predicted": 0.348,
-      "actual": 0.35
+      "actual": 0.349
      },
      {
       "from": 0.4,
       "to": 0.5,
-      "n": 1536,
+      "n": 1579,
       "predicted": 0.448,
-      "actual": 0.453
+      "actual": 0.45
      },
      {
       "from": 0.5,
       "to": 0.6,
-      "n": 1506,
+      "n": 1541,
       "predicted": 0.551,
-      "actual": 0.564
+      "actual": 0.56
      },
      {
       "from": 0.6,
       "to": 0.7,
-      "n": 1500,
+      "n": 1545,
       "predicted": 0.648,
-      "actual": 0.645
+      "actual": 0.644
      },
      {
       "from": 0.7,
       "to": 0.8,
-      "n": 1631,
+      "n": 1672,
       "predicted": 0.751,
       "actual": 0.754
      },
      {
       "from": 0.8,
       "to": 0.9,
-      "n": 1618,
+      "n": 1659,
       "predicted": 0.848,
-      "actual": 0.853
+      "actual": 0.852
      },
      {
       "from": 0.9,
       "to": 1.0,
-      "n": 741,
+      "n": 764,
       "predicted": 0.93,
       "actual": 0.938
      }
