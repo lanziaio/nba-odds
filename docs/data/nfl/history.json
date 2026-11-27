@@ -901,9 +901,11 @@
     "strength": "lean",
     "ticker": "KXNFLRSHYDS-26NOV26KCBUF-KCPMAHOMES15-20",
     "team": "KC",
-    "won": null,
+    "won": true,
     "close": 0.685,
-    "clv": -0.005
+    "clv": -0.005,
+    "status": "won",
+    "pnl": 0.29
    },
    {
     "athlete_id": "3918298",
@@ -918,12 +920,21 @@
     "strength": "lean",
     "ticker": "KXNFLRSHYDS-26NOV26KCBUF-BUFJALLEN17-50",
     "team": "BUF",
-    "won": null,
+    "won": true,
     "close": 0.675,
-    "clv": 0.005
+    "clv": 0.005,
+    "status": "won",
+    "pnl": 0.31
    }
   ],
-  "result": null,
-  "close_at": "2026-11-27T01:07:08+00:00"
+  "result": {
+   "home_score": 13,
+   "away_score": 10,
+   "home_won": true
+  },
+  "close_at": "2026-11-27T01:07:08+00:00",
+  "model_pick_correct": true,
+  "graded": true,
+  "lines_graded": true
  }
 ]
