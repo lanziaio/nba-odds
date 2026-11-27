@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T00:37:05+00:00",
+ "generated_at": "2026-11-27T01:07:08+00:00",
  "sport": "nfl",
  "slate_label": "Week 12, 2026",
  "slate": [
@@ -139,8 +139,8 @@
     "details": "BUF -3",
     "home_spread": -3.0,
     "total": 46.5,
-    "home_ml": -157,
-    "away_ml": 132,
+    "home_ml": -155,
+    "away_ml": 131,
     "home_ml_open": -135,
     "away_ml_open": 114
    },
@@ -188,7 +188,9 @@
       "strength": "lean",
       "ticker": "KXNFLRSHYDS-26NOV26KCBUF-KCPMAHOMES15-20",
       "team": "KC",
-      "won": null
+      "won": null,
+      "close": 0.685,
+      "clv": -0.005
      },
      {
       "athlete_id": "3918298",
@@ -203,20 +205,23 @@
       "strength": "lean",
       "ticker": "KXNFLRSHYDS-26NOV26KCBUF-BUFJALLEN17-50",
       "team": "BUF",
-      "won": null
+      "won": null,
+      "close": 0.675,
+      "clv": 0.005
      }
     ],
-    "result": null
+    "result": null,
+    "close_at": "2026-11-27T01:07:08+00:00"
    }
   },
   {
    "odds": {
     "provider": "Draft Kings",
-    "details": "DEN -5.5",
-    "home_spread": 5.5,
+    "details": "DEN -4.5",
+    "home_spread": 4.5,
     "total": 36.5,
-    "home_ml": 211,
-    "away_ml": -256,
+    "home_ml": 209,
+    "away_ml": -253,
     "home_ml_open": -102,
     "away_ml_open": -118
    },
@@ -339,8 +344,8 @@
     "details": "MIN -7",
     "home_spread": -7.0,
     "total": 41.5,
-    "home_ml": -311,
-    "away_ml": 253,
+    "home_ml": -310,
+    "away_ml": 252,
     "home_ml_open": -218,
     "away_ml_open": 180
    },
@@ -624,9 +629,9 @@
    }
   },
   "clv": {
-   "n": 3,
-   "avg_clv": 0.0017,
-   "beat_close": 0.3333
+   "n": 5,
+   "avg_clv": 0.001,
+   "beat_close": 0.4
   },
   "calibration": {
    "lines": 4882,
